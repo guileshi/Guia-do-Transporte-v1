@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais Cargas - Transportadora</title>
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS Personalizada -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Font-Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="fixed-top topbar-hide" id="navbar">
+        <div class="bg_navbar">
+            <div class="container p-0">
+                <nav class="navbar navbar-expand-xl navbar-light" role="navigation">
+                    <a href="index.html" class="nav-link navLogo">
+                        <!-- Logo / Texto -->
+                        <img src="img/logo-2.png" alt="Logo Mais Cargas" id="logoImg">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                        aria-controls="menu" aria-expanded="false" aria-label="Menu colapso">
+                        <span class="navbar-toggler-icon text-dark"></span>
+                    </button>
+                    <div id="menuNav" class="collapse navbar-collapse justify-content-end">
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Links -->
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">
+                                    <span class="navItemText">
+                                        Início
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="navItemText">
+                                        Sobre
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="navItemText">
+                                        Contato
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="navItemText">
+                                        Fretes
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="navItemText">
+                                        Cotação de Frete
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- <a href="#" class="btn nav-link" type="button" role="button">
+                                    <span class="navItemText botao-entrar">
+                                        Entrar
+                                    </span>
+                                </a> -->
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle botao-entrar" type="button"
+                                        id="dropdownEntrar" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Entrar
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownEntrar">
+                                        <li><a class="dropdown-item" href="entrar-empresa.html" role="navigation">Sou Empresa</a></li>
+                                        <li><a class="dropdown-item" href="entrar-motorista.html" role="navigation">Sou Motorista</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="heroSection">
+        <div class="container-fluid bg-hero" style="padding: 0;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-12 hero-content">
+                    <h1>Transportadora Mais Cargas</h1>
+                    <h2>Encontre cargas, empresas e caminhoneiros</h2>
+                    <div class="hero-botoes justify-content-xl-start justify-content-center">
+                        <a href="empresa.html" class="btn btn-danger hero-botoes-empresa anim-botao" role="navigation">
+                            Sou Empresa
+                        </a>
+                        <a href="motorista.html" class="btn btn-secondary hero-botoes-motorista anim-botao" role="navigation">
+                            Sou Motorista
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-4 d-none d-xl-flex hero-celular">
+                    <picture>
+                        <img src="img/celular-v2.png" alt="Aplicativo do Mais Cargas" class="img-fluid">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid bg-comoFunciona">
+            <div class="container">
+                <h2 class="d-flex justify-content-center">Como Funciona</h2>
+                <div class="row">
+
+                    <div class="col-xl-6 col-xl-flex d-xl-flex d-none my-auto">
+                        <picture>
+                            <img src="img/caminhao-celular.png" alt="Caminhão vermelho em cima de um celular"
+                                class="img-fluid caminhao-anim">
+                        </picture>
+                    </div>
+
+                    <div class="row col-xl-6 col-sm-12">
+                        <div class="col-12 justify-xl-content-start justify-content-center d-flex">
+                            <div class="card sombra-caixa">
+                                <div class="row">
+                                    <div class="col-3 position-relative my-sm-auto">
+                                        <img src="img/homem-carrinhoDeMao.png" alt="Homem carregando um caminhão de mão"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="card-body">
+                                            <h3 class="card-title">
+                                                Empresas anunciam seus cargos
+                                            </h3>
+                                            <p class="card-text">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+                                                obcaecati
+                                                tenetur iure. Minima, cumque natus?
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="bg-pontos-vermelhos absolute d-xl-flex d-none"
+                                style="transform: translate(-280px, -40px);"></div>
+                        </div>
+                        <div class="col-12 justify-xl-content-start justify-content-center d-flex">
+                            <div class="card sombra-caixa">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="img/caminhao-vermelho.png" alt="Caminhão vermelho" class="img-fluid">
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="card-body">
+                                            <h3 class="card-title">
+                                                Empresas anunciam seus cargos
+                                            </h3>
+                                            <p class="card-text">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+                                                obcaecati
+                                                tenetur iure. Minima, cumque natus?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 justify-xl-content-start justify-content-center d-flex">
+                            <div class="card sombra-caixa">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="img/handshake-vermelho.png" alt="Duas mãos fazendo um acordo"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="card-body">
+                                            <h3 class="card-title">
+                                                Empresas anunciam seus cargos
+                                            </h3>
+                                            <p class="card-text">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+                                                obcaecati
+                                                tenetur iure. Minima, cumque natus?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container bg-paraEmpresa hide" id="para-empresa">
+            <div class="row">
+                <div class="col-xl-5 col-12 mx-auto position-relative">
+                    <picture class="d-flex justify-content-center py-md-4">
+                        <img src="img/company-building.png" alt="Predio cinza com uma arvore na frente"
+                            class="img-fluid">
+                    </picture>
+                    <div class="bg-circulo-vermelhos rounded-circle behind absolute d-none d-xl-flex" style="
+                    transform: translate(200px, -200px);"></div>
+                </div>
+                <div class="col-xl-7 col-12">
+                    <h2>
+                        Para você, Empresa
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste in esse numquam minus omnis
+                        pariatur vero reiciendis voluptas magnam officiis repellat autem quis, possimus dolorem neque
+                        necessitatibus facilis voluptatum architecto?
+                    </p>
+                    <div class="d-flex justify-content-end">
+                        <a href="empresa.html" class="btn btn-danger botao-verMais anim-botao" role="navigation">
+                            Ver mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container bg-paraMotorista hide" id="para-motorista">
+            <div class="row">
+                <div class="col-xl-5 col-12 d-xl-none d-block position-relative">
+                    <picture class="d-xl-none d-flex justify-content-center py-md-2">
+                        <img src="img/van-vermelha.png" alt="Van vermelha" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="col-xl-7 col-12">
+                    <h2>
+                        Para você, Motorista
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste in esse numquam minus omnis
+                        pariatur vero reiciendis voluptas magnam officiis repellat autem quis, possimus dolorem neque
+                        necessitatibus facilis voluptatum architecto?
+                    </p>
+                    <div class="d-flex justify-content-start">
+                        <a href="motorista.html" class="btn btn-danger botao-verMais anim-botao" role="navigation">
+                            Ver mais
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-5 col-12 position-relative">
+                    <picture class="d-xl-flex d-none justify-content-center">
+                        <img src="img/van-vermelha.png" alt="Van vermelha" class="img-fluid">
+                    </picture>
+                    <div class="bg-circulo-vermelhos rounded-circle behind absolute d-none d-xl-flex"
+                        style="transform: translate(250px, -200px);"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container bg-paraCotacao hide" id="para-cotacao">
+            <div class="row">
+                <div class="col-xl-5 col-12">
+                    <picture class="d-flex justify-content-center py-md-4">
+                        <img src="img/fills-form-vermelho.png" alt="Preenchendo um formúlario" class="img-fluid">
+                    </picture>
+                    <div class="bg-circulo-vermelhos rounded-circle behind absolute d-none d-xl-flex"
+                        style="transform: translate(170px, -200px);"></div>
+                </div>
+                <div class="col-xl-7 col-12">
+                    <h2>
+                        Solicite sua cotação
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste in esse numquam minus omnis
+                        pariatur vero reiciendis voluptas magnam officiis repellat autem quis, possimus dolorem neque
+                        necessitatibus facilis voluptatum architecto?
+                    </p>
+                    <div class="d-flex justify-content-end">
+                        <a href="empresa.html" class="btn btn-danger botao-verMais anim-botao" role="navigation">
+                            Ver mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid bg-numeros">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <h2>
+                            Acompanhe em tempo real
+                        </h2>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                        <h3>
+                            Números em constante crescimento
+                        </h3>
+                    </div>
+                    <div class="col-xl-4 col-12 d-flex">
+                        <div class="mx-auto">
+                            <div class="card sombra-caixa">
+                                <div class="card-title mx-auto bg-numeros-icones">
+                                    <span><i class="fas fa-box-open"></i></span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="contar d-flex justify-content-center">
+                                        800
+                                    </span>
+                                </div>
+                                <h4 class="text-center">Fretes</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-12 d-flex">
+                        <div class="mx-auto">
+                            <div class="card sombra-caixa">
+                                <div class="card-title mx-auto bg-numeros-icones">
+                                    <span><i class="fas fa-male"></i></span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="contar d-flex justify-content-center">
+                                        10000
+                                    </span>
+                                </div>
+                                <h4 class="text-center">Motorista</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-12 d-flex">
+                        <div class="mx-auto">
+                            <div class="card sombra-caixa">
+                                <div class="card-title mx-auto bg-numeros-icones">
+                                    <span><i class="fas fa-building numeros-icones"></i></span>
+                                </div>
+                                <div class="card-body">
+                                    <span class="contar d-flex justify-content-center">
+                                        200
+                                    </span>
+                                </div>
+                                <h4 class="text-center">Transportadora</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid bg-parallax bg-aplicativo">
+            <div class="titulo-aplicativo">
+                <h2 class="text-center">
+                    No celular dos motoristas
+                </h2>
+                <h3 class="text-center"> Conectamos seu caminhão com fretes na ida e na volta </p>
+            </div>
+            <div class="row bg-aplicativoInfo d-flex mx-auto">
+                <div class="col-12">
+                    <h3 class="text-center">Mais de 5 mil downloads</h2>
+                        <h4 class="text-center">MaisCargas é o aplicativo de fretes preferido dos caminhoneiros, com a
+                            melhor avaliaçao na Play Store
+                    </h3>
+                    <div class="d-flex justify-content-center links-aplicativo">
+                        <a href="#"><img src="img/googlePlay1-preto.png" alt="Aplicativo do Google Play"
+                                class="img-fluid googlePlay anim-botao"></a>
+                        <a href="#"><img src="img/appStore-preto.png" alt=" Aplicativo da App Store"
+                                class="img-fluid anim-botao"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-fluid bg-footer" style="padding: 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-12 bg-footer-contato">
+                        <div class="row">
+                            <div class="col-xl-6 col-12 footer-contato">
+                                <h2>Contate-nos</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">(11) 9 1234-5678</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">email@hotmail.com</a>
+                                    </li>
+                                </ul>
+                                <h2>Saiba onde estamos</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">Praça Parque Novo Mundo 00</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">SP, SP - Brasil</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-6 col-12 footer-contato">
+                                <h2>Links</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#heroSection">Inicio</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sobre</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contato</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Listar Fretes</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cotação de Fretes</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 footer-redeSocial">
+                                <div class="d-flex justify-content-center">
+                                    <div class="bg-redeSocial-icones justify-content-center">
+                                        <a href=""><i class="fab fa-facebook-f" title="Facebook"></i></a>
+                                    </div>
+                                    <div class="bg-redeSocial-icones" title="Whatsapp">
+                                        <a href=""><i class="fab fa-whatsapp"></i></a>
+                                    </div>
+                                    <div class="bg-redeSocial-icones" title="Instagram">
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                    <div class="bg-redeSocial-icones" title="Google Play">
+                                        <a href=""><i class="fab fa-google-play googlePlay-icone"></i></a>
+                                    </div>
+                                    <div class="bg-redeSocial-icones" title="App Store">
+                                        <a href=""><i class="fab fa-app-store"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-12 bg-footer-duvidas d-flex justify-content-center mx-auto">
+                        <div class="row">
+                            <div class="col-auto">
+                                <h2>
+                                    Duvidas
+                                </h2>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-12 form-floating">
+                                            <input type="text" class="form-control" id="nome" name="nome"
+                                                placeholder="Pedro Guilherme">
+                                            <label for="nome">Nome</label>
+                                        </div>
+                                        <div class="col-xl-6 col-12 form-floating">
+                                            <input type="text" class="form-control" id="email" name="email"
+                                                placeholder="email@hotmail.com">
+                                            <label for="email">Email</label>
+                                        </div>
+                                        <div class="col-12 form-floating">
+                                            <input type="text" class="form-control" id="assunto" name="assunto"
+                                                placeholder="Escreva o assunto">
+                                            <label for="assunto">Assunto</label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Escreva o seu problema"
+                                                id="mensagem" style="height: 100px"></textarea>
+                                            <label for="mensagem">Mensagem</label>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-danger footer-botao-enviar anim-botao" type="submit"
+                                        role="button" title="Enviar">
+                                        Enviar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex justify-content-center footer-copyright">
+                            COPYRIGHT | TODOS OS DIREITOS RESERVADOS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/my.js"></script>
+</body>
+
+</html>

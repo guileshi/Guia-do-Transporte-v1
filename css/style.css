@@ -1,0 +1,1413 @@
+/* Exportação Fonte Poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* Exportação Fonte Roboto */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+:root {
+    /* SEÇÃO DE CORES */
+    --CorBase: #8B0000;
+    --CorBaseHover: #700000;
+    --CorBranco: #F8F8F8;
+    --CorBranco2: #fff;
+    --CorCinza: #DBDBDB;
+    --CorCinzaEscuro: #6F6F6F;
+    --CorPreto: #343434;
+    --CorPreto2: #484848;
+    /* FIM DA SEÇÃO DE CORES */
+    /* SEÇÃO DE FONTES */
+    --FonteBold: 700;
+    --FonteSemiBold: 600;
+    --FonteMedio: 500;
+    --FonteNormal: 400;
+    --FonteLight: 300;
+    --Roboto: Roboto, Poppins, Arial, sans-serif;
+    --Poppins: Poppins, Robot, Arial, sans-serif;
+    /* FIM DA SEÇÃO DE FONTES */
+}
+
+/* Configurações de Estilo Scroll*/
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+* {
+    /* CONFIGURAÇÕES GERAIS DO PROJETO */
+    font-family: var(--Poppins);
+    letter-spacing: 0.03em;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* = Classes usada para esconder elementos = */
+
+.hide {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1.3s ease-out;
+}
+
+.unHide {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1.3s ease-out;
+}
+
+.bg-circulo-vermelhos {
+    width: 150px;
+    height: 150px;
+    opacity: 0.7;
+    background: repeating-linear-gradient( 240deg, rgba(255, 255, 255, 0) .8px, #e2626b 1.6px, #e2626b 3px, rgba(255, 255, 255, 0) 3.8px, rgba(255, 255, 255, 0) 10px);
+}
+
+.bg-pontos-vermelhos {
+    width: 145px;
+    height: 145px;
+    opacity: 0.7;
+    background: radial-gradient(var(--CorBase) 2px, transparent 2.5px);
+    background-size: .75rem .75rem;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.behind {
+    z-index: -1 !important;
+}
+
+.absolute {
+    position: absolute !important;
+}
+
+.vertical-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-parallax {
+    background: url(../img/homem-celular.jpg) fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    max-height: 600px;
+    padding-top: 80px;
+    position: relative;
+}
+
+.isRequired::after {
+    content: '*';
+    color: red;
+}
+
+/* === */
+
+/* === Navbar === */
+
+/* Remover paddings da Navbar */
+
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: -4px;
+    transition: all 0.2s;
+}
+
+/* Fundo da Navbar */
+
+.bg_navbar {
+    height: 58px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.2s;
+}
+
+.navbar-toggler {
+    margin-right: 24px;
+}
+
+#navbar.topbar-hide .bg_navbar {
+    height: 64px;
+    background: transparent;
+}
+
+#navbar.topbar-hide .navbar {
+    margin-top: 0;
+}
+
+#navbar.topbar-hide #menuNav ul li a .navItemText {
+    color: white;
+    border-bottom: 0px solid var(--CorBase);
+}
+
+#navbar.topbar-hide #menuNav ul li a .navItemText:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .2s ease, background-color .2s ease;
+}
+
+#navbar.topbar-hide #menuNav ul li a .navItemText:hover:after {
+    width: 100%;
+    background: var(--CorBranco2);
+}
+
+#navbar #menuNav ul li a .navItemText:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    opacity: 0;
+    width: 0px;
+    background: transparent;
+    transition: width .2s ease, background-color .2s ease;
+}
+
+#navbar #menuNav ul li a .navItemText:hover:after {
+    width: 100%;
+    opacity: 0.8;
+    background: var(--CorBase);
+}
+
+#navbar.topbar-hide #menuNav ul li a .navItemText:hover {
+    color: var(--CorCinza);
+}
+
+/* Links da Navbar */
+
+.nav-link {
+    padding: 8px 20px;
+}
+
+#navbar .nav-item {
+    padding: 8px 16px 0 0;
+    background-color: none;
+}
+
+#navbar.topbar-hide #menuNav .nav-item {
+    padding: 0 8px;
+}
+
+/* Logo da Navbar */
+
+#navbar.topbar-hide .navLogo {
+    padding: 8px 20px;
+}
+
+.navLogo {
+    padding: 0;
+}
+
+.navLogo img {
+    height: 58px;
+    width: 330px;
+}
+
+#navbar.topbar-hide .navLogo img {
+    height: 64px;
+    width: 330px;
+}
+
+/* Itens da Navbar */
+
+#menuNav ul li a .navItemText {
+    font-size: 16px;
+    font-weight: var(--FonteSemiBold);
+    color: var(--CorPreto);
+}
+
+#menuNav ul li a .navItemText:hover {
+    color: var(--CorBase);
+}
+
+#navbar.topbar-hide .botao-entrar {
+    color: var(--CorBase) !important;
+    background-color: var(--CorBranco2);
+}
+
+#navbar.topbar-hide .botao-entrar:hover {
+    color: var(--CorBaseHover) !important;
+    background: var(--CorCinza);
+}
+
+#navbar .botao-entrar {
+    color: var(--CorBranco2) !important;
+    font-size: 16px;
+    font-weight: var(--FonteSemiBold);
+    background-color: var(--CorBase);
+    padding: 4px 8px;
+    border-radius: 10px;
+    margin-top: 4px;
+    border: none;
+    transition: color .2s;
+}
+
+#navbar .botao-entrar:hover {
+    color: var(--CorCinza) !important;
+    background: var(--CorBaseHover);
+}
+
+#menuNav ul .dropdown .dropdown-item {
+    color: var(--CorPreto);
+    font-weight: var(--FonteSemiBold);
+}
+
+#menuNav ul .dropdown .dropdown-item:hover {
+    color: var(--CorPreto2);
+}
+
+#menuNav.navbar-mobile ul li {
+    background-color: var(--CorBranco2);
+}
+
+/*  === */
+
+/* === Imagens de Motorista/Empresa === */
+
+.bg-hero {
+    padding: 0;
+    margin-bottom: 160px;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    background: url(../img/caminhoneiro2-vermelho.jpg);
+    background-size: cover;
+    background-position: center top;
+    clip-path: polygon(53% 0, 100% 0, 100% 70%, 100% 89%, 65% 100%, 18% 100%, 0 100%, 0 0);
+}
+
+.bg-hero-motorista {
+    padding: 0;
+    margin-bottom: 160px;
+    width: 100%;
+    height: 77vh;
+    position: relative;
+    background: url(../img/caminhoneiro3-vermelho.jpg);
+    background-size: cover;
+    background-position: center -170px;
+    clip-path: polygon(53% 0, 100% 0, 100% 70%, 100% 89%, 65% 100%, 18% 100%, 0 100%, 0 0);
+}
+
+.bg-hero-empresa {
+    padding: 0;
+    margin-bottom: 160px;
+    width: 100%;
+    height: 77vh;
+    position: relative;
+    background: url(../img/company-background.jpg);
+    background-size: cover;
+    background-position: center -170px;
+    clip-path: polygon(53% 0, 100% 0, 100% 70%, 100% 89%, 65% 100%, 18% 100%, 0 100%, 0 0);
+}
+
+.hero-content {
+    position: relative;
+    margin-top: -560px;
+}
+
+.hero-celular {
+    position: relative;
+    margin-top: -720px;
+    animation: zoomIn-zoomOut 4s infinite;
+    z-index: 1000;
+}
+
+.hero-content-motorista {
+    position: relative;
+    margin-top: -320px;
+}
+
+.hero-content-empresa {
+    position: relative;
+    margin-top: -320px;
+}
+
+.hero-content h1 {
+    color: var(--CorBranco2);
+    font-size: 32px;
+    font-weight: var(--FonteBold);
+    margin-bottom: 8px;
+}
+
+.hero-content h2 {
+    color: var(--CorBranco2);
+    font-size: 24px;
+    font-weight: var(--FonteLight);
+    margin-bottom: 32px;
+    max-width: 410px;
+}
+
+.hero-content-motorista h1 {
+    color: var(--CorBranco2);
+    font-size: 32px;
+    font-weight: var(--FonteBold);
+    margin-bottom: 16px;
+}
+
+.hero-content-motorista h2 {
+    color: var(--CorBranco2);
+    font-size: 24px;
+    font-weight: var(--FonteLight);
+    margin-bottom: 32px;
+}
+
+.hero-content-empresa h1 {
+    color: var(--CorBranco2);
+    font-size: 32px;
+    font-weight: var(--FonteBold);
+    margin-bottom: 16px;
+}
+
+.hero-content-empresa h2 {
+    color: var(--CorBranco2);
+    font-size: 24px;
+    font-weight: var(--FonteLight);
+    margin-bottom: 32px;
+}
+
+.hero-botoes {
+    display: flex;
+}
+
+.hero-botoes-empresa {
+    color: var(--CorBranco2);
+    background: var(--CorBase);
+    border: none;
+    font-size: 24px;
+    font-weight: var(--FonteBold);
+    margin-right: 16px;
+    transition: all 0.2s;
+}
+
+.hero-botoes-motorista {
+    color: var(--CorBase);
+    background: var(--CorBranco2);
+    border: none;
+    font-size: 24px;
+    font-weight: var(--FonteBold);
+    transition: all 0.2s;
+}
+
+.hero-botoes-motorista:hover {
+    color: var(--CorBaseHover);
+    background-color: var(--CorCinza);
+}
+
+.hero-botoes-empresa:hover {
+    color: var(--CorCinza);
+    background-color: var(--CorBaseHover);
+}
+
+@keyframes zoomIn-zoomOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* === Como Funciona === */
+
+.bg-comoFunciona {
+    margin-bottom: 240px;
+    background: var(--CorBranco);
+    z-index: -20;
+}
+
+.bg-comoFunciona .card {
+    border: none;
+    height: 170px;
+    width: 580px;
+    border-radius: 12px;
+    margin: 16px 0;
+    transition: all 0.2s ease-out;
+    z-index: 2;
+}
+
+.bg-comoFunciona .card .card-body {
+    padding: 0;
+    margin-left: 40px;
+}
+
+.bg-comoFunciona h2 {
+    color: var(--CorPreto);
+    font-size: 32px;
+    font-weight: var(--FonteBold);
+    padding: 124px 0;
+}
+
+.bg-comoFunciona .card h3 {
+    color: var(--CorPreto);
+    font-size: 16px;
+    font-weight: var(--FonteMedio);
+    margin-top: 32px;
+    margin-bottom: 8px;
+}
+
+.bg-comoFunciona .card p {
+    color: var(--CorPreto2);
+    font-size: 16px;
+    font-weight: var(--FonteNormal);
+    text-align: justify;
+    padding-right: 32px;
+}
+
+.bg-comoFunciona .card img {
+    height: 170px;
+    width: 170px;
+    object-fit: scale-down;
+    margin-left: 16px;
+}
+
+.caminhao-anim {
+    position: relative;
+    animation: up-down 4s infinite ease-in-out;
+}
+
+@keyframes up-down {
+    0% {
+        top: -20px;
+    }
+    50% {
+        top: 20px;
+    }
+    100% {
+        top: -20px;
+    }
+}
+
+/* === Para Empresa === */
+
+.bg-paraEmpresa, .bg-motorista-veiculo1, .bg-empresa1 {
+    margin-bottom: 120px;
+}
+
+.bg-paraEmpresa picture img, .bg-motorista-veiculo1 picture img, .bg-empresa1 picture img {
+    height: 200px;
+    width: 260px;
+    object-fit: contain;
+}
+
+.bg-paraEmpresa h2, .bg-motorista-veiculo1 h2, .bg-empresa1 h2 {
+    color: var(--CorPreto);
+    font-size: 24px;
+    font-weight: var(--FonteSemiBold);
+}
+
+.bg-paraEmpresa p, .bg-motorista-veiculo1 p, .bg-empresa1 p {
+    color: var(--CorPreto);
+    font-size: 16px;
+    font-weight: var(--FonteLight);
+    text-align: justify;
+}
+
+/* === */
+
+/* === Para Motorista === */
+
+.bg-paraMotorista, .bg-motorista-veiculo2, .bg-empresa2 {
+    margin-bottom: 120px;
+}
+
+.bg-paraMotorista picture img, .bg-motorista-veiculo2 picture img, .bg-empresa2 picture img {
+    height: 200px;
+    width: 260px;
+    object-fit: contain;
+}
+
+.bg-paraMotorista h2, .bg-motorista-veiculo2 h2, .bg-empresa2 h2 {
+    color: var(--CorPreto);
+    font-size: 24px;
+    font-weight: var(--FonteSemiBold);
+}
+
+.bg-paraMotorista p, .bg-motorista-veiculo2 p, .bg-empresa2 p {
+    color: var(--CorPreto);
+    font-size: 16px;
+    font-weight: var(--FonteLight);
+    text-align: justify;
+}
+
+/* === */
+
+/* === Para Cotação === */
+
+.bg-paraCotacao, .bg-motorista-veiculo3, .bg-empresa3 {
+    margin-bottom: 240px;
+}
+
+.bg-paraCotacao picture img, .bg-motorista-veiculo3 picture img, .bg-empresa3 picture img {
+    height: 200px;
+    width: 260px;
+    object-fit: contain;
+}
+
+.bg-paraCotacao h2, .bg-motorista-veiculo3 h2, .bg-empresa3 h2 {
+    color: var(--CorPreto);
+    font-size: 24px;
+    font-weight: var(--FonteSemiBold);
+}
+
+.bg-paraCotacao p, .bg-motorista-veiculo3 p, .bg-empresa3 p {
+    color: var(--CorPreto);
+    font-size: 16px;
+    font-weight: var(--FonteLight);
+    text-align: justify;
+}
+
+/* === */
+
+/* === Números estatisticos === */
+
+.bg-numeros {
+    background: var(--CorBase);
+    clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 92%);
+    padding-top: 120px;
+    padding-bottom: 160px;
+    margin-bottom: 240px;
+}
+
+.bg-numeros h2 {
+    color: var(--CorBranco2);
+    font-size: 24px;
+    font-weight: var(--FonteSemiBold);
+}
+
+.bg-numeros h3 {
+    color: var(--CorBranco2);
+    font-size: 16px;
+    font-weight: var(--FonteNormal);
+    margin-bottom: 120px;
+}
+
+.bg-numeros .card {
+    border-radius: 20px;
+    width: 300px;
+    height: 250px;
+}
+
+.bg-numeros .card .card-body {
+    padding: 0;
+}
+
+.bg-numeros .bg-numeros-icones {
+    position: relative;
+    background-color: var(--CorBranco2);
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    top: -25px;
+}
+
+.bg-numeros .bg-numeros-icones i {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.bg-numeros .bg-numeros-icones span {
+    position: relative;
+    top: 4px;
+    left: 0px;
+    font-size: 32px;
+    color: var(--CorPreto);
+    transition: all 0.2s;
+}
+
+.bg-numeros .card .card-body span {
+    color: var(--CorPreto);
+    font-size: 64px;
+    font-weight: var(--FonteBold);
+    justify-content: center;
+    text-align: center;
+    cursor: default;
+}
+
+.bg-numeros .card h4 {
+    color: var(--CorBase);
+    font-size: 24px;
+    font-weight: var(--FonteMedio);
+    padding-bottom: 16px;
+    cursor: default;
+}
+
+.bg-numeros .card .card-body span::before {
+    content: "+";
+    color: var(--CorPreto);
+    cursor: default;
+}
+
+/* === */
+
+/* === Aplicativo === */
+
+.bg-aplicativo {
+    padding: 0;
+}
+
+/* .bg-aplicativo picture img {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: 1366px;
+    object-fit: fill;
+} */
+
+.bg-aplicativo .bg-aplicativoInfo h3 {
+    color: var(--CorBase);
+    font-size: 24px;
+    font-weight: var(--FonteSemiBold);
+    margin-top: 32px;
+}
+
+.bg-aplicativo .bg-aplicativoInfo h4 {
+    color: var(--CorCinzaEscuro);
+    font-size: 16px;
+    font-weight: var(--FonteNormal);
+    padding: 0 64px;
+}
+
+.bg-aplicativo a img {
+    object-fit: scale-down;
+    height: 90px;
+    width: 280px;
+}
+
+.links-aplicativo a:first-child img {
+    margin-right: 32px;
+}
+
+.links-aplicativo {
+    margin: 32px 0;
+}
+
+.bg-aplicativoInfo {
+    position: relative;
+    background-color: var(--CorBranco2);
+    width: 760px;
+    /* margin-top: -280px; */
+    border-radius: 20px;
+    /* margin-bottom: 240px; */
+    bottom: -280px;
+}
+
+.titulo-aplicativo {
+    position: relative;
+    /* top: -288px; */
+    bottom: -280px;
+}
+
+.titulo-aplicativo h2 {
+    color: var(--CorBranco2);
+    font-size: 32px;
+    font-weight: var(--FonteBold);
+}
+
+.titulo-aplicativo h3 {
+    color: var(--CorBranco);
+    font-size: 16px;
+    font-weight: var(--FonteNormal);
+}
+
+/* === */
+
+/* === Footer === */
+
+.bg-footer {
+    background-color: var(--CorBranco2);
+    margin-top: 240px;
+}
+
+.bg-footer .bg-footer-contato {
+    box-shadow: 14px 14px 12px 0 rgb(0 0 0 / 20%);
+    margin-bottom: 48px;
+}
+
+.footer-contato:first-child {
+    padding-left: 32px;
+}
+
+.bg-footer .footer-contato h2 {
+    color: var(--CorPreto);
+    font-size: 32px;
+    font-weight: var(--FonteBold);
+}
+
+.bg-footer ul {
+    color: var(--CorPreto);
+    font-size: 24px;
+    font-weight: var(--FonteBold);
+    padding: 0;
+}
+
+.bg-footer ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+.bg-footer ul li a {
+    font-size: 18px;
+    font-weight: var(--FonteNormal);
+    color: var(--CorPreto);
+    text-decoration: none;
+    border-bottom: 2px none transparent;
+    transition: color 0.2s;
+}
+
+.bg-footer ul li a:hover {
+    color: var(--CorCinzaEscuro);
+    border-bottom: 2px solid var(--CorBase);
+}
+
+.bg-footer .footer-redeSocial {
+    background-color: var(--CorBase);
+    margin-top: 128px;
+    border-radius: 0 0 4px 4px;
+}
+
+.bg-footer form .form-control {
+    color: var(--CorPreto);
+    background-color: var(--CorBranco);
+    margin-bottom: 8px;
+    border: none;
+}
+
+.bg-footer form .form-floating label {
+    left: 16px;
+}
+
+.bg-footer-duvidas {
+    padding: 0 64px;
+    margin-top: 128px;
+}
+
+.bg-footer-duvidas h2 {
+    color: var(--CorPreto);
+    font-size: 32px;
+    font-weight: var(--FonteBold);
+    margin-bottom: 32px;
+}
+
+.footer-copyright {
+    color: var(--CorPreto);
+    font-size: 16px;
+    font-weight: var(--FonteBold);
+    margin-bottom: 8px;
+}
+
+.bg-footer .bg-redeSocial-icones {
+    position: relative;
+    background-color: var(--CorBranco2);
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    margin: 8px 30px;
+}
+
+.bg-footer .bg-redeSocial-icones i {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.bg-footer .bg-redeSocial-icones:hover {
+    background-color: var(--CorBranco);
+}
+
+.bg-footer .bg-redeSocial-icones a {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 28px;
+    color: var(--CorPreto);
+    transition: all 0.2s;
+}
+
+.bg-footer .bg-redeSocial-icones:hover a {
+    color: var(--CorBase);
+}
+
+.bg-footer .bg-redeSocial-icones .googlePlay-icone {
+    padding-left: 4px;
+}
+
+/* === */
+
+/* === Seção de Cadastro === */
+
+.bg-cadastrar {
+    position: relative;
+    background-color: var(--CorBranco);
+    padding: 64px 0;
+    width: 100%;
+    margin-bottom: 240px;
+}
+
+.bg-cadastrar a {
+    position: relative;
+    font-size: 24px;
+    font-weight: var(--FonteSemiBold);
+    height: 50px;
+    width: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.bg-cadastrar .btn-link-entrar {
+    color: var(--CorBase);
+    background: var(--CorBranco);
+    border: 1px solid var(--CorBase);
+    transition: all .2s;
+}
+
+.bg-cadastrar .btn-link-entrar:hover {
+    color: var(--CorBaseHover);
+    background: var(--CorCinza);
+    border: 1px solid var(--CorBaseHover);
+}
+
+.bg-cadastrar .btn-link-cadastrar {
+    color: var(--CorBranco);
+    background: var(--CorBase);
+    border: 1px solid var(--CorBase);
+    transition: all .2s;
+}
+
+.bg-cadastrar .btn-link-cadastrar:hover {
+    color: var(--CorBranco2);
+    background: var(--CorBaseHover);
+    border: 1px solid var(--CorBaseHover);
+}
+
+/* === */
+
+/* === Pagina de Entrar/Cadastrar/Recuperar Senha === */
+
+.bg-loginout-section {
+    position: relative;
+    height: 100vh;
+}
+
+.bg-loginout {
+    background: var(--CorBranco2);
+    height: auto;
+    width: 40%;
+}
+
+.bg-loginout h1, .bg-loginout h2 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-loginout h1 {
+    color: var(--CorBase);
+    font-size: 32px;
+    font-weight: var(--FonteSemiBold);
+    margin-bottom: 32px;
+}
+
+.bg-loginout h2 {
+    color: var(--CorPreto);
+    font-size: 24px;
+    font-weight: var(--FonteMedio);
+    margin-bottom: 16px;
+}
+
+.bg-loginout .loginout-infos {
+    color: var(--CorPreto);
+    font-size: 22px;
+    font-weight: var(--FonteMedio);
+}
+
+.bg-loginout .loginout-infos {
+    color: var(--CorCinzaEscuro);
+    font-size: 16px;
+    font-weight: var(--FonteNormal);
+    margin: 4px 0;
+    text-align: center;
+}
+
+.bg-loginout .loginout-infos:hover {
+    color: var(--CorPreto2);
+}
+
+.bg-loginout form .form-control {
+    background-color: var(--CorBranco);
+    margin-bottom: 16px;
+    border: none;
+    font-size: 16px;
+    font-weight: var(--FonteNormal);
+}
+
+.bg-loginout form .form-floating label {
+    color: var(--CorPreto2);
+}
+
+.bg-loginout-facebook {
+    position: relative;
+    background-color: #4267B2;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 16px;
+}
+
+.bg-loginout-google {
+    position: relative;
+    background-color: #DB4437;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 16px;
+}
+
+.bg-loginout-facebook span i, .bg-loginout-google span i {
+    color: var(--CorBranco2);
+}
+
+.loginout-redesSociais {
+    display: none;
+}
+
+/* === */
+
+/* === Recuperar Senha === */
+
+.bg-loginout p {
+    color: var(--CorPreto);
+    font-size: 16px;
+    font-weight: var(--FonteNormal);
+    margin: 16px 0;
+    text-align: center;
+}
+
+/* === */
+
+/* === Pagina de Cotação === */
+
+.bg-cotacao {
+    padding: 0;
+    margin-bottom: 80px;
+    width: 100%;
+    height: 40vh;
+    position: relative;
+    background: url(../img/background-quotation-vermelho.jpg);
+    background-size: cover;
+    background-position: center -315px;
+}
+
+.hero-content-cotacao h1 {
+    color: var(--CorBranco2);
+    font-size: 32px;
+    font-weight: var(--FonteBold);
+    margin-bottom: 16px;
+}
+
+.hero-content-cotacao h2 {
+    color: var(--CorBranco2);
+    font-size: 24px;
+    font-weight: var(--FonteLight);
+    margin-bottom: 32px;
+}
+
+.hero-content-cotacao {
+    margin-top: -180px;
+    z-index: 1;
+}
+
+.bg-cotacao-formulario h2 {
+    color: var(--CorBase);
+    font-size: 32px;
+    font-weight: var(--FonteSemiBold);
+    margin-bottom: 16px;
+}
+
+.bg-cotacao-formulario .form-control, .form-select {
+    background-color: var(--CorBranco);
+    border: none;
+}
+
+.bg-cotacao-formulario {
+    width: 70%;
+}
+
+.bg-cotacao-comoFunciona h3 {
+    color: var(--CorPreto);
+    font-size: 32px;
+    font-weight: var(--FonteSemiBold);
+    margin-bottom: 16px;
+}
+
+.bg-cotacao-empresas h3 {
+    color: var(--CorBranco2);
+    font-size: 32px;
+    font-weight: var(--FonteSemiBold);
+    padding: 32px 0;
+}
+
+.bg-cotacao-comoFunciona p {
+    color: var(--CorPreto);
+    font-size: 24px;
+    font-weight: var(--FonteLight);
+    text-align: justify;
+    margin-top: 8px;
+    max-width: 80%;
+}
+
+.bg-cotacao-empresas img {
+    height: 110px;
+    width: 110px;
+    background: white;
+    border-radius: 50%;
+    object-fit: scale-down;
+    margin: 32px 0;
+}
+
+.bg-cotacao-empresas {
+    background-color: var(--CorBase);
+    margin: 160px 0;
+}
+
+.label-transporte {
+    color: var(--CorPreto);
+    font-size: 16px;
+    font-weight: var(--FonteMedio);
+}
+
+/* === */
+
+/* === Botões === */
+
+.footer-botao-enviar {
+    color: var(--CorBranco2);
+    background-color: var(--CorBase);
+    padding: 16px 48px;
+    font-size: 16px;
+    font-weight: var(--FonteSemiBold);
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-top: 32px;
+    transition: all 0.2s;
+}
+
+.botao-verMais {
+    color: var(--CorBranco2);
+    background-color: var(--CorBase);
+    padding: 4px 8px;
+    font-size: 16px;
+    font-weight: var(--FonteBold);
+    border-radius: 4px;
+    border: 1px solid transparent;
+    margin-top: 32px;
+    transition: all 0.2s ease-out;
+}
+
+.footer-botao-enviar:hover, .botao-verMais:hover {
+    background-color: var(--CorBaseHover);
+    color: var(--CorCinza);
+    border: 1px solid transparent;
+}
+
+.anim-botao {
+    transform: translateY(0);
+    transition: transform 0.2s ease-out;
+}
+
+.anim-botao:hover {
+    transform: translateY(-4px);
+}
+
+.btn-loginout {
+    color: var(--CorBranco2);
+    background-color: var(--CorBase);
+    font-size: 16px;
+    font-weight: var(--FonteSemiBold);
+    border-radius: 12px;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    margin: 16px 0;
+}
+
+.btn-loginout:hover {
+    color: var(--CorBranco);
+    background-color: var(--CorBaseHover);
+}
+
+/* === */
+
+/* === Sombras === */
+
+.sombra-caixa {
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+}
+
+.sombra-caixa:hover {
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* === Media Queries === */
+
+/* Celular */
+
+@media (min-width: 300px) and (max-width: 767.98px) {
+    .bg-aplicativoInfo {
+        width: auto;
+    }
+    .bg-comoFunciona .card {
+        width: auto;
+        height: auto;
+    }
+    .footer-contato:first-child {
+        padding: 0 12px;
+    }
+    .bg-footer .footer-contato h2 {
+        text-align: center;
+    }
+    .bg-footer .bg-redeSocial-icones {
+        margin: 4px 8px;
+    }
+    .footer-botao-enviar {
+        display: block;
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .footer-copyright {
+        display: flex;
+        text-align: center;
+    }
+    .links-aplicativo a:first-child img {
+        margin: 0 8px 0 0;
+    }
+    .bg-aplicativo a img {
+        width: 160px;
+    }
+    .bg-aplicativo .bg-aplicativoInfo h4 {
+        padding: 0;
+    }
+    .bg-numeros .card {
+        margin: 16px 0;
+    }
+    .bg-numeros {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding-top: 80px;
+        padding-bottom: 80px;
+        margin-bottom: 240px;
+    }
+    .bg-numeros h3 {
+        margin-bottom: 40px;
+    }
+    .bg-paraEmpresa h2, .bg-paraMotorista h2, .bg-paraCotacao h2 {
+        margin-top: 16px;
+        text-align: center;
+    }
+    .bg-paraCotacao {
+        margin-bottom: 80px;
+    }
+    .bg-comoFunciona {
+        margin-bottom: 80px;
+    }
+    .bg-comoFunciona .card p {
+        padding-bottom: 8px;
+    }
+    .hero-content {
+        margin-top: -560px;
+    }
+    .hero-content h1, .hero-content h2, .bg-numeros h2 {
+        text-align: center;
+    }
+    .bg-hero {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .hero-botoes {
+        display: block;
+    }
+    .hero-botoes-empresa, .hero-botoes-motorista {
+        margin-bottom: 8px;
+        margin-right: 0;
+        width: 100%;
+    }
+    .bg-comoFunciona .card .card-body {
+        margin-left: 0;
+    }
+    .bg-comoFunciona {
+        padding-top: 0;
+        clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    .titulo-aplicativo {
+        top: 100px;
+    }
+    .bg-parallax {
+        background: url(../img/homem-celular.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .bg-aplicativoInfo {
+        bottom: -92px;
+    }
+    .bg-footer {
+        margin-top: 40px;
+    }
+    .navLogo img {
+        margin-left: 24px;
+        height: 56px;
+        width: 248px;
+        padding-top: 4px;
+    }
+    .navbar-nav .nav-link {
+        margin-left: 8px;
+    }
+    .bg_navbar {
+        background-color: var(--CorBranco2);
+    }
+    .navbar-toggler {
+        margin-right: 8px;
+    }
+    #navbar .botao-entrar {
+        margin: 8px 0 8px 8px;
+    }
+    .botao-verMais {
+        display: block;
+        width: 100%;
+    }
+    .bg-footer ul li {
+        text-align: center;
+    }
+    .bg-comoFunciona .card img {
+        height: 225px;
+    }
+    .bg-paraCotacao h2, .bg-paraMotorista h2, .bg-paraEmpresa h2, .bg-motorista-veiculo3 h2, .bg-motorista-veiculo2 h2, .bg-motorista-veiculo1 h2, .bg-empresa3 h2, .bg-empresa2 h2, .bg-empresa1 h2 {
+        text-align: center;
+    }
+    .bg-hero-motorista, .bg-hero-empresa {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        height: 80vh;
+        margin-bottom: 120px;
+        background-position: 0;
+    }
+    .bg-paraCotacao, .bg-motorista-veiculo3, .bg-empresa3 {
+        margin-bottom: 120px;
+    }
+    .hero-content-empresa, .hero-content-motorista {
+        margin-top: -320px;
+    }
+    .bg-cadastrar {
+        margin-bottom: 120px;
+    }
+    .bg-loginout {
+        background: var(--CorBranco2);
+        height: auto;
+        width: 90%;
+    }
+}
+
+/* Tablet */
+
+@media (min-width: 768px) and (max-width: 1025px) {
+    .hero-content {
+        margin-top: -820px;
+    }
+    .hero-content h1, .hero-content h2 {
+        text-align: center;
+        max-width: none;
+    }
+    .hero-content h1 {
+        margin-top: 32px;
+        font-size: 64px;
+    }
+    .bg-numeros .card {
+        margin: 32px 0;
+    }
+    .bg-footer .footer-contato h2 {
+        text-align: center;
+    }
+    .bg-footer ul li {
+        text-align: center;
+    }
+    .bg-footer .bg-footer-contato {
+        box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.3);
+    }
+    .footer-botao-enviar {
+        display: block;
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    .bg-parallax {
+        background: url(../img/homem-celular.jpg);
+        background-repeat: no-repeat;
+        height: 550px;
+        max-height: 600px;
+        padding-top: 80px;
+        position: relative;
+    }
+    .bg-paraCotacao h2, .bg-paraMotorista h2, .bg-paraEmpresa h2, .bg-motorista-veiculo3 h2, .bg-motorista-veiculo2 h2, .bg-motorista-veiculo1 h2, .bg-empresa3 h2, .bg-empresa2 h2, .bg-empresa1 h2 {
+        text-align: center;
+    }
+    .bg-hero-motorista, .bg-hero-empresa {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        height: 80vh;
+        background-position: 0;
+    }
+    .bg-loginout {
+        background: var(--CorBranco2);
+        height: auto;
+        width: 70%;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1026px) and (max-width: 1399.98px) {}
+
+/* Large Desktop */
+
+@media (min-width: 1400px) {
+    .bg-loginout {
+        width: 30%;
+    }
+}
