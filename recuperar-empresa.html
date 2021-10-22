@@ -19,41 +19,122 @@
 
 <body>
 
+    <header class="fixed-top" id="navbar">
+        <div class="bg_navbar">
+            <div class="container p-0">
+                <nav class="navbar navbar-expand-xl navbar-light" role="navigation">
+                    <a href="index.html" class="nav-link navLogo">
+                        <!-- Logo / Texto -->
+                        <img src="img/logo-2-vermelho.png" alt="Logo Mais Cargas" id="logoImg">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                        aria-controls="menu" aria-expanded="false" aria-label="Menu colapso">
+                        <span class="navbar-toggler-icon text-dark"></span>
+                    </button>
+                    <div id="menuNav" class="collapse navbar-collapse justify-content-end">
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Links -->
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">
+                                    <span class="navItemText">
+                                        Início
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="navItemText">
+                                        Sobre
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="navItemText">
+                                        Contato
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="navItemText">
+                                        Fretes
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="cotacao.html" class="nav-link">
+                                    <span class="navItemText">
+                                        Cotação de Frete
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="botao-entrar">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle botao-entrar" type="button"
+                                        id="dropdownEntrar" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Entrar
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownEntrar">
+                                        <li><a class="dropdown-item" href="entrar-empresa.html" role="navigation">Sou Empresa</a></li>
+                                        <li><a class="dropdown-item" href="entrar-motorista.html" role="navigation">Sou Motorista</a></li>
+                                        <div class="horizontal-bar"></div>
+                                        <li class="navbar-cadastrar"><a class="dropdown-item dropdown-cadastrar" href="cadastrar.html" role="navigation">Cadastrar-se</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
     <section>
         <div class="bg-loginout-section d-flex">
             <div class="container bg-loginout my-auto">
                 <div class="row">
                     <div class="col-12">
                         <div>
-                            <h1>
-                                Empresa
-                            </h1>
+                            <div class="d-flex">
+                                <a href="recuperar-motorista.html" class="btn btn-danger btn-loginout noActive souMotorista " type="submit" role="button"
+                                    title="Enviar">
+                                    Sou Motorista
+                                </a>
+                                <a href="#" class="btn btn-danger btn-loginout active souEmpresa " type="submit" role="button"
+                                    title="Enviar">
+                                    Sou Empresa
+                                </a>
+                            </div>
                             <h2>
                                 Recuperar senha
                             </h2>
                             <p>
-                                O MaisCargas enviará um SMS para verificar seu número de telefone. Você receberá um link de verificação.
+                                O MaisCargas enviará um <strong>email</strong> para verificar seu número de telefone. Você receberá um link de verificação.
                             </p>
                             <form>
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="tel" class="form-control" id="celular" name="celular"
-                                                placeholder="91234-5678">
-                                            <label for="celular">Digite seu número de celular</label>
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                placeholder="meuemail@maiscargas.com">
+                                            <label for="email">Digite seu email</label>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                             <div class="d-flex">
-                                <button class="btn btn-danger btn-loginout anim-botao" type="submit" role="button"
+                                <button class="btn btn-danger btn-loginout anim-botao text-uppercase" type="submit" role="button"
                                     title="Enviar">
                                     Recuperar minha senha
                                 </button>
                             </div>
                         </div>
                         <div class="justify-content-center d-flex">
-                            <a href="entrar-empresa.html" class="text-center loginout-infos">Já possui uma conta? Clique aqui para entrar</a>
+                            <a href="entrar.html" class="text-center loginout-infos">Já possui uma conta? Clique aqui para entrar.</a>
+                        </div>
+                        <div class="justify-content-center d-flex">
+                            <a href="cadastrar.html" class="text-center loginout-infos">Ainda não possui conta? Clique aqui para se cadastrar.</a>
                         </div>
                     </div>
                 </div>

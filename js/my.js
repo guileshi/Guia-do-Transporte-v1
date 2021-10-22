@@ -1,34 +1,32 @@
-var celular = false;
-var tablet = false;
-var pc = false;
+var celular;
+var tablet;
+var pc;
 
-$(window).load("index.html", function () {
+$(window).load(function () {
     if (window.screen.width < 576.98) {
-        celular = true
+        celular = true;
         document.getElementById('logoImg').src = "img/logo-2-vermelho.png"
+        console.log("Celular")
         // console.log("Tela menor que 580 pixels")
     } else if (window.screen.width > 767.98 && window.screen.width <= 1024) {
-        tablet = true
+        tablet = true;
         document.getElementById('logoImg').src = "img/logo-2-vermelho.png"
+        console.log("Tablet")
         // console.log("Tela maior que 700 pixels")
     } else if (window.screen.width > 1025) {
-        pc = true
+        pc = true;
+        console.log("Computador")
         // console.log("Tela maior que 1000px")
     }
 
-    if (pc == false) {
-        $('#navbar').removeClass('topbar-hide')
-    }
-
     if (celular == true || tablet == true) {
-        $('#menuNav').addClass('navbar-mobile')
-
-        $('#para-empresa').removeClass('hide')
-        $('#para-motorista').removeClass('hide')
-        $('#para-cotacao').removeClass('hide')
+        $('#navbar').removeClass('topbar-hide')
 
         $('.btn-link-cadastrar').text("Cadastrar-se")
+        
+        $("#carousel-butons").addClass("hide")
     }
+
     // console.log(`Celular = ${celular}, Tablet = ${tablet}, PC = ${pc}`)
 });
 
@@ -44,21 +42,6 @@ $(window).scroll(function (e) {
         else {
             $('#navbar').addClass('topbar-hide')
             document.getElementById('logoImg').src = "img/logo-2.png"
-        }
-
-        if (scroll > 1299) {
-            $('#para-empresa').removeClass('hide')
-            $('#para-empresa').addClass('unHide')
-        }
-
-        if (scroll > 1600) {
-            $('#para-motorista').removeClass('hide')
-            $('#para-motorista').addClass('unHide')
-        }
-
-        if (scroll > 2000) {
-            $('#para-cotacao').removeClass('hide')
-            $('#para-cotacao').addClass('unHide')
         }
     }
     // console.log("Scroll: " + scroll)
@@ -95,6 +78,15 @@ $('#mudanca').change(function(){
             $('#valorNota, #peso, #quantidade').removeAttr('required');
     }
 });
+
+$("#botao-entrar").mouseenter(function () {     
+    $(".dropdown-menu").addClass("show");
+});
+
+$("#botao-entrar").mouseleave(function () {     
+    $(".dropdown-menu").removeClass("show");
+});
+
 
 "use strict";
 /*Inicializar nosso contador */

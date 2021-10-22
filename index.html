@@ -69,12 +69,7 @@
                                     </span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <!-- <a href="#" class="btn nav-link" type="button" role="button">
-                                    <span class="navItemText botao-entrar">
-                                        Entrar
-                                    </span>
-                                </a> -->
+                            <li class="nav-item" id="botao-entrar">
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle botao-entrar" type="button"
                                         id="dropdownEntrar" data-bs-toggle="dropdown" aria-expanded="false">
@@ -83,6 +78,8 @@
                                     <ul class="dropdown-menu" aria-labelledby="dropdownEntrar">
                                         <li><a class="dropdown-item" href="entrar-empresa.html" role="navigation">Sou Empresa</a></li>
                                         <li><a class="dropdown-item" href="entrar-motorista.html" role="navigation">Sou Motorista</a></li>
+                                        <div class="horizontal-bar"></div>
+                                        <li class="navbar-cadastrar"><a class="dropdown-item dropdown-cadastrar" href="cadastrar.html" role="navigation">Cadastrar-se</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -207,64 +204,6 @@
     </section>
 
     <section>
-        <div class="container bg-carrosel">
-            <div id="carousel-ParaVoce" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="img/caminhoneiro2-vermelho.jpg" class="d-block w-100 img-anim" style="clip-path: polygon(55% 0, 100% 0%, 100% 100%, 44% 100%); object-fit: contain; border-bottom-right-radius: 12px;" alt="...">
-                    <div class="carousel-text">
-                        <h2>Para você, Motorista</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in voluptas quia.
-                        </p>
-                        <button class="btn btn-danger btn-saibaMais d-block anim-botao">
-                            SAIBA MAIS
-                        </button>
-                    </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="10000">
-                    <img src="img/caminhoneiro3-vermelho.jpg" class="d-block w-100" style="clip-path: polygon(55% 0, 100% 0%, 100% 100%, 44% 100%); object-fit: contain; border-bottom-right-radius: 12px;" alt="...">
-                    <div class="carousel-text">
-                        <h2>Para você, Empresa</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in voluptas quia.
-                            </p>
-                            <button class="btn btn-danger btn-saibaMais anim-botao">
-                                SAIBA MAIS
-                            </button>
-                      </div>
-                  </div>
-                  <div class="carousel-item" data-bs-interval="10000">
-                    <img src="img/company-background.jpg" class="d-block w-100" style="clip-path: polygon(55% 0, 100% 0%, 100% 100%, 44% 100%); object-fit: contain; border-bottom-right-radius: 12px;" alt="...">
-                    <div class="carousel-text">
-                        <h2>Faça sua cotação</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in voluptas quia.
-                            </p>
-                            <button class="btn btn-danger btn-saibaMais anim-botao">
-                                SAIBA MAIS
-                            </button>
-                      </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide="prev">
-                  <span><i class="fas fa-angle-left"></i></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide="next">
-                    <span><i class="fas fa-angle-right"></i></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
-    </section>
-
-    <section>
         <div class="container-fluid bg-numeros">
             <div class="container">
                 <div class="row">
@@ -325,6 +264,68 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid bg-carrosel">
+            
+                    <div id="carousel-ParaVoce" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" data-bs-interval="1000000">
+                            <img src="img/caminhoneiro2-vermelho.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-text">
+                                <h2>Para você, Motorista</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in voluptas quia.
+                                </p>
+                                <a href="motorista.html" class="btn btn-danger btn-saibaMais d-block mx-auto anim-botao">
+                                    SAIBA MAIS
+                                </a>
+                            </div>
+                          </div>
+                          <div class="carousel-item" data-bs-interval="10000">
+                            <img src="img/caminhoneiro3-vermelho.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-text">
+                                <h2>Para você, Empresa</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in voluptas quia.
+                                    </p>
+                                    <a href="empresa.html" class="btn btn-danger btn-saibaMais d-block mx-auto anim-botao">
+                                        SAIBA MAIS
+                                    </a>
+                              </div>
+                          </div>
+                          <div class="carousel-item" data-bs-interval="10000">
+                            <img src="img/company-background.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-text">
+                                <h2>Faça sua cotação</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in voluptas quia.
+                                    </p>
+                                    <a href="cotacao.html" class="btn btn-danger btn-saibaMais d-block mx-auto anim-botao">
+                                        SAIBA MAIS
+                                    </a>
+                              </div>
+                          </div>
+                        </div>
+                        <div id="carousel-butons">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide="prev" id="carousel-control-prev">
+                              <span><i class="fas fa-angle-left"></i></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide="next" id="carousel-control-next">
+                                <span><i class="fas fa-angle-right"></i></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+    
         </div>
     </section>
 

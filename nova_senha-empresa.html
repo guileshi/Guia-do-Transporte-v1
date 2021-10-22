@@ -19,6 +19,77 @@
 
 <body>
 
+    <header class="fixed-top" id="navbar">
+        <div class="bg_navbar">
+            <div class="container p-0">
+                <nav class="navbar navbar-expand-xl navbar-light" role="navigation">
+                    <a href="index.html" class="nav-link navLogo">
+                        <!-- Logo / Texto -->
+                        <img src="img/logo-2-vermelho.png" alt="Logo Mais Cargas" id="logoImg">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                        aria-controls="menu" aria-expanded="false" aria-label="Menu colapso">
+                        <span class="navbar-toggler-icon text-dark"></span>
+                    </button>
+                    <div id="menuNav" class="collapse navbar-collapse justify-content-end">
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Links -->
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">
+                                    <span class="navItemText">
+                                        Início
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="navItemText">
+                                        Sobre
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="navItemText">
+                                        Contato
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <span class="navItemText">
+                                        Fretes
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="cotacao.html" class="nav-link">
+                                    <span class="navItemText">
+                                        Cotação de Frete
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item" id="botao-entrar">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle botao-entrar" type="button"
+                                        id="dropdownEntrar" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Entrar
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownEntrar">
+                                        <li><a class="dropdown-item" href="entrar-empresa.html" role="navigation">Sou Empresa</a></li>
+                                        <li><a class="dropdown-item" href="entrar-motorista.html" role="navigation">Sou Motorista</a></li>
+                                        <div class="horizontal-bar"></div>
+                                        <li class="navbar-cadastrar"><a class="dropdown-item dropdown-cadastrar" href="cadastrar.html" role="navigation">Cadastrar-se</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
     <section>
         <div class="bg-loginout-section d-flex">
             <div class="container bg-loginout my-auto">
