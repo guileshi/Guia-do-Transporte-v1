@@ -146,8 +146,8 @@ h1 {
 /* Fundo da Navbar */
 
 .bg_navbar {
-    height: 58px;
-    background-color: rgba(255, 255, 255, 0.95);
+    height: 80px;
+    background-color: var(--CorBranco2);
     padding-top: 0;
     padding-bottom: 0;
     transition: all 0.2s;
@@ -164,6 +164,10 @@ h1 {
 
 #navbar.topbar-hide .navbar {
     margin-top: 0;
+}
+
+#navbar #menuNav {
+    margin-top: 8px;
 }
 
 #navbar.topbar-hide #menuNav ul li a .navItemText {
@@ -214,7 +218,7 @@ h1 {
 }
 
 #navbar .nav-item {
-    padding: 8px 16px 0 0;
+    padding: 0 8px;
     background-color: none;
 }
 
@@ -226,19 +230,20 @@ h1 {
 
 #navbar.topbar-hide .navLogo {
     padding: 8px 20px;
+    margin-top: 0;
 }
 
 .navLogo {
-    padding: 0;
+    padding: 8px 20px;
 }
 
 .navLogo img {
-    height: 58px;
+    height: 66px;
     width: 330px;
 }
 
 #navbar.topbar-hide .navLogo img {
-    height: 64px;
+    height: 66px;
     width: 330px;
 }
 
@@ -307,7 +312,7 @@ h1 {
     background: url(../img/caminhoneiro2-vermelho.jpg);
     background-size: cover;
     background-position: center top;
-    clip-path: polygon(53% 0, 100% 0, 100% 70%, 100% 89%, 65% 100%, 18% 100%, 0 100%, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
 }
 
 .bg-hero-motorista {
@@ -405,31 +410,33 @@ h1 {
 
 .hero-botoes-empresa {
     color: var(--CorBranco2);
-    background: var(--CorBase);
-    border: none;
+    background: none;
+    border: 1px solid var(--CorBranco2);
     font-size: 24px;
     font-weight: var(--FonteBold);
-    margin-right: 16px;
     transition: all 0.2s;
 }
 
 .hero-botoes-motorista {
-    color: var(--CorBase);
-    background: var(--CorBranco2);
+    color: var(--CorBranco2);
+    background: var(--CorBase);
     border: none;
     font-size: 24px;
     font-weight: var(--FonteBold);
     transition: all 0.2s;
+    margin-right: 16px;
 }
 
 .hero-botoes-motorista:hover {
-    color: var(--CorBaseHover);
-    background-color: var(--CorCinza);
+    color: var(--CorBranco);
+    background-color: var(--CorBaseHover);
 }
 
 .hero-botoes-empresa:hover {
     color: var(--CorCinza);
-    background-color: var(--CorBaseHover);
+    border: 1px solid var(--CorCinza);
+    background-color: transparent';
+
 }
 
 @keyframes zoomIn-zoomOut {
@@ -447,9 +454,10 @@ h1 {
 /* === Como Funciona === */
 
 .bg-comoFunciona {
-    margin-bottom: 240px;
-    background: var(--CorBranco);
+    margin-bottom: 160px;
+    background: var(--CorBranco2);
     z-index: -20;
+    padding-bottom: 32px;
 }
 
 .bg-comoFunciona .card {
@@ -471,14 +479,14 @@ h1 {
     color: var(--CorPreto);
     font-size: 32px;
     font-weight: var(--FonteBold);
-    padding: 124px 0;
+    padding: 0 0 80px 0;
 }
 
 .bg-comoFunciona .card h3 {
     color: var(--CorPreto);
     font-size: 16px;
     font-weight: var(--FonteMedio);
-    margin-top: 32px;
+    margin-top: 16px;
     margin-bottom: 8px;
 }
 
@@ -514,79 +522,162 @@ h1 {
     }
 }
 
-/* === Para Empresa === */
+/* === Carrosel === */
 
-.bg-paraEmpresa, .bg-motorista-veiculo1, .bg-empresa1 {
+.bg-carrosel {
+    margin: 160px auto;
+    width: 75%;
+    display: block;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.bg-carrosel .carousel-control-prev {
+    left: -160px !important;
+    opacity: 1;
+}
+
+.bg-carrosel .carousel-control-next {
+    right: -160px !important;
+    opacity: 1;
+}
+
+.bg-carrosel .carousel-control-prev span, .bg-carrosel .carousel-control-next span {
+    padding: 16px 24px;
+    background: var(--CorBase);
+    border-radius: 100%;
+}
+
+.bg-carrosel .carousel-control-prev:hover span, .bg-carrosel .carousel-control-next:hover span {
+    background-color: var(--CorBaseHover);
+}
+
+.bg-carrosel span i {
+    color: var(--CorBranco2);
+    font-size: 32px;
+}
+
+.bg-carrosel span:hover i {
+    color: var(--CorBranco);
+}
+
+.carousel-text {
+    position: absolute;
+    top: 0;
+    padding: 0 80px 0 32px;
+    margin-top: 32px;
+    height: 100%;
+}
+
+.carousel-text h2 {
+    color: var(--CorPreto);
+    font-size: 64px;
+    font-weight: var(--FonteBold);
+    max-width: 380px;
+}
+
+.carousel-text p {
+    color: var(--CorPreto);
+    font-size: 24px;
+    font-weight: var(--FonteNormal);
+    margin-top: 32px;
+    max-width: 380px;
+}
+
+.bg-carrosel {
+    background-color: var(--CorBranco);
+    padding: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: var(--CorBase);
+    border-radius: 50%;
+    margin: auto 8px;
+}
+
+.carousel-indicators [data-bs-target]:hover {
+    opacity: 0.9;
+}
+
+.carousel-indicators .active {
+    width: 10px;
+    height: 10px;
+    background-color: var(--CorBranco2);
+    border: 7px solid var(--CorBase);
+}
+
+.carousel-indicators {
+    margin-bottom: -48px;
+}
+
+/* === */
+
+.bg-motorista-veiculo1, .bg-empresa1 {
     margin-bottom: 120px;
 }
 
-.bg-paraEmpresa picture img, .bg-motorista-veiculo1 picture img, .bg-empresa1 picture img {
+.bg-motorista-veiculo1 picture img, .bg-empresa1 picture img {
     height: 200px;
     width: 260px;
     object-fit: contain;
 }
 
-.bg-paraEmpresa h2, .bg-motorista-veiculo1 h2, .bg-empresa1 h2 {
+.bg-motorista-veiculo1 h2, .bg-empresa1 h2 {
     color: var(--CorPreto);
     font-size: 24px;
     font-weight: var(--FonteSemiBold);
 }
 
-.bg-paraEmpresa p, .bg-motorista-veiculo1 p, .bg-empresa1 p {
+.bg-motorista-veiculo1 p, .bg-empresa1 p {
     color: var(--CorPreto);
     font-size: 16px;
     font-weight: var(--FonteLight);
     text-align: justify;
 }
 
-/* === */
-
-/* === Para Motorista === */
-
-.bg-paraMotorista, .bg-motorista-veiculo2, .bg-empresa2 {
+.bg-motorista-veiculo2, .bg-empresa2 {
     margin-bottom: 120px;
 }
 
-.bg-paraMotorista picture img, .bg-motorista-veiculo2 picture img, .bg-empresa2 picture img {
+.bg-motorista-veiculo2 picture img, .bg-empresa2 picture img {
     height: 200px;
     width: 260px;
     object-fit: contain;
 }
 
-.bg-paraMotorista h2, .bg-motorista-veiculo2 h2, .bg-empresa2 h2 {
+.bg-motorista-veiculo2 h2, .bg-empresa2 h2 {
     color: var(--CorPreto);
     font-size: 24px;
     font-weight: var(--FonteSemiBold);
 }
 
-.bg-paraMotorista p, .bg-motorista-veiculo2 p, .bg-empresa2 p {
+.bg-motorista-veiculo2 p, .bg-empresa2 p {
     color: var(--CorPreto);
     font-size: 16px;
     font-weight: var(--FonteLight);
     text-align: justify;
 }
 
-/* === */
-
-/* === Para Cotação === */
-
-.bg-paraCotacao, .bg-motorista-veiculo3, .bg-empresa3 {
+.bg-motorista-veiculo3, .bg-empresa3 {
     margin-bottom: 240px;
 }
 
-.bg-paraCotacao picture img, .bg-motorista-veiculo3 picture img, .bg-empresa3 picture img {
+.bg-motorista-veiculo3 picture img, .bg-empresa3 picture img {
     height: 200px;
     width: 260px;
     object-fit: contain;
 }
 
-.bg-paraCotacao h2, .bg-motorista-veiculo3 h2, .bg-empresa3 h2 {
+.bg-motorista-veiculo3 h2, .bg-empresa3 h2 {
     color: var(--CorPreto);
     font-size: 24px;
     font-weight: var(--FonteSemiBold);
 }
 
-.bg-paraCotacao p, .bg-motorista-veiculo3 p, .bg-empresa3 p {
+.bg-motorista-veiculo3 p, .bg-empresa3 p {
     color: var(--CorPreto);
     font-size: 16px;
     font-weight: var(--FonteLight);
@@ -1062,7 +1153,7 @@ h1 {
     color: var(--CorBase);
     font-size: 32px;
     font-weight: var(--FonteSemiBold);
-    margin-bottom: 16px;
+    margin-bottom: 40px;
 }
 
 .bg-cotacao-formulario .form-control, .form-select {
@@ -1082,10 +1173,17 @@ h1 {
 }
 
 .bg-cotacao-empresas h3 {
-    color: var(--CorBranco2);
+    color: var(--CorBase);
     font-size: 32px;
     font-weight: var(--FonteSemiBold);
     padding: 32px 0;
+}
+
+.bg-cotacao-empresas h4 {
+    color: var(--CorPreto);
+    font-size: 22px;
+    font-weight: var(--FonteNormal);
+    margin: 0 0 16px 0;
 }
 
 .bg-cotacao-comoFunciona p {
@@ -1103,12 +1201,23 @@ h1 {
     background: white;
     border-radius: 50%;
     object-fit: scale-down;
-    margin: 32px 0;
+    margin: 16px 0;
 }
 
 .bg-cotacao-empresas {
-    background-color: var(--CorBase);
+    background-color: var(--CorBranco);
     margin: 160px 0;
+    padding-bottom: 32px;
+}
+
+.bg-cotacao-formulario form i {
+    color: var(--CorPreto);
+}
+
+.bg-cotacao-formulario form i::after {
+    content: "";
+    border-left: 1px solid var(--CorBase);
+    margin: 0 8px;
 }
 
 .label-transporte {
@@ -1133,16 +1242,25 @@ h1 {
     transition: all 0.2s;
 }
 
-.botao-verMais {
+.btn-saibaMais {
     color: var(--CorBranco2);
     background-color: var(--CorBase);
-    padding: 4px 8px;
-    font-size: 16px;
+    padding: 22px 64px;
+    font-size: 24px;
     font-weight: var(--FonteBold);
-    border-radius: 4px;
+    border-radius: 50px;
     border: 1px solid transparent;
-    margin-top: 32px;
     transition: all 0.2s ease-out;
+    position: absolute;
+    bottom: 60px;
+    width: 70%;
+    justify-content: end;
+    align-self: flex-end;
+}
+
+.btn-saibaMais:hover {
+    color: var(--CorBranco);
+    background-color: var(--CorBaseHover);
 }
 
 .footer-botao-enviar:hover, .botao-verMais:hover {

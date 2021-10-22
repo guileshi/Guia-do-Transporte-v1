@@ -84,14 +84,14 @@ $("body").on('click', '.password', function() {
     }
 });
 
-$('.mystaff_hide').hide(); /* Começa Escondido */
-$('#mystuff').change(function(){
+$('.mudanca_hide').hide(); /* Começa Escondido */
+$('#mudanca').change(function(){
          
     if($(this).val() == "opt2"){
-            $('.mystaff_hide').show(); /* Mostrar */
+            $('.mudanca_hide').show(); /* Mostrar */
             $('#valorNota, #peso, #quantidade').attr('required', true);
     }else{
-            $('.mystaff_hide').hide(); /* Esconder */
+            $('.mudanca_hide').hide(); /* Esconder */
             $('#valorNota, #peso, #quantidade').removeAttr('required');
     }
 });

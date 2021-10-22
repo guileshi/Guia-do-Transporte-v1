@@ -63,7 +63,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="cotacao.html" class="nav-link">
                                     <span class="navItemText">
                                         Cotação de Frete
                                     </span>
@@ -101,11 +101,11 @@
                     <h1>Transportadora Mais Cargas</h1>
                     <h2>Encontre cargas, empresas e caminhoneiros</h2>
                     <div class="hero-botoes justify-content-xl-start justify-content-center">
-                        <a href="empresa.html" class="btn btn-danger hero-botoes-empresa anim-botao" role="navigation">
-                            Sou Empresa
-                        </a>
-                        <a href="motorista.html" class="btn btn-secondary hero-botoes-motorista anim-botao" role="navigation">
+                        <a href="empresa.html" class="btn btn-danger hero-botoes-motorista anim-botao" role="navigation">
                             Sou Motorista
+                        </a>
+                        <a href="motorista.html" class="btn btn-secondary hero-botoes-empresa anim-botao" role="navigation">
+                            Sou Empresa
                         </a>
                     </div>
                 </div>
@@ -142,7 +142,7 @@
                                     <div class="col-9">
                                         <div class="card-body">
                                             <h3 class="card-title">
-                                                Empresas anunciam seus cargos
+                                                Empresas anunciam suas cargas 
                                             </h3>
                                             <p class="card-text">
                                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
@@ -166,7 +166,7 @@
                                     <div class="col-9">
                                         <div class="card-body">
                                             <h3 class="card-title">
-                                                Empresas anunciam seus cargos
+                                                Motoristas buscam fretes compativéis ao seu veículo
                                             </h3>
                                             <p class="card-text">
                                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
@@ -188,7 +188,7 @@
                                     <div class="col-9">
                                         <div class="card-body">
                                             <h3 class="card-title">
-                                                Empresas anunciam seus cargos
+                                                Ambos negociam sem intermediação
                                             </h3>
                                             <p class="card-text">
                                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
@@ -207,91 +207,60 @@
     </section>
 
     <section>
-        <div class="container bg-paraEmpresa hide" id="para-empresa">
-            <div class="row">
-                <div class="col-xl-5 col-12 mx-auto position-relative">
-                    <picture class="d-flex justify-content-center py-md-4">
-                        <img src="img/company-building.png" alt="Predio cinza com uma arvore na frente"
-                            class="img-fluid">
-                    </picture>
-                    <div class="bg-circulo-vermelhos rounded-circle behind absolute d-none d-xl-flex" style="
-                    transform: translate(200px, -200px);"></div>
-                </div>
-                <div class="col-xl-7 col-12">
-                    <h2>
-                        Para você, Empresa
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste in esse numquam minus omnis
-                        pariatur vero reiciendis voluptas magnam officiis repellat autem quis, possimus dolorem neque
-                        necessitatibus facilis voluptatum architecto?
-                    </p>
-                    <div class="d-flex justify-content-end">
-                        <a href="empresa.html" class="btn btn-danger botao-verMais anim-botao" role="navigation">
-                            Ver mais
-                        </a>
+        <div class="container bg-carrosel">
+            <div id="carousel-ParaVoce" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="img/caminhoneiro2-vermelho.jpg" class="d-block w-100 img-anim" style="clip-path: polygon(55% 0, 100% 0%, 100% 100%, 44% 100%); object-fit: contain; border-bottom-right-radius: 12px;" alt="...">
+                    <div class="carousel-text">
+                        <h2>Para você, Motorista</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in voluptas quia.
+                        </p>
+                        <button class="btn btn-danger btn-saibaMais d-block anim-botao">
+                            SAIBA MAIS
+                        </button>
                     </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="10000">
+                    <img src="img/caminhoneiro3-vermelho.jpg" class="d-block w-100" style="clip-path: polygon(55% 0, 100% 0%, 100% 100%, 44% 100%); object-fit: contain; border-bottom-right-radius: 12px;" alt="...">
+                    <div class="carousel-text">
+                        <h2>Para você, Empresa</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in voluptas quia.
+                            </p>
+                            <button class="btn btn-danger btn-saibaMais anim-botao">
+                                SAIBA MAIS
+                            </button>
+                      </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="10000">
+                    <img src="img/company-background.jpg" class="d-block w-100" style="clip-path: polygon(55% 0, 100% 0%, 100% 100%, 44% 100%); object-fit: contain; border-bottom-right-radius: 12px;" alt="...">
+                    <div class="carousel-text">
+                        <h2>Faça sua cotação</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in voluptas quia.
+                            </p>
+                            <button class="btn btn-danger btn-saibaMais anim-botao">
+                                SAIBA MAIS
+                            </button>
+                      </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="container bg-paraMotorista hide" id="para-motorista">
-            <div class="row">
-                <div class="col-xl-5 col-12 d-xl-none d-block position-relative">
-                    <picture class="d-xl-none d-flex justify-content-center py-md-2">
-                        <img src="img/van-vermelha.png" alt="Van vermelha" class="img-fluid">
-                    </picture>
-                </div>
-                <div class="col-xl-7 col-12">
-                    <h2>
-                        Para você, Motorista
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste in esse numquam minus omnis
-                        pariatur vero reiciendis voluptas magnam officiis repellat autem quis, possimus dolorem neque
-                        necessitatibus facilis voluptatum architecto?
-                    </p>
-                    <div class="d-flex justify-content-start">
-                        <a href="motorista.html" class="btn btn-danger botao-verMais anim-botao" role="navigation">
-                            Ver mais
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-12 position-relative">
-                    <picture class="d-xl-flex d-none justify-content-center">
-                        <img src="img/van-vermelha.png" alt="Van vermelha" class="img-fluid">
-                    </picture>
-                    <div class="bg-circulo-vermelhos rounded-circle behind absolute d-none d-xl-flex"
-                        style="transform: translate(250px, -200px);"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container bg-paraCotacao hide" id="para-cotacao">
-            <div class="row">
-                <div class="col-xl-5 col-12">
-                    <picture class="d-flex justify-content-center py-md-4">
-                        <img src="img/fills-form-vermelho.png" alt="Preenchendo um formúlario" class="img-fluid">
-                    </picture>
-                    <div class="bg-circulo-vermelhos rounded-circle behind absolute d-none d-xl-flex"
-                        style="transform: translate(170px, -200px);"></div>
-                </div>
-                <div class="col-xl-7 col-12">
-                    <h2>
-                        Solicite sua cotação
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste in esse numquam minus omnis
-                        pariatur vero reiciendis voluptas magnam officiis repellat autem quis, possimus dolorem neque
-                        necessitatibus facilis voluptatum architecto?
-                    </p>
-                    <div class="d-flex justify-content-end">
-                        <a href="empresa.html" class="btn btn-danger botao-verMais anim-botao" role="navigation">
-                            Ver mais
-                        </a>
-                    </div>
-                </div>
-            </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide="prev">
+                  <span><i class="fas fa-angle-left"></i></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide="next">
+                    <span><i class="fas fa-angle-right"></i></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
     </section>
 
