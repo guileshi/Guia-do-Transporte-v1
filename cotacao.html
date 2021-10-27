@@ -49,7 +49,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="#contato" class="nav-link scroll-page">
                                     <span class="navItemText">
                                         Contato
                                     </span>
@@ -63,26 +63,26 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="cotacao.html" class="nav-link">
                                     <span class="navItemText">
                                         Cotação de Frete
                                     </span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <!-- <a href="#" class="btn nav-link" type="button" role="button">
-                                    <span class="navItemText botao-entrar">
-                                        Entrar
-                                    </span>
-                                </a> -->
+                            <li class="nav-item" id="botao-entrar">
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle botao-entrar" type="button"
                                         id="dropdownEntrar" data-bs-toggle="dropdown" aria-expanded="false">
                                         Entrar
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownEntrar">
-                                        <li><a class="dropdown-item" href="#">Sou Empresa</a></li>
-                                        <li><a class="dropdown-item" href="#">Sou Motorista</a></li>
+                                        <li><a class="dropdown-item" href="entrar-empresa.html" role="navigation">Sou
+                                                Empresa</a></li>
+                                        <li><a class="dropdown-item" href="entrar-motorista.html" role="navigation">Sou
+                                                Motorista</a></li>
+                                        <div class="horizontal-bar"></div>
+                                        <li class="navbar-cadastrar"><a class="dropdown-item dropdown-cadastrar"
+                                                href="cadastrar.html" role="navigation">Cadastrar-se</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -110,8 +110,7 @@
             <div class="row">
                 <div class="col-12 bg-cotacao-formulario mx-auto">
                     <h2 class="text-center">Solicitar uma Cotação</h2>
-
-                    <form role="form" class="form-floating row needs-validation" aria-label="Formulario de Cotação">
+                    <form role="form" class="form-floating row" aria-label="Formulario de Cotação">
                         <div class="py-2">
                             <label for="mudanca" class="form-label label-transporte">Selecione o
                                 tipo de Transporte</label>
@@ -120,62 +119,64 @@
                                 <option value="opt2">Transporte de Cargas</option>
                             </select>
                         </div>
-
                         <div class="form-floating py-2 col-xl-6 form-group">
                             <input type="text" class="form-control" id="cidadeOrigem" name="cidadeOrigem"
                                 placeholder="Ex.: São Paulo" required aria-required="true"
                                 aria-labelledby="cidadeOrigem" aria-hidden="false">
-                            <label for="cidadeOrigem" class="isRequired form-label px-4 py-4"><i class="fas fa-building"></i>Cidade de Origem</label>
+                            <label for="cidadeOrigem" class="isRequired form-label px-4 py-4"><i
+                                    class="fas fa-building"></i>Cidade de Origem</label>
                         </div>
-
                         <div class="form-floating py-2 col-xl-6 form-group">
                             <input type="text" class="form-control" id="cidadeFinal" name="cidadeFinal"
                                 placeholder="Ex.: Rio de Janeiro" required aria-required="true"
                                 aria-labelledby="cidadeFinal" aria-hidden="false">
-                            <label for="cidadeFinal" class="isRequired form-label px-4 py-4"><i class="far fa-building"></i>Cidade de Destino</label>
+                            <label for="cidadeFinal" class="isRequired form-label px-4 py-4"><i
+                                    class="far fa-building"></i>Cidade de Destino</label>
                         </div>
-
                         <div class="container">
                             <div class="mudanca_hide mudanca_opt1 row">
                                 <div class="form-floating py-2 col-xl-4 form-group">
                                     <input type="number" class="form-control" id="valorNota" name="valorNota"
                                         placeholder="Ex.: 201" required aria-required="true" aria-labelledby="valorNota"
                                         aria-hidden="false">
-                                    <label for="valorNota" class="isRequired form-label px-4 py-4"><i class="fas fa-dollar-sign"></i>Valor de Nota(R$)  </label>
+                                    <label for="valorNota" class="isRequired form-label px-4 py-4"><i
+                                            class="fas fa-dollar-sign"></i>Valor de Nota(R$) </label>
                                 </div>
                                 <div class="form-floating py-2 col-xl-4 form-group">
                                     <input type="number" class="form-control" id="quantidade" name="quantidade"
                                         placeholder="exemplo@dominio.com.br" required aria-required="true"
                                         aria-labelledby="quantidade" aria-hidden="false">
-                                    <label for="quantidade" class="isRequired form-label px-4 py-4"><i class="fas fa-dolly-flatbed"></i>Quantidade</label>
+                                    <label for="quantidade" class="isRequired form-label px-4 py-4"><i
+                                            class="fas fa-dolly-flatbed"></i>Quantidade</label>
                                 </div>
                                 <div class="form-floating py-2 col-xl-4 form-group">
                                     <input type="number" class="form-control" id="peso" name="peso"
                                         placeholder="exemplo@dominio.com.br" required aria-required="true"
                                         aria-labelledby="peso" aria-hidden="false">
-                                    <label for="peso" class="isRequired form-label px-4 py-4"><i class="fas fa-balance-scale"></i>Peso</label>
+                                    <label for="peso" class="isRequired form-label px-4 py-4"><i
+                                            class="fas fa-balance-scale"></i>Peso</label>
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-floating py-2 col-xl-6 form-group">
                             <input type="text" class="form-control" id="nome" name="nome" placeholder="Ex.: João Vitor"
                                 required aria-required="true" aria-labelledby="nome" aria-hidden="false">
-                            <label for="nome" class="isRequired form-label px-4 py-4"><i class="fas fa-user"></i>Nome</label>
+                            <label for="nome" class="isRequired form-label px-4 py-4"><i
+                                    class="fas fa-user"></i>Nome</label>
                         </div>
                         <div class="form-floating py-2 col-xl-6 form-group">
                             <input type="tel" class="form-control" id="telefone" name="telefone"
                                 placeholder="Ex.: 1234-5678" aria-labelledby="telefone" aria-hidden="false">
-                            <label for="telefone" class="form-label px-4 py-4"><i class="fas fa-phone"></i>Telefone</label>
+                            <label for="telefone" class="form-label px-4 py-4"><i
+                                    class="fas fa-phone"></i>Telefone</label>
                         </div>
-
                         <div class="form-floating py-2 col-xl-12 form-group">
                             <input type="email" class="form-control" id="email" name="email"
                                 placeholder="exemplo@dominio.com.br" required aria-required="true"
                                 aria-labelledby="email" aria-hidden="false">
-                            <label for="email" class="isRequired form-label px-4 py-4"><i class="fas fa-envelope"></i>Email</label>
+                            <label for="email" class="isRequired form-label px-4 py-4"><i
+                                    class="fas fa-envelope"></i>Email</label>
                         </div>
-
                         <div class="form-group py-2">
                             <label for="motivoContato" id="observações" name="observações" aria-labelledby="observações"
                                 aria-hidden="false">Observações</label>
@@ -183,7 +184,6 @@
                                 favor enviar a relação dos móveis a serem transportados.)</small>
                             <textarea class="form-control" id="motivoContato" rows="3"></textarea>
                         </div>
-
                         <div class="d-block w-50 mx-auto">
                             <button class="btn btn-danger btn-cotacao anim-botao" type="submit" role="button">
                                 Enviar

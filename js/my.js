@@ -44,26 +44,14 @@ $(window).scroll(function (e) {
             document.getElementById('logoImg').src = "img/logo-2.png"
         }
     }
-    // console.log("Scroll: " + scroll)
-});
-
-$("body").on('click', '.confirm-password', function() {
-    $(this).toggleClass("fa-eye fa-eye-slash");
-    var input = $("#confirm-password");
-    if (input.attr("type") === "password") {
-      input.attr("type", "text");
-    } else {
-      input.attr("type", "password");
-    }
-});
-
-$("body").on('click', '.password', function() {
-    $(this).toggleClass("fa-eye fa-eye-slash");
-    var input = $("#password");
-    if (input.attr("type") === "password") {
-      input.attr("type", "text");
-    } else {
-      input.attr("type", "password");
+    if(scroll >= 1000 && scroll <= 2400){
+        $('.bg-numeros').addClass("slideLeft")
+        $('.bg-numeros-cards').addClass("unHide")
+        $('.bg-numeros-cards').removeClass("hide")
+    } else{
+        $('.bg-numeros').removeClass("slideLeft")
+        $('.bg-numeros-cards').addClass("hide")
+        $('.bg-numeros-cards').removeClass("unHide")        
     }
 });
 
@@ -94,3 +82,14 @@ $('.contar').counterUp({
     time: 1000,
     delay: 10
 });
+
+(function ($) {
+    /*Efeito de rolagem de tela para os links clicados */
+    var $doc = $('html,body');
+    $(".scroll-page").click(function () {
+        $doc.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+        return false;
+    })
+})(jQuery);
