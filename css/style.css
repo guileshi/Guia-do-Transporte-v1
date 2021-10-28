@@ -1470,6 +1470,9 @@ h1 {
     .navLogo {
         padding: 8px 0;
     }
+    #navbar .nav-item{
+        background-color: white;
+    }
     .bg-aplicativoInfo {
         width: auto;
     }
@@ -1537,6 +1540,7 @@ h1 {
     }
     .bg-hero {
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        background-position: -300px 70px;
     }
     .hero-botoes {
         display: block;
@@ -1685,6 +1689,9 @@ h1 {
 /* Tablet */
 
 @media (min-width: 768px) and (max-width: 1025px) {
+    #navbar .nav-item{
+        background-color: white;
+    }
     .hero-content {
         margin-top: -820px;
     }

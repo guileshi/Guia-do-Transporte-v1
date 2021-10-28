@@ -44,14 +44,10 @@ $(window).scroll(function (e) {
             document.getElementById('logoImg').src = "img/logo-2.png"
         }
     }
-    if(scroll >= 1000 && scroll <= 2400){
+    if(scroll >= 1000){
         $('.bg-numeros').addClass("slideLeft")
         $('.bg-numeros-cards').addClass("unHide")
         $('.bg-numeros-cards').removeClass("hide")
-    } else{
-        $('.bg-numeros').removeClass("slideLeft")
-        $('.bg-numeros-cards').addClass("hide")
-        $('.bg-numeros-cards').removeClass("unHide")        
     }
 });
 
