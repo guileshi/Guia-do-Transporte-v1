@@ -17,9 +17,23 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body id="motorista">
     <!-- Navbar -->
     <header class="fixed-top topbar-hide" id="navbar">
+        <section class="bg-baixeApp hide">
+            <div class="container">
+                <div class="row pt-1 pb-2">
+                        <div class="col-8 d-flex">
+                            <p class="text-center my-auto mx-auto">Baixe agora o aplicativo</p>
+                        </div>
+                        <div class="col-4 d-flex">
+                            <a class="btn btn-danger btn-baixarApp mx-auto" role="button" type="btn">
+                                Baixar
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </section>
         <div class="bg_navbar">
             <div class="container p-0">
                 <nav class="navbar navbar-expand-xl navbar-light" role="navigation">
@@ -93,6 +107,41 @@
         </div>
     </header>
 
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="d-flex justify-content-end ">
+                    <button type="button" class="modal-close" data-bs-dismiss="modal">
+                        X
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <img src="img/homem-celular.jpg" class="img-modal" alt="Celular do MaisCargas">
+                            </div>
+                            <div class="col-12 motorista-modal">
+                                <h2 class="text-center">
+                                    No celular dos motoristas
+                                </h2>
+                                <h3 class="text-center">Conectamos seu caminhão com fretes na ida e na volta</h3>
+                                <h4 class="text-center">Baixe agora nosso aplicativo</h4>
+                                <p class="text-center mx-auto">MaisCargas é o aplicativo de fretes preferido dos caminhoneiros, com a melhor avaliaçao na Play Store</p>
+                                <div class="d-flex justify-content-center links-modal">
+                                    <a href="#"><img src="img/google-play-button.png" alt="Aplicativo do Google Play"
+                                            class="img-fluid anim-botao"></a>
+                                    <a href="#"><img src="img/app-store-button.png" alt=" Aplicativo da App Store"
+                                            class="img-fluid anim-botao"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section>
         <div class="container-fluid bg-hero-motorista" style="padding: 0;"></div>
         <div class="container">
@@ -106,7 +155,35 @@
     </section>
 
     <section>
-        <div class="container bg-motorista-veiculo1">
+        <div class="container bg-motorista-veiculo">
+            <div class="row">
+                <div class="col-xl-5 col-12 d-xl-none d-block position-relative">
+                    <picture class="d-xl-none d-flex justify-content-center mb-lg-0 mb-4">
+                        <img src="img/celular-v2.png" alt="Celular com o aplicativo do MaisCargas" class="img-fluid">
+                    </picture>
+                </div>
+                <div class="col-xl-7 col-12 my-auto">
+                    <h2 class="text-center text-lg-start">
+                        Baixe o aplicativo do Mais Cargas
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste in esse numquam minus omnis
+                        pariatur vero reiciendis voluptas magnam officiis repellat autem quis, possimus dolorem neque
+                        necessitatibus <a href="#" target="_blank" class="link-primary link-externo">clique aqui para
+                            baixar</a>.
+                    </p>
+                </div>
+                <div class="col-xl-5 col-12 position-relative">
+                    <picture class="d-xl-flex d-none justify-content-center">
+                        <img src="img/celular-v2.png" alt="Van vermelha" class="img-fluid">
+                    </picture>
+                    <div class="bg-circulo-vermelhos rounded-circle behind absolute d-none d-xl-flex"
+                        style="transform: translate(180px, -150px);"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container bg-motorista-veiculo">
             <div class="row">
                 <div class="col-xl-5 col-12 mx-auto position-relative">
                     <picture class="d-flex justify-content-center py-md-4">
@@ -116,8 +193,8 @@
                     <div class="bg-circulo-vermelhos rounded-circle behind absolute d-none d-xl-flex" style="
                     transform: translate(160px, -200px);"></div>
                 </div>
-                <div class="col-xl-7 col-12">
-                    <h2>
+                <div class="col-xl-7 col-12 my-auto">
+                    <h2 class="text-center text-lg-start">
                         Busque a carga ideal para você
                     </h2>
                     <p>
@@ -129,15 +206,15 @@
             </div>
         </div>
 
-        <div class="container bg-motorista-veiculo2">
+        <div class="container bg-motorista-veiculo">
             <div class="row">
                 <div class="col-xl-5 col-12 d-xl-none d-block position-relative">
                     <picture class="d-xl-none d-flex justify-content-center py-md-2">
                         <img src="img/veiculo-moto.png" alt="Van vermelha" class="img-fluid">
                     </picture>
                 </div>
-                <div class="col-xl-7 col-12">
-                    <h2>
+                <div class="col-xl-7 col-12 my-auto">
+                    <h2 class="text-center text-lg-start">
                         Não importa o veículo!
                     </h2>
                     <p>
@@ -156,7 +233,7 @@
             </div>
         </div>
 
-        <div class="container bg-motorista-veiculo3">
+        <div class="container bg-motorista-veiculo">
             <div class="row">
                 <div class="col-xl-5 col-12">
                     <picture class="d-flex justify-content-center py-md-4">
@@ -165,8 +242,8 @@
                     <div class="bg-circulo-vermelhos rounded-circle behind absolute d-none d-xl-flex"
                         style="transform: translate(180px, -200px);"></div>
                 </div>
-                <div class="col-xl-7 col-12">
-                    <h2>
+                <div class="col-xl-7 col-12 my-auto">
+                    <h2 class="text-center text-lg-start">
                         Sem intermediação!
                     </h2>
                     <p>
@@ -180,14 +257,16 @@
     </section>
 
     <section>
-        <div class="container-fluid bg-cadastrar" style="margin-bottom: 120px;">
+        <div class="container-fluid bg-cadastrar">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-12">
-                        <a href="cadastrar-motorista.html" class="btn btn-danger btn-link-cadastrar anim-botao" role="navigation"><span>Cadastrar-se GRÁTIS agora mesmo!</span></a>
+                        <a href="cadastrar-motorista.html" class="btn btn-danger btn-link-cadastrar anim-botao"
+                            role="navigation"><span>Cadastrar-se GRÁTIS agora mesmo!</span></a>
                     </div>
                     <div class="col-xl-6 col-12 mt-2 mt-xl-0">
-                        <a href="entrar-motorista.html" class="btn btn-danger btn-link-entrar anim-botao" role="navigation"><span>Já é cadastrado? Entrar</span></a>
+                        <a href="entrar-motorista.html" class="btn btn-danger btn-link-entrar anim-botao"
+                            role="navigation"><span>Já é cadastrado? Entrar</span></a>
                     </div>
                 </div>
             </div>
@@ -209,9 +288,9 @@
                             melhor avaliaçao na Play Store
                     </h3>
                     <div class="d-flex justify-content-center links-aplicativo">
-                        <a href="#"><img src="img/googlePlay1-preto.png" alt="Aplicativo do Google Play"
+                        <a href="#"><img src="img/google-play-button.png" alt="Aplicativo do Google Play"
                                 class="img-fluid googlePlay anim-botao"></a>
-                        <a href="#"><img src="img/appStore-preto.png" alt=" Aplicativo da App Store"
+                        <a href="#"><img src="img/app-store-button.png" alt=" Aplicativo da App Store"
                                 class="img-fluid anim-botao"></a>
                     </div>
                 </div>
@@ -340,6 +419,7 @@
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/waypoints.min.js"></script>
     <script src="js/my.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>

@@ -7,6 +7,7 @@ $(window).load(function () {
         celular = true;
         document.getElementById('logoImg').src = "img/logo-2-vermelho.png"
         console.log("Celular")
+        $(".bg-baixeApp").removeClass('hide')
         // console.log("Tela menor que 580 pixels")
     } else if (window.screen.width > 767.98 && window.screen.width <= 1024) {
         tablet = true;
@@ -26,7 +27,6 @@ $(window).load(function () {
         
         $("#carousel-butons").addClass("hide")
     }
-
     // console.log(`Celular = ${celular}, Tablet = ${tablet}, PC = ${pc}`)
 });
 
@@ -43,11 +43,6 @@ $(window).scroll(function (e) {
             $('#navbar').addClass('topbar-hide')
             document.getElementById('logoImg').src = "img/logo-2.png"
         }
-    }
-    if(scroll >= 1000){
-        $('.bg-numeros').addClass("slideLeft")
-        $('.bg-numeros-cards').addClass("unHide")
-        $('.bg-numeros-cards').removeClass("hide")
     }
 });
 
@@ -76,7 +71,7 @@ $("#botao-entrar").mouseleave(function () {
 /*Inicializar nosso contador */
 $('.contar').counterUp({
     time: 1000,
-    delay: 10
+    delay: 20
 });
 
 (function ($) {

@@ -20,6 +20,20 @@
 <body>
     <!-- Navbar -->
     <header class="fixed-top topbar-hide" id="navbar">
+        <section class="bg-baixeApp hide">
+            <div class="container">
+                <div class="row pt-1 pb-2">
+                        <div class="col-8 d-flex">
+                            <p class="text-center my-auto mx-auto">Baixe agora o aplicativo</p>
+                        </div>
+                        <div class="col-4 d-flex">
+                            <a class="btn btn-danger btn-baixarApp mx-auto" role="button" type="btn">
+                                Baixar
+                            </a>
+                        </div>
+                </div>
+            </div>
+        </section>
         <div class="bg_navbar">
             <div class="container p-0">
                 <nav class="navbar navbar-expand-xl navbar-light" role="navigation">
@@ -120,6 +134,7 @@
         </div>
     </section>
 
+    
     <section>
         <div class="container-fluid bg-comoFunciona">
             <div class="container">
@@ -133,15 +148,15 @@
                         </picture>
                     </div>
 
-                    <div class="row col-xl-6 col-sm-12">
+                    <div class="col-xl-6 col-sm-12">
                         <div class="col-12 justify-xl-content-start justify-content-center d-flex">
-                            <div class="card sombra-caixa">
+                            <div class="card sombra-caixa" id="comoFunciona-card1">
                                 <div class="row">
-                                    <div class="col-3 position-relative my-sm-auto">
+                                    <div class="col-4 position-relative mx-auto">
                                         <img src="img/homem-carrinhoDeMao.png" alt="Homem carregando um caminhão de mão"
                                             class="img-fluid">
                                     </div>
-                                    <div class="col-9">
+                                    <div class="col-8">
                                         <div class="card-body">
                                             <h3 class="card-title">
                                                 Empresas anunciam suas cargas
@@ -153,19 +168,18 @@
                                             </p>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
-                            <div class="bg-pontos-vermelhos absolute d-xl-flex d-none"
-                                style="transform: translate(-230px, -30px)"></div>
+                            <!-- <div class="bg-pontos-vermelhos absolute d-xl-flex d-none"
+                                style="transform: translate(-230px, -30px)"></div> -->
                         </div>
                         <div class="col-12 justify-xl-content-start justify-content-center d-flex">
-                            <div class="card sombra-caixa">
+                            <div class="card sombra-caixa" id="comoFunciona-card2">
                                 <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <img src="img/caminhao-vermelho.png" alt="Caminhão vermelho" class="img-fluid">
                                     </div>
-                                    <div class="col-9">
+                                    <div class="col-8">
                                         <div class="card-body">
                                             <h3 class="card-title">
                                                 Motoristas buscam fretes compativéis ao seu veículo
@@ -181,13 +195,13 @@
                             </div>
                         </div>
                         <div class="col-12 justify-xl-content-start justify-content-center d-flex">
-                            <div class="card sombra-caixa">
+                            <div class="card sombra-caixa" id="comoFunciona-card3">
                                 <div class="row">
-                                    <div class="col-3">
+                                    <div class="col-4">
                                         <img src="img/handshake-vermelho.png" alt="Duas mãos fazendo um acordo"
                                             class="img-fluid">
                                     </div>
-                                    <div class="col-9">
+                                    <div class="col-8">
                                         <div class="card-body">
                                             <h3 class="card-title">
                                                 Ambos negociam sem intermediação
@@ -222,7 +236,7 @@
                             Números em constante crescimento
                         </h3>
                     </div>
-                    <div class="col-xl-4 col-12 d-flex hide bg-numeros-cards">
+                    <div class="col-xl-4 col-12 d-flex bg-numeros-cards" style="opacity: 0;" id="bg-numeros-card1">
                         <div class="mx-auto">
                             <div class="card sombra-caixa">
                                 <div class="card-title mx-auto bg-numeros-icones">
@@ -237,7 +251,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-12 d-flex hide bg-numeros-cards">
+                    <div class="col-xl-4 col-12 d-flex bg-numeros-cards" style="opacity: 0;" id="bg-numeros-card2">
                         <div class="mx-auto">
                             <div class="card sombra-caixa">
                                 <div class="card-title mx-auto bg-numeros-icones">
@@ -252,7 +266,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-12 d-flex hide bg-numeros-cards">
+                    <div class="col-xl-4 col-12 d-flex bg-numeros-cards" style="opacity: 0;" id="bg-numeros-card3">
                         <div class="mx-auto">
                             <div class="card sombra-caixa">
                                 <div class="card-title mx-auto bg-numeros-icones">
@@ -285,7 +299,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="5000">
-                            <img src="img/carrosel-motorista-vermelho.jpg" alt="" class="d-block w-100">
+                        <img src="img/carrosel-motorista-vermelho.jpg" alt="" class="d-block w-100">
                         <div class="carousel-text mx-auto d-block">
                             <h2>Para você, Motorista</h2>
                             <p>
@@ -314,31 +328,31 @@
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
                         <img src="img/carrosel-cotacao-vermelho.jpg" alt="" class="d-block w-100 carousel-img">
-                                <div class=" carousel-text">
-                        <h2>Faça sua cotação</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in
-                            voluptas quia.
-                        </p>
-                        <a href="cotacao.html" class="btn btn-danger btn-saibaMais d-block mx-auto anim-botao">
-                            SAIBA MAIS
-                        </a>
+                        <div class=" carousel-text">
+                            <h2>Faça sua cotação</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in
+                                voluptas quia.
+                            </p>
+                            <a href="cotacao.html" class="btn btn-danger btn-saibaMais d-block mx-auto anim-botao">
+                                SAIBA MAIS
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div id="carousel-butons">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-ParaVoce"
+                        data-bs-slide="prev" id="carousel-control-prev">
+                        <span><i class="fas fa-angle-left"></i></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-ParaVoce"
+                        data-bs-slide="next" id="carousel-control-next">
+                        <span><i class="fas fa-angle-right"></i></span>
+                        <span class="visually-hidden">Proximo</span>
+                    </button>
+                </div>
             </div>
-            <div id="carousel-butons">
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-ParaVoce"
-                    data-bs-slide="prev" id="carousel-control-prev">
-                    <span><i class="fas fa-angle-left"></i></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel-ParaVoce"
-                    data-bs-slide="next" id="carousel-control-next">
-                    <span><i class="fas fa-angle-right"></i></span>
-                    <span class="visually-hidden">Proximo</span>
-                </button>
-            </div>
-        </div>
     </section>
 
     <section>
@@ -356,9 +370,9 @@
                             melhor avaliaçao na Play Store
                     </h3>
                     <div class="d-flex justify-content-center links-aplicativo">
-                        <a href="#"><img src="img/googlePlay1-preto.png" alt="Aplicativo do Google Play"
+                        <a href="#"><img src="img/google-play-button.png" alt="Aplicativo do Google Play"
                                 class="img-fluid googlePlay anim-botao"></a>
-                        <a href="#"><img src="img/appStore-preto.png" alt=" Aplicativo da App Store"
+                        <a href="#"><img src="img/app-store-button.png" alt=" Aplicativo da App Store"
                                 class="img-fluid anim-botao"></a>
                     </div>
                 </div>
@@ -487,6 +501,7 @@
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/waypoints.min.js"></script>
     <script src="js/my.js"></script>
+    <script src="js/intersection-observer.js"></script>
 </body>
 
 </html>
