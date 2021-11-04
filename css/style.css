@@ -235,6 +235,10 @@ h1 {
     margin-right: 32px;
 }
 
+.navbar-light .navbar-toggler{
+    border: none !important;
+}
+
 /* === */
 
 /* === Navbar === */
