@@ -393,6 +393,7 @@ h1 {
     -webkit-transition: color .2s;
 }
 
+
 #navbar .botao-entrar:hover {
     color: var(--CorCinza) !important;
     background: var(--CorBaseHover);
@@ -403,6 +404,9 @@ h1 {
     font-weight: var(--FonteSemiBold);
     border-radius: 4px;
     padding: 8px;
+}
+#navbar .dropdown-item:active{
+    background-color: var(--CorCinza);
 }
 
 #menuNav ul .dropdown .dropdown-item:hover {
@@ -429,7 +433,7 @@ h1 {
 }
 
 #navbar .dropdown-cadastrar:hover {
-    color: var(--CorBranco) !important;
+    color: var(--CorCinza) !important;
     background-color: var(--CorBaseHover) !important;
 }
 
