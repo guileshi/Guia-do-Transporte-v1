@@ -4,78 +4,96 @@ var pc;
 
 $(window).load(function () {
     if (window.screen.width < 576.98) {
+
+        $('.topbar').addClass('mobile')
+        $('.filter').addClass('mobile')
+        $('.topbar').addClass('container-fluid')
+        $('.topbar').removeClass('container')
+        $('#topbar__logo__mobile').css("display", "block");
+        $('#topbar__logo__desktop').css("display", "none");
+        $('.download-app').css("display", "block")
+        $('.explanation__subtitle').text("Procure a transportadora pela rota e faça cotação online sem precisar se cadastrar.")
+        $('.quotation__form__btn--icon').html("<i class='fas fa-search fa-lg'></i>" + " <span>PESQUISAR</span>")
+        $('.rotes').addClass('mobile')
+
+        if($('#sidebar').hasClass('mobile')){
+            $('.sidebar').css("right", "initial")
+        }
+
+        addLanguageScript = function(name) {
+            var head = document.getElementsByTagName("head")[0],
+                script = document.createElement('script');
+        
+            script.type = 'text/javascript'
+            script.src = "js/" + name + '.js'
+            head.appendChild(script);
+        };
+        addLanguageScript('intersection-observer-mobile');
+
         celular = true;
-        document.getElementById('logoImg').src = "img/logo-2-vermelho.png"
         console.log("Celular")
-        $(".bg-baixeApp").removeClass('hide')
-        // console.log("Tela menor que 580 pixels")
     } else if (window.screen.width > 767.98 && window.screen.width <= 1024) {
+        
+        $('.topbar').addClass('mobile')
+        $('.filter').addClass('mobile')
+        $('.topbar').addClass('container-fluid')
+        $('.topbar').removeClass('container')
+        $('#topbar__logo__mobile').css("display", "block");
+        $('#topbar__logo__desktop').css("display", "none");
+        $('.download-app').css("display", "block")
+
+        if($('#sidebar').hasClass('mobile')){
+            $('.sidebar').css("right", "initial")
+        }
+
+        addLanguageScript = function(name) {
+            var head = document.getElementsByTagName("head")[0],
+                script = document.createElement('script');
+        
+            script.type = 'text/javascript'
+            script.src = "js/" + name + '.js'
+            head.appendChild(script);
+        };
+        addLanguageScript('intersection-observer-tablet');
+
         tablet = true;
-        document.getElementById('logoImg').src = "img/logo-2-vermelho.png"
         console.log("Tablet")
-        // console.log("Tela maior que 700 pixels")
     } else if (window.screen.width > 1025) {
+
+        $('.topbar__divider').css("display", "block");
         pc = true;
         console.log("Computador")
-        // console.log("Tela maior que 1000px")
-    }
-
-    if (celular == true || tablet == true) {
-        $('#navbar').removeClass('topbar-hide')
-
-        $('.btn-link-cadastrar').text("Cadastrar-se")
+        addLanguageScript = function(name) {
+            var head = document.getElementsByTagName("head")[0],
+                script = document.createElement('script');
         
-        $("#carousel-butons").addClass("hide")
+            script.type = 'text/javascript'
+            script.src = "js/" + name + '.js'
+            head.appendChild(script);
+        };
+        addLanguageScript('intersection-observer');
     }
-    // console.log(`Celular = ${celular}, Tablet = ${tablet}, PC = ${pc}`)
+
 });
 
-$(window).scroll(function (e) {
-    // add/remove class to navbar when scrolling to hide/show
-    var scroll = $(window).scrollTop(); // Variavel para pegar o scroll
+$('.topbar_list--btn').click(function(){
+    $('.sidebar').toggleClass('no__collapse')
+    $('#filter--blue').css("display", "block")
+})
+$('#filter--blue').click(function(){
+    $(this).css("display", "none")
+    $('.sidebar').toggleClass('no__collapse')
+})
 
-    if (pc == true) {
-        if (scroll != 0) {
-            $('#navbar').removeClass('topbar-hide')
-            document.getElementById('logoImg').src = "img/logo-2-vermelho.png"
-        }
-        else {
-            $('#navbar').addClass('topbar-hide')
-            document.getElementById('logoImg').src = "img/logo-2.png"
-        }
-    }
-});
-
-$('.mudanca_hide').hide(); /* Começa Escondido */
-$('#mudanca').change(function(){
-         
-    if($(this).val() == "opt2"){
-            $('.mudanca_hide').show(); /* Mostrar */
-            $('#valorNota, #peso, #quantidade').attr('required', true);
-    }else{
-            $('.mudanca_hide').hide(); /* Esconder */
-            $('#valorNota, #peso, #quantidade').removeAttr('required');
-    }
-});
-
-$("#botao-entrar").mouseenter(function () {     
-    $(".dropdown-menu").addClass("show");
-});
-
-$("#botao-entrar").mouseleave(function () {     
-    $(".dropdown-menu").removeClass("show");
-});
-
-
+// Iniciar contador de numeros
 "use strict";
-/*Inicializar nosso contador */
 $('.contar').counterUp({
     time: 1000,
     delay: 20
 });
 
+// Efeito de rolagem
 (function ($) {
-    /*Efeito de rolagem de tela para os links clicados */
     var $doc = $('html,body');
     $(".scroll-page").click(function () {
         $doc.animate({
@@ -84,3 +102,22 @@ $('.contar').counterUp({
         return false;
     })
 })(jQuery);
+
+function onChangeText(e, classname) {
+    if(e.value){
+        $(`.${classname}`).addClass('filled')
+        $(`.${classname}`).removeClass('empty')
+    } else{
+        $(`.${classname}`).addClass('empty')
+        $(`.${classname}`).removeClass('filled')
+    }
+}
+
+function onFocus(classname) {
+    $(`.${classname}`).addClass('focused')
+    $(`.${classname}`).removeClass('blur')
+}
+function onBlur(classname) {
+    $(`.${classname}`).removeClass('focused')
+    $(`.${classname}`).addClass('blur')
+}

@@ -5,216 +5,1113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mais Cargas - Transportadora</title>
+    <title>O Melhor Guia de Transporte - Guia do Transporte</title>
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- CSS Personalizada -->
     <link rel="stylesheet" href="css/style.css">
     <!-- CSS Font-Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
-        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="vendor/fontawesome-free-5.15.4-web/css/all.min.css">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <header class="fixed-top topbar-hide" id="navbar">
-        <section class="bg-baixeApp hide">
-            <div class="container">
-                <div class="row pt-1 pb-2">
-                        <div class="col-8 d-flex">
-                            <p class="text-center my-auto mx-auto">Baixe agora o aplicativo</p>
-                        </div>
-                        <div class="col-4 d-flex">
-                            <a class="btn btn-danger btn-baixarApp mx-auto" role="button" type="btn">
-                                Baixar
-                            </a>
-                        </div>
+    <section class="mobile" id="sidebar">
+        <div class="filter" id="filter--blue"></div>
+        <div class="sidebar container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="sidebar__logo"></div>
                 </div>
-            </div>
-        </section>
-        <div class="bg_navbar">
-            <div class="container p-0">
-                <nav class="navbar navbar-expand-xl navbar-light" role="navigation">
-                    <a href="index.html" class="nav-link navLogo">
-                        <!-- Logo / Texto -->
-                        <img src="img/logo-2.png" alt="Logo Mais Cargas" id="logoImg">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
-                        aria-controls="menu" aria-expanded="false" aria-label="Menu colapso">
-                        <span class="navbar-toggler-icon text-dark"></span>
-                    </button>
-                    <div id="menuNav" class="collapse navbar-collapse justify-content-end">
-                        <ul class="navbar-nav ml-auto">
-                            <!-- Links -->
-                            <li class="nav-item">
-                                <a href="index.html" class="nav-link">
-                                    <span class="navItemText">
-                                        Início
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <span class="navItemText">
-                                        Sobre
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#contato" class="nav-link scroll-page">
-                                    <span class="navItemText">
-                                        Contato
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <span class="navItemText">
-                                        Fretes
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="cotacao.html" class="nav-link">
-                                    <span class="navItemText">
-                                        Cotação de Frete
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item" id="botao-entrar">
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle botao-entrar" type="button"
-                                        id="dropdownEntrar" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Entrar
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownEntrar">
-                                        <li><a href="entrar-empresa.html" class="dropdown-item"  role="navigation" type="button">Sou
-                                                Empresa</a></li>
-                                        <li><a href="entrar-motorista.html" class="dropdown-item"  role="navigation" type="button">Sou
-                                                Motorista</a></li>
-                                        <div class="horizontal-bar"></div>
-                                        <li class="navbar-cadastrar"><a class="dropdown-item dropdown-cadastrar"
-                                                href="cadastrar.html" role="navigation">Cadastrar-se</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                <ul class="sidebar__list" role="navigation">
+
+                    <li class="sidebar__list__item active col-12">
+                        <a href="#" class="d-flex" role="link" title="Inicio">
+                            <span class="sidebar__list__item--icon"><i class="fas fa-home fa-lg mx-2"></i></span>
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12">
+                        <a href="#" class="d-flex" role="link" title="Transportadoras">
+                            <span class="sidebar__list__item--icon"><i class="fas fa-building fa-lg mx-2"></i></span>
+                            Transportadoras
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12">
+                        <a href="#" class="d-flex" role="link" title="Cotação">
+                            <span class="sidebar__list__item--icon"><i
+                                    class="fas fa-clipboard-list fa-lg mx-2"></i></span>
+                            Cotação
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12">
+                        <a href="#" class="d-flex" role="link" title="Origem e Destino">
+                            <span class="sidebar__list__item--icon"><i
+                                    class="fas fa-map-marker-alt fa-lg mx-2"></i></span>
+                            Origem e Destino
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12">
+                        <a href="#" class="d-flex" role="link" title="Blog">
+                            <span class="sidebar__list__item--icon"><i class="fab fa-blogger-b fa-lg mx-2"></i></span>
+                            Blog
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12">
+                        <a href="#" class="d-flex" role="link" title="Sobre Nós">
+                            <span class="sidebar__list__item--icon"><i class="fas fa-users fa-lg mx-2"></i></span>
+                            Sobre Nós
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item">
+                        <a href="#" class="d-flex" role="link" title="Políticas e Termos">
+                            <span class="sidebar__list__item--icon"><i class="fas fa-book fa-lg mx-2"></i></span>
+                            Políticas e Termos
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12" title="Cadastre-se">
+                        <a href="#" class="d-flex justify-content-center" role="link">
+                            <i class="fas fa-sign-in-alt fa-lg mx-2"></i> </span>
+                            Cadastre-se
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header>
+    </section>
 
-    <section id="heroSection">
-        <div class="container-fluid bg-hero" style="padding: 0;"></div>
+    <section class="download-app fixed-top">
+        <div class="download-app__group">
+            <div class="download-app__group__text">
+                Baixe o nosso App
+            </div>
+            <div>
+                <button class="download-app__group__btn rounded">
+                    Baixar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero container-fluid">
+    </section>
+
+    <nav class="container-fluid topbar__fluid" role="navigation">
+        <div class="container topbar">
+            <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte"></a>
+            <ul class="topbar__list">
+                <li class="topbar__list__item">
+                    <a href="index.html" class="text-uppercase" aria-current="page" title="Ir para o Inicio">
+                        Inicio
+                    </a>
+                </li>
+                <li class="topbar__list__item">
+                    <a href="#" class="text-uppercase" title="Ir para Origem e Destino">
+                        origem e destino
+                    </a>
+                </li>
+                <li class="topbar__list__item">
+                    <a href="#" class="text-uppercase" title="Ir para Transportadoras">
+                        transportadoras
+                    </a>
+                </li>
+                <li class="topbar__list__item">
+                    <a href="#" class="text-uppercase" title="Ir para Cotação Rápida">
+                        cotação rápida
+                    </a>
+                </li>
+                <li class="topbar__list__item">
+                    <button class="btn topbar_list--btn" title="Abrir o menu">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </li>
+            </ul>
+            <a href="index.html" class="topbar__logo--mobile" id="topbar__logo__mobile" title="Guia do Transporte"></a>
+        </div>
+    </nav>
+
+    <section class="topbar__quotation container-fluid">
+        <div class="container">
+
+            <div class="row">
+                <form class="topbar__quotation__form">
+                    <div class="col-md-5 col-12">
+                        <div
+                            class="d-flex align-items-center rounded quotation__form__field topbar__form__field quotation__form__input__origin">
+                            <span class="quotation_form_field--icon">
+                                <i class="fas fa-map-marker-alt mx-3"></i>
+                            </span>
+                            <div class="position-relative w-100 me-3">
+                                <label for="origin" class="position-absolute quotation__form__label">
+                                    Origem da sua carga
+                                </label>
+                                <input type="text" id="origin" name="origin" class="w-100 quotation__form__input"
+                                    required aria-required="true"
+                                    onkeyup="onChangeText(this, 'quotation__form__input__origin')"
+                                    onfocus="onFocus('quotation__form__input__origin')"
+                                    onblur="onBlur('quotation__form__input__origin')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-12">
+                        <div
+                            class="d-flex align-items-center rounded quotation__form__field topbar__form__field quotation__form__input__destiny">
+                            <span class="quotation_form_field--icon">
+                                <i class="fas fa-map-marker-alt mx-3"></i>
+                            </span>
+                            <div class="position-relative w-100 me-3">
+                                <label for="destiny" class="position-absolute quotation__form__label">
+                                    Destino da sua carga
+                                </label>
+                                <input type="text" id="destiny" name="destiny" class="w-100 quotation__form__input"
+                                    required aria-required="true"
+                                    onkeyup="onChangeText(this, 'quotation__form__input__destiny')"
+                                    onfocus="onFocus('quotation__form__input__destiny')"
+                                    onblur="onBlur('quotation__form__input__destiny')">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-auto col-md-auto col-12">
+                        <button class="btn quotation__form__btn topbar__form__field rounded" role="button"
+                            type="submit">
+                            <span class="quotation__form__btn--icon">
+                                <i class="fas fa-search fa-lg"></i>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+    </section>
+
+    <div class="topbar__divider" role="separator"></div>
+
+    <section class="quotation container">
+        <div class="row">
+            <h1 class="quotation__title col-12">
+                Busque sua Transportadora
+            </h1>
+            <h2 class="quotation__subtitle col-12">
+                Digite a origem e o destino. Temos parcerias com transportadoras em todo o Brasil!
+            </h2>
+            <form class="quotation__form">
+                <div class="col-md-5 col-12">
+                    <div
+                        class="d-flex align-items-center rounded quotation__form__field quotation__form__input__origin">
+                        <span class="quotation_form_field--icon">
+                            <i class="fas fa-map-marker-alt mx-3"></i>
+                        </span>
+                        <div class="position-relative w-100 me-3">
+                            <label for="origin" class="position-absolute quotation__form__label">
+                                Origem da sua carga
+                            </label>
+                            <input type="text" id="origin" name="origin" class="w-100 quotation__form__input" required
+                                aria-required="true" onkeyup="onChangeText(this, 'quotation__form__input__origin')"
+                                onfocus="onFocus('quotation__form__input__origin')"
+                                onblur="onBlur('quotation__form__input__origin')">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-12">
+                    <div
+                        class="d-flex align-items-center rounded quotation__form__field quotation__form__input__destiny">
+                        <span class="quotation_form_field--icon">
+                            <i class="fas fa-map-marker-alt mx-3"></i>
+                        </span>
+                        <div class="position-relative w-100 me-3">
+                            <label for="destiny" class="position-absolute quotation__form__label">
+                                Destino da sua carga
+                            </label>
+                            <input type="text" id="destiny" name="destiny" class="w-100 quotation__form__input" required
+                                aria-required="true" onkeyup="onChangeText(this, 'quotation__form__input__destiny')"
+                                onfocus="onFocus('quotation__form__input__destiny')"
+                                onblur="onBlur('quotation__form__input__destiny')">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-12">
+                    <button class="btn quotation__form__btn rounded" role="button" type="submit">
+                        <span class="quotation__form__btn--icon">
+                            <i class="fas fa-search fa-lg"></i>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="explanation container">
+        <div class="row">
+            <h2 class="explanation__title col-12">
+                Fácil de Usar
+            </h2>
+            <h3 class="explanation__subtitle col-12">
+                Procure a transportadora pela rota e faça cotação online sem precisar se cadastrar. Nunca foi tão fácil
+                fazer sua cotação com a transportadora certa!
+            </h3>
+
+
+            <div class="explanation__card col-md-4 col-12">
+                <div class="explanation__card__icon">
+                    <span class="explanation__card__icon--icon">
+                        <i class="fas fa-map-marked-alt fa-lg"></i>
+                    </span>
+                </div>
+                <h3 class="explanation__card__title">
+                    Digite Origem e Destino
+                </h3>
+                <p class="explanation__card__text">
+                    Escolha a origem e o destino de sua carga, assim irá melhorar a busca das transportadoras
+                </p>
+            </div>
+            <div class="explanation__card col-md-4 col-12">
+                <div class="explanation__card__icon">
+                    <span class="explanation__card__icon--icon">
+                        <i class="fas fa-map-marked-alt fa-lg"></i>
+                    </span>
+                </div>
+                <h3 class="explanation__card__title">
+                    Pressione Buscar
+                </h3>
+                <p class="explanation__card__text">
+                    Sem muito segredo, agora é só clicar em buscar e aguardar carregar a lista de Transportadoras
+                </p>
+            </div>
+            <div class="explanation__card col-md-4 col-12">
+                <div class="explanation__card__icon">
+                    <span class="explanation__card__icon--icon">
+                        <i class="fas fa-map-marked-alt fa-lg"></i>
+                    </span>
+                </div>
+                <h3 class="explanation__card__title">
+                    Solicite Cotação
+                </h3>
+                <p class="explanation__card__text">
+                    Escolha as transportadoras, clique em “Solicitar Cotação” e envie os dados da sua carga
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="advertising container">
+        <a href="#" target="_blank">
+            <div class="advertising__announce">
+            </div>
+        </a>
+    </section>
+
+    <section class="rotes container">
+        <h2 class="rotes__title">
+            Rotas de Transporte
+        </h2>
+        <h3 class="rotes__subtitle">
+            Veja abaixo as rotas mais buscadas
+        </h3>
+        <ul class="rotes__list row">
+            <!-- 30 rotas no total -->
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+
+            <br>
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+
+            <br>
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+
+            <br>
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+
+            <br>
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <li class="rotes__list__item">
+                    <a href="#" class="rotes__list__item_link">
+                        <h4 class="rotes__list__item__title">
+                            BH - RJ
+                        </h4>
+                        <span class="rotes__list__item__text__group">
+                            <span class="rotes__list__item--origin mx-2">
+                                Belo Horizonte
+                            </span>
+                            <span class="rotes__list__item--divider"> > </span>
+                            <span class="rotes__list__item--destiny mx-2">
+                                Rio de Janeiro
+                            </span>
+                        </span>
+                        <div class="rotes__list__item__anim">
+
+                        </div>
+                    </a>
+                </li>
+            </div>
+
+
+
+        </ul>
+    </section>
+
+    <section class="app container-fluid">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-md-3 d-none d-md-block">
+                    <div class="app__image--cell">
+                        <img src="img/celular-aplicativo.png" id="app__image--cell--anim"
+                            alt="Celular com o aplicativo do Mais Cargas">
+                    </div>
+                </div>
+                <div class="col-md-9 col-12">
+                    <div class="row">
+                        <div class="col-12 d-block d-md-none">
+                            <div class="app__image--cell">
+                                <img src="img/celular-aplicativo.png" alt="Celular com o aplicativo do Mais Cargas">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="app__group">
+                                <h2 class="app__title">
+                                    Baixe já nosso aplicativo
+                                </h2>
+                                <p class="app__subtitle">
+                                    Faça sua cotação online e receba as respostas diretamente em seu <span
+                                        class="app__subtitle--green"><strong>WhatsApp</strong></span> de forma simples e
+                                    rápida
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="app__image--google app__group">
+                                <a href="#" target="_blank" role="navigation"
+                                    title="Baixar o aplicativo do Guia do Transporte">
+                                    <img src="img/google-play.png" alt="Disponivel no Google Play">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog container">
+        <div class="row">
+            <div class="col-12">
+                <div class="blog__group__text">
+                    <h2 class="blog__title">
+                        Blog do Transporte
+                    </h2>
+                    <h3 class="blog__subtitle">
+                        Saiba tudo que acontece no mundo dos transportes
+                    </h3>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <a href="#" target="_blank">
+                    <div class="card blog__item">
+                        <div class="blog__image">
+                            <img src="img/noticia2.png" alt="Noticia do Blog">
+                        </div>
+                        <div class="card-body blog__content">
+                            <span class="blog__content__tag">
+                                Notícias Transportes
+                            </span>
+                            <div class="blog__content__text">
+                                Aplicativos de transporte | Com mais de 500 mil veículos cadastrados na capital Paulista, judicializaram fiscalização, diz CMUV em CPI
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <a href="#" target="_blank">
+                    <div class="card blog__item">
+                        <div class="blog__image">
+                            <img src="img/noticia1.png" alt="Noticia do Blog">
+                        </div>
+                        <div class="card-body blog__content">
+                            <span class="blog__content__tag">
+                                Transportes no Brasil
+                            </span>
+                            <div class="blog__content__text">
+                                Transporte coletivo | Uso da frota do transporte público de Joinville/SC
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 d-lg-block d-none">
+                <a href="#" target="_blank">
+                    <div class="card blog__item">
+                        <div class="blog__image">
+                            <img src="img/noticia3.png" alt="Noticia do Blog">
+                        </div>
+                        <div class="card-body blog__content">
+                            <span class="blog__content__tag">
+                                Transportadoras
+                            </span>
+                            <div class="blog__content__text">
+                                Caminhões e máquinas agrícolas: veículos podem ser adquiridos por consórcio
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="statistics container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-xl-8 col-12 hero-content">
-                    <h1>Transportadora Mais Cargas</h1>
-                    <h2>Encontre cargas, empresas e caminhoneiros</h2>
-                    <div class="hero-botoes justify-content-xl-start justify-content-center">
-                        <a href="motorista.html" class="btn btn-danger hero-botoes-motorista anim-botao"
-                            role="navigation">
-                            Sou Motorista
-                        </a>
-                        <a href="empresa.html" class="btn btn-secondary hero-botoes-empresa anim-botao"
-                            role="navigation">
-                            Sou Empresa
-                        </a>
+                <div class="col-lg-3 col-6">
+                    <div class="statistics__item">
+                        <div class="statistics__title">
+                            5M
+                        </div>
+                        <div class="statistics__subtitle">
+                            Buscas Realizadas
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-4 d-none d-xl-flex hero-celular">
-                    <picture>
-                        <img src="img/celular-v2.png" alt="Aplicativo do Mais Cargas" class="img-fluid">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <section>
-        <div class="container-fluid bg-comoFunciona">
-            <div class="container">
-                <h2 class="d-flex justify-content-center">Como Funciona</h2>
-                <div class="row">
-
-                    <div class="col-xl-6 col-xl-flex d-xl-flex d-none my-auto">
-                        <picture>
-                            <img src="img/caminhao-celular.png" alt="Caminhão vermelho em cima de um celular"
-                                class="img-fluid caminhao-anim">
-                        </picture>
+                <div class="col-lg-3 col-6">
+                    <div class="statistics__item --mobile">
+                        <div class="statistics__title">
+                            1M
+                        </div>
+                        <div class="statistics__subtitle">
+                            Cotações solicitadas
+                        </div>
                     </div>
-
-                    <div class="col-xl-6 col-sm-12">
-                        <div class="col-12 justify-xl-content-start justify-content-center d-flex">
-                            <div class="card" id="comoFunciona-card1">
-                                <div class="row">
-                                    <div class="col-4 position-relative mx-auto">
-                                        <img src="img/homem-carrinhoDeMao.png" alt="Homem carregando um caminhão de mão"
-                                            class="img-fluid">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <h3 class="card-title">
-                                                Empresas anunciam suas cargas
-                                            </h3>
-                                            <p class="card-text">
-                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
-                                                obcaecati
-                                                tenetur iure. Minima, cumque natus?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="bg-pontos-vermelhos absolute d-xl-flex d-none"
-                                style="transform: translate(-230px, -30px)"></div> -->
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="statistics__item">
+                        <div class="statistics__title">
+                            5582
                         </div>
-                        <div class="col-12 justify-xl-content-start justify-content-center d-flex">
-                            <div class="card" id="comoFunciona-card2">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <img src="img/caminhao-vermelho.png" alt="Caminhão vermelho" class="img-fluid">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <h3 class="card-title">
-                                                Motoristas buscam fretes compativéis ao seu veículo
-                                            </h3>
-                                            <p class="card-text">
-                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
-                                                obcaecati
-                                                tenetur iure. Minima, cumque natus?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="statistics__subtitle">
+                            Cidade atendidas
                         </div>
-                        <div class="col-12 justify-xl-content-start justify-content-center d-flex">
-                            <div class="card" id="comoFunciona-card3">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <img src="img/handshake-vermelho.png" alt="Duas mãos fazendo um acordo"
-                                            class="img-fluid">
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="card-body">
-                                            <h3 class="card-title">
-                                                Ambos negociam sem intermediação
-                                            </h3>
-                                            <p class="card-text">
-                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
-                                                obcaecati
-                                                tenetur iure. Minima, cumque natus?
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="statistics__item --last">
+                        <div class="statistics__title">
+                            2193
+                        </div>
+                        <div class="statistics__subtitle">
+                            Transportadoras
                         </div>
                     </div>
                 </div>
@@ -222,273 +1119,39 @@
         </div>
     </section>
 
-    <section>
-        <div class="container-fluid bg-numeros">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-flex justify-content-center">
-                        <h2>
-                            Acompanhe em tempo real
-                        </h2>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center">
+    <footer class="footer container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between">
                         <h3>
-                            Números em constante crescimento
+                            Alguns de nossos links
+                        </h3>
+                        <h3>
+                            Siga-nos nas redes sociais
                         </h3>
                     </div>
-                    <div class="col-xl-4 col-12 d-flex bg-numeros-cards" style="opacity: 0;" id="bg-numeros-card1">
-                        <div class="mx-auto">
-                            <div class="card sombra-caixa">
-                                <div class="card-title mx-auto bg-numeros-icones">
-                                    <span><i class="fas fa-box-open"></i></span>
-                                </div>
-                                <div class="card-body">
-                                    <span class="contar d-flex justify-content-center">
-                                        800
-                                    </span>
-                                </div>
-                                <h4 class="text-center">Fretes</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-12 d-flex bg-numeros-cards" style="opacity: 0;" id="bg-numeros-card2">
-                        <div class="mx-auto">
-                            <div class="card sombra-caixa">
-                                <div class="card-title mx-auto bg-numeros-icones">
-                                    <span><i class="fas fa-male"></i></span>
-                                </div>
-                                <div class="card-body">
-                                    <span class="contar d-flex justify-content-center">
-                                        10000
-                                    </span>
-                                </div>
-                                <h4 class="text-center">Motorista</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-12 d-flex bg-numeros-cards" style="opacity: 0;" id="bg-numeros-card3">
-                        <div class="mx-auto">
-                            <div class="card sombra-caixa">
-                                <div class="card-title mx-auto bg-numeros-icones">
-                                    <span><i class="fas fa-building numeros-icones"></i></span>
-                                </div>
-                                <div class="card-body">
-                                    <span class="contar d-flex justify-content-center">
-                                        200
-                                    </span>
-                                </div>
-                                <h4 class="text-center">Transportadora</h4>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container bg-carrosel">
-            <div id="carousel-ParaVoce" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel-ParaVoce" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000">
-                        <img src="img/carrosel-motorista-vermelho.jpg" alt="" class="d-block w-100">
-                        <div class="carousel-text mx-auto d-block">
-                            <h2>Para você, Motorista</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur
-                                in
-                                voluptas quia.
-                            </p>
-                            <a href="motorista.html" class="btn btn-danger btn-saibaMais d-block mx-auto anim-botao">
-                                SAIBA MAIS
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <img src="img/carrosel-empresa-vermelho.jpg" alt="" class="d-block w-100 carousel-img">
-                        <div class="carousel-text">
-                            <h2>Para você, Empresa</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur
-                                in
-                                voluptas quia.
-                            </p>
-                            <a href="empresa.html" class="btn btn-danger btn-saibaMais d-block mx-auto anim-botao">
-                                SAIBA MAIS
-                            </a>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <img src="img/carrosel-cotacao-vermelho.jpg" alt="" class="d-block w-100 carousel-img">
-                        <div class=" carousel-text">
-                            <h2>Faça sua cotação</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique quo consequatur in
-                                voluptas quia.
-                            </p>
-                            <a href="cotacao.html" class="btn btn-danger btn-saibaMais d-block mx-auto anim-botao">
-                                SAIBA MAIS
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div id="carousel-butons">
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-ParaVoce"
-                        data-bs-slide="prev" id="carousel-control-prev">
-                        <span><i class="fas fa-angle-left"></i></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-ParaVoce"
-                        data-bs-slide="next" id="carousel-control-next">
-                        <span><i class="fas fa-angle-right"></i></span>
-                        <span class="visually-hidden">Proximo</span>
-                    </button>
-                </div>
-            </div>
-    </section>
-
-    <section>
-        <div class="container-fluid bg-parallax bg-aplicativo">
-            <div class="titulo-aplicativo">
-                <h2 class="text-center">
-                    No celular dos motoristas
-                </h2>
-                <h3 class="text-center"> Conectamos seu caminhão com fretes na ida e na volta </p>
-            </div>
-            <div class="row bg-aplicativoInfo d-flex mx-auto">
                 <div class="col-12">
-                    <h3 class="text-center">Mais de 5 mil downloads</h2>
-                        <h4 class="text-center">MaisCargas é o aplicativo de fretes preferido dos caminhoneiros, com a
-                            melhor avaliaçao na Play Store
-                    </h3>
-                    <div class="d-flex justify-content-center links-aplicativo">
-                        <a href="#"><img src="img/google-play-button.png" alt="Aplicativo do Google Play"
-                                class="img-fluid googlePlay anim-botao"></a>
-                        <a href="#"><img src="img/app-store-button.png" alt=" Aplicativo da App Store"
-                                class="img-fluid anim-botao"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container-fluid bg-footer" style="padding: 0;">
-            <div class="container" id="contato">
-                <div class="row">
-                    <div class="col-xl-6 col-12 bg-footer-contato">
-                        <div class="row">
-                            <div class="col-xl-6 col-12 footer-contato">
-                                <h2>Contate-nos</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#">(11) 9 1234-5678</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">email@hotmail.com</a>
-                                    </li>
-                                </ul>
-                                <h2>Saiba onde estamos</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#">Praça Parque Novo Mundo 00</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">SP, SP - Brasil</a>
-                                    </li>
-                                </ul>
+                    <div class="d-flex">
+                        <div>
+                            <div>
+                                Sobre nós
                             </div>
-                            <div class="col-xl-6 col-12 footer-contato">
-                                <h2>Links</h2>
-                                <ul>
-                                    <li>
-                                        <a href="#heroSection">Inicio</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Sobre</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Contato</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Listar Fretes</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Cotação de Fretes</a>
-                                    </li>
-                                </ul>
+                            <div>
+                                Solicitar cotação
                             </div>
-                            <div class="col-12 footer-redeSocial">
-                                <div class="d-flex justify-content-center">
-                                    <div class="bg-redeSocial-icones justify-content-center">
-                                        <a href=""><i class="fab fa-facebook-f" title="Facebook"></i></a>
-                                    </div>
-                                    <div class="bg-redeSocial-icones" title="Whatsapp">
-                                        <a href=""><i class="fab fa-whatsapp"></i></a>
-                                    </div>
-                                    <div class="bg-redeSocial-icones" title="Instagram">
-                                        <a href=""><i class="fab fa-instagram"></i></a>
-                                    </div>
-                                    <div class="bg-redeSocial-icones" title="Google Play">
-                                        <a href=""><i class="fab fa-google-play googlePlay-icone"></i></a>
-                                    </div>
-                                    <div class="bg-redeSocial-icones" title="App Store">
-                                        <a href=""><i class="fab fa-app-store"></i></a>
-                                    </div>
-                                </div>
+                            <div>
+                                Políticas e Termos
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-6 col-12 bg-footer-duvidas d-flex justify-content-center mx-auto">
-                        <div class="row">
-                            <div class="col-auto">
-                                <h2>
-                                    Duvidas
-                                </h2>
-                                <form>
-                                    <div class="row">
-                                        <div class="col-xl-6 col-12 form-floating">
-                                            <input type="text" class="form-control" id="nome" name="nome"
-                                                placeholder="Pedro Guilherme">
-                                            <label for="nome">Nome</label>
-                                        </div>
-                                        <div class="col-xl-6 col-12 form-floating">
-                                            <input type="text" class="form-control" id="email" name="email"
-                                                placeholder="email@hotmail.com">
-                                            <label for="email">Email</label>
-                                        </div>
-                                        <div class="col-12 form-floating">
-                                            <input type="text" class="form-control" id="assunto" name="assunto"
-                                                placeholder="Escreva o assunto">
-                                            <label for="assunto">Assunto</label>
-                                        </div>
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Escreva o seu problema"
-                                                id="mensagem" style="height: 100px"></textarea>
-                                            <label for="mensagem">Mensagem</label>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="d-flex justify-content-end">
-                                    <button class="btn btn-danger footer-botao-enviar anim-botao" type="submit"
-                                        role="button" title="Enviar">
-                                        Enviar
-                                    </button>
-                                </div>
+                        <div>
+                            <div>
+                               F Facebook
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="d-flex justify-content-center footer-copyright">
-                            COPYRIGHT | TODOS OS DIREITOS RESERVADOS
+                            <div>
+                                I Instagram
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -499,9 +1162,8 @@
     <script src="js/jquery-min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
     <script src="js/my.js"></script>
-    <script src="js/intersection-observer.js"></script>
+    <script src="js/animate.js"></script>
 </body>
 
 </html>
