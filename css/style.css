@@ -47,7 +47,8 @@
     --opens-sans: "Open Sans", sans-serif;
     /* transition */
     --t-btn: all 0.5s ease-out;
-    --t-form: all 0.2s;
+    --t-form: all 0.2s ease-out;
+    --t-generic: all 0.3s ease-out;
 }
 
 /* general */
@@ -173,7 +174,8 @@ label {
     right: -500px;
     width: 250px;
     height: 100vh;
-    transition: all 0.3s ease-out;
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
     z-index: 999999;
 }
 
@@ -251,6 +253,7 @@ label {
     color: var(--accent-0);
     border-radius: 4px;
     transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
     width: 105%;
 }
 
@@ -292,6 +295,7 @@ label {
     margin: 0;
     color: var(--accent-7);
     transform: translateX(24px);
+    -webkit-transform: translateX(24px);
 }
 
 .topbar__fluid {
@@ -442,6 +446,7 @@ label {
     z-index: 10;
     display: none;
     box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 20%);
+    
 }
 
 .topbar__quotation__form {
@@ -529,7 +534,9 @@ label {
     cursor: text;
     top: 50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
     transition: var(--t-form);
+    -webkit-transition: var(--t-form);
     pointer-events: none;
 }
 
@@ -538,6 +545,7 @@ label {
 .quotation_form_field--icon {
     color: var(--accent-4);
     transition: var(--t-form);
+    -webkit-transition: var(--t-form);
 }
 
 .quotation__form__field.filled .quotation_form_field--icon {
@@ -551,16 +559,19 @@ label {
     width: 100%;
     background: #1565C0;
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
-    transition: all 0.2s;
+    transition: var(--t-btn);
+    -webkit-transition: var(--t-btn);
 }
 
 .quotation__form__btn:hover {
     transform: translate(-5px, -5px);
+    -webkit-transform: translate(-5px, -5px);
     box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
 }
 
 .quotation__form__btn:active {
     transform: translate(-5px, 0);
+    -webkit-transform: translate(-5px, 0);
     box-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
 }
 
@@ -629,6 +640,7 @@ label {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     color: var(--base);
 }
 
@@ -686,7 +698,8 @@ label {
     font-family: var(--poppins);
     text-align: center;
     margin-bottom: 2px;
-    transition: all 0.3s ease-out;
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
 }
 
 .rotes__list__item--destiny, .rotes__list__item--origin {
@@ -695,7 +708,8 @@ label {
     font-size: var(--px18);
     font-family: var(--opens-sans);
     text-align: center;
-    transition: all 0.3s ease-out;
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
 }
 
 .rotes__list__item__text__group {
@@ -709,7 +723,8 @@ label {
     font-weight: var(--extrabold);
     font-size: var(--px18);
     font-family: var(--opens-sans);
-    transition: all 0.3s ease-out;
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
 }
 
 .rotes__list__item__anim {
@@ -720,7 +735,8 @@ label {
     height: 100%;
     width: 0%;
     background-color: var(--base);
-    transition: all 0.3s ease-out;
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
 }
 
 .rotes__list__item_link:hover .rotes__list__item__anim {
@@ -792,10 +808,12 @@ label {
     height: 85px;
     object-fit: contain;
     transition: all 0.2s ease-out;
+    -webkit-transition: var(--t-generic);
 }
 
 .app__image--google img:hover {
     transform: translateY(-10px);
+    -webkit-transform: translateY(-10px)
 }
 
 .app__title {
@@ -884,11 +902,13 @@ label {
 }
 
 .blog__item {
-    transition: all 0.2s;
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
 }
 
 .blog__item:hover {
     transform: scale(1.05);
+    -webkit-transform: scale(1.05);
 }
 
 /* --- */
@@ -1064,6 +1084,7 @@ label {
     }
     .sidebar__list__item.active a {
         transform: initial;
+        -webkit-transform: initial;
         width: 102%;
         border-radius: 0 4px 4px 0;
     }
@@ -1076,7 +1097,8 @@ label {
         right: auto;
         width: 250px;
         height: 100vh;
-        transition: all 0.3s ease-out;
+        transition: var(--t-generic);
+        -webkit-transition: var(--t-generic);
         z-index: 999999;
     }
     .sidebar.no__collapse {
@@ -1274,6 +1296,7 @@ label {
     }
     .sidebar__list__item.active a {
         transform: initial;
+        -webkit-transform: initital;
         width: 102%;
         border-radius: 0 4px 4px 0;
     }
@@ -1286,7 +1309,8 @@ label {
         right: auto;
         width: 250px;
         height: 100vh;
-        transition: all 0.3s ease-out;
+        transition: var(--t-generic);
+        -webkit-transition: var(--t-generic);
         z-index: 999999;
     }
     .sidebar.no__collapse {
@@ -1306,6 +1330,7 @@ label {
         margin: 0;
         color: var(--accent-7);
         transform: translateX(64px);
+        -webkit-transform: translateX(64px)
     }
     /* --- */
     /* quotation */

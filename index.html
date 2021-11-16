@@ -26,23 +26,24 @@
                     <div class="sidebar__logo"></div>
                 </div>
                 <ul class="sidebar__list" role="navigation">
+                    <button role="button" title="Fechar o menu" tabindex="0">X</button>
                     <!-- Adicione a classe active na li quando for a página selecionada -->
                     <li class="sidebar__list__item active col-12">
-                        <a href="#" class="d-flex" role="link" title="Inicio">
+                        <a href="index.html" class="d-flex" role="menuitem" title="Inicio" tabindex="0">
                             <span class="sidebar__list__item--icon"><i class="fas fa-home fa-lg mx-2"></i></span>
                             Inicio
                         </a>
                     </li>
 
                     <li class="sidebar__list__item col-12">
-                        <a href="#" class="d-flex" role="link" title="Transportadoras">
+                        <a href="transportadoras.html" class="d-flex" role="menuitem" title="Transportadoras" tabindex="0">
                             <span class="sidebar__list__item--icon"><i class="fas fa-building fa-lg mx-2"></i></span>
                             Transportadoras
                         </a>
                     </li>
 
                     <li class="sidebar__list__item col-12">
-                        <a href="#" class="d-flex" role="link" title="Cotação">
+                        <a href="#" class="d-flex" role="menuitem" title="Cotação" tabindex="0">
                             <span class="sidebar__list__item--icon"><i
                                     class="fas fa-clipboard-list fa-lg mx-2"></i></span>
                             Cotação
@@ -50,7 +51,7 @@
                     </li>
 
                     <li class="sidebar__list__item col-12">
-                        <a href="#" class="d-flex" role="link" title="Origem e Destino">
+                        <a href="#" class="d-flex" role="menuitem" title="Origem e Destino" tabindex="0">
                             <span class="sidebar__list__item--icon"><i
                                     class="fas fa-map-marker-alt fa-lg mx-2"></i></span>
                             Origem e Destino
@@ -58,28 +59,28 @@
                     </li>
 
                     <li class="sidebar__list__item col-12">
-                        <a href="#" class="d-flex" role="link" title="Blog">
+                        <a href="#" class="d-flex" role="menuitem" title="Blog" tabindex="0">
                             <span class="sidebar__list__item--icon"><i class="fab fa-blogger-b fa-lg mx-2"></i></span>
                             Blog
                         </a>
                     </li>
 
                     <li class="sidebar__list__item col-12">
-                        <a href="#" class="d-flex" role="link" title="Sobre Nós">
+                        <a href="#" class="d-flex" role="menuitem" title="Sobre Nós" tabindex="0">
                             <span class="sidebar__list__item--icon"><i class="fas fa-users fa-lg mx-2"></i></span>
                             Sobre Nós
                         </a>
                     </li>
 
                     <li class="sidebar__list__item">
-                        <a href="#" class="d-flex" role="link" title="Políticas e Termos">
+                        <a href="#" class="d-flex" role="menuitem" title="Políticas e Termos" tabindex="0">
                             <span class="sidebar__list__item--icon"><i class="fas fa-book fa-lg mx-2"></i></span>
                             Políticas e Termos
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item col-12" title="Cadastre-se">
-                        <a href="#" class="d-flex justify-content-center" role="link">
+                    <li class="sidebar__list__item col-12" title="Cadastre-se" tabindex="0">
+                        <a href="#" class="d-flex justify-content-center" role="menuitem">
                             <i class="fas fa-sign-in-alt fa-lg mx-2"></i> </span>
                             Cadastre-se
                         </a>
@@ -114,29 +115,29 @@
             <div class="container topbar">
                 <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte"></a>
                 <ul class="topbar__list">
-                    <li class="topbar__list__item">
+                    <li class="topbar__list__item" role="link">
                         <!-- Utilizar aria-current="page" quando for a página ativa -->
-                        <a href="index.html" class="text-uppercase" aria-current="page" title="Ir para o Inicio">
+                        <a href="index.html" class="text-uppercase" aria-current="page" title="Ir para o Inicio" tabindex="1">
                             Inicio
                         </a>
                     </li>
-                    <li class="topbar__list__item">
-                        <a href="#" class="text-uppercase" title="Ir para Origem e Destino">
+                    <li class="topbar__list__item" role="link">
+                        <a href="#" class="text-uppercase" title="Ir para Origem e Destino" tabindex="1">
                             origem e destino
                         </a>
                     </li>
-                    <li class="topbar__list__item">
-                        <a href="#" class="text-uppercase" title="Ir para Transportadoras">
+                    <li class="topbar__list__item" role="link">
+                        <a href="#" class="text-uppercase" title="Ir para Transportadoras" tabindex="1">
                             transportadoras
                         </a>
                     </li>
-                    <li class="topbar__list__item">
-                        <a href="#" class="text-uppercase" title="Ir para Cotação Rápida">
+                    <li class="topbar__list__item" role="link">
+                        <a href="#" class="text-uppercase" title="Ir para Cotação Rápida" tabindex="1">
                             cotação rápida
                         </a>
                     </li>
-                    <li class="topbar__list__item">
-                        <button class="btn topbar_list--btn" title="Abrir o menu">
+                    <li class="topbar__list__item" role="button">
+                        <button class="btn topbar_list--btn" title="Abrir o menu" tabindex="1">
                             <i class="fas fa-bars fa-lg"></i>
                             <span class="text-uppercase mx-2 topbar__list--menu d-none d-lg-inline">Menu</span>
                         </button>
