@@ -103,25 +103,29 @@ const inputOriginTop = document.getElementById('origin-top')
 const inputDestination = document.getElementById('destination')
 const inputDestinationTop = document.getElementById('destination-top')
 
-function onChangeText(e, classname) {
-
+function getTextOrigin(){
     document.getElementById('origin').oninput = () => {
 
         inputOriginTop.value = inputOrigin.value
     }
-
+}
+function getTextOriginTop(){
     document.getElementById('origin-top').oninput = () => {
         inputOrigin.value = inputOriginTop.value
     }
-
+}
+function getTextDestination(){
     document.getElementById('destination').oninput = () => {
         inputDestinationTop.value = inputDestination.value
     }
-
+}
+function getTextDestinationTop(){
     document.getElementById('destination-top').oninput = () => {
         inputDestination.value = inputDestinationTop.value
     }
+}
 
+function onChangeText(e, classname) {
     if (e.value) {
         $(`.${classname}`).addClass('filled')
         $(`.${classname}`).removeClass('empty')
@@ -129,13 +133,28 @@ function onChangeText(e, classname) {
         $(`.${classname}`).addClass('empty')
         $(`.${classname}`).removeClass('filled')
     }
+
+    getTextOrigin();
+    getTextOriginTop();
+    getTextDestination();
+    getTextDestinationTop();
 }
 
 function onFocus(classname) {
     $(`.${classname}`).addClass('focused')
     $(`.${classname}`).removeClass('blur')
+
+    getTextOrigin();
+    getTextOriginTop();
+    getTextDestination();
+    getTextDestinationTop();
 }
 function onBlur(classname) {
     $(`.${classname}`).removeClass('focused')
     $(`.${classname}`).addClass('blur')
+
+    getTextOrigin();
+    getTextOriginTop();
+    getTextDestination();
+    getTextDestinationTop();
 }

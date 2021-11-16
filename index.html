@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <!-- Barra de Navegação lateral -->
     <section id="sidebar">
         <div class="filter" id="filter--blue"></div>
         <div class="sidebar container">
@@ -25,7 +26,7 @@
                     <div class="sidebar__logo"></div>
                 </div>
                 <ul class="sidebar__list" role="navigation">
-
+                    <!-- Adicione a classe active na li quando for a página selecionada -->
                     <li class="sidebar__list__item active col-12">
                         <a href="#" class="d-flex" role="link" title="Inicio">
                             <span class="sidebar__list__item--icon"><i class="fas fa-home fa-lg mx-2"></i></span>
@@ -88,6 +89,7 @@
         </div>
     </section>
 
+    <!-- Visivel apenas em dispositivos mobile. Barra de baixar o aplicativo -->
     <section class="download-app fixed-top d-block d-lg-none">
         <div class="download-app__group">
             <div class="download-app__group__text">
@@ -101,15 +103,19 @@
         </div>
     </section>
 
+    <!-- Background do Hero -->
     <header class="hero container-fluid">
     </header>
 
+    <!-- Conteúdo principal -->
     <main>
+        <!-- Navbar -->
         <nav class="container-fluid topbar__fluid" role="navigation">
             <div class="container topbar">
                 <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte"></a>
                 <ul class="topbar__list">
                     <li class="topbar__list__item">
+                        <!-- Utilizar aria-current="page" quando for a página ativa -->
                         <a href="index.html" class="text-uppercase" aria-current="page" title="Ir para o Inicio">
                             Inicio
                         </a>
@@ -139,10 +145,14 @@
                 <a href="index.html" class="topbar__logo--mobile" id="topbar__logo__mobile" title="Guia do Transporte"></a>
             </div>
         </nav>
+
+        <!-- Formulario de cotação Topbar -->
         <section class="topbar__quotation container-fluid">
             <div class="container">
                 <div class="row">
                     <form class="topbar__quotation__form">
+
+                        <!-- Input Origem -->
                         <div class="col-md-5 col-12">
                             <div
                                 class="d-flex align-items-center rounded quotation__form__field topbar__form__field quotation__form__input__origin">
@@ -161,6 +171,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Input Destino -->
                         <div class="col-md-5 col-12">
                             <div
                                 class="d-flex align-items-center rounded quotation__form__field topbar__form__field quotation__form__input__destination">
@@ -190,9 +202,14 @@
                     </form>
                 </div>
         </section>
+
+        <!-- Divisor da Navbar -->
         <div class="topbar__divider" role="separator"></div>
+
+        <!-- Formulario do Hero -->
         <section class="quotation container">
             <div class="row">
+                <!-- Titulo principal -->
                 <h1 class="quotation__title col-12">
                     Busque sua Transportadora
                 </h1>
@@ -200,6 +217,8 @@
                     Digite a origem e o destino. Temos parcerias com transportadoras em todo o Brasil!
                 </h2>
                 <form class="quotation__form">
+
+                    <!-- Input Origem -->
                     <div class="col-md-5 col-12">
                         <div
                             class="d-flex align-items-center rounded quotation__form__field quotation__form__input__origin">
@@ -217,6 +236,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Input Destino -->
                     <div class="col-md-5 col-12">
                         <div
                             class="d-flex align-items-center rounded quotation__form__field quotation__form__input__destination">
@@ -244,6 +265,8 @@
                 </form>
             </div>
         </section>
+
+        <!-- Explicação(Como usar) -->
         <section class="explanation container">
             <div class="row">
                 <h2 class="explanation__title col-12">
@@ -294,12 +317,16 @@
                 </div>
             </div>
         </section>
+
+        <!-- Propaganda -->
         <section class="advertising container">
             <a href="#" target="_blank">
                 <div class="advertising__announce">
                 </div>
             </a>
         </section>
+
+        <!-- Rotas -->
         <section class="rotes container">
             <h2 class="rotes__title">
                 Rotas de Transporte
@@ -1032,7 +1059,7 @@
                                 5M
                             </div>
                             <div class="statistics__subtitle">
-                                Buscas Realizadas
+                                Buscas realizadas
                             </div>
                         </div>
                     </div>
@@ -1049,7 +1076,7 @@
                     <div class="col-lg-3 col-6">
                         <div class="statistics__item">
                             <div class="statistics__title">
-                                5582
+                                5K
                             </div>
                             <div class="statistics__subtitle">
                                 Cidade atendidas
@@ -1059,7 +1086,7 @@
                     <div class="col-lg-3 col-6">
                         <div class="statistics__item --last">
                             <div class="statistics__title">
-                                2193
+                                2.2K
                             </div>
                             <div class="statistics__subtitle">
                                 Transportadoras
@@ -1141,7 +1168,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/my.js"></script>
-    <script src="js/animate.js"></script>
 </body>
 
 </html>

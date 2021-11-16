@@ -319,8 +319,8 @@ label {
     display: flex;
     align-items: center;
     width: 90vw;
-    height: 116px;
-    margin-top: 16px;
+    height: auto;
+    margin-top: 32px;
     padding: 0;
     top: 0;
     left: 0;
@@ -349,6 +349,7 @@ label {
     object-fit: none;
     height: 90px;
     width: 270px;
+    margin-bottom: -20px;
 }
 
 .topbar.fixed .topbar__logo {
@@ -601,7 +602,7 @@ label {
 .explanation__card__title {
     font-family: var(--poppins);
     font-weight: var(--regular);
-    font-size: var(--px24);
+    font-size: var(--px18);
     text-align: center;
     color: var(--accent-7);
 }
@@ -609,7 +610,7 @@ label {
 .explanation__card__text {
     font-family: var(--opens-sans);
     font-weight: var(--light);
-    font-size: var(--px18);
+    font-size: var(--px16);
     text-align: center;
     color: var(--accent-7);
 }
@@ -942,9 +943,20 @@ label {
 /* footer */
 
 .footer {
-    background-color: var(--accent-9);
-    padding: 32px 0;
-    margin-bottom: -1px;
+    background-color: var(--accent-10);
+    padding: 16px 0;
+    position: relative;
+}
+.footer::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    width: 90%;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid var(--accent-4);
+    opacity: 0.2;
 }
 
 .footer__text {
@@ -955,7 +967,7 @@ label {
 }
 
 .footer__title {
-    font-size: var(--px24);
+    font-size: var(--px18);
     font-weight: var(--medium);
     font-family: var(--poppins);
     color: var(--accent-0);
@@ -974,19 +986,19 @@ label {
     margin-right: 12px;
     border-radius: 4px;
     color: var(--accent-0);
-    font-size: var(--px18);
+    font-size: var(--px16);
     font-family: var(--poppins);
     font-weight: var(--regular);
 }
 
 .footer__link__item--blue {
-    font-size: var(--px24);
+    font-size: var(--px18);
     border: initial;
     color: var(--accent-blue);
 }
 
 .footer__link__item--purple {
-    font-size: var(--px24);
+    font-size: var(--px18);
     border: initial;
     color: var(--accent-purple);
     margin-right: 0;
@@ -1022,7 +1034,7 @@ label {
 
 .footer--2__text {
     color: var(--accent-5);
-    font-size: var(--px18);
+    font-size: var(--px16);
     font-family: var(--opens-sans);
     font-weight: var(--light);
 }
