@@ -1429,7 +1429,7 @@ label {
 
 /* lg */
 
-@media (min-width: 1024px) and (max-width: 1399.98px) {
+@media (min-width: 1024px) {
     /* sidebar */
     .sidebar.no__collapse {
         opacity: 1;
@@ -1442,7 +1442,3 @@ label {
     }
     /* --- */
 }
-
-/* xl */
-
-@media (min-width: 1400px) {}
