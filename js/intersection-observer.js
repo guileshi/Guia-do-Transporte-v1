@@ -12,7 +12,7 @@ const appOptions = {
 const heroOptions = {
     root: null,
 
-    threshold: 0,
+    threshold: 0.3,
 
     rootMargin: "0px"
 }

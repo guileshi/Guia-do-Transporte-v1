@@ -16,14 +16,10 @@ $(window).load(function () {
         $('.quotation__form__btn--icon').html("<i class='fas fa-search fa-lg'></i>" + " <span>PESQUISAR</span>")
         $('.rotes').addClass('mobile')
 
-        if($('#sidebar').hasClass('mobile')){
-            $('.sidebar').css("right", "initial")
-        }
-
-        addLanguageScript = function(name) {
+        addLanguageScript = function (name) {
             var head = document.getElementsByTagName("head")[0],
                 script = document.createElement('script');
-        
+
             script.type = 'text/javascript'
             script.src = "js/" + name + '.js'
             head.appendChild(script);
@@ -33,7 +29,7 @@ $(window).load(function () {
         celular = true;
         console.log("Celular")
     } else if (window.screen.width > 767.98 && window.screen.width <= 1024) {
-        
+
         $('.topbar').addClass('mobile')
         $('.filter').addClass('mobile')
         $('.topbar').addClass('container-fluid')
@@ -42,14 +38,10 @@ $(window).load(function () {
         $('#topbar__logo__desktop').css("display", "none");
         $('.download-app').css("display", "block")
 
-        if($('#sidebar').hasClass('mobile')){
-            $('.sidebar').css("right", "initial")
-        }
-
-        addLanguageScript = function(name) {
+        addLanguageScript = function (name) {
             var head = document.getElementsByTagName("head")[0],
                 script = document.createElement('script');
-        
+
             script.type = 'text/javascript'
             script.src = "js/" + name + '.js'
             head.appendChild(script);
@@ -63,26 +55,29 @@ $(window).load(function () {
         $('.topbar__divider').css("display", "block");
         pc = true;
         console.log("Computador")
-        addLanguageScript = function(name) {
+        addLanguageScript = function (name) {
             var head = document.getElementsByTagName("head")[0],
                 script = document.createElement('script');
-        
+
             script.type = 'text/javascript'
             script.src = "js/" + name + '.js'
             head.appendChild(script);
         };
         addLanguageScript('intersection-observer');
     }
-
 });
 
-$('.topbar_list--btn').click(function(){
+$('.topbar_list--btn').click(function () {
     $('.sidebar').toggleClass('no__collapse')
+    // $('.sidebar').addClass('no__collapse')
+    // $('.sidebar').removeClass('collapse')
     $('#filter--blue').css("display", "block")
 })
-$('#filter--blue').click(function(){
+$('#filter--blue').click(function () {
     $(this).css("display", "none")
     $('.sidebar').toggleClass('no__collapse')
+    // $('.sidebar').removeClass('no__collapse')
+    // $('.sidebar').addClass('collapse')
 })
 
 // Iniciar contador de numeros
@@ -103,11 +98,34 @@ $('.contar').counterUp({
     })
 })(jQuery);
 
+const inputOrigin = document.getElementById('origin')
+const inputOriginTop = document.getElementById('origin-top')
+const inputDestination = document.getElementById('destination')
+const inputDestinationTop = document.getElementById('destination-top')
+
 function onChangeText(e, classname) {
-    if(e.value){
+
+    document.getElementById('origin').oninput = () => {
+
+        inputOriginTop.value = inputOrigin.value
+    }
+
+    document.getElementById('origin-top').oninput = () => {
+        inputOrigin.value = inputOriginTop.value
+    }
+
+    document.getElementById('destination').oninput = () => {
+        inputDestinationTop.value = inputDestination.value
+    }
+
+    document.getElementById('destination-top').oninput = () => {
+        inputDestination.value = inputDestinationTop.value
+    }
+
+    if (e.value) {
         $(`.${classname}`).addClass('filled')
         $(`.${classname}`).removeClass('empty')
-    } else{
+    } else {
         $(`.${classname}`).addClass('empty')
         $(`.${classname}`).removeClass('filled')
     }
