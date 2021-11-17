@@ -69,15 +69,11 @@ $(window).load(function () {
 
 $('.topbar_list--btn').click(function () {
     $('.sidebar').toggleClass('no__collapse')
-    // $('.sidebar').addClass('no__collapse')
-    // $('.sidebar').removeClass('collapse')
     $('#filter--blue').css("display", "block")
 })
-$('#filter--blue').click(function () {
-    $(this).css("display", "none")
+$('#filter--blue,.sidebar__list__btn--close').click(function () {
+    $('#filter--blue').css("display", "none")
     $('.sidebar').toggleClass('no__collapse')
-    // $('.sidebar').removeClass('no__collapse')
-    // $('.sidebar').addClass('collapse')
 })
 
 // Iniciar contador de numeros
@@ -105,7 +101,6 @@ const inputDestinationTop = document.getElementById('destination-top')
 
 function getTextOrigin(){
     document.getElementById('origin').oninput = () => {
-
         inputOriginTop.value = inputOrigin.value
     }
 }

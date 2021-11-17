@@ -46,7 +46,7 @@
     --poppins: Poppins, sans-serif;
     --opens-sans: "Open Sans", sans-serif;
     /* transition */
-    --t-btn: all 0.5s ease-out;
+    --t-btn: all 0.2s ease-out;
     --t-form: all 0.2s ease-out;
     --t-generic: all 0.3s ease-out;
 }
@@ -244,6 +244,25 @@ label {
 .sidebar__list__item a:active {
     background: var(--accent-3);
     color: var(--accent-5);
+}
+
+.sidebar__list__btn--close{
+    background-color: var(--accent-0);
+    color: var(--accent-6);
+    border-radius: 50%;
+    left: -16px;
+    position: absolute;
+    padding: 8px 12px;
+    top: 32px;
+    z-index: 999999;
+}
+.sidebar__list__btn--close:hover{
+    background-color: var(--accent-1);
+    color: var(--accent-5);
+}
+.sidebar__list__btn--close:active{
+    background-color: var(--accent-0);
+    color: var(--accent-6);
 }
 
 /* active */
@@ -570,9 +589,9 @@ label {
 }
 
 .quotation__form__btn:active {
-    transform: translate(-5px, 0);
-    -webkit-transform: translate(-5px, 0);
-    box-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+    transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 }
 
 .quotation__form__btn--icon {
@@ -916,7 +935,7 @@ label {
 /* statistics */
 
 .statistics {
-    background-color: var(--accent-9);
+    background-color: var(--accent-10);
     padding: 32px 0;
     margin-bottom: -2px;
 }
@@ -966,6 +985,7 @@ label {
     background-color: var(--accent-10);
     padding: 16px 0;
     position: relative;
+    margin-bottom: -1px;
 }
 .footer::after {
     content: "";
