@@ -935,7 +935,7 @@ label {
 /* statistics */
 
 .statistics {
-    background-color: var(--accent-10);
+    background-color: var(--accent-9);
     padding: 32px 0;
     margin-bottom: -2px;
 }
