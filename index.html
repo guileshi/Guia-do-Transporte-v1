@@ -31,6 +31,33 @@
 </head>
 
 <body>
+    <!-- Botão de voltar para o topo -->
+    <div class="slidetop">
+        <a href="#hero" class="btn slidetop__btn scroll-page" type="button" role="button">
+            <i class="fas fa-arrow-up fa-lg"></i>
+        </a>
+    </div>
+
+    <section class="cookie">
+        <button class="cookie__close" type="button" role="button">
+            <div class="cookie__close__btn"><i class="fas fa-times fa-lg"></i></div>
+        </button>
+        <h2 class="cookie__title">
+            Aceita um Cookie?
+        </h2>
+        <p class="cookie__text">
+            O site Guia do Transporte utiliza a tecnologia de cookies para melhorar a experiência do usuario.
+        </p>
+        <div class="cookie__btn__group">
+            <a href="#" class="cookie__btn --transparent" role="button" type="button">
+                Saiba Mais
+            </a>
+            <button class="cookie__btn" role="button" type="button" id="cookie__btn--accept">
+                Aceitar
+            </button>
+        </div>
+    </section>
+
     <!-- Barra de Navegação lateral -->
     <section id="sidebar">
         <div class="filter" id="filter--blue"></div>
@@ -124,7 +151,7 @@
     </section>
 
     <!-- Background do Hero -->
-    <header class="hero container-fluid">
+    <header class="hero container-fluid" id="hero">
     </header>
 
     <!-- Conteúdo principal -->

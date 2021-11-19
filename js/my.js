@@ -153,3 +153,30 @@ function onBlur(classname) {
     getTextDestination();
     getTextDestinationTop();
 }
+
+// Botão de aceitar cookies
+$('#cookie__btn--accept').click(function(){
+    $(".cookie").css("display", "none")
+})
+
+
+// Botão de fechar os cookies
+$('.cookie__close__btn').click(function(){
+    $(".cookie").css("display", "none")
+})
+
+(function ($) {
+    /*Efeito de rolagem de tela para os links clicados */
+    var $doc = $('html,body');
+    $(".scroll-page").click(function () {
+        $doc.animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+        return false;
+    })
+})(jQuery);
+
+// Transição de tela de loading
+$(window).on("load", function () {
+    $(".gooey").fadeOut("slow");
+});

@@ -53,6 +53,7 @@ const observerApp = new IntersectionObserver(function (entries, observer) {
 const observerHero = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting && entry.target === hero) {
+            $('.slidetop').removeClass("unhide")
             $('.topbar').removeClass('fixed')
             $('.topbar__quotation').css("display", "none")
             $('.topbar__quotation__form').css("display", "none")
@@ -61,6 +62,7 @@ const observerHero = new IntersectionObserver(function (entries, observer) {
             console.log("Hero Observed")
 
         } else if (!entry.isIntersecting) {
+            $('.slidetop').addClass("unhide")
             $('.topbar').addClass('fixed')
             $('.topbar__quotation').css("display", "block")
             $('.topbar__quotation__form').css("display", "flex")
