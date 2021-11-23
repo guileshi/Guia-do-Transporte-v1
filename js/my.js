@@ -3,7 +3,7 @@ var tablet;
 var pc;
 
 $(window).load(function () {
-    if (window.screen.width < 576.98) {
+    if (window.screen.width < 767) {
 
         $('.topbar').addClass('mobile')
         $('.filter').addClass('mobile')
@@ -16,18 +16,29 @@ $(window).load(function () {
         $('.quotation__form__btn--icon').html("<i class='fas fa-search fa-lg'></i>" + " <span>PESQUISAR</span>")
         $('.rotes').addClass('mobile')
 
-        addLanguageScript = function (name) {
-            var head = document.getElementsByTagName("head")[0],
-                script = document.createElement('script');
-
-            script.type = 'text/javascript'
-            script.src = "js/" + name + '.js'
-            head.appendChild(script);
-        };
-        addLanguageScript('intersection-observer-mobile');
+        if(window.screen.width <= 320){
+            addLanguageScript = function (name) {
+                var head = document.getElementsByTagName("head")[0],
+                    script = document.createElement('script');
+    
+                script.type = 'text/javascript'
+                script.src = "js/" + name + '.js'
+                head.appendChild(script);
+            };
+            addLanguageScript('intersection-observer-small-mobile');
+        } else{
+            addLanguageScript = function (name) {
+                var head = document.getElementsByTagName("head")[0],
+                    script = document.createElement('script');
+    
+                script.type = 'text/javascript'
+                script.src = "js/" + name + '.js'
+                head.appendChild(script);
+            };
+            addLanguageScript('intersection-observer-mobile');
+        }
 
         celular = true;
-        console.log("Celular")
     } else if (window.screen.width > 767.98 && window.screen.width <= 1024) {
 
         $('.topbar').addClass('mobile')
@@ -49,21 +60,19 @@ $(window).load(function () {
         addLanguageScript('intersection-observer-tablet');
 
         tablet = true;
-        console.log("Tablet")
     } else if (window.screen.width > 1025) {
 
         $('.topbar__divider').css("display", "block");
-        pc = true;
-        console.log("Computador")
         addLanguageScript = function (name) {
             var head = document.getElementsByTagName("head")[0],
-                script = document.createElement('script');
-
+            script = document.createElement('script');
+            
             script.type = 'text/javascript'
             script.src = "js/" + name + '.js'
             head.appendChild(script);
         };
         addLanguageScript('intersection-observer');
+        pc = true;
     }
 });
 

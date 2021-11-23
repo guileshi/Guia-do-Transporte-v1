@@ -1,0 +1,120 @@
+.rotes {
+    margin: 80px auto;
+}
+
+.rotes__list {
+    margin-top: 24px;
+}
+
+.rotes__title {
+    font-size: var(--px24);
+    font-family: var(--poppins);
+    font-weight: var(--medium);
+    color: var(--accent-7);
+    text-align: center;
+}
+
+.rotes__subtitle {
+    font-size: var(--px18);
+    font-family: var(--opens-sans);
+    font-weight: var(--light);
+    color: var(--accent-7);
+    text-align: center;
+}
+
+.rotes__list__item {
+    position: relative;
+    border: 1px solid var(--base);
+    border-left: 5px solid var(--base);
+    border-radius: 4px 0 4px 0;
+    padding: 2px 0;
+    margin-bottom: 8px;
+}
+
+.rotes__list__item__title {
+    color: var(--accent-10);
+    font-weight: var(--regular);
+    font-size: var(--px18);
+    font-family: var(--poppins);
+    text-align: center;
+    margin-bottom: 2px;
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+}
+
+.rotes__list__item--destiny, .rotes__list__item--origin {
+    color: var(--accent-7);
+    font-weight: var(--light);
+    font-size: var(--px18);
+    font-family: var(--opens-sans);
+    text-align: center;
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+}
+
+.rotes__list__item__text__group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotes__list__item--divider {
+    color: var(--base);
+    font-weight: var(--extrabold);
+    font-size: var(--px18);
+    font-family: var(--opens-sans);
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+}
+
+.rotes__list__item__anim {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--base);
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+}
+
+.rotes__list__item_link:hover .rotes__list__item__anim {
+    width: 100%;
+}
+
+.rotes__list__item_link:hover .rotes__list__item--divider {
+    color: var(--accent-0);
+}
+
+.rotes__list__item_link:hover .rotes__list__item__title, .rotes__list__item_link:hover .rotes__list__item--origin, .rotes__list__item_link:hover .rotes__list__item--destiny {
+    color: var(--accent-0);
+}
+
+.rotes__list__item_link:active .rotes__list__item__anim {
+    background-color: var(--baseDark);
+    color: var(--accent-1);
+}
+
+.rotes.mobile .row {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    position: relative;
+}
+
+.rotes .row .col-12 {
+    display: inline-block;
+}
+
+@media (max-width: 767.98px) {
+    .rotes {
+        margin: 32px auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .rotes {
+        margin: 40px auto;
+    }
+}

@@ -1,0 +1,46 @@
+.hero {
+    padding: 0;
+    position: relative;
+    opacity: 0;
+    /* no-repeat center/100% */
+    background: url(../img/caminhao-background.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 90vh;
+    z-index: -1;
+    animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+}
+
+@keyframes hero-slide-down {
+    0%{
+        opacity: 0;
+        transform: translateY(-5%);
+    }
+    100%{
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hero-transform {
+        100%{
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+        }
+}
+
+@media (max-width: 767.98px) {
+    .hero {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        height: 80vh;
+        animation: hero-transform 1.5s 2.8s cubic-bezier(0, .1, 0, 1) forwards, hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        height: 70vh;
+        animation: hero-transform 1.5s 2.8s cubic-bezier(0, .1, 0, 1) forwards, hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+
+    }
+}

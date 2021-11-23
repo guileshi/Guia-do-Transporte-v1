@@ -54,21 +54,19 @@ const observerHero = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting && entry.target === hero) {
             $('.slidetop').removeClass("unhide")
-            $('.topbar').removeClass('fixed')
+            $('.topbar__fluid').removeClass('fixed')
+
             $('.topbar__quotation').css("display", "none")
             $('.topbar__quotation__form').css("display", "none")
-            $('.topbar__fluid').removeClass('fixed')
-            $('.topbar__fluid').css("background-color", "transparent")
-            console.log("Hero Observed")
+
 
         } else if (!entry.isIntersecting) {
             $('.slidetop').addClass("unhide")
-            $('.topbar').addClass('fixed')
+            $('.topbar__fluid').addClass('fixed')
+
             $('.topbar__quotation').css("display", "block")
             $('.topbar__quotation__form').css("display", "flex")
-            $('.topbar__fluid').addClass('fixed')
-            $('.topbar__fluid').css("background-color", "white")
-            console.log("Hero Unobserved")
+
             return;
         }
     })
