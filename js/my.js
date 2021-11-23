@@ -76,6 +76,12 @@ $(window).load(function () {
     }
 });
 
+// Transição de tela de loading
+$(window).on("load", function () {
+    $(".loading__background").fadeOut("slow");
+});
+
+// Sidebar
 $('.topbar_list--btn').click(function () {
     $('.sidebar').toggleClass('no__collapse')
     $('#filter--blue').css("display", "block")
@@ -103,6 +109,7 @@ $('.contar').counterUp({
     })
 })(jQuery);
 
+// Form
 const inputOrigin = document.getElementById('origin')
 const inputOriginTop = document.getElementById('origin-top')
 const inputDestination = document.getElementById('destination')
