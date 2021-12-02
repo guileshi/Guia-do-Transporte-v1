@@ -71,6 +71,32 @@
     .blog__item {
         margin-bottom: 16px;
     }
+    .blog__title {
+        color: var(--accent-7);
+        font-size: var(--px18);
+        font-weight: var(--medium);
+        font-family: var(--poppins);
+        text-align: center;
+        margin-bottom: 8px;
+    }
+    
+    .blog__subtitle {
+        color: var(--accent-7);
+        font-size: var(--px16);
+        font-weight: var(--light);
+        font-family: var(--opens-sans);
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .blog__content__text {
+        color: var(--accent-7);
+        font-weight: var(--regular);
+        font-size: var(--px16);
+        font-family: var(--opens-sans);
+        margin-top: 8px;
+        text-decoration: underline;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

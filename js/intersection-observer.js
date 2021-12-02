@@ -72,5 +72,5 @@ const observerHero = new IntersectionObserver(function (entries, observer) {
     })
 }, heroOptions);
 
-observerApp.observe(app)
 observerHero.observe(hero)
+observerApp.observe(app)

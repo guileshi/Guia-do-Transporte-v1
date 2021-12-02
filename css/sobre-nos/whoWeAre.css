@@ -1,0 +1,70 @@
+.whoWeAre{
+    margin: var(--px32) 0 5rem 0;
+    opacity: 0;
+    animation: slide-down 1s 2.4s cubic-bezier(.2,.7,.4,1) forwards;
+}
+
+.whoWeAre__title{
+    font-family: var(--poppins);
+    font-weight: var(--medium);
+    font-size: var(--px24);
+    color: var(--base);
+    text-align: center;
+    justify-content: center;
+}
+
+.whoWeAre__paragraph{
+    font-family: var(--opens-sans);
+    font-weight: var(--light);
+    font-size: var(--px18);
+    color: var(--accent-8);
+    text-align: center;
+    justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+    .whoWeAre{
+        margin: var(--px16) 0 var(--px32) 0;
+    }
+    .whoWeAre__title{
+        font-family: var(--poppins);
+        font-weight: var(--medium);
+        font-size: var(--px18);
+        color: var(--base);
+        text-align: left;
+        justify-content: left;
+    }
+    
+    .whoWeAre__paragraph{
+        font-family: var(--opens-sans);
+        font-weight: var(--light);
+        font-size: var(--px16);
+        color: var(--accent-8);
+        text-align: left;
+        justify-content: left;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .whoWeAre{
+        margin: var(--px32) 0 5rem 0;
+    }
+    
+    .whoWeAre__title{
+        font-family: var(--poppins);
+        font-weight: var(--medium);
+        font-size: var(--px24);
+        color: var(--base);
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .whoWeAre__paragraph{
+        font-family: var(--opens-sans);
+        font-weight: var(--light);
+        font-size: var(--px16);
+        color: var(--accent-8);
+        text-align: center;
+        justify-content: center;
+    }
+}

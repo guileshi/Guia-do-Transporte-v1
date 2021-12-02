@@ -3,7 +3,7 @@
     position: relative;
     opacity: 0;
     /* no-repeat center/100% */
-    background: url(../img/caminhao-background.jpg) no-repeat;
+    background: url(../../img/caminhao-background.jpg) no-repeat;
     background-size: cover;
     overflow: hidden;
     height: 90vh;
@@ -11,22 +11,6 @@
     animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
 }
 
-@keyframes hero-slide-down {
-    0%{
-        opacity: 0;
-        transform: translateY(-5%);
-    }
-    100%{
-        opacity: 0.9;
-        transform: translateY(0);
-    }
-}
-
-@keyframes hero-transform {
-        100%{
-            clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
-        }
-}
 
 @media (max-width: 767.98px) {
     .hero {

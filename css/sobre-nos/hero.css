@@ -1,0 +1,23 @@
+.hero{
+    background: url(../../img/sobre-nos/road-background.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    padding: 0;
+    position: relative;
+    opacity: 0;
+
+    animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+}
+
+@media (max-width: 767.98px) {
+    .hero{
+        height: 50vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero{
+        height: 50vh;
+    }
+}

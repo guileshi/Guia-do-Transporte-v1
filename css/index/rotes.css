@@ -111,10 +111,73 @@
     .rotes {
         margin: 32px auto;
     }
+    .rotes__title {
+        font-size: var(--px18);
+        font-family: var(--poppins);
+        font-weight: var(--medium);
+        color: var(--accent-7);
+        text-align: center;
+    }
+    
+    .rotes__subtitle {
+        font-size: var(--px16);
+        font-family: var(--opens-sans);
+        font-weight: var(--light);
+        color: var(--accent-7);
+        text-align: center;
+    }
+
+    .rotes__list__item__title {
+        color: var(--accent-10);
+        font-weight: var(--regular);
+        font-size: var(--px18);
+        font-family: var(--poppins);
+        text-align: center;
+        margin-bottom: 2px;
+        transition: var(--t-generic);
+        -webkit-transition: var(--t-generic);
+    }
+    
+    .rotes__list__item--destiny, .rotes__list__item--origin {
+        color: var(--accent-7);
+        font-weight: var(--light);
+        font-size: var(--px16);
+        font-family: var(--opens-sans);
+        text-align: center;
+        transition: var(--t-generic);
+        -webkit-transition: var(--t-generic);
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px){
     .rotes {
         margin: 40px auto;
+    }
+    .rotes__subtitle {
+        font-size: var(--px16);
+        font-family: var(--opens-sans);
+        font-weight: var(--light);
+        color: var(--accent-7);
+        text-align: center;
+    }
+    .rotes__list__item__title {
+        color: var(--accent-10);
+        font-weight: var(--regular);
+        font-size: var(--px18);
+        font-family: var(--poppins);
+        text-align: center;
+        margin-bottom: 2px;
+        transition: var(--t-generic);
+        -webkit-transition: var(--t-generic);
+    }
+    
+    .rotes__list__item--destiny, .rotes__list__item--origin {
+        color: var(--accent-7);
+        font-weight: var(--light);
+        font-size: var(--px16);
+        font-family: var(--opens-sans);
+        text-align: center;
+        transition: var(--t-generic);
+        -webkit-transition: var(--t-generic);
     }
 }

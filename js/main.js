@@ -16,21 +16,21 @@ $(window).load(function () {
         $('.quotation__form__btn--icon').html("<i class='fas fa-search fa-lg'></i>" + " <span>PESQUISAR</span>")
         $('.rotes').addClass('mobile')
 
-        if(window.screen.width <= 320){
+        if (window.screen.width <= 320) {
             addLanguageScript = function (name) {
                 var head = document.getElementsByTagName("head")[0],
                     script = document.createElement('script');
-    
+
                 script.type = 'text/javascript'
                 script.src = "js/" + name + '.js'
                 head.appendChild(script);
             };
             addLanguageScript('intersection-observer-small-mobile');
-        } else{
+        } else {
             addLanguageScript = function (name) {
                 var head = document.getElementsByTagName("head")[0],
                     script = document.createElement('script');
-    
+
                 script.type = 'text/javascript'
                 script.src = "js/" + name + '.js'
                 head.appendChild(script);
@@ -65,8 +65,8 @@ $(window).load(function () {
         $('.topbar__divider').css("display", "block");
         addLanguageScript = function (name) {
             var head = document.getElementsByTagName("head")[0],
-            script = document.createElement('script');
-            
+                script = document.createElement('script');
+
             script.type = 'text/javascript'
             script.src = "js/" + name + '.js'
             head.appendChild(script);
@@ -115,22 +115,22 @@ const inputOriginTop = document.getElementById('origin-top')
 const inputDestination = document.getElementById('destination')
 const inputDestinationTop = document.getElementById('destination-top')
 
-function getTextOrigin(){
+function getTextOrigin() {
     document.getElementById('origin').oninput = () => {
         inputOriginTop.value = inputOrigin.value
     }
 }
-function getTextOriginTop(){
+function getTextOriginTop() {
     document.getElementById('origin-top').oninput = () => {
         inputOrigin.value = inputOriginTop.value
     }
 }
-function getTextDestination(){
+function getTextDestination() {
     document.getElementById('destination').oninput = () => {
         inputDestinationTop.value = inputDestination.value
     }
 }
-function getTextDestinationTop(){
+function getTextDestinationTop() {
     document.getElementById('destination-top').oninput = () => {
         inputDestination.value = inputDestinationTop.value
     }
@@ -171,26 +171,23 @@ function onBlur(classname) {
 }
 
 // Botão de aceitar cookies
-$('#cookie__btn--accept').click(function(){
+$('#cookie__btn--accept').click(function () {
     $(".cookie").css("display", "none")
 })
 
 
 // Botão de fechar os cookies
-$('.cookie__close__btn').click(function(){
+$('.cookie__close__btn').click(function () {
     $(".cookie").css("display", "none")
 })
 
-(function ($) {
-    /*Efeito de rolagem de tela para os links clicados */
-    var $doc = $('html,body');
+var $doc = $('html,body');
     $(".scroll-page").click(function () {
         $doc.animate({
             scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-        return false;
+         }, 10);
+         return false;
     })
-})(jQuery);
 
 // Transição de tela de loading
 $(window).on("load", function () {

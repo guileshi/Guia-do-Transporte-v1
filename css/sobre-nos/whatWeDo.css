@@ -1,0 +1,93 @@
+.whatWeDo{
+    margin: 5rem 0;
+    opacity: 0;
+    animation: slide-down 1s 3.2s cubic-bezier(.2,.7,.4,1) forwards;
+}
+
+.whatWeDo__img{
+    /* Trocar as Imagens */
+    background: url(../../img/sobre-nos/caminhao2.jpg) no-repeat center;
+    width: 100%;
+    height: 536px;
+    padding: 0;
+    opacity: 0.8;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    background-size: cover;
+}
+
+.whatWeDo__group{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.whatWeDo__title{
+    font-size: var(--px24);
+    font-weight: var(--medium);
+    font-family: var(--poppins);
+    color: var(--base);
+}
+
+.whatWeDo__paragraph{
+    font-size: var(--px18);
+    font-weight: var(--light);
+    font-family: var(--opens-sans);
+    color: var(--accent-8);
+    margin-bottom: var(--px8);
+    text-align: justify;
+}
+
+.whatWeDo__link__group{
+    display: inline-flex;
+}
+
+.whatWeDo__link{
+    font-size: var(--px18);
+    font-weight: var(--light);
+    font-family: var(--opens-sans);
+    color: var(--base);
+    text-decoration: underline;
+}
+
+.whatWeDo__link__group__icon{
+    margin-left: var(--px8);
+}
+
+@media (max-width: 767.98px) {
+    .whatWeDo{
+        margin: var(--px32) 0;
+    }
+    .whatWeDo__group{
+        position: relative;
+        top: initial;
+        transform: initial;
+    }
+    .whatWeDo__title{
+        font-size: var(--px18);
+    }
+    .whatWeDo__paragraph{
+        font-size: var(--px16);
+    }
+    .whatWeDo__link{
+        font-size: var(--px12);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .whatWeDo{
+        margin:  2.5rem 0;
+    }
+    .whatWeDo__title{
+        font-size: var(--px24);
+    }
+    .whatWeDo__paragraph{
+        font-size: var(--px16);
+    }
+    .whatWeDo__link{
+        font-size: var(--px16);
+    }
+
+    .whatWeDo__img{
+        clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+    }
+}

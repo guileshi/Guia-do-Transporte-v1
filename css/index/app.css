@@ -1,5 +1,5 @@
 .app {
-    background: url("../img/background-aplicativo.jpg");
+    background: url("../../img/background-aplicativo.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: auto;
@@ -77,9 +77,10 @@
     .app__title {
         color: var(--accent-0);
         font-weight: var(--medium);
-        font-size: var(--px24);
+        font-size: var(--px18);
         font-family: var(--poppins);
         text-align: center;
+        padding: 8px 0 0 0;
     }
     .app__subtitle {
         color: var(--accent-0);

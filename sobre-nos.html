@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="O maior Guia do Transporte do Brasil. Busque e encontre transportadoras credenciadas para a sua carga!">
+    <meta name="theme-color" content="#1565C0">
+    <meta name="robots" content="index, follow">
+    <meta name="Language" content="Portuguese">
+    <meta name="city" content="São Paulo">
+    <meta name="country" content="Brazil">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guiadotransporte.com.br">
+    <meta property="og:image" content="https://guiadotransporte.com.br/images/guia-do-transporte-og.jpg">
+    <meta property="og:size_name" content="Guia do Transporte">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta http-equiv="content-language" content="pr-br">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="Revisit-After" content="1 day">
+    <title>O Melhor Guia de Transporte - Guia do Transporte</title>
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- CSS Main -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- CSS Hero Sobre Nós -->
+    <link rel="stylesheet" href="css/sobre-nos/hero.css">
+
+    <!-- CSS Sobre Nós -->
+    <link rel="stylesheet" href="css/sobre-nos/aboutUs.css">
+
+    <!-- CSS Quem Somos Nós -->
+    <link rel="stylesheet" href="css/sobre-nos/whoWeAre.css">
+
+    <!-- CSS O que nós Fazemos -->
+    <link rel="stylesheet" href="css/sobre-nos/whatWeDo.css">
+
+    <!-- CSS Nosso Objetivo -->
+    <link rel="stylesheet" href="css/sobre-nos/ourGoal.css">
+
+    <!-- CSS Font-Awesome -->
+    <link rel="stylesheet" href="vendor/fontawesome-free-5.15.4-web/css/all.min.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Loading -->
+    <div class="loading__background">
+        <div class="loading">
+            <div class="loading__head">
+                <div class="loading__head__detail">
+                </div>
+            </div>
+            <div class="loading__body">
+                <img src="img/logo-dark.png" class="loading__body__image" alt="">
+            </div>
+            <div class="loading__wheel --1">
+                <div class="loading__wheel__inside">
+                </div>
+            </div>
+            <div class="loading__wheel --2">
+                <div class="loading__wheel__inside">
+                </div>
+            </div>
+            <div class="loading__wheel --3">
+            </div>
+            <div class="loading__wheel --4">
+        
+            </div>
+            <img src="img/wind.png" class="loading__wind">
+        </div>
+    </div>
+
+    <!-- Botão de voltar para o topo -->
+    <div class="slidetop">
+        <a href="#hero" class="btn slidetop__btn scroll-page" type="button" role="button">
+            <i class="fas fa-arrow-up fa-lg"></i>
+        </a>
+    </div>
+
+    <!-- Cookie -->
+    <!-- <section class="cookie">
+        <button class="cookie__close" type="button" role="button">
+            <div class="cookie__close__btn"><i class="fas fa-times fa-lg"></i></div>
+        </button>
+        <h2 class="cookie__title">
+            Aceita um Cookie?
+        </h2>
+        <p class="cookie__text">
+            O site Guia do Transporte utiliza a tecnologia de cookies para melhorar a experiência do usuario.
+        </p>
+        <div class="cookie__btn__group">
+            <a href="#" class="cookie__btn --transparent" role="button" type="button">
+                Saiba Mais
+            </a>
+            <button class="cookie__btn" role="button" type="button" id="cookie__btn--accept">
+                Aceitar
+            </button>
+        </div>
+    </section> -->
+
+    <!-- Barra de Navegação lateral -->
+    <section id="sidebar">
+        <div class="filter" id="filter--blue"></div>
+        <div class="sidebar container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="sidebar__logo" title="Logo do Guia do Transporte"></div>
+                </div>
+                <ul class="sidebar__list" role="navigation" aria-expanded="true">
+                    <button role="button" class="sidebar__list__btn--close" title="Fechar o menu" tabindex="0">
+                        <i class="fas fa-times fa-lg">
+
+                        </i>
+                    </button>
+                    <span class="sr-only">Botão para fechar o menu</span>
+                    <!-- Adicione a classe active na li quando for a página selecionada -->
+                    <li class="sidebar__list__item active col-12" role="menuitem">
+                        <a href="index.html" class="d-flex" title="Inicio" tabindex="0" role="link">
+                            <span class="sidebar__list__item--icon"><i class="fas fa-home fa-lg mx-2"></i></span>
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12" role="menuitem">
+                        <a href="transportadoras.html" class="d-flex" title="Transportadoras" tabindex="0" role="link"
+                            role="link">
+                            <span class="sidebar__list__item--icon"><i class="fas fa-building fa-lg mx-2"></i></span>
+                            Transportadoras
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12" role="menuitem">
+                        <a href="#" class="d-flex" title="Cotação" tabindex="0" role="link">
+                            <span class="sidebar__list__item--icon"><i
+                                    class="fas fa-clipboard-list fa-lg mx-2"></i></span>
+                            Cotação
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12" role="menuitem">
+                        <a href="#" class="d-flex" title="Origem e Destino" tabindex="0" role="link">
+                            <span class="sidebar__list__item--icon"><i
+                                    class="fas fa-map-marker-alt fa-lg mx-2"></i></span>
+                            Origem e Destino
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12" role="menuitem">
+                        <a href="#" class="d-flex" title="Blog" tabindex="0" role="link">
+                            <span class="sidebar__list__item--icon"><i class="fab fa-blogger-b fa-lg mx-2"></i></span>
+                            Blog
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12" role="menuitem">
+                        <a href="#" class="d-flex" title="Sobre Nós" tabindex="0" role="link">
+                            <span class="sidebar__list__item--icon"><i class="fas fa-users fa-lg mx-2"></i></span>
+                            Sobre Nós
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item" role="menuitem">
+                        <a href="#" class="d-flex" title="Políticas e Termos" tabindex="0" role="link">
+                            <span class="sidebar__list__item--icon"><i class="fas fa-book fa-lg mx-2"></i></span>
+                            Políticas e Termos
+                        </a>
+                    </li>
+
+                    <li class="sidebar__list__item col-12" title="Cadastre-se" tabindex="0" role="menuitem">
+                        <a href="#" class="d-flex justify-content-center" role="link">
+                            <i class="fas fa-sign-in-alt fa-lg mx-2"></i> </span>
+                            Cadastre-se
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visivel apenas em dispositivos mobile. Barra de baixar o aplicativo -->
+    <section class="download-app fixed-top d-block d-lg-none">
+        <div class="download-app__group">
+            <div class="download-app__group__text" id="download__app">
+                Baixe o nosso App
+            </div>
+            <div class="d-flex">
+                <a href="#" class="download-app__group__btn rounded" aria-describedby="download__app">
+                    Baixar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background do Hero -->
+    <header class="hero container-fluid" id="hero">
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Navbar -->
+        <nav class="container-fluid topbar__fluid" role="navigation">
+            <div class="container topbar">
+                <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte"></a>
+                <ul class="topbar__list">
+                    <li class="topbar__list__item" role="link">
+                        <!-- Utilizar aria-current="page" quando for a página ativa -->
+                        <a href="index.html" class="text-uppercase" aria-current="page" title="Ir para o Inicio"
+                            tabindex="1">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="topbar__list__item" role="link">
+                        <a href="#" class="text-uppercase" title="Ir para Origem e Destino" tabindex="1">
+                            origem e destino
+                        </a>
+                    </li>
+                    <li class="topbar__list__item" role="link">
+                        <a href="#" class="text-uppercase" title="Ir para Transportadoras" tabindex="1">
+                            transportadoras
+                        </a>
+                    </li>
+                    <li class="topbar__list__item" role="link">
+                        <a href="#" class="text-uppercase" title="Ir para Cotação Rápida" tabindex="1">
+                            cotação rápida
+                        </a>
+                    </li>
+                    <li class="topbar__list__item" role="button">
+                        <button class="btn topbar_list--btn" title="Abrir o menu" tabindex="1">
+                            <i class="fas fa-bars fa-lg"></i>
+                            <span class="text-uppercase mx-2 topbar__list--menu d-none d-lg-inline">Menu</span>
+                        </button>
+                    </li>
+                </ul>
+                <a href="index.html" class="topbar__logo--mobile" id="topbar__logo__mobile"
+                    title="Guia do Transporte"></a>
+            </div>
+        </nav>
+
+        <!-- Formulario de cotação Topbar -->
+        <section class="topbar__quotation container-fluid">
+            <div class="container">
+                <div class="row">
+                    <form class="topbar__quotation__form">
+
+                        <!-- Input Origem -->
+                        <div class="col-md-5 col-12">
+                            <div
+                                class="d-flex align-items-center rounded quotation__form__field topbar__form__field quotation__form__input__origin">
+                                <span class="quotation_form_field--icon">
+                                    <i class="fas fa-map-marker-alt mx-3"></i>
+                                </span>
+                                <div class="position-relative w-100 me-3">
+                                    <label for="origin" class="position-absolute quotation__form__label">
+                                        Origem da sua carga
+                                    </label>
+                                    <input type="text" id="origin-top" name="origin"
+                                        class="w-100 quotation__form__input" required aria-required="true"
+                                        onkeyup="onChangeText(this, 'quotation__form__input__origin')"
+                                        onfocus="onFocus('quotation__form__input__origin')"
+                                        onblur="onBlur('quotation__form__input__origin')">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Input Destino -->
+                        <div class="col-md-5 col-12">
+                            <div
+                                class="d-flex align-items-center rounded quotation__form__field topbar__form__field quotation__form__input__destination">
+                                <span class="quotation_form_field--icon">
+                                    <i class="fas fa-map-marker-alt mx-3"></i>
+                                </span>
+                                <div class="position-relative w-100 me-3">
+                                    <label for="destination" class="position-absolute quotation__form__label">
+                                        Destino da sua carga
+                                    </label>
+                                    <input type="text" id="destination-top" name="destination"
+                                        class="w-100 quotation__form__input" required aria-required="true"
+                                        onkeyup="onChangeText(this, 'quotation__form__input__destination')"
+                                        onfocus="onFocus('quotation__form__input__destination')"
+                                        onblur="onBlur('quotation__form__input__destination')">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-auto col-md-auto col-12">
+                            <button class="btn quotation__form__btn topbar__form__field" role="button"
+                                type="submit">
+                                <span class="quotation__form__btn--icon" aria-hidden="true">
+                                    <i class="fas fa-search fa-lg"></i>
+                                </span>
+                                <span class="sr-only">Botão de Pesquisar</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+        </section>
+
+        <!-- Divisor da Navbar -->
+        <div class="topbar__divider" role="separator" aria-hidden="true"></div>
+
+        <!-- Sobre nós (hero) -->
+        <section class="aboutUs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="aboutUs__title">
+                            Sobre nós
+                        </h1>
+                        <h2 class="aboutUs__subtitle">
+                            Conheça um pouco mais sobre o nosso Guia do Transporte.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section aria-label="breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb__item"> <a href="index.html" class="breadcrumb__link">
+                                <div class="breadcrumb__link__group">
+                                    <div class="breadcrumb__link__icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div>
+                                        Inicio
+                                    </div>
+                                </div>
+                            </a>
+                            </li>
+                            <li class="breadcrumb__item active" aria-current="page"> <a href="#" class="breadcrumb__link">
+                                Sobre nós
+                            </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="whoWeAre">
+            <div class="container">
+                <div class="row d-lg-flex justify-content-lg-center">
+                    <div class="col-12">
+                        <h2 class="whoWeAre__title">
+                            Quem somos
+                        </h2>
+                    </div>
+                    <div class="col-lg-8 col-12">
+                        <p class="whoWeAre__paragraph">
+                            O Guia do Transporte foi criado para facilitar a busca por empresas de transporte e a entrega de sua carga. Tudo para facilitar o processo de cotação com as diversas empresas no nosso Guia.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="whatWeDo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="whatWeDo__group">
+                            <h2 class="whatWeDo__title">
+                                O que nós fazemos
+                            </h2>
+                            <p class="whatWeDo__paragraph">
+                                Durante suas buscas no nosso <strong>GUIA DO TRANSPORTE</strong> será possível encontrar empresas de todos os estados brasileiros, facilitando muito na escolha da melhor transportadora para sua carga.
+                            </p>
+                            <p class="whatWeDo__paragraph">
+                                Aqui você poderá aumentar a eficiência das negociações de frete e de embarque para sua carga ampliando assim suas opções de transporte.
+                            </p>
+                            <p class="whatWeDo__paragraph">
+                                Nossos bancos de dados são constantemente atualizados para garantir sua integridade e possuem praticamente todas as cidades brasileiras.
+                            </p>
+                            <a href="#" class="whatWeDo__link">
+                                <div class="whatWeDo__link__group">
+                                    <div>
+                                        Saiba mais sobre nossas políticas e termos
+                                    </div>
+                                    <div class="whatWeDo__link__group__icon">
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 d-none d-md-block pe-0">
+                        <div class="whatWeDo__img">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ourGoal">
+            <div class="container">
+                <div class="row d-lg-flex justify-content-lg-center">
+                    <div class="col-12">
+                        <h2 class="ourGoal__title">
+                            Nosso Objetivo
+                        </h2>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <p class="ourGoal__paragraph">
+                            Facilitar a cotação e o envio de carga através de um robusto sistema de classificação das empresas transportadoras de todo o Brasil.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <!-- Links úteis do Footer(navegação) -->
+        <section class="footer container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="footer__text">
+                            <h3 class="footer__title">
+                                Alguns de nossos links
+                            </h3>
+                            <div class="footer__link">
+                                <a href="sobre-nos.html" class="footer__link__item">
+                                    Sobre nós
+                                </a>
+                                <a href="#" class="footer__link__item">
+                                    Solicitar cotação
+                                </a>
+                                <a href="#" class="footer__link__item">
+                                    Políticas e Termos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12">
+                        <div class="footer__link__group">
+                            <h3 class="footer__title">
+                                Siga-nos nas redes sociais
+                            </h3>
+                            <div class="footer__link">
+                                <a href="#" target="_blank" class="footer__link__item--blue" role="link">
+                                    <i class="fab fa-facebook-square"></i> Facebook
+                                </a>
+                                <a href="#" target="_blank" class="footer__link__item--purple" role="link">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Direitos Autorais e Onde Estamos -->
+        <section class="footer--2 container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="footer--2__group">
+                            <div class="footer--2__text">
+                                ©2021 <a href="index.html" class="footer--2__text--grey">Guia do Transporte</a> -
+                                29.497.833/0001-91.
+                            </div>
+                            <div class="footer--2__text">
+                                Todos os direitos reservados.
+                            </div>
+                        </div>
+                        <div class="footer--2__group">
+                            <div class="footer--2__text">
+                                Parque Novo Mundo, São Paulo - SP, 02185-000
+                            </div>
+                            <div class="footer--2__text">
+                                Praça Novo Mundo, 64
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Importar Jquery -->
+    <script src="js/jquery-min.js"></script>
+
+    <!-- Importar Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Importar Jquery Counterup Plugin -->
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- Importar meu arquivo Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
