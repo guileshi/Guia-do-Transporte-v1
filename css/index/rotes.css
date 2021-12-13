@@ -1,9 +1,13 @@
 .rotes {
-    margin: 80px auto;
+    margin: 5em auto;
+}
+
+body#originDestination .rotes{
+    margin: var(--px32) auto 0 auto;
 }
 
 .rotes__list {
-    margin-top: 24px;
+    margin-top: var(--px24);
 }
 
 .rotes__title {
@@ -13,6 +17,10 @@
     color: var(--accent-7);
     text-align: center;
 }
+
+body#originDestination .rotes__title{
+    color: var(--base);
+} 
 
 .rotes__subtitle {
     font-size: var(--px18);
@@ -96,14 +104,14 @@
     color: var(--accent-1);
 }
 
-.rotes.mobile .row {
+body.index .rotes.mobile .row {
     display: block;
     overflow-x: scroll;
     white-space: nowrap;
     position: relative;
 }
 
-.rotes .row .col-12 {
+body.index .rotes .row .col-12 {
     display: inline-block;
 }
 
@@ -152,6 +160,9 @@
 @media (min-width: 768px) and (max-width: 1023px){
     .rotes {
         margin: 40px auto;
+    }
+    body#originDestination .rotes{
+        margin: 2.5rem auto 0 auto;
     }
     .rotes__subtitle {
         font-size: var(--px16);

@@ -20,33 +20,24 @@
     <meta http-equiv="content-language" content="pr-br">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta name="Revisit-After" content="1 day">
-    <title>O Melhor Guia de Transporte - Guia do Transporte</title>
+    <title>Origem e Destino - Guia do Transporte</title>
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
     <!-- CSS Main -->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- CSS Home Header -->
-    <link rel="stylesheet" href="css/index/hero.css">
-
     <!-- CSS Quotation -->
     <link rel="stylesheet" href="css/index/quotation.css">
 
-    <!-- CSS Explanation -->
-    <link rel="stylesheet" href="css/index/explanation.css">
+    <!-- CSS Hero Sobre Nós -->
+    <link rel="stylesheet" href="css/origem-destino/hero.css">
+
+    <!-- CSS originDestination -->
+    <link rel="stylesheet" href="css/origem-destino/originDestination.css">
 
     <!-- CSS Rotes -->
     <link rel="stylesheet" href="css/index/rotes.css">
-
-    <!-- CSS App -->
-    <link rel="stylesheet" href="css/index/app.css">
-
-    <!-- CSS Blog -->
-    <link rel="stylesheet" href="css/index/blog.css">
-
-    <!-- CSS Statistic -->
-    <link rel="stylesheet" href="css/index/statistic.css">
 
     <!-- CSS Font-Awesome -->
     <link rel="stylesheet" href="vendor/fontawesome-free-5.15.4-web/css/all.min.css">
@@ -54,7 +45,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="index">
+<body id="originDestination">
     <!-- Loading -->
     <div class="loading__background">
         <div class="loading">
@@ -80,6 +71,13 @@
             </div>
             <img src="img/wind.png" class="loading__wind">
         </div>
+    </div>
+
+    <!-- Botão de voltar para o topo -->
+    <div class="slidetop">
+        <a href="#hero" class="btn slidetop__btn scroll-page" type="button" role="button">
+            <i class="fas fa-arrow-up fa-lg"></i>
+        </a>
     </div>
 
     <!-- Cookie -->
@@ -112,66 +110,66 @@
                     <div class="sidebar__logo" title="Logo do Guia do Transporte"></div>
                 </div>
                 <ul class="sidebar__list" role="navigation" aria-expanded="true">
-                    <button role="button" class="sidebar__list__btn--close" title="Fechar o menu">
+                    <button role="button" class="sidebar__list__btn--close" title="Fechar o menu" tabindex="0">
                         <i class="fas fa-times fa-lg">
 
                         </i>
                     </button>
                     <span class="sr-only">Botão para fechar o menu</span>
                     <!-- Adicione a classe active na li quando for a página selecionada -->
-                    <li class="sidebar__list__item active" role="menuitem" tabindex="0">
-                        <a href="index.html" class="d-flex" title="Inicio" role="link">
+                    <li class="sidebar__list__item col-12" role="menuitem">
+                        <a href="index.html" class="d-flex" title="Inicio" tabindex="0" role="link">
                             <span class="sidebar__list__item--icon"><i class="fas fa-home fa-lg mx-2"></i></span>
                             Inicio
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
-                        <a href="transportadoras.html" class="d-flex" title="Transportadoras" role="link"
+                    <li class="sidebar__list__item col-12" role="menuitem">
+                        <a href="transportadoras.html" class="d-flex" title="Transportadoras" tabindex="0" role="link"
                             role="link">
                             <span class="sidebar__list__item--icon"><i class="fas fa-building fa-lg mx-2"></i></span>
                             Transportadoras
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
-                        <a href="#" class="d-flex" title="Cotação" role="link">
+                    <li class="sidebar__list__item col-12" role="menuitem">
+                        <a href="#" class="d-flex" title="Cotação" tabindex="0" role="link">
                             <span class="sidebar__list__item--icon"><i
                                     class="fas fa-clipboard-list fa-lg mx-2"></i></span>
                             Cotação
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
-                        <a href="origem-destino.html" class="d-flex" title="Origem e Destino" role="link">
+                    <li class="sidebar__list__item col-12 active" role="menuitem">
+                        <a href="#" class="d-flex" title="Origem e Destino" tabindex="0" role="link">
                             <span class="sidebar__list__item--icon"><i
                                     class="fas fa-map-marker-alt fa-lg mx-2"></i></span>
                             Origem e Destino
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
-                        <a href="#" class="d-flex" title="Blog"  role="link">
+                    <li class="sidebar__list__item col-12" role="menuitem">
+                        <a href="#" class="d-flex" title="Blog" tabindex="0" role="link">
                             <span class="sidebar__list__item--icon"><i class="fab fa-blogger-b fa-lg mx-2"></i></span>
                             Blog
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
-                        <a href="sobre-nos.html " class="d-flex" title="Sobre Nós"  role="link">
+                    <li class="sidebar__list__item col-12" role="menuitem">
+                        <a href="sobre-nos.html" class="d-flex" title="Sobre Nós" tabindex="0" role="link">
                             <span class="sidebar__list__item--icon"><i class="fas fa-users fa-lg mx-2"></i></span>
                             Sobre Nós
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
-                        <a href="#" class="d-flex" title="Políticas e Termos"  role="link">
+                    <li class="sidebar__list__item" role="menuitem">
+                        <a href="#" class="d-flex" title="Políticas e Termos" tabindex="0" role="link">
                             <span class="sidebar__list__item--icon"><i class="fas fa-book fa-lg mx-2"></i></span>
                             Políticas e Termos
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" title="Cadastre-se" role="menuitem" tabindex="0">
+                    <li class="sidebar__list__item col-12" title="Cadastre-se" tabindex="0" role="menuitem">
                         <a href="#" class="d-flex justify-content-center" role="link">
                             <i class="fas fa-sign-in-alt fa-lg mx-2"></i> </span>
                             Cadastre-se
@@ -200,124 +198,54 @@
     <header class="hero container-fluid" id="hero">
     </header>
 
-    <!-- Conteúdo principal -->
-    <main>
-        <!-- Navbar -->
-        <nav class="container-fluid topbar__fluid" role="navigation">
-            <div class="container topbar">
-                <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte" tabindex="1"></a>
-                <ul class="topbar__list">   
-                    <li class="topbar__list__item" role="link">
-                        <!-- Utilizar aria-current="page" quando for a página ativa -->
-                        <a href="index.html" class="text-uppercase" aria-current="page" title="Ir para o Inicio"
-                            tabindex="1">
-                            Inicio
-                        </a>
-                    </li>
-                    <li class="topbar__list__item" role="link">
-                        <a href="origem-destino.html" class="text-uppercase" title="Ir para Origem e Destino" tabindex="1">
-                            origem e destino
-                        </a>
-                    </li>
-                    <li class="topbar__list__item" role="link">
-                        <a href="transportadoras.html" class="text-uppercase" title="Ir para Transportadoras" tabindex="1">
-                            transportadoras
-                        </a>
-                    </li>
-                    <li class="topbar__list__item" role="link">
-                        <a href="#" class="text-uppercase" title="Ir para Cotação Rápida" tabindex="1">
-                            cotação rápida
-                        </a>
-                    </li>
-                    <li class="topbar__list__item" role="button">
-                        <button class="btn topbar_list--btn" title="Abrir o menu" tabindex="1">
-                            <i class="fas fa-bars fa-lg"></i>
-                            <span class="text-uppercase mx-2 topbar__list--menu d-none d-lg-inline">Menu</span>
-                        </button>
-                    </li>
-                </ul>
-                <a href="index.html" class="topbar__logo--mobile" id="topbar__logo__mobile"
-                    title="Guia do Transporte"></a>
-            </div>
-        </nav>
-
-        <!-- Formulario de cotação Topbar -->
-        <section class="topbar__quotation container-fluid">
-            <div class="container">
-                <div class="row">
-                    <form class="topbar__quotation__form">
-
-                        <!-- Input Origem -->
-                        <div class="col-md-5 col-12">
-                            <div
-                                class="d-flex align-items-center rounded quotation__form__field topbar__form__field quotation__form__input__origin">
-                                <span class="quotation_form_field--icon">
-                                    <i class="fas fa-map-marker-alt mx-3"></i>
-                                </span>
-                                <div class="position-relative w-100 me-3">
-                                    <label for="origin" class="position-absolute quotation__form__label">
-                                        Origem da sua carga
-                                    </label>
-                                    <input type="text" id="origin-top" name="origin"
-                                        class="w-100 quotation__form__input" required aria-required="true"
-                                        onkeyup="onChangeText(this, 'quotation__form__input__origin')"
-                                        onfocus="onFocus('quotation__form__input__origin')"
-                                        onblur="onBlur('quotation__form__input__origin')">
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Input Destino -->
-                        <div class="col-md-5 col-12">
-                            <div
-                                class="d-flex align-items-center rounded quotation__form__field topbar__form__field quotation__form__input__destination">
-                                <span class="quotation_form_field--icon">
-                                    <i class="fas fa-map-marker-alt mx-3"></i>
-                                </span>
-                                <div class="position-relative w-100 me-3">
-                                    <label for="destination" class="position-absolute quotation__form__label">
-                                        Destino da sua carga
-                                    </label>
-                                    <input type="text" id="destination-top" name="destination"
-                                        class="w-100 quotation__form__input" required aria-required="true"
-                                        onkeyup="onChangeText(this, 'quotation__form__input__destination')"
-                                        onfocus="onFocus('quotation__form__input__destination')"
-                                        onblur="onBlur('quotation__form__input__destination')">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-auto col-md-auto col-12">
-                            <button class="btn quotation__form__btn topbar__form__field" role="button"
-                                type="submit">
-                                <span class="quotation__form__btn--icon" aria-hidden="true">
-                                    <i class="fas fa-search fa-lg"></i>
-                                </span>
-                                <span class="sr-only">Botão de Pesquisar</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-        </section>
-
-        <!-- Divisor da Navbar -->
-        <div class="topbar__divider" role="separator" aria-hidden="true"></div>
-
-        <!-- Formulario do Hero -->
-        <section class="quotation container">
+    <!-- Navbar -->
+    <nav class="container-fluid topbar__fluid" role="navigation">
+        <div class="container topbar">
+            <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte"  tabindex="1"></a>
+            <ul class="topbar__list">
+                <li class="topbar__list__item" role="link">
+                    <!-- Utilizar aria-current="page" quando for a página ativa -->
+                    <a href="index.html" class="text-uppercase" aria-current="page" title="Ir para o Inicio"
+                        tabindex="1">
+                        Inicio
+                    </a>
+                </li>
+                <li class="topbar__list__item" role="link">
+                    <a href="#" class="text-uppercase" title="Ir para Origem e Destino" tabindex="1">
+                        origem e destino
+                    </a>
+                </li>
+                <li class="topbar__list__item" role="link">
+                    <a href="#" class="text-uppercase" title="Ir para Transportadoras" tabindex="1">
+                        transportadoras
+                    </a>
+                </li>
+                <li class="topbar__list__item" role="link">
+                    <a href="#" class="text-uppercase" title="Ir para Cotação Rápida" tabindex="1">
+                        cotação rápida
+                    </a>
+                </li>
+                <li class="topbar__list__item" role="button">
+                    <button class="btn topbar_list--btn" title="Abrir o menu" tabindex="1">
+                        <i class="fas fa-bars fa-lg"></i>
+                        <span class="text-uppercase mx-2 topbar__list--menu d-none d-lg-inline">Menu</span>
+                    </button>
+                </li>
+            </ul>
+            <a href="index.html" class="topbar__logo--mobile" id="topbar__logo__mobile"
+                title="Guia do Transporte"></a>
+        </div>
+    </nav>
+     <!-- Formulario de cotação Topbar -->
+     <section class="topbar__quotation container-fluid">
+        <div class="container">
             <div class="row">
-                <!-- Titulo principal -->
-                <h1 class="quotation__title col-12">
-                    Busque sua Transportadora
-                </h1>
-                <h2 class="quotation__subtitle col-12">
-                    Digite a origem e o destino. Temos parcerias com transportadoras em todo o Brasil!
-                </h2>
-                <form class="quotation__form">
+                <form class="topbar__quotation__form">
 
                     <!-- Input Origem -->
                     <div class="col-md-5 col-12">
                         <div
-                            class="d-flex align-items-center rounded quotation__form__field quotation__form__input__origin">
+                            class="d-flex align-items-center rounded quotation__form__field topbar__form__field quotation__form__input__origin">
                             <span class="quotation_form_field--icon">
                                 <i class="fas fa-map-marker-alt mx-3"></i>
                             </span>
@@ -325,8 +253,8 @@
                                 <label for="origin" class="position-absolute quotation__form__label">
                                     Origem da sua carga
                                 </label>
-                                <input tabindex="0" type="text" id="origin" name="origin" class="w-100 quotation__form__input"
-                                    required aria-required="true"
+                                <input type="text" id="origin-top" name="origin"
+                                    class="w-100 quotation__form__input" required aria-required="true"
                                     onkeyup="onChangeText(this, 'quotation__form__input__origin')"
                                     onfocus="onFocus('quotation__form__input__origin')"
                                     onblur="onBlur('quotation__form__input__origin')">
@@ -337,7 +265,7 @@
                     <!-- Input Destino -->
                     <div class="col-md-5 col-12">
                         <div
-                            class="d-flex align-items-center rounded quotation__form__field quotation__form__input__destination">
+                            class="d-flex align-items-center rounded quotation__form__field topbar__form__field quotation__form__input__destination">
                             <span class="quotation_form_field--icon">
                                 <i class="fas fa-map-marker-alt mx-3"></i>
                             </span>
@@ -345,7 +273,7 @@
                                 <label for="destination" class="position-absolute quotation__form__label">
                                     Destino da sua carga
                                 </label>
-                                <input tabindex="0" type="text" id="destination" name="destination"
+                                <input type="text" id="destination-top" name="destination"
                                     class="w-100 quotation__form__input" required aria-required="true"
                                     onkeyup="onChangeText(this, 'quotation__form__input__destination')"
                                     onfocus="onFocus('quotation__form__input__destination')"
@@ -353,8 +281,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-12">
-                        <button tabindex="0" class="btn quotation__form__btn" role="button" type="submit">
+                    <div class="col-lg-auto col-md-auto col-12">
+                        <button class="btn quotation__form__btn topbar__form__field" role="button"
+                            type="submit">
                             <span class="quotation__form__btn--icon" aria-hidden="true">
                                 <i class="fas fa-search fa-lg"></i>
                             </span>
@@ -363,78 +292,112 @@
                     </div>
                 </form>
             </div>
-        </section>
+    </section>
 
-        <!-- Explicação(Como usar) -->
-        <section class="explanation container">
-            <div class="row">
-                <h2 class="explanation__title col-12">
-                    Fácil de Usar
-                </h2>
-                <h3 class="explanation__subtitle col-12">
-                    Procure a transportadora pela rota e faça cotação online sem precisar se cadastrar. Nunca foi tão
-                    fácil
-                    fazer sua cotação com a transportadora certa!
-                </h3>
-                <div class="explanation__card col-md-4 col-12">
-                    <div class="explanation__card__icon">
-                        <span class="explanation__card__icon--icon">
-                            <i class="fas fa-map-marked-alt fa-lg"></i>
-                        </span>
+     <!-- Divisor da Navbar -->
+     <div class="topbar__divider" role="separator" aria-hidden="true"></div>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Sobre nós (hero) -->
+        <section class="originDestination">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="originDestination__title">
+                            Digite sua origem e destino
+                        </h1>
+                        <h2 class="originDestination__subtitle">
+                            Faça sua cotação com transportadoras que atendem todo o Brasil. Aqui você pode ver as rotas mais buscadas no Guia do Transporte.
+                        </h2>
                     </div>
-                    <h4 class="explanation__card__title">
-                        Digite Origem e Destino
-                    </h4>
-                    <p class="explanation__card__text">
-                        Escolha a origem e o destino de sua carga, assim irá melhorar a busca das transportadoras
-                    </p>
-                </div>
-                <div class="explanation__card col-md-4 col-12">
-                    <div class="explanation__card__icon">
-                        <span class="explanation__card__icon--icon">
-                            <i class="fas fas fa-search fa-lg"></i>
-                        </span>
-                    </div>
-                    <h4 class="explanation__card__title">
-                        Pressione Buscar
-                    </h4>
-                    <p class="explanation__card__text">
-                        Sem muito segredo, agora é só clicar em buscar e aguardar carregar a lista de Transportadoras
-                    </p>
-                </div>
-                <div class="explanation__card col-md-4 col-12">
-                    <div class="explanation__card__icon">
-                        <span class="explanation__card__icon--icon">
-                            <i class="fas fa-clipboard-list fa-lg"></i>
-                        </span>
-                    </div>
-                    <h4 class="explanation__card__title">
-                        Solicite Cotação
-                    </h4>
-                    <p class="explanation__card__text">
-                        Escolha as transportadoras, clique em “Solicitar Cotação” e envie os dados da sua carga
-                    </p>
+                    <form class="quotation__form">
+
+                        <!-- Input Origem -->
+                        <div class="col-md-5 col-12">
+                            <div
+                                class="d-flex align-items-center rounded quotation__form__field quotation__form__input__origin">
+                                <span class="quotation_form_field--icon">
+                                    <i class="fas fa-map-marker-alt mx-3"></i>
+                                </span>
+                                <div class="position-relative w-100 me-3">
+                                    <label for="origin" class="position-absolute quotation__form__label">
+                                        Origem da sua carga
+                                    </label>
+                                    <input tabindex="0" type="text" id="origin" name="origin" class="w-100 quotation__form__input"
+                                        required aria-required="true"
+                                        onkeyup="onChangeText(this, 'quotation__form__input__origin')"
+                                        onfocus="onFocus('quotation__form__input__origin')"
+                                        onblur="onBlur('quotation__form__input__origin')">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Input Destino -->
+                        <div class="col-md-5 col-12">
+                            <div
+                                class="d-flex align-items-center rounded quotation__form__field quotation__form__input__destination">
+                                <span class="quotation_form_field--icon">
+                                    <i class="fas fa-map-marker-alt mx-3"></i>
+                                </span>
+                                <div class="position-relative w-100 me-3">
+                                    <label for="destination" class="position-absolute quotation__form__label">
+                                        Destino da sua carga
+                                    </label>
+                                    <input tabindex="0" type="text" id="destination" name="destination"
+                                        class="w-100 quotation__form__input" required aria-required="true"
+                                        onkeyup="onChangeText(this, 'quotation__form__input__destination')"
+                                        onfocus="onFocus('quotation__form__input__destination')"
+                                        onblur="onBlur('quotation__form__input__destination')">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-12">
+                            <button tabindex="0" class="btn quotation__form__btn" role="button" type="submit">
+                                <span class="quotation__form__btn--icon" aria-hidden="true">
+                                    <i class="fas fa-search fa-lg"></i>
+                                </span>
+                                <span class="sr-only">Botão de Pesquisar</span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
 
-        <!-- Propaganda -->
-        <section class="advertising container">
-            <a href="#" target="_blank" tabindex="-1" aria-hidden="true" role="banner">
-                <div class="advertising__announce">
+        <!-- Breadcrumb -->
+        <section aria-label="breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb__item"> <a href="index.html" class="breadcrumb__link">
+                                <div class="breadcrumb__link__group">
+                                    <div class="breadcrumb__link__icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div>
+                                        Inicio
+                                    </div>
+                                </div>
+                            </a>
+                            </li>
+                            <li class="breadcrumb__item active" aria-current="page"> <a href="#" class="breadcrumb__link">
+                                Origem e Destino
+                            </a>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-                <span class="sr-only">Propaganda</span>
-            </a>
+            </div>
         </section>
 
         <!-- Rotas -->
         <section class="rotes container">
             <h2 class="rotes__title">
-                Rotas de Transporte
+                Encontre a rota ideial para você!
             </h2>
-            <h3 class="rotes__subtitle">
-                Veja abaixo as rotas mais buscadas
-            </h3>
             <ul class="rotes__list row" role="list">
                 <!-- 30 rotas no total -->
                 <div class="col-lg-4 col-md-6 col-12">
@@ -1044,169 +1007,33 @@
             </ul>
         </section>
 
-        <!-- Aplicativo Mobile -->
-        <section class="app container-fluid">
-            <div class="container position-relative">
-                <div class="row">
-                    <div class="col-md-3 d-none d-md-block">
-                        <div class="app__image--cell">
-                            <img src="img/celular-aplicativo.png" id="app__image--cell--anim"
-                                alt="Celular com o aplicativo do Guia do Transporte"
-                                title="Aplicativo Guia do Transporte">
-                        </div>
-                    </div>
-                    <div class="col-md-9 col-12">
-                        <div class="row">
-                            <div class="col-12 d-block d-md-none">
-                                <div class="app__image--cell">
-                                    <img src="img/celular-aplicativo.png"
-                                        alt="Celular com o aplicativo do Guia do Transporte"
-                                        title="Aplicativo Guia do Transporte">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="app__group">
-                                    <h2 class="app__title">
-                                        Baixe já nosso aplicativo
-                                    </h2>
-                                    <p class="app__subtitle">
-                                        Faça sua cotação online e receba as respostas diretamente em seu <a href="#"
-                                            target="_blank" class="app__subtitle--green" tabindex="0"><strong>WhatsApp</strong></a>
-                                        de
-                                        forma simples e
-                                        rápida
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="app__image--google app__group">
-                                    <a href="#" target="_blank" role="navigation"
-                                        title="Baixar o aplicativo do Guia do Transporte">
-                                        <img src="img/google-play.png" alt="Disponivel no Google Play">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Paginatior -->
+        <section role="navigation">
+            <ul class="pagination__base">
+                <li class="pagination__item active">
+                    <a href="#" class="pagination__link">1</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">2</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">3</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">4</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">5</a>
+                </li>
+                <li class="pagination__item">
+                    <span class="pagination__item__divider"> ... </span>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">5000</a>
+                </li>
+            </ul>
         </section>
 
-        <!-- Blog -->
-        <section class="blog container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="blog__group__text">
-                        <h2 class="blog__title">
-                            Blog do Transporte
-                        </h2>
-                        <h3 class="blog__subtitle">
-                            Saiba tudo que acontece no mundo dos transportes
-                        </h3>
-                    </div>
-                </div>
-                <article class="col-lg-4 col-md-6 col-12" role="article">
-                    <a href="#" target="_blank" tabindex="0">
-                        <div class="card blog__item">
-                            <div class="blog__image">
-                                <img src="img/noticia2.png" alt="Noticia do Blog">
-                            </div>
-                            <div class="card-body blog__content">
-                                <span class="blog__content__tag">
-                                    Notícias Transportes
-                                </span>
-                                <h4 class="blog__content__text">
-                                    Aplicativos de transporte | Com mais de 500 mil veículos cadastrados na capital
-                                    Paulista, judicializaram fiscalização, diz CMUV em CPI
-                                </h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-                <article class="col-lg-4 col-md-6 col-12" role="article">
-                    <a href="#" target="_blank" tabindex="0">
-                        <div class="card blog__item">
-                            <div class="blog__image">
-                                <img src="img/noticia1.png" alt="Noticia do Blog">
-                            </div>
-                            <div class="card-body blog__content">
-                                <span class="blog__content__tag">
-                                    Transportes no Brasil
-                                </span>
-                                <h4 class="blog__content__text">
-                                    Transporte coletivo | Uso da frota do transporte público de Joinville/SC
-                                </h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-                <article class="col-4 d-lg-block d-none" role="article">
-                    <a href="#" target="_blank" tabindex="0">
-                        <div class="card blog__item">
-                            <div class="blog__image">
-                                <img src="img/noticia3.png" alt="Noticia do Blog">
-                            </div>
-                            <div class="card-body blog__content">
-                                <span class="blog__content__tag">
-                                    Transportadoras
-                                </span>
-                                <h4 class="blog__content__text">
-                                    Caminhões e máquinas agrícolas: veículos podem ser adquiridos por consórcio
-                                </h4>
-                            </div>
-                        </div>
-                    </a>
-                </article>
-            </div>
-        </section>
-
-        <!-- Estatisticas -->
-        <section class="statistics container-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-6">
-                        <div class="statistics__item">
-                            <div class="statistics__title">
-                                5M
-                            </div>
-                            <div class="statistics__subtitle">
-                                Buscas realizadas
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="statistics__item --mobile">
-                            <div class="statistics__title">
-                                1M
-                            </div>
-                            <div class="statistics__subtitle">
-                                Cotações solicitadas
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="statistics__item">
-                            <div class="statistics__title">
-                                5K
-                            </div>
-                            <div class="statistics__subtitle">
-                                Cidade atendidas
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="statistics__item --last">
-                            <div class="statistics__title">
-                                2.2K
-                            </div>
-                            <div class="statistics__subtitle">
-                                Transportadoras
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -1222,13 +1049,13 @@
                                 Alguns de nossos links
                             </h3>
                             <div class="footer__link">
-                                <a href="sobre-nos.html" class="footer__link__item" tabindex="0">
+                                <a href="sobre-nos.html" class="footer__link__item">
                                     Sobre nós
                                 </a>
-                                <a href="#" class="footer__link__item" tabindex="0">
+                                <a href="#" class="footer__link__item">
                                     Solicitar cotação
                                 </a>
-                                <a href="#" class="footer__link__item" tabindex="0">
+                                <a href="#" class="footer__link__item">
                                     Políticas e Termos
                                 </a>
                             </div>
@@ -1240,10 +1067,10 @@
                                 Siga-nos nas redes sociais
                             </h3>
                             <div class="footer__link">
-                                <a href="#" target="_blank" class="footer__link__item--blue" role="link" tabindex="0">
+                                <a href="#" target="_blank" class="footer__link__item--blue" role="link">
                                     <i class="fab fa-facebook-square"></i> Facebook
                                 </a>
-                                <a href="#" target="_blank" class="footer__link__item--purple" role="link" tabindex="0">
+                                <a href="#" target="_blank" class="footer__link__item--purple" role="link">
                                     <i class="fab fa-instagram"></i> Instagram
                                 </a>
                             </div>
@@ -1287,14 +1114,15 @@
     <!-- Importar Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Importar Jquery Counterup Plugin -->
-    <script src="js/jquery.counterup.min.js"></script>
-
-    <!-- Importar Main Javascript -->
+    <!-- Importar meu arquivo Javascript -->
     <script src="js/main.js"></script>
 
-    <!-- Importar Counter Up Javascript  -->
-    <script src="js/counterUp.js"></script>
+    <!-- Importar Cuttr -->
+    <script src="js/cuttr.js"></script>
+
+    <!-- Importat Truncate -->
+    <script src="js/truncate.js"></script>
+
 </body>
 
 </html>

@@ -2,7 +2,17 @@ var celular;
 var tablet;
 var pc;
 
-$(window).load(function () {
+var addLanguageScript = function (name) {
+    var head = document.getElementsByTagName("head")[0],
+        script = document.createElement('script');
+
+    script.type = 'text/javascript'
+    script.src = "js/" + name + '.js'
+    script.classList.add('intersection-observer')
+    head.appendChild(script);
+};
+
+function init() {
     if (window.screen.width < 767) {
 
         $('.topbar').addClass('mobile')
@@ -15,26 +25,15 @@ $(window).load(function () {
         $('.explanation__subtitle').text("Procure a transportadora pela rota e faça cotação online sem precisar se cadastrar.")
         $('.quotation__form__btn--icon').html("<i class='fas fa-search fa-lg'></i>" + " <span>PESQUISAR</span>")
         $('.rotes').addClass('mobile')
+        $('.topbar__quotation__form').css("display", "none")
+
 
         if (window.screen.width <= 320) {
-            addLanguageScript = function (name) {
-                var head = document.getElementsByTagName("head")[0],
-                    script = document.createElement('script');
 
-                script.type = 'text/javascript'
-                script.src = "js/" + name + '.js'
-                head.appendChild(script);
-            };
+
             addLanguageScript('intersection-observer-small-mobile');
         } else {
-            addLanguageScript = function (name) {
-                var head = document.getElementsByTagName("head")[0],
-                    script = document.createElement('script');
 
-                script.type = 'text/javascript'
-                script.src = "js/" + name + '.js'
-                head.appendChild(script);
-            };
             addLanguageScript('intersection-observer-mobile');
         }
 
@@ -44,59 +43,70 @@ $(window).load(function () {
         $('.topbar').addClass('mobile')
         $('.filter').addClass('mobile')
         $('.topbar').addClass('container-fluid')
+        $('.topbar__divider').css("display", "none");
         $('.topbar').removeClass('container')
         $('#topbar__logo__mobile').css("display", "block");
         $('#topbar__logo__desktop').css("display", "none");
         $('.download-app').css("display", "block")
+        $('.topbar__quotation__form').css("display", "none")
 
-        addLanguageScript = function (name) {
-            var head = document.getElementsByTagName("head")[0],
-                script = document.createElement('script');
 
-            script.type = 'text/javascript'
-            script.src = "js/" + name + '.js'
-            head.appendChild(script);
-        };
         addLanguageScript('intersection-observer-tablet');
 
         tablet = true;
     } else if (window.screen.width > 1025) {
 
         $('.topbar__divider').css("display", "block");
-        addLanguageScript = function (name) {
-            var head = document.getElementsByTagName("head")[0],
-                script = document.createElement('script');
+        $('.topbar').removeClass('mobile')
+        $('.filter').removeClass('mobile')
+        $('.topbar').removeClass('container-fluid')
+        $('.topbar').addClass('container')
+        $('#topbar__logo__mobile').css("display", "none");
+        $('#topbar__logo__desktop').css("display", "block");
+        $('.quotation__form__btn--icon').html("<i class='fas fa-search fa-lg'></i>")
 
-            script.type = 'text/javascript'
-            script.src = "js/" + name + '.js'
-            head.appendChild(script);
-        };
-        addLanguageScript('intersection-observer');
+
+        if ($('body').is('#transportadoras')) {
+            return
+        } else {
+
+            addLanguageScript('intersection-observer');
+        }
+
+
         pc = true;
     }
+}
+
+$(window).load(function () {
+    init()
 });
+
 
 // Transição de tela de loading
 $(window).on("load", function () {
     $(".loading__background").fadeOut("slow");
 });
+// ---
 
 // Sidebar
 $('.topbar_list--btn').click(function () {
     $('.sidebar').toggleClass('no__collapse')
     $('#filter--blue').css("display", "block")
 })
+
 $('#filter--blue,.sidebar__list__btn--close').click(function () {
     $('#filter--blue').css("display", "none")
     $('.sidebar').toggleClass('no__collapse')
 })
 
-// Iniciar contador de numeros
-"use strict";
-$('.contar').counterUp({
-    time: 1000,
-    delay: 20
+$(document).on('keyup', function (e) {
+    if (e.key == "Escape") {
+        $('.sidebar').removeClass('no__collapse')
+        $('#filter--blue').css("display", "none")
+    }
 });
+//   ---
 
 // Efeito de rolagem
 (function ($) {
@@ -108,6 +118,7 @@ $('.contar').counterUp({
         return false;
     })
 })(jQuery);
+// ---
 
 // Form
 const inputOrigin = document.getElementById('origin')
@@ -175,21 +186,15 @@ $('#cookie__btn--accept').click(function () {
     $(".cookie").css("display", "none")
 })
 
-
 // Botão de fechar os cookies
 $('.cookie__close__btn').click(function () {
     $(".cookie").css("display", "none")
 })
 
 var $doc = $('html,body');
-    $(".scroll-page").click(function () {
-        $doc.animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-         }, 10);
-         return false;
-    })
-
-// Transição de tela de loading
-$(window).on("load", function () {
-    $(".gooey").fadeOut("slow");
-});
+$(".scroll-page").click(function () {
+    $doc.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 10);
+    return false;
+})

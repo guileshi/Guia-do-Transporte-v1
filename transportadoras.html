@@ -20,27 +20,15 @@
     <meta http-equiv="content-language" content="pr-br">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta name="Revisit-After" content="1 day">
-    <title>Sobre Nós - Guia do Transporte</title>
+    <title>Transportadoras - Guia do Transporte</title>
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     
     <!-- CSS Main -->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- CSS Hero Sobre Nós -->
-    <link rel="stylesheet" href="css/sobre-nos/hero.css">
-
-    <!-- CSS Sobre Nós -->
-    <link rel="stylesheet" href="css/sobre-nos/aboutUs.css">
-
-    <!-- CSS Quem Somos Nós -->
-    <link rel="stylesheet" href="css/sobre-nos/whoWeAre.css">
-
-    <!-- CSS O que nós Fazemos -->
-    <link rel="stylesheet" href="css/sobre-nos/whatWeDo.css">
-
-    <!-- CSS Nosso Objetivo -->
-    <link rel="stylesheet" href="css/sobre-nos/ourGoal.css">
+    <!-- CSS Transportadoras -->
+    <link rel="stylesheet" href="css/transports/transports.css">
 
     <!-- CSS Font-Awesome -->
     <link rel="stylesheet" href="vendor/fontawesome-free-5.15.4-web/css/all.min.css">
@@ -48,7 +36,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body id="noHero">
     <!-- Loading -->
     <div class="loading__background">
         <div class="loading">
@@ -127,7 +115,7 @@
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item col-12" role="menuitem">
+                    <li class="sidebar__list__item col-12 active" role="menuitem">
                         <a href="transportadoras.html" class="d-flex" title="Transportadoras" tabindex="0" role="link"
                             role="link">
                             <span class="sidebar__list__item--icon"><i class="fas fa-building fa-lg mx-2"></i></span>
@@ -158,7 +146,7 @@
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item col-12 active" role="menuitem">
+                    <li class="sidebar__list__item col-12" role="menuitem">
                         <a href="#" class="d-flex" title="Sobre Nós" tabindex="0" role="link">
                             <span class="sidebar__list__item--icon"><i class="fas fa-users fa-lg mx-2"></i></span>
                             Sobre Nós
@@ -197,12 +185,8 @@
         </div>
     </section>
 
-    <!-- Background do Hero -->
-    <header class="hero container-fluid" id="hero">
-    </header>
-
     <!-- Navbar -->
-    <nav class="container-fluid topbar__fluid" role="navigation">
+    <nav class="container-fluid topbar__fluid fixed" role="navigation">
         <div class="container topbar">
             <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte"  tabindex="1"></a>
             <ul class="topbar__list">
@@ -240,7 +224,7 @@
         </div>
     </nav>
      <!-- Formulario de cotação Topbar -->
-     <section class="topbar__quotation container-fluid">
+     <section class="topbar__quotation container-fluid" style="display: block;" >
         <div class="container">
             <div class="row">
                 <form class="topbar__quotation__form">
@@ -303,22 +287,6 @@
     <!-- Conteúdo principal -->
     <main>
 
-        <!-- Sobre nós (hero) -->
-        <section class="aboutUs">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="aboutUs__title">
-                            Sobre nós
-                        </h1>
-                        <h2 class="aboutUs__subtitle">
-                            Conheça um pouco mais sobre o nosso Guia do Transporte.
-                        </h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Breadcrumb -->
         <section aria-label="breadcrumb">
             <div class="container">
@@ -337,7 +305,7 @@
                             </a>
                             </li>
                             <li class="breadcrumb__item active" aria-current="page"> <a href="#" class="breadcrumb__link">
-                                Sobre nós
+                                Transportadoras
                             </a>
                             </li>
                         </ol>
@@ -346,76 +314,238 @@
             </div>
         </section>
 
-        <section class="whoWeAre">
-            <div class="container">
-                <div class="row d-lg-flex justify-content-lg-center">
-                    <div class="col-12">
-                        <h2 class="whoWeAre__title">
-                            Quem somos
-                        </h2>
-                    </div>
-                    <div class="col-lg-8 col-12">
-                        <p class="whoWeAre__paragraph">
-                            O Guia do Transporte foi criado para facilitar a busca por empresas de transporte e a entrega de sua carga. Tudo para facilitar o processo de cotação com as diversas empresas no nosso Guia.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="whatWeDo">
+        <section class="transports">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-6">
-                        <div class="whatWeDo__group">
-                            <h2 class="whatWeDo__title">
-                                O que nós fazemos
-                            </h2>
-                            <p class="whatWeDo__paragraph">
-                                Durante suas buscas no nosso <strong>GUIA DO TRANSPORTE</strong> será possível encontrar empresas de todos os estados brasileiros, facilitando muito na escolha da melhor transportadora para sua carga.
-                            </p>
-                            <p class="whatWeDo__paragraph">
-                                Aqui você poderá aumentar a eficiência das negociações de frete e de embarque para sua carga ampliando assim suas opções de transporte.
-                            </p>
-                            <p class="whatWeDo__paragraph">
-                                Nossos bancos de dados são constantemente atualizados para garantir sua integridade e possuem praticamente todas as cidades brasileiras.
-                            </p>
-                            <a href="#" class="whatWeDo__link">
-                                <div class="whatWeDo__link__group">
-                                    <div>
-                                        Saiba mais sobre nossas políticas e termos
+                    <div class="col-12">
+                        <h1 class="transports__title">As Maiores Transportadoras do Brasil</h1>
+                        <h2 class="transports__subtitle">Faça sua cotação de frete com as maiores transportadoras do Brasil</h2>
+
+                        <form>
+
+                            <input type="text" name="transports__search" id="transports__search" placeholder="Digite o nome fantasia ou CNPJ da empresa" class="transports__search">
+
+                        </form>
+
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="transports__card premium">
+                                <div class="transports__img">
+                                    <img src="img/noticia1.png" alt="Empresa" class="transports__image">
+                                </div>
+                                <h3 class="transports__card__title">
+                                    onibus cargas vrum vrum
+                                </h3>
+                                <div class="transports__card__phone__group d-lg-flex d-block">
+                                    <div class="transports__card__contact">
+                                        <i class="fas fa-phone transports__card__icon"></i> (15) 4003-0953
                                     </div>
-                                    <div class="whatWeDo__link__group__icon">
-                                        <i class="fas fa-angle-right"></i>
+                                    <div class="transports__card__contact">
+                                        <i class="fab fa-whatsapp transports__card__icon"></i> (11) 9 1234-5678
                                     </div>
                                 </div>
-                            </a>
-                        </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-envelope transports__card__icon"></i> emailGrande@exemplo.com.br
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-desktop transports__card__icon"></i> www.onibuscargasvrumvrum.coa.br
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-12 col-md-6 d-none d-md-block pe-0">
-                        <div class="whatWeDo__img">
 
-                        </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="transports__card premium">
+                                <div class="transports__img">
+                                    <img src="img/noticia1.png" alt="Empresa" class="transports__image">
+                                </div>
+                                <h3 class="transports__card__title">
+                                    onibus cargas vrum vrum
+                                </h3>
+                                <div class="transports__card__phone__group d-lg-flex d-block">
+                                    <div class="transports__card__contact">
+                                        <i class="fas fa-phone transports__card__icon"></i> (15) 4003-0953
+                                    </div>
+                                    <div class="transports__card__contact">
+                                        <i class="fab fa-whatsapp transports__card__icon"></i> (11) 9 1234-5678
+                                    </div>
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-envelope transports__card__icon"></i> emailGrande@exemplo.com.br
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-desktop transports__card__icon"></i> www.onibuscargasvrumvrum.coa.br
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="transports__card premium">
+                                <div class="transports__img">
+                                    <img src="img/noticia1.png" alt="Empresa" class="transports__image">
+                                </div>
+                                <h3 class="transports__card__title">
+                                    onibus cargas vrum vrum
+                                </h3>
+                                <div class="transports__card__phone__group d-lg-flex d-block">
+                                    <div class="transports__card__contact">
+                                        <i class="fas fa-phone transports__card__icon"></i> (15) 4003-0953
+                                    </div>
+                                    <div class="transports__card__contact">
+                                        <i class="fab fa-whatsapp transports__card__icon"></i> (11) 9 1234-5678
+                                    </div>
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-envelope transports__card__icon"></i> emailGrande@exemplo.com.br
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-desktop transports__card__icon"></i> www.onibuscargasvrumvrum.coa.br
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="transports__card premium">
+                                <div class="transports__img">
+                                    <img src="img/noticia1.png" alt="Empresa" class="transports__image">
+                                </div>
+                                <h3 class="transports__card__title">
+                                    onibus cargas vrum vrum
+                                </h3>
+                                <div class="transports__card__phone__group d-lg-flex d-block">
+                                    <div class="transports__card__contact">
+                                        <i class="fas fa-phone transports__card__icon"></i> (15) 4003-0953
+                                    </div>
+                                    <div class="transports__card__contact">
+                                        <i class="fab fa-whatsapp transports__card__icon"></i> (11) 9 1234-5678
+                                    </div>
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-envelope transports__card__icon"></i> emailGrande@exemplo.com.br
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-desktop transports__card__icon"></i> www.onibuscargasvrumvrum.coa.br
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="transports__card premium">
+                                <div class="transports__img">
+                                    <img src="img/noticia1.png" alt="Empresa" class="transports__image">
+                                </div>
+                                <h3 class="transports__card__title">
+                                    onibus cargas vrum vrum
+                                </h3>
+                                <div class="transports__card__phone__group d-lg-flex d-block">
+                                    <div class="transports__card__contact">
+                                        <i class="fas fa-phone transports__card__icon"></i> (15) 4003-0953
+                                    </div>
+                                    <div class="transports__card__contact">
+                                        <i class="fab fa-whatsapp transports__card__icon"></i> (11) 9 1234-5678
+                                    </div>
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-envelope transports__card__icon"></i> emailGrande@exemplo.com.br
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-desktop transports__card__icon"></i> www.onibuscargasvrumvrum.coa.br
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="transports__card">
+                                <div class="transports__img">
+                                    <img src="img/noticia1.png" alt="Empresa" class="transports__image">
+                                </div>
+                                <h3 class="transports__card__title">
+                                    onibus cargas vrum vrum
+                                </h3>
+                                <div class="transports__card__phone__group d-lg-flex d-block">
+                                    <div class="transports__card__contact">
+                                        <i class="fas fa-phone transports__card__icon"></i> (15) 4003-0953
+                                    </div>
+                                    <div class="transports__card__contact">
+                                        <i class="fab fa-whatsapp transports__card__icon"></i> (11) 9 1234-5678
+                                    </div>
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-envelope transports__card__icon"></i> emailGrande@exemplo.com.br
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-desktop transports__card__icon"></i> www.onibuscargasvrumvrum.coa.br
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="#">
+                            <div class="transports__card">
+                                <div class="transports__img">
+                                    <img src="img/noticia1.png" alt="Empresa" class="transports__image">
+                                </div>
+                                <h3 class="transports__card__title">
+                                    onibus cargas vrum vrum
+                                </h3>
+                                <div class="transports__card__phone__group d-lg-flex d-block">
+                                    <div class="transports__card__contact">
+                                        <i class="fas fa-phone transports__card__icon"></i> (15) 4003-0953
+                                    </div>
+                                    <div class="transports__card__contact">
+                                        <i class="fab fa-whatsapp transports__card__icon"></i> (11) 9 1234-5678
+                                    </div>
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-envelope transports__card__icon"></i> emailGrande@exemplo.com.br
+                                </div>
+                                <div class="transports__card__contact">
+                                    <i class="fas fa-desktop transports__card__icon"></i> www.onibuscargasvrumvrum.coa.br
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="ourGoal">
-            <div class="container">
-                <div class="row d-lg-flex justify-content-lg-center">
-                    <div class="col-12">
-                        <h2 class="ourGoal__title">
-                            Nosso Objetivo
-                        </h2>
-                    </div>
-                    <div class="col-12 col-lg-8">
-                        <p class="ourGoal__paragraph">
-                            Facilitar a cotação e o envio de carga através de um robusto sistema de classificação das empresas transportadoras de todo o Brasil.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <!-- pagination -->
+        <section>
+            <ul class="pagination__base">
+                <li class="pagination__item active">
+                    <a href="#" class="pagination__link">1</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">2</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">3</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">4</a>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">5</a>
+                </li>
+                <li class="pagination__item">
+                    <span class="pagination__item__divider"> ... </span>
+                </li>
+                <li class="pagination__item">
+                    <a href="#" class="pagination__link">5000</a>
+                </li>
+            </ul>
         </section>
 
     </main>
