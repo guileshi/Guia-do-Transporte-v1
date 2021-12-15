@@ -31,4 +31,6 @@ var observer = new IntersectionObserver(function (entries, observer) {
     })
 }, options);
 
-observer.observe(app)
+if(app){
+    observerApp.observe(app)
+}

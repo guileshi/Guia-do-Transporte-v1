@@ -34,6 +34,7 @@
     --regular: 400;
     --light: 300;
     /* pixels to rem */
+    --px80: 5rem;
     --px64: 4rem;
     --px48: 3rem;
     --px36: 2.25em;

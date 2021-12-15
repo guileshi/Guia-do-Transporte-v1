@@ -1,0 +1,139 @@
+.signin{
+    margin: var(--px32) 0 var(--px80) 0;
+}
+
+.signin__title{
+    color: var(--base);
+    font-size: var(--px36);
+    font-weight: var(--medium);
+    font-family: var(--poppins);
+    text-align: center;
+}
+
+.signin__form__title{
+    color: var(--accent-7);
+    font-size: var(--px24);
+    font-weight: var(--medium);
+    font-family: var(--poppins);
+    margin-top: var(--px24);
+    margin-bottom: var(--px16);
+}
+
+.signin__form__label{
+    color: var(--accent-7);
+    font-size: var(--px18);
+    font-weight: var(--regular);
+    font-family: var(--opens-sans);
+    margin: var(--px16) 0 var(--px8) 0;
+}
+
+.sigin__form__input{
+    background-color: var(--accent-0);
+    font-size: var(--px18);
+    border-radius: 4px;
+    border-color: var(--accent-3);
+    padding: var(--px16);
+    color: var(--accent-6);
+}
+.sigin__form__input::placeholder{
+    color: var(--accent-4);
+}
+
+.sigin__form__input:focus{
+    background-color: var(--accent-2);
+    border-color: var(--accent-4);
+}
+
+.form-check{
+    display: flex;
+    align-items: center;
+}
+
+.form-check .signin__form__label{
+    margin-top: var(--px8);
+}
+
+.form-check .signin__form__label{
+    max-width: 90%;
+    text-align: justify;
+}
+
+.signin__form__check{
+    display: flex;
+    align-items: center;
+    width: var(--px24);
+    height: var(--px24);
+    margin-right: var(--px8);
+}
+
+.signin__form__btn{
+    margin-top: var(--px24);
+    padding: var(--px16) var(--px32);
+    background: var(--base);
+    color: var(--accent-0);
+    font-size: var(--px18);
+    font-weight: var(--medium); 
+    font-family: var(--poppins);
+    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    transition: var(--t-btn);
+    -webkit-transition: var(--t-btn);
+}
+
+.signin__form__btn:hover {
+    transform: translate(-5px, -5px) !important;
+    -webkit-transform: translate(-5px, -5px) !important;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+    color: var(--accent-0);
+}
+
+.signin__form__btn:active {
+    transform: translate(0, 0) !important;
+    -webkit-transform: translate(0, 0) !important;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+    color: var(--accent-0);
+}
+
+@media (max-width: 767.98px) {
+    .signin__form__label{
+        font-size: var(--px16);
+    }
+    .sigin__form__input{
+        font-size: var(--px16);
+    }
+    .signin__form__title{
+        font-size: var(--px18);
+    }
+    .signin__title{
+        font-size: var(--px20);
+    }
+    .signin__form__btn{
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        font-size: var(--px16);
+    }
+    .signin__form__btn--icon{
+        margin-right: var(--px8);
+    }
+    .signin{
+        margin: var(--px32) 0 var(--px32) 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .signin__form__label{
+        font-size: var(--px16);
+    }
+    .sigin__form__input{
+        font-size: var(--px16);
+    }
+    .signin__title{
+        font-size: var(--px32);
+    }
+    .signin__form__btn{
+        font-size: var(--px16);
+    }
+    .signin{
+        margin: var(--px32) 0 var(--px40) 0;
+    }
+}

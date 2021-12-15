@@ -1,6 +1,11 @@
 var app = document.querySelector(".app")
 var hero = document.querySelector(".hero")
 
+var terms = document.querySelector('#term__title')
+var privacy = document.querySelector('#privacy__title')
+var publicy = document.querySelector('#publicy__title')
+var conditions = document.querySelector('#conditions__title')
+
 var appOptions = {
     root: null, // Tamanho da viewport comum
 
@@ -15,6 +20,14 @@ var heroOptions = {
     threshold: 0.3,
 
     rootMargin: "0px"
+}
+
+var termOptions = {
+    root: null,
+
+    threshold: 0,
+
+    rootMargin: "-50px"
 }
 
 var observerApp = new IntersectionObserver(function (entries, observer) {
@@ -72,5 +85,41 @@ var observerHero = new IntersectionObserver(function (entries, observer) {
     })
 }, heroOptions);
 
-observerHero.observe(hero)
-observerApp.observe(app)
+var observerTerms = new IntersectionObserver(function (entries, observer){
+    entries.forEach(entry => {
+        if (entry.isIntersecting && entry.target === terms){
+            $('.termOfServices__links__item').removeClass('active')
+            $('#terms').addClass('active')
+        } 
+
+        if (entry.isIntersecting && entry.target === privacy){
+            $('.termOfServices__links__item').removeClass('active')
+            $('#privacy').addClass('active')
+        } 
+
+        if (entry.isIntersecting && entry.target === publicy){
+            $('.termOfServices__links__item').removeClass('active')
+            $('#publicy').addClass('active')
+        } 
+
+        if (entry.isIntersecting && entry.target === conditions){
+            $('.termOfServices__links__item').removeClass('active')
+            $('#conditions').addClass('active')
+        } 
+    })
+}, termOptions)
+
+if(app){
+    observerApp.observe(app)
+}
+
+if(hero){
+    observerHero.observe(hero)
+}
+
+if([terms, publicy, privacy, conditions]){
+    observerTerms.observe(terms)
+    observerTerms.observe(publicy)
+    observerTerms.observe(privacy)
+    observerTerms.observe(conditions)
+}

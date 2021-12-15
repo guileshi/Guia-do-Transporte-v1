@@ -22,7 +22,7 @@
     padding: var(--px24);
     margin: var(--px24) 0;
 
-    border-radius: var(--px24);
+    border-radius: 100px;
     border: 1px solid var(--accent-3);
 
     color: var(--accent-7);
@@ -52,6 +52,11 @@
 
 .transports__card:hover{
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.transports__card.premium:hover{
+    box-shadow: 0 0 12px #ebcc12;
+    transform: scale(1.01);
 }
 
 .transports__card.premium{

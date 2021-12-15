@@ -1,5 +1,10 @@
 var app = document.querySelector(".app")
 
+var terms = document.querySelector('#term__title')
+var privacy = document.querySelector('#privacy__title')
+var publicy = document.querySelector('#publicy__title')
+var conditions = document.querySelector('#conditions__title')
+
 var options = {
     root: null, // Tamanho da viewport comum
 
@@ -7,6 +12,14 @@ var options = {
 
     rootMargin: "0px" // Setando o tamnho da viewport em si, ao adicionarmos margins ela é somada a seção. Por exemplo se tiverrmos a nossa box com o nosso conteudo de tamanho x, se adicionar uma margin negativa, algo como -150px, a viewport encolhera em -150px, o mesmo ocorre com margens positivas. Independe se o valor for 0, tem que colocar px. Para ter uma visão clara do que exatamente é isso, pensa em uma camera, faz um quadrado com os dedos, fingindo ser uma camera, o tamanho dessa camera é o tamanho dessa margem.
 };
+
+var termOptions = {
+    root: null,
+
+    threshold: 0,
+
+    rootMargin: "-50px"
+}
 
 var observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
@@ -41,4 +54,37 @@ var observer = new IntersectionObserver(function (entries, observer) {
     })
 }, options);
 
-observer.observe(app)
+var observerTerms = new IntersectionObserver(function (entries, observer){
+    entries.forEach(entry => {
+        if (entry.isIntersecting && entry.target === terms){
+            $('.termOfServices__links__item').removeClass('active')
+            $('#terms').addClass('active')
+        } 
+
+        if (entry.isIntersecting && entry.target === privacy){
+            $('.termOfServices__links__item').removeClass('active')
+            $('#privacy').addClass('active')
+        } 
+
+        if (entry.isIntersecting && entry.target === publicy){
+            $('.termOfServices__links__item').removeClass('active')
+            $('#publicy').addClass('active')
+        } 
+
+        if (entry.isIntersecting && entry.target === conditions){
+            $('.termOfServices__links__item').removeClass('active')
+            $('#conditions').addClass('active')
+        } 
+    })
+}, termOptions)
+
+if(app){
+    observerApp.observe(app)
+}
+
+if([terms, publicy, privacy, conditions]){
+    observerTerms.observe(terms)
+    observerTerms.observe(publicy)
+    observerTerms.observe(privacy)
+    observerTerms.observe(conditions)
+}
