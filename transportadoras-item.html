@@ -20,18 +20,24 @@
     <meta http-equiv="content-language" content="pr-br">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta name="Revisit-After" content="1 day">
-    <title>Cadastra-se - Guia do Transporte</title>
+    <title>TRANSPORTADORA - Guia do Transporte</title>
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+
     <!-- CSS Main -->
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- CSS Transportadoras -->
-    <link rel="stylesheet" href="css/signin.css">
+    <!-- CSS Transportadora Item -->
+    <link rel="stylesheet" href="css/transportadora-item/transportadora-item.css">
 
-    <!-- CSS Inputs -->
+    <!-- CSS Rating -->
+    <link rel="stylesheet" href="css/rating/stars.css">
+
+    <!-- CSS Generic Form -->
     <link rel="stylesheet" href="css/input.css">
+
+    <!-- CSS Quotation Modal -->
+    <link rel="stylesheet" href="css/modals/quotation.css">
 
     <!-- CSS Font-Awesome -->
     <link rel="stylesheet" href="vendor/fontawesome-free-5.15.4-web/css/all.min.css">
@@ -61,7 +67,7 @@
             <div class="loading__wheel --3">
             </div>
             <div class="loading__wheel --4">
-        
+
             </div>
             <img src="img/wind.png" class="loading__wind">
         </div>
@@ -191,7 +197,8 @@
     <!-- Navbar -->
     <nav class="container-fluid topbar__fluid fixed" role="navigation">
         <div class="container topbar">
-            <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte"  tabindex="1"></a>
+            <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte"
+                tabindex="1"></a>
             <ul class="topbar__list">
                 <li class="topbar__list__item" role="link">
                     <!-- Utilizar aria-current="page" quando for a página ativa -->
@@ -222,12 +229,11 @@
                     </button>
                 </li>
             </ul>
-            <a href="index.html" class="topbar__logo--mobile" id="topbar__logo__mobile"
-                title="Guia do Transporte"></a>
+            <a href="index.html" class="topbar__logo--mobile" id="topbar__logo__mobile" title="Guia do Transporte"></a>
         </div>
     </nav>
-     <!-- Formulario de cotação Topbar -->
-     <section class="topbar__quotation container-fluid" style="display: block;" >
+    <!-- Formulario de cotação Topbar -->
+    <section class="topbar__quotation container-fluid" style="display: block;">
         <div class="container">
             <div class="row">
                 <form class="topbar__quotation__form">
@@ -243,8 +249,8 @@
                                 <label for="origin" class="position-absolute quotation__form__label">
                                     Origem da sua carga
                                 </label>
-                                <input type="text" id="origin-top" name="origin"
-                                    class="w-100 quotation__form__input" required aria-required="true"
+                                <input type="text" id="origin-top" name="origin" class="w-100 quotation__form__input"
+                                    required aria-required="true"
                                     onkeyup="onChangeText(this, 'quotation__form__input__origin')"
                                     onfocus="onFocus('quotation__form__input__origin')"
                                     onblur="onBlur('quotation__form__input__origin')">
@@ -272,8 +278,7 @@
                         </div>
                     </div>
                     <div class="col-lg-auto col-md-auto col-12">
-                        <button class="btn quotation__form__btn topbar__form__field" role="button"
-                            type="submit">
+                        <button class="btn quotation__form__btn topbar__form__field" role="button" type="submit">
                             <span class="quotation__form__btn--icon" aria-hidden="true">
                                 <i class="fas fa-search fa-lg"></i>
                             </span>
@@ -284,8 +289,99 @@
             </div>
     </section>
 
-     <!-- Divisor da Navbar -->
-     <div class="topbar__divider" role="separator" aria-hidden="true"></div>
+    <!-- Divisor da Navbar -->
+    <div class="topbar__divider" role="separator" aria-hidden="true"></div>
+
+    <!-- Modal de Cotação -->
+    <section id="quotation__modal">
+        <div class="quotation__filter"></div>
+        <section class="quotation__modal">
+            <div class="quotation__close">
+                <i class="fas fa-times" aria-label="Fechar"></i>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="quotation__modal__title">
+                            Solicitar Cotação
+                        </h1>
+                        <h2 class="quotation__modal__subtitle">
+                            <!-- Nome da Transportadora -->
+                            Capital Logistica
+                        </h2>
+                    </div>
+                    <div class="col-12">
+                        <div class="quotation__buttons">
+                            <button class="btn generic__form__btn">
+                                Transporte de Carga
+                            </button>
+                            <button class="btn generic__form__btn --white">
+                                Mudança
+                            </button>
+                        </div>
+                    </div>
+                    <form>
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-lg-5 col-md-5 col-12">
+                                    <label for="origin" class="form-label generic__form__label">Origem</label>
+                                    <input type="text" class="form-control generic__form__input" name="origin" placeholder="Cidade de Origem" required>
+                                </div>
+                                
+                                <div class="col-lg-5 col-md-5 col-12">
+                                    <label for="destination" class="form-label generic__form__label">Destino</label>
+                                    <input type="text" class="form-control generic__form__input" name="destination" placeholder="Cidade de Destino" required>
+                                </div>
+
+                                <!-- Excluir ao clicar em Mudança -->
+                                <div class="col-lg-3 col-md-4 col-8">
+                                    <label for="note" class="form-label generic__form__label">Valor da Nota</label>
+                                    <input type="number" class="form-control generic__form__input" name="note" placeholder="Nota">
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 col-8">
+                                    <label for="quantity" class="form-label generic__form__label">Quantidade</label>
+                                    <input type="number" class="form-control generic__form__input" name="quantity" placeholder="Quantidade">
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 col-8">
+                                    <label for="weight" class="form-label generic__form__label">Peso</label>
+                                    <input type="number" class="form-control generic__form__input" name="weigth" placeholder="Peso">
+                                </div>
+                                <!-- //// -->
+
+                                <div class="col-lg-4 col-md-5 col-12">
+                                    <label for="name" class="form-label generic__form__label">Nome</label>
+                                    <input type="text" class="form-control generic__form__input" name="name" placeholder="Nome">
+                                </div>
+
+                                <div class="col-lg-4 col-md-5 col-12">
+                                    <label for="email" class="form-label generic__form__label">Email</label>
+                                    <input type="email" class="form-control generic__form__input" name="email" placeholder="Email">
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-10">
+                                    <label for="cellphone" class="form-label generic__form__label">Telefone</label>
+                                    <input type="tel" class="form-control generic__form__input" name="cellphone" placeholder="Telefone">
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="obs" class="form-label generic__form__label">
+                                        Observações
+                                    </label>
+                                    <textarea class="form-control" rows="2" placeholder="Peso, quantidade, volumes, medidas, valor NF."></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <button class="btn generic__form__btn" type="submit">
+                            Solicitar cotação
+                        </button>
+                    </form>
+                </div>
+            </div>
+         </section>
+    </section>
 
     <!-- Conteúdo principal -->
     <main>
@@ -297,19 +393,24 @@
                     <div class="col-12">
                         <ol class="breadcrumb">
                             <li class="breadcrumb__item"> <a href="index.html" class="breadcrumb__link">
-                                <div class="breadcrumb__link__group">
-                                    <div class="breadcrumb__link__icon">
-                                        <i class="fas fa-home"></i>
+                                    <div class="breadcrumb__link__group">
+                                        <div class="breadcrumb__link__icon">
+                                            <i class="fas fa-home"></i>
+                                        </div>
+                                        <div>
+                                            Inicio
+                                        </div>
                                     </div>
-                                    <div>
-                                        Inicio
-                                    </div>
-                                </div>
-                            </a>
+                                </a>
                             </li>
-                            <li class="breadcrumb__item active" aria-current="page"> <a href="#" class="breadcrumb__link">
-                                Cadastrar-se
-                            </a>
+                            <li class="breadcrumb__item"> <a href="transportadoras.html" class="breadcrumb__link">
+                                    Transportadoras
+                                </a>
+                            </li>
+                            <li class="breadcrumb__item active" aria-current="page"> <a href="transportadoras.html"
+                                    class="breadcrumb__link">
+                                    Potencial Cargas
+                                </a>
                             </li>
                         </ol>
                     </div>
@@ -317,130 +418,201 @@
             </div>
         </section>
 
-        <section class="signin">
+        <section class="trans__item">
+            <div class="container">
+                <div class="trans__item__header">
+                    <div class="row">
+                        <div class="col-lg-2 col-12">
+                            <img src="img/trans-item/potencial-sp-cargas.png" class="trans__item__logo"
+                                alt="Logo da Empresa" role="img">
+                        </div>
+                        <div class="col-lg-10 col-12">
+                            <div class="trans__item__info">
+                                <h1 class="trans__item__title">
+                                    Potencial Cargas
+                                </h1>
+
+                                <div id="stars">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+
+                                    <a href="#" class="stars__comments">
+                                        13 comentário(s)
+                                    </a>
+                                </div>
+
+                                <ul class="trans__list" role="navigation">
+                                    <li class="trans__list__item">
+                                        <a href="tel:" class="trans__item__contact__link">
+                                            <span class="trans__item__contact__link__icon">
+                                                <i class="fas fa-phone-alt"></i>
+                                            </span>
+                                            Celular
+                                        </a>
+                                    </li>
+                                    <li class="trans__list__item">
+                                        <a href="#" class="trans__item__contact__link" target="_blank">
+                                            <span class="trans__item__contact__link__icon">
+                                                <i class="fab fa-whatsapp"></i>
+                                            </span>
+                                            Whatsapp
+                                        </a>
+                                    </li>
+                                    <li class="trans__list__item">
+                                        <a href="mailto:" class="trans__item__contact__link">
+                                            <span class="trans__item__contact__link__icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                            Email
+                                        </a>
+                                    </li>
+                                    <li class="trans__list__item">
+                                        <a href="#" class="trans__item__contact__link" target="_blank">
+                                            <span class="trans__item__contact__link__icon">
+                                                <i class="fas fa-desktop"></i>
+                                            </span>
+                                            Website
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <button class="btn btn__anim trans__header__btn" type="button" role="button">
+                                    Solicitar Cotação
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trans__description">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="signin__title">
-                            Cadastrar-se
-                        </h1>
+                        <h2 class="trans__infos__title">Descrição</h2>
+
+                        <form>
+                            <textarea class="form-control trans__item__textfield" id="text__description" disabled>Você ainda não adicionou nenhuma descrição. Adicionar uma descrição pode melhorar a busca da sua empresa, adicione uma agora mesmo!</textarea>
+                        </form>
                     </div>
                 </div>
-                <form>
-                    <fieldset>
-                        <legend class="generic__form__title">Dados pessoais</legend>
-                        <div class="row">
-                            <div class="col-lg-5 col-md-7 col-12">
-                                <label for="email" class="form-label generic__form__label">Email</label>
-                                <input type="email" class="form-control generic__form__input" name="email" placeholder="Email" required>
-                            </div>
-                            <div class="col-lg-3 col-md-5 col-6">
-                                <label for="cellphone" class="form-label generic__form__label">Celular</label>
-                                <input type="tel" class="form-control generic__form__input" name="cellphone" placeholder="Celular" required>
-                            </div>
-                            <div class="col-lg-3 col-md-5 col-6">
-                                <label for="telephone" class="form-label generic__form__label">Telefone</label>
-                                <input type="cel" class="form-control generic__form__input" name="telephone" placeholder="Telefone">
-                            </div>
-                            <div class="col-lg-6 col-md-7 col-12">
-                                <label for="website" class="form-label generic__form__label">Site</label>
-                                <input type="text" class="form-control generic__form__input" name="website" placeholder="Site">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4 col-md-5 col-8">
-                                <label for="password" class="form-label generic__form__label">Senha</label>
-                                <input type="password" class="form-control generic__form__input" name="password" placeholder="Senha">
-                            </div>
-                            <div class="col-lg-4 col-md-5 col-8">
-                                <label for="confirmPassword" class="form-label generic__form__label">Confirmar senha</label>
-                                <input type="password" class="form-control generic__form__input" name="confirmPassword" placeholder="Confirmar Senha">
-                            </div>
-                        </div>
-                    </fieldset>
+            </div>
+        </section>
 
-                    <fieldset>
-                        <legend class="generic__form__title">Empresa</legend>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-5 col-8">
-                                <label for="cnpj" class="form-label generic__form__label">CNPJ</label>
-                                <input type="text" class="form-control generic__form__input" name="cnpj" placeholder="CNPJ">
-                            </div>
-                            <div class="col-lg-3 col-md-5 col-8">
-                                <label for="cellphone" class="form-label generic__form__label">Inscrição Estadual</label>
-                                <input type="text" class="form-control generic__form__input" name="cellphone" placeholder="Inscrição Estadual">
-                            </div>
-                            <div class="col-lg-5 col-md-5 col-12">
-                                <label for="telephone" class="form-label generic__form__label">Nome do Responsável</label>
-                                <input type="text" class="form-control generic__form__input" name="telephone" placeholder="Nome do Responsável">
-                            </div>
-                            <div class="col-lg-5 col-md-6 col-12">
-                                <label for="telephone" class="form-label generic__form__label">Nome Fantasia</label>
-                                <input type="text" class="form-control generic__form__input" name="telephone" placeholder="Nome Fantasia">
-                            </div>
-                            <div class="col-lg-5 col-md-6 col-12">
-                                <label for="website" class="form-label generic__form__label">Razão Social</label>
-                                <input type="text" class="form-control generic__form__input" name="website" placeholder="Razão Social">
-                            </div>
-                        </div>
-                    </fieldset>
-                    
-                    <fieldset>
-                        <legend class="generic__form__title">Endereço</legend>
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4 col-8">
-                                <label for="cep" class="form-label generic__form__label">CEP</label>
-                                <input type="number" class="form-control generic__form__input" name="cep" placeholder="CEP">
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-12">
-                                <label for="state" class="form-label generic__form__label">Estado</label>
-                                <input type="text" class="form-control generic__form__input" name="state" placeholder="Estado">
-                            </div>
-                            <div class="col-lg-4 col-md-7 col-12">
-                                <label for="district" class="form-label generic__form__label">Bairro</label>
-                                <input type="text" class="form-control generic__form__input" name="district" placeholder="Bairro">
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-6">
-                                <label for="number" class="form-label generic__form__label">N°</label>
-                                <input type="number" class="form-control generic__form__input" name="number" placeholder="Número">
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <label for="city" class="form-label generic__form__label">Cidade</label>
-                                <input type="text" class="form-control generic__form__input" name="city" placeholder="Cidade">
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-12">
-                                <label for="publicPlace" class="form-label generic__form__label">Logradouro</label>
-                                <input type="text" class="form-control generic__form__input" name="publicPlace" placeholder="Logradouro">
-                            </div>
-                            <div class="col-lg-4 col-md-7 col-12">
-                                <label for="complement" class="form-label generic__form__label">Complemento</label>
-                                <input type="text" class="form-control generic__form__input" name="complement" placeholder="Complemento">
-                            </div>
-                        </div>
-                    </fieldset>
+        <section class="trans__infos"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <h2 class="trans__infos__title">
+                            Sobre
+                        </h2>
+                        <div class="trans__infos__container">
+                            <h3 class="trans__infos__subtitle">
+                                Endereço
+                            </h3>
+                            <h4 class="trans__infos__text">
+                                <span class="trans__infos__icon">
+                                    <i class="fas fa-home"></i>
+                                </span>
+                                <a href="#" class="trans__infos__link">Rua Soldado Cristóvão Morais Garcia, 196 - Parque Novo Mundo, São Paulo - SP, 02187-090</a>
+                            </h4>
 
-                    <div class="form-check">
-                        <input class="form-check-input generic__form__check" checked type="checkbox" id="checkPolicy">
-                        <label class="form-check-label generic__form__label" for="checkPolicy">
-                            Li e concordo com as Políticas e Termos.
-                        </label>
+                            <h3 class="trans__infos__subtitle">
+                                CNPJ
+                            </h3>
+                            <h4 class="trans__infos__text">
+                                <span class="trans__infos__icon">
+                                    <i class="fab fa-wpforms"></i>
+                                </span>
+                                <a href="#" class="trans__infos__link">34.060.967/0001-80</a>
+                            </h4>
+
+                            <h3 class="trans__infos__subtitle">
+                                Inscrição Estadual
+                            </h3>
+                            <h4 class="trans__infos__text">
+                                <span class="trans__infos__icon">
+                                    <i class="fab fa-wpforms"></i>
+                                </span>
+                                <a href="#" class="trans__infos__link">126323100110</a>
+                            </h4>
+                            
+                        </div>
                     </div>
-                    
-                    <div class="form-check">
-                        <input class="form-check-input generic__form__check" type="checkbox" id="checkNews">
-                        <label class="form-check-label generic__form__label" for="checkNews">
-                            Desejo receber as novidades do Guia do Transporte no meu email.
-                        </label>
+                    <div class="col-lg-6 col-12">
+                        <h2 class="trans__infos__title">
+                            Contato
+                        </h2>
+                        <div class="trans__infos__container">
+                            <h3 class="trans__infos__subtitle">
+                                Telefone
+                            </h3>
+                            <h4 class="trans__infos__text">
+                                <span class="trans__infos__icon">
+                                    <i class="fas fa-home"></i>
+                                </span>
+                                <a href="tel:" class="trans__infos__link">(11) 2309-4295</a>
+                            </h4>
+
+                            <h3 class="trans__infos__subtitle">
+                                Whatsapp
+                            </h3>
+                            <h4 class="trans__infos__text">
+                                <span class="trans__infos__icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </span>
+                                <!-- API Whats -->
+                                <a href="#" class="trans__infos__link" target="_blank">(11) 9 4727-1563</a>
+                            </h4>
+
+                            <h3 class="trans__infos__subtitle">
+                                Email
+                            </h3>
+                            <h4 class="trans__infos__text">
+                                <span class="trans__infos__icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <a href="emailto:#" class="trans__infos__link">comercial2@potencialcargas.com.br</a>
+                            </h4>
+
+                            <h3 class="trans__infos__subtitle">
+                                Website
+                            </h3>
+                            <h4 class="trans__infos__text">
+                                <span class="trans__infos__icon">
+                                    <i class="fab fa-wpforms"></i>
+                                </span>
+                                <a href="#" class="trans__infos__link" target="_blank">www.potencialcargas.com.br</a>
+                            </h4>
+                            
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <button class="btn generic__form__btn" role="button" type="submit">
-                        <span class="generic__form__btn--icon" aria-hidden="true">
-                            <i class="fas fa-building"></i>
-                        </span>
-                        <span>Cadastrar Empresa</span>
-                    </button>
+        <section class="trans__comments">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="trans__infos__title">Comentários</h2>
 
-                </form>
+                        <div class="trans__infos__container">
+                            <span class="trans__item__textfield">
+                                Ainda não há nenhum comentário. Seja o(a) primeiro(a) a comentar!
+                            </span>
+                        </div>
+
+                        <button class="btn trans__comments__btn btn__anim" type="button" role="button">
+                            Adicionar um comentário...
+                        </button>
+                    
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -458,7 +630,7 @@
                             <h3 class="footer__title">
                                 Alguns de nossos links
                             </h3>
-                            <div class="footer__link">
+                            <div class="footer__link" role="navigation">
                                 <a href="sobre-nos.html" class="footer__link__item">
                                     Sobre nós
                                 </a>
@@ -526,6 +698,11 @@
 
     <!-- Importar meu arquivo Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Importar Javascript Avaliação -->
+    <script src="js/rating.js"></script>
+
+    <!-- Importar Javascript  -->
 </body>
 
 </html>

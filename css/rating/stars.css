@@ -1,0 +1,37 @@
+
+.star {
+    color: var(--accent-2);
+}
+
+.star__active {
+    color: goldenrod !important;
+}
+
+.stars__comments{
+    font-size: var(--px12);
+    font-family: var(--opens-sans);
+    text-decoration: underline;
+    color: var(--accent-6);
+    font-weight: var(--light);
+    margin-left: var(--px8);
+}
+
+.stars__comments:hover{
+    color: var(--accent-4);
+}
+
+@media (max-width: 767.98px) {
+    #stars{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    #stars{
+        display: flex;
+        justify-content: center;
+    }
+
+}

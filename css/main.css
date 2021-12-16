@@ -37,6 +37,7 @@
     --px80: 5rem;
     --px64: 4rem;
     --px48: 3rem;
+    --px40: 2.5rem;
     --px36: 2.25em;
     --px32: 2rem;
     --px24: 1.5rem;
@@ -89,6 +90,10 @@ input, button {
 
 label {
     font-size: var(--px16);
+}
+
+.form-control:disabled, .form-control[readonly]{
+    background: var(--accent-1);
 }
 
 .blur {
@@ -198,16 +203,6 @@ body#noHero .breadcrumb {
     content: '';
     position: absolute;
 }
-
-@media (max-width: 767.98px) {
-    .breadcrumb__item {
-        font-size: var(--px16);
-        font-weight: var(--regular);
-        font-family: var(--poppins);
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {}
 
 /* --- */
 
@@ -808,6 +803,18 @@ body#noHero .breadcrumb {
 
 /* --- */
 
+.btn__anim:hover{
+    transform: translate(-5px, -5px) !important;
+    -webkit-transform: translate(-5px, -5px) !important;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+}
+
+.btn__anim:active{
+    transform: translate(0, 0) !important;
+    -webkit-transform: translate(0, 0) !important;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+}
+
 .quotation__form__btn {
     height: var(--px64);
     width: 100%;
@@ -815,18 +822,6 @@ body#noHero .breadcrumb {
     box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
     transition: var(--t-btn);
     -webkit-transition: var(--t-btn);
-}
-
-.quotation__form__btn:hover {
-    transform: translate(-5px, -5px) !important;
-    -webkit-transform: translate(-5px, -5px) !important;
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
-}
-
-.quotation__form__btn:active {
-    transform: translate(0, 0) !important;
-    -webkit-transform: translate(0, 0) !important;
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
 }
 
 .quotation__form__btn--icon {
@@ -1178,6 +1173,12 @@ body#noHero .breadcrumb {
         margin-top: var(--topMarginMobile);
     }
 
+    .breadcrumb__item {
+        font-size: clamp(0.75rem, 1rem, 1rem);
+        font-weight: var(--regular);
+        font-family: var(--poppins);
+    }
+
     /* --- */
 
     /* breadcrumb */
@@ -1354,6 +1355,12 @@ body#noHero .breadcrumb {
     body#noHero .breadcrumb {
         margin-top: calc(var(--topbarMarginBreadcrumb) + var(--px8));
     }
+
+    .breadcrumb__item {
+        font-size: var(--px16);
+        font-weight: var(--regular);
+        font-family: var(--poppins);
+    }
     /* --- */
 
     /* sidebar */
@@ -1507,8 +1514,6 @@ body#noHero .breadcrumb {
     body#noHero .breadcrumb {
         margin-top: calc(var(--topbarHeight) + var(--px8));
     }
-    
-
     /* --- */
 }
 

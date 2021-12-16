@@ -1,0 +1,347 @@
+/* Geral */
+.trans__item {
+    margin: var(--px32) auto var(--px24) auto;
+}
+.trans__infos__title{
+    color: var(--accent-7);
+    font-size: var(--px24);
+    font-weight: var(--medium);
+    font-family: var(--poppins);
+
+    margin-bottom: var(--px16);
+}
+
+/* Header */
+
+.trans__item__title{
+    color: var(--accent-7);
+    font-size: var(--px36);
+    font-weight: var(--regular);
+    font-family: var(--poppins);
+}
+.trans__item__header {
+    padding: var(--px16);
+}
+
+.trans__item__logo {
+    height: 100%;
+    width: 100%;
+
+    border-radius: var(--px12);
+    object-fit: cover;
+}
+
+.trans__item__info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.trans__item__links{
+    position: absolute;
+    bottom: var(--px16);
+}
+
+.trans__item__contact__link{
+    height: 100%;
+    width: 100%;
+    color: var(--base);
+    font-size: var(--px18);
+    font-weight: var(--regular);
+    font-family: var(--opens-sans);
+
+    transition: var(--t-generic);
+}
+
+.trans__item__contact__link:hover{
+    color: var(--baseDark);
+    border-color: var(--baseDark);
+}
+
+.trans__list{
+    position: absolute;
+    bottom: var(--px16);
+    display: flex;
+    flex-direction: row;
+}
+
+.trans__list__item{
+    margin-right: var(--px8);
+    border: 1px solid var(--base);
+    padding: var(--px8);
+    border-radius: var(--px8);
+}
+
+.trans__list__item:last-of-type{
+    margin-right: initial;
+}
+
+
+/* Descrição */
+.trans__item__textfield{
+    border-color: var(--accent-2);
+    background: var(--accent-1);
+    color: var(--accent-7);
+    font-size: var(--px18);
+    font-weight: var(--light);
+    font-family: var(--opens-sans);
+}
+
+.trans__description{
+    margin-bottom: var(--px24);
+}
+
+/* Sobre | Contato */
+.trans__infos{
+    margin-bottom: var(--px24);
+}
+
+.trans__infos__container{
+    height: auto;
+    min-height: 18.75rem;
+    width: 100%;
+
+    background: var(--accent-1);
+    border: 1px solid var(--accent-2);
+    border-radius: var(--px12);
+
+    padding: var(--px16);
+}
+
+.trans__comments .trans__infos__container{
+    min-height: 0;
+}
+
+.trans__infos__subtitle{
+    color: var(--accent-7);
+    font-size: var(--px18);
+    font-weight: var(--regular);
+    font-family: var(--poppins);
+}
+
+.trans__infos__icon{
+    margin-right: var(--px8);
+    color: var(--base);
+}
+
+.trans__infos__text{
+    display: flex;
+    flex-direction: row;
+
+    margin-left: var(--px16);
+    margin-bottom: var(--px8);
+}
+
+.trans__infos__link{
+    color: var(--accent-7);
+    font-size: var(--px18);
+    font-weight: var(--light);
+    font-family: var(--opens-sans);
+
+    display: flex;
+    align-items: center;
+}
+
+.trans__infos__text:last-of-type{
+    margin-bottom: 0;
+}
+
+.trans__infos__link:hover{
+    color: var(--accent-5);
+    text-decoration: underline;
+}
+
+/* comments */
+.trans__comments{
+    margin-bottom: var(--px80);
+}
+
+
+/* buttons */
+.trans__comments__btn, .trans__header__btn{
+    padding: var(--px8) var(--px16);
+    background: var(--base);
+    float: right;
+    margin-top: var(--px16);
+
+    color: var(--accent-0);
+    font-size: var(--px18);
+    font-weight: var(--medium);
+    font-family: var(--poppins);
+
+    box-shadow: 1px 1px 0 black;
+
+    transition: var(--t-btn);
+    -webkit-transition: var(--t-btn);
+}
+
+.trans__comments__btn:hover, .trans__header__btn:hover{
+    color: var(--accent-0);
+}
+
+.trans__header__btn{
+    position: absolute;
+    bottom: var(--px16);
+    right: var(--px16);
+}
+
+@media (max-width: 767.98px) {
+
+    .trans__item__title{
+        font-size: var(--px24);
+    }
+
+    .trans__item__title{
+        font-size: var(--px20);
+    }
+
+    .trans__item__info{
+        display: block;
+    }
+
+    .trans__item__logo{
+        max-height: 178px;
+        max-width: 178px;
+        object-fit: cover;
+        display: block;
+        margin: auto;      
+    }
+
+    .trans__description{
+        margin-bottom: unset;
+    }
+
+    .trans__item__contact__link, .trans__item__textfield, .trans__infos__subtitle, .trans__infos__link, .trans__comments__btn, .trans__header__btn{
+        font-size: var(--px16);
+    }
+
+    .trans__item__contact__link{
+        display: flex;
+        justify-content: center;
+    }
+
+    .trans__item__contact__link__icon{
+        margin-right: var(--px8);
+    }
+
+    .trans__item__title{
+        display: flex;
+        justify-content: center;
+    }
+
+    .trans__item__links{
+        position: relative;
+    }
+
+    .trans__header__btn, .trans__comments__btn{
+        position: static;
+        display: block;
+        width: 100%;
+        float: unset;
+    }
+
+    .trans__list{
+        margin: var(--px24) 0;
+        width: 100%;
+        justify-content: center;
+        position: static;
+    }
+
+    .trans__comments{
+        margin-bottom: var(--px40);
+    }
+
+    .trans__list__item{
+        margin-bottom: var(--px8);
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .trans__infos__title{
+        margin-top: var(--px24);
+    }
+
+    .trans__infos{
+        margin-bottom: 0;
+    }
+
+    .trans__list{
+        display: block;
+        flex-direction: unset;
+        columns: 2;
+        margin: var(--px24) 0;
+        width: 100%;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .trans__item__title{
+        font-size: var(--px32);
+    }
+
+    .trans__infos__title{
+        font-size: var(--px24);
+    }
+
+    .trans__item__info{
+        display: block;
+    }
+
+    .trans__description{
+        margin-bottom: unset;
+    }
+
+    .trans__item__logo{
+        max-height: 178px;
+        max-width: 178px;
+        object-fit: cover;
+        display: block;
+        margin: auto;      
+    }
+
+    .trans__item__title{
+        display: flex;
+        justify-content: center;
+    }
+
+    .trans__item__links{
+        position: relative;
+    }
+
+    .trans__item__contact__link, .trans__item__textfield, .trans__infos__subtitle, .trans__infos__link, .trans__comments__btn, .trans__header__btn{
+        font-size: var(--px16);
+    }
+
+    .trans__header__btn, .trans__comments__btn{
+        position: static;
+        display: block;
+        width: 100%;
+        float: unset;
+    }
+
+    .trans__infos__title{
+        margin-top: var(--px24);
+    }
+
+    .trans__list{
+        margin: var(--px24) 0;
+        width: 100%;
+        justify-content: center;
+        position: static;
+    }
+
+    .trans__infos{
+        margin-bottom: 0;
+    }
+
+    .trans__comments{
+        margin-bottom: var(--px40);
+    }
+
+}
