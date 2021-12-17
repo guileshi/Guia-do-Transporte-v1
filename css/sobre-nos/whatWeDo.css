@@ -2,6 +2,9 @@
     margin: 5rem 0;
     opacity: 0;
     animation: slide-down 1s 3.2s cubic-bezier(.2,.7,.4,1) forwards;
+    -webkit-animation: slide-down 1s 3.2s cubic-bezier(.2,.7,.4,1) forwards;
+    -moz-animation: slide-down 1s 3.2s cubic-bezier(.2,.7,.4,1) forwards;
+    -o-animation: slide-down 1s 3.2s cubic-bezier(.2,.7,.4,1) forwards;
 }
 
 .whatWeDo__img{
@@ -19,6 +22,9 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
 }
 
 .whatWeDo__title{

@@ -8,6 +8,9 @@
     opacity: 0;
 
     animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+    -webkit-animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+    -moz-animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+    -o-animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
 }
 
 @media (max-width: 767.98px) {

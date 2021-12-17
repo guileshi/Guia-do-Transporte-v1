@@ -52,6 +52,9 @@
     font-family: var(--opens-sans);
 
     transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
 }
 
 .trans__item__contact__link:hover{
@@ -174,6 +177,8 @@
 
     transition: var(--t-btn);
     -webkit-transition: var(--t-btn);
+    -moz-transition: var(--t-btn);
+    -o-transition: var(--t-btn);
 }
 
 .trans__comments__btn:hover, .trans__header__btn:hover{
@@ -270,11 +275,12 @@
     .trans__list{
         display: block;
         flex-direction: unset;
-        columns: 2;
         margin: var(--px24) 0;
         width: 100%;
+        columns: 2;
         -webkit-columns: 2;
         -moz-columns: 2;
+        -o-columns: 2;
     }
     
 }

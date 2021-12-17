@@ -1,24 +1,31 @@
 .quotation__modal{
     position: fixed;
-    left: 50%;
-    top: 0;
-    bottom: 0;
+    right: 0;
+    left: 0;
 
-    margin-top: var(--px32);
-    margin-bottom: var(--px32);
-    transform: translateX(-50%);
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: var(--px16);
 
     background: var(--accent-0);
     
     border-radius: var(--px8);
-    width: calc(100vw - 30%);
+    width: calc(100vw - 60%);
+    height: auto;
     
-    padding: var(--px32);
+    padding: var(--px16);
     z-index: 999999999999;
 
-    overflow-y: scroll;
+    animation: slide-down 0.4s ease forwards;
+    -webkit-animation: slide-down 0.4s ease forwards;
+    -moz-animation: slide-down 0.4s ease forwards;
+    -o-animation: slide-down 0.4s ease forwards;
 }
 
+.transItem .generic__form__btn:last-child{
+    margin-left: var(--px8);
+}
 
 .quotation__filter{
     position: fixed;
@@ -29,7 +36,6 @@
     background: rgba(0, 0, 0, 0.3);
 
     z-index: 99999999999;
-
 }
 
 .quotation__modal__title{
@@ -53,7 +59,15 @@
     top: var(--px16);
     right: var(--px16);
 
+    font-size: var(--px18);
+
+    pointer-events: all;
+    cursor: pointer;
+
     transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
 }
 
 .quotation__close:hover{
@@ -67,8 +81,18 @@
         padding: var(--px16);
         margin-top: 5%;
         margin-bottom: 5%;
+
+        overflow-y: scroll;
+
+        top: 0;
+        bottom: 0;
+        
     }
 
+    .transItem .generic__form__btn.--white{
+        margin-left: unset;
+    }
+    
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {

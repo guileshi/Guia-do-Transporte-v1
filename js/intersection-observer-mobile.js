@@ -32,5 +32,5 @@ var observer = new IntersectionObserver(function (entries, observer) {
 }, options);
 
 if(app){
-    observerApp.observe(app)
+    observer.observe(app)
 }

@@ -3,12 +3,15 @@
     position: relative;
     opacity: 0;
     /* no-repeat center/100% */
-    background: url(../../img/caminhao-background.jpg) no-repeat;
+    background: url(../../img/caminhao-background2.jpg) no-repeat;
     background-size: cover;
     overflow: hidden;
     height: 90vh;
     z-index: -1;
     animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+    -webkit-animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+    -moz-animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+    -o-animation: hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
 }
 
 
@@ -17,6 +20,9 @@
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         height: 80vh;
         animation: hero-transform 1.5s 2.8s cubic-bezier(0, .1, 0, 1) forwards, hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+        -webkit-animation: hero-transform 1.5s 2.8s cubic-bezier(0, .1, 0, 1) forwards, hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+        -moz-animation: hero-transform 1.5s 2.8s cubic-bezier(0, .1, 0, 1) forwards, hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+        -o-animation: hero-transform 1.5s 2.8s cubic-bezier(0, .1, 0, 1) forwards, hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
     }
 }
 
@@ -25,6 +31,9 @@
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         height: 70vh;
         animation: hero-transform 1.5s 2.8s cubic-bezier(0, .1, 0, 1) forwards, hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+        -webkit-animation: hero-transform 1.5s 2.8s cubic-bezier(0, .1, 0, 1) forwards, hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+        -moz-animation: hero-transform 1.5s 2.8s cubic-bezier(0, .1, 0, 1) forwards, hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
+        -o-animation: hero-transform 1.5s 2.8s cubic-bezier(0, .1, 0, 1) forwards, hero-slide-down 2s 0.4s cubic-bezier(.3,1,.9,1) forwards;
 
     }
 }

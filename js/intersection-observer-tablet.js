@@ -1,6 +1,6 @@
 var app = document.querySelector(".app")
 
-var terms = document.querySelector('#term__title')
+var terms = document.querySelector('#termOfServices')
 var privacy = document.querySelector('#privacy__title')
 var publicy = document.querySelector('#publicy__title')
 var conditions = document.querySelector('#conditions__title')
@@ -16,9 +16,9 @@ var options = {
 var termOptions = {
     root: null,
 
-    threshold: 0,
+    threshold: 0.1,
 
-    rootMargin: "-50px"
+    rootMargin: "-180px"
 }
 
 var observer = new IntersectionObserver(function (entries, observer) {
@@ -79,7 +79,7 @@ var observerTerms = new IntersectionObserver(function (entries, observer){
 }, termOptions)
 
 if(app){
-    observerApp.observe(app)
+    observer.observe(app)
 }
 
 if([terms, publicy, privacy, conditions]){

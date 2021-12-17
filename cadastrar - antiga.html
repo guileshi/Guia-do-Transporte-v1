@@ -23,7 +23,7 @@
     <title>Cadastra-se - Guia do Transporte</title>
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
+    
     <!-- CSS Main -->
     <link rel="stylesheet" href="css/main.css">
 
@@ -61,7 +61,7 @@
             <div class="loading__wheel --3">
             </div>
             <div class="loading__wheel --4">
-
+        
             </div>
             <img src="img/wind.png" class="loading__wind">
         </div>
@@ -191,8 +191,7 @@
     <!-- Navbar -->
     <nav class="container-fluid topbar__fluid fixed" role="navigation">
         <div class="container topbar">
-            <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte"
-                tabindex="1"></a>
+            <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte"  tabindex="1"></a>
             <ul class="topbar__list">
                 <li class="topbar__list__item" role="link">
                     <!-- Utilizar aria-current="page" quando for a página ativa -->
@@ -223,11 +222,12 @@
                     </button>
                 </li>
             </ul>
-            <a href="index.html" class="topbar__logo--mobile" id="topbar__logo__mobile" title="Guia do Transporte"></a>
+            <a href="index.html" class="topbar__logo--mobile" id="topbar__logo__mobile"
+                title="Guia do Transporte"></a>
         </div>
     </nav>
-    <!-- Formulario de cotação Topbar -->
-    <section class="topbar__quotation container-fluid" style="display: block;">
+     <!-- Formulario de cotação Topbar -->
+     <section class="topbar__quotation container-fluid" style="display: block;" >
         <div class="container">
             <div class="row">
                 <form class="topbar__quotation__form">
@@ -243,8 +243,8 @@
                                 <label for="origin" class="position-absolute quotation__form__label">
                                     Origem da sua carga
                                 </label>
-                                <input type="text" id="origin-top" name="origin" class="w-100 quotation__form__input"
-                                    required aria-required="true"
+                                <input type="text" id="origin-top" name="origin"
+                                    class="w-100 quotation__form__input" required aria-required="true"
                                     onkeyup="onChangeText(this, 'quotation__form__input__origin')"
                                     onfocus="onFocus('quotation__form__input__origin')"
                                     onblur="onBlur('quotation__form__input__origin')">
@@ -272,7 +272,8 @@
                         </div>
                     </div>
                     <div class="col-lg-auto col-md-auto col-12">
-                        <button class="btn quotation__form__btn topbar__form__field" role="button" type="submit">
+                        <button class="btn quotation__form__btn topbar__form__field" role="button"
+                            type="submit">
                             <span class="quotation__form__btn--icon" aria-hidden="true">
                                 <i class="fas fa-search fa-lg"></i>
                             </span>
@@ -283,8 +284,8 @@
             </div>
     </section>
 
-    <!-- Divisor da Navbar -->
-    <div class="topbar__divider" role="separator" aria-hidden="true"></div>
+     <!-- Divisor da Navbar -->
+     <div class="topbar__divider" role="separator" aria-hidden="true"></div>
 
     <!-- Conteúdo principal -->
     <main>
@@ -296,20 +297,19 @@
                     <div class="col-12">
                         <ol class="breadcrumb">
                             <li class="breadcrumb__item"> <a href="index.html" class="breadcrumb__link">
-                                    <div class="breadcrumb__link__group">
-                                        <div class="breadcrumb__link__icon">
-                                            <i class="fas fa-home"></i>
-                                        </div>
-                                        <div>
-                                            Inicio
-                                        </div>
+                                <div class="breadcrumb__link__group">
+                                    <div class="breadcrumb__link__icon">
+                                        <i class="fas fa-home"></i>
                                     </div>
-                                </a>
+                                    <div>
+                                        Inicio
+                                    </div>
+                                </div>
+                            </a>
                             </li>
-                            <li class="breadcrumb__item active" aria-current="page"> <a href="#"
-                                    class="breadcrumb__link">
-                                    Cadastrar-se
-                                </a>
+                            <li class="breadcrumb__item active" aria-current="page"> <a href="#" class="breadcrumb__link">
+                                Cadastrar-se
+                            </a>
                             </li>
                         </ol>
                     </div>
@@ -319,62 +319,128 @@
 
         <section class="signin">
             <div class="container">
-                <div class="col-lg-8 col-12 offset-lg-2">
+                <div class="row">
                     <div class="col-12">
                         <h1 class="signin__title">
                             Cadastrar-se
                         </h1>
                     </div>
+                </div>
+                <div class="col-8 offset-2">
                     <form class="row">
-                        <div class="col-md-5 col-12">
-                            <label for="cnpj" class="form-label generic__form__label required">CNPJ</label>
-                            <input type="text" class="form-control generic__form__input" name="cnpj" placeholder="Digite o CNPJ" required>
-                        </div>
-                        <div class="col-md-7 col-12">
-                            <label for="email" class="form-label generic__form__label required">Email</label>
-                            <input type="email" class="form-control generic__form__input" name="email"
-                                placeholder="Digite seu email" required>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <label for="password" class="form-label generic__form__label required">Senha</label>
-                            <div class="showPassword">
-                                <input type="password" class="form-control generic__form__input" name="password" id="password"
-                                    placeholder="Digite sua senha">
-                                    <i class="fas fa-eye showPassword__eye" myinput="#password"></i>
+                        <fieldset>
+                            <legend class="generic__form__title">Dados pessoais</legend>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-7 col-12">
+                                    <label for="email" class="form-label generic__form__label">Email</label>
+                                    <input type="email" class="form-control generic__form__input" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-6">
+                                    <label for="cellphone" class="form-label generic__form__label">Celular</label>
+                                    <input type="tel" class="form-control generic__form__input" name="cellphone" placeholder="Celular" required>
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-6">
+                                    <label for="telephone" class="form-label generic__form__label">Telefone</label>
+                                    <input type="cel" class="form-control generic__form__input" name="telephone" placeholder="Telefone">
+                                </div>
+                                <div class="col-lg-6 col-md-7 col-12">
+                                    <label for="website" class="form-label generic__form__label">Site</label>
+                                    <input type="text" class="form-control generic__form__input" name="website" placeholder="Site">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <label for="confirmPassword" class="form-label generic__form__label required">Confirmar
-                                senha</label>
-                            <div class="showPassword">
-                                <input type="password" class="form-control generic__form__input" id="confirmPassword"
-                                placeholder="Confirme sua senha">
-                                <i class="fas fa-eye showPassword__eye" myinput="#confirmPassword"></i>
-                            </div>   
-                        </div>
-
+                            <div class="row">
+                                <div class="col-lg-4 col-md-5 col-8">
+                                    <label for="password" class="form-label generic__form__label">Senha</label>
+                                    <input type="password" class="form-control generic__form__input" name="password" placeholder="Senha">
+                                </div>
+                                <div class="col-lg-4 col-md-5 col-8">
+                                    <label for="confirmPassword" class="form-label generic__form__label">Confirmar senha</label>
+                                    <input type="password" class="form-control generic__form__input" name="confirmPassword" placeholder="Confirmar Senha">
+                                </div>
+                            </div>
+                        </fieldset>
+    
+                        <fieldset>
+                            <legend class="generic__form__title">Empresa</legend>
+                            <div class="row">
+                                <div class="col-lg-3 col-md-5 col-8">
+                                    <label for="cnpj" class="form-label generic__form__label">CNPJ</label>
+                                    <input type="text" class="form-control generic__form__input" name="cnpj" placeholder="CNPJ">
+                                </div>
+                                <div class="col-lg-3 col-md-5 col-8">
+                                    <label for="cellphone" class="form-label generic__form__label">Inscrição Estadual</label>
+                                    <input type="text" class="form-control generic__form__input" name="cellphone" placeholder="Inscrição Estadual">
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-12">
+                                    <label for="telephone" class="form-label generic__form__label">Nome do Responsável</label>
+                                    <input type="text" class="form-control generic__form__input" name="telephone" placeholder="Nome do Responsável">
+                                </div>
+                                <div class="col-lg-5 col-md-6 col-12">
+                                    <label for="telephone" class="form-label generic__form__label">Nome Fantasia</label>
+                                    <input type="text" class="form-control generic__form__input" name="telephone" placeholder="Nome Fantasia">
+                                </div>
+                                <div class="col-lg-5 col-md-6 col-12">
+                                    <label for="website" class="form-label generic__form__label">Razão Social</label>
+                                    <input type="text" class="form-control generic__form__input" name="website" placeholder="Razão Social">
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend class="generic__form__title">Endereço</legend>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-4 col-8">
+                                    <label for="cep" class="form-label generic__form__label">CEP</label>
+                                    <input type="number" class="form-control generic__form__input" name="cep" placeholder="CEP">
+                                </div>
+                                <div class="col-lg-2 col-md-4 col-12">
+                                    <label for="state" class="form-label generic__form__label">Estado</label>
+                                    <input type="text" class="form-control generic__form__input" name="state" placeholder="Estado">
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-12">
+                                    <label for="district" class="form-label generic__form__label">Bairro</label>
+                                    <input type="text" class="form-control generic__form__input" name="district" placeholder="Bairro">
+                                </div>
+                                <div class="col-lg-2 col-md-3 col-6">
+                                    <label for="number" class="form-label generic__form__label">N°</label>
+                                    <input type="number" class="form-control generic__form__input" name="number" placeholder="Número">
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <label for="city" class="form-label generic__form__label">Cidade</label>
+                                    <input type="text" class="form-control generic__form__input" name="city" placeholder="Cidade">
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-12">
+                                    <label for="publicPlace" class="form-label generic__form__label">Logradouro</label>
+                                    <input type="text" class="form-control generic__form__input" name="publicPlace" placeholder="Logradouro">
+                                </div>
+                                <div class="col-lg-4 col-md-7 col-12">
+                                    <label for="complement" class="form-label generic__form__label">Complemento</label>
+                                    <input type="text" class="form-control generic__form__input" name="complement" placeholder="Complemento">
+                                </div>
+                            </div>
+                        </fieldset>
+    
                         <div class="form-check">
-                            <input class="form-check-input generic__form__check" checked type="checkbox"
-                                id="checkPolicy">
+                            <input class="form-check-input generic__form__check" checked type="checkbox" id="checkPolicy">
                             <label class="form-check-label generic__form__label" for="checkPolicy">
-                                Li e concordo com as <a href="termos-de-servico.html" style="text-decoration: underline;">Políticas e Termos</a>.
+                                Li e concordo com as Políticas e Termos.
                             </label>
                         </div>
-
+                        
                         <div class="form-check">
                             <input class="form-check-input generic__form__check" type="checkbox" id="checkNews">
                             <label class="form-check-label generic__form__label" for="checkNews">
                                 Desejo receber as novidades do Guia do Transporte no meu email.
                             </label>
                         </div>
-
+    
                         <button class="btn generic__form__btn" role="button" type="submit">
                             <span class="generic__form__btn--icon" aria-hidden="true">
                                 <i class="fas fa-building"></i>
                             </span>
                             <span>Cadastrar Empresa</span>
                         </button>
-
+    
                     </form>
                 </div>
             </div>

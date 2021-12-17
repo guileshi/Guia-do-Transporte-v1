@@ -191,10 +191,14 @@ $('.cookie__close__btn').click(function () {
     $(".cookie").css("display", "none")
 })
 
-var $doc = $('html,body');
-$(".scroll-page").click(function () {
-    $doc.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 1000);
-    return false;
-})
+$(".showPassword__eye").click(function() {
+
+    $(this).toggleClass("fa-eye fa-eye-slash")
+
+    var input = $($(this).attr("myinput"));
+    if (input.attr("type") == "password") {
+      input.attr("type", "text");
+    } else {
+      input.attr("type", "password");
+    }
+  });

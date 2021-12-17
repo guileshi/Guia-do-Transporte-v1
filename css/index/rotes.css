@@ -48,6 +48,8 @@ body#originDestination .rotes__title{
     margin-bottom: 2px;
     transition: var(--t-generic);
     -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
 }
 
 .rotes__list__item--destiny, .rotes__list__item--origin {
@@ -58,6 +60,8 @@ body#originDestination .rotes__title{
     text-align: center;
     transition: var(--t-generic);
     -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
 }
 
 .rotes__list__item__text__group {
@@ -73,6 +77,8 @@ body#originDestination .rotes__title{
     font-family: var(--opens-sans);
     transition: var(--t-generic);
     -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
 }
 
 .rotes__list__item__anim {
@@ -85,6 +91,8 @@ body#originDestination .rotes__title{
     background-color: var(--base);
     transition: var(--t-generic);
     -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
 }
 
 .rotes__list__item_link:hover .rotes__list__item__anim {
@@ -144,6 +152,8 @@ body.index .rotes .row .col-12 {
         margin-bottom: 2px;
         transition: var(--t-generic);
         -webkit-transition: var(--t-generic);
+        -moz-transition: var(--t-generic);
+        -o-transition: var(--t-generic);
     }
     
     .rotes__list__item--destiny, .rotes__list__item--origin {
@@ -154,6 +164,8 @@ body.index .rotes .row .col-12 {
         text-align: center;
         transition: var(--t-generic);
         -webkit-transition: var(--t-generic);
+        -moz-transition: var(--t-generic);
+        -o-transition: var(--t-generic);
     }
 }
 
@@ -180,6 +192,8 @@ body.index .rotes .row .col-12 {
         margin-bottom: 2px;
         transition: var(--t-generic);
         -webkit-transition: var(--t-generic);
+        -moz-transition: var(--t-generic);
+        -o-transition: var(--t-generic);
     }
     
     .rotes__list__item--destiny, .rotes__list__item--origin {
@@ -190,5 +204,7 @@ body.index .rotes .row .col-12 {
         text-align: center;
         transition: var(--t-generic);
         -webkit-transition: var(--t-generic);
+        -moz-transition: var(--t-generic);
+        -o-transition: var(--t-generic);
     }
 }

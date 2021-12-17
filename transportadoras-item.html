@@ -45,7 +45,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body id="noHero">
+<body id="noHero" class="transItem">
     <!-- Loading -->
     <div class="loading__background">
         <div class="loading">
@@ -71,13 +71,6 @@
             </div>
             <img src="img/wind.png" class="loading__wind">
         </div>
-    </div>
-
-    <!-- Botão de voltar para o topo -->
-    <div class="slidetop">
-        <a href="#hero" class="btn slidetop__btn scroll-page" type="button" role="button">
-            <i class="fas fa-arrow-up fa-lg"></i>
-        </a>
     </div>
 
     <!-- Cookie -->
@@ -204,7 +197,7 @@
                     <!-- Utilizar aria-current="page" quando for a página ativa -->
                     <a href="index.html" class="text-uppercase" aria-current="page" title="Ir para o Inicio"
                         tabindex="1">
-                        Inicio
+                        inicio
                     </a>
                 </li>
                 <li class="topbar__list__item" role="link">
@@ -232,8 +225,9 @@
             <a href="index.html" class="topbar__logo--mobile" id="topbar__logo__mobile" title="Guia do Transporte"></a>
         </div>
     </nav>
+
     <!-- Formulario de cotação Topbar -->
-    <section class="topbar__quotation container-fluid" style="display: block;">
+    <section class="topbar__quotation container-fluid">
         <div class="container">
             <div class="row">
                 <form class="topbar__quotation__form">
@@ -293,12 +287,19 @@
     <div class="topbar__divider" role="separator" aria-hidden="true"></div>
 
     <!-- Modal de Cotação -->
-    <section id="quotation__modal">
-        <div class="quotation__filter"></div>
+    <section id="quotation__modal" class="hide">
+
+        <!-- Filtro -->
+        <div class="quotation__filter" onclick="toggleModal('quotation__modal')"></div>
+
         <section class="quotation__modal">
-            <div class="quotation__close">
+
+            <!-- Botão de Fechar -->
+            <div class="quotation__close" onclick="toggleModal('quotation__modal')">
                 <i class="fas fa-times" aria-label="Fechar"></i>
             </div>
+
+
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -307,75 +308,177 @@
                         </h1>
                         <h2 class="quotation__modal__subtitle">
                             <!-- Nome da Transportadora -->
-                            Capital Logistica
+                            Potencial Cargas
                         </h2>
                     </div>
                     <div class="col-12">
                         <div class="quotation__buttons">
-                            <button class="btn generic__form__btn">
+                            <button class="btn generic__form__btn" id="form__trans__buttom">
                                 Transporte de Carga
                             </button>
-                            <button class="btn generic__form__btn --white">
+                            <button class="btn generic__form__btn --white" id="form__mudanca__buttom">
                                 Mudança
                             </button>
                         </div>
                     </div>
-                    <form>
+                    <form action="#">
                         <fieldset>
                             <div class="row">
-                                <div class="col-lg-5 col-md-5 col-12">
-                                    <label for="origin" class="form-label generic__form__label">Origem</label>
+
+                                <!-- Origem -->
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="origin" class="form-label generic__form__label required">Origem</label>
                                     <input type="text" class="form-control generic__form__input" name="origin" placeholder="Cidade de Origem" required>
                                 </div>
                                 
-                                <div class="col-lg-5 col-md-5 col-12">
-                                    <label for="destination" class="form-label generic__form__label">Destino</label>
+                                <!-- Destino -->
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="destination" class="form-label generic__form__label required">Destino</label>
                                     <input type="text" class="form-control generic__form__input" name="destination" placeholder="Cidade de Destino" required>
                                 </div>
 
                                 <!-- Excluir ao clicar em Mudança -->
-                                <div class="col-lg-3 col-md-4 col-8">
-                                    <label for="note" class="form-label generic__form__label">Valor da Nota</label>
-                                    <input type="number" class="form-control generic__form__input" name="note" placeholder="Nota">
+
+                                <!-- Nota -->
+                                <div class="col-lg-4 col-md-4 col-6  form__only__trans">
+                                    <label for="note" class="form-label generic__form__label required">Valor da Nota</label>
+                                    <input type="number" class="form-control generic__form__input" name="note" placeholder="Em real(R$)" required>
                                 </div>
 
-                                <div class="col-lg-3 col-md-4 col-8">
-                                    <label for="quantity" class="form-label generic__form__label">Quantidade</label>
-                                    <input type="number" class="form-control generic__form__input" name="quantity" placeholder="Quantidade">
+                                <!-- Quantidade -->
+                                <div class="col-lg-4 col-md-4 col-6 form__only__trans">
+                                    <label for="quantity" class="form-label generic__form__label required">Quantidade</label>
+                                    <input type="number" class="form-control generic__form__input" name="quantity" placeholder="Quantidade" required>
                                 </div>
 
-                                <div class="col-lg-3 col-md-4 col-8">
-                                    <label for="weight" class="form-label generic__form__label">Peso</label>
-                                    <input type="number" class="form-control generic__form__input" name="weigth" placeholder="Peso">
+                                <!-- Peso -->
+                                <div class="col-lg-4 col-md-4 col-12 form__only__trans">
+                                    <label for="weight" class="form-label generic__form__label required">Peso</label>
+                                    <input type="number" class="form-control generic__form__input" name="weigth" placeholder="Em quilo" required>
                                 </div>
                                 <!-- //// -->
 
-                                <div class="col-lg-4 col-md-5 col-12">
-                                    <label for="name" class="form-label generic__form__label">Nome</label>
-                                    <input type="text" class="form-control generic__form__input" name="name" placeholder="Nome">
+                                <!-- Nome -->
+                                <div class="col-lg-4 col-md-7 col-12">
+                                    <label for="name" class="form-label generic__form__label required">Nome</label>
+                                    <input type="text" class="form-control generic__form__input" name="name" placeholder="Seu nome" required>
                                 </div>
-
+                                <!-- Telefone -->
                                 <div class="col-lg-4 col-md-5 col-12">
-                                    <label for="email" class="form-label generic__form__label">Email</label>
-                                    <input type="email" class="form-control generic__form__input" name="email" placeholder="Email">
-                                </div>
-
-                                <div class="col-lg-3 col-md-3 col-10">
                                     <label for="cellphone" class="form-label generic__form__label">Telefone</label>
-                                    <input type="tel" class="form-control generic__form__input" name="cellphone" placeholder="Telefone">
+                                    <input type="tel" class="form-control generic__form__input" name="cellphone" placeholder="Seu telefone">
                                 </div>
 
+                                <!-- Email -->
+                                <div class="col-lg-4 col-md-12 col-12">
+                                    <label for="email" class="form-label generic__form__label required">Email</label>
+                                    <input type="email" class="form-control generic__form__input" name="email" placeholder="Seu email" required>
+                                </div>
+
+
+                                <!-- Observações -->
                                 <div class="col-12">
                                     <label for="obs" class="form-label generic__form__label">
                                         Observações
                                     </label>
-                                    <textarea class="form-control" rows="2" placeholder="Peso, quantidade, volumes, medidas, valor NF."></textarea>
+                                    <textarea class="form-control" rows="2" id="transItem__quotation__obs" placeholder="Peso, quantidade, volumes, medidas, valor NF."></textarea>
                                 </div>
                             </div>
                         </fieldset>
 
-                        <button class="btn generic__form__btn" type="submit">
+                        <!-- Botão Submit -->
+                        <button class="btn generic__form__btn" type="submit" role="button" style="margin-left: unset;">
                             Solicitar cotação
+                        </button>
+                    </form>
+                </div>
+            </div>
+         </section>
+    </section>
+
+    <!-- Modal de Cotação -->
+    <section id="comment__modal" class="hide">
+
+        <!-- Filtro -->
+        <div class="quotation__filter" onclick="toggleModal('comment__modal')">
+        </div>
+
+        <section class="quotation__modal">
+
+            <!-- Botão de Fechar -->
+            <div class="quotation__close" onclick="toggleModal('comment__modal')">
+                <i class="fas fa-times" aria-label="Fechar"></i>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="quotation__modal__title">
+                            Faça um comentário
+                        </h1>
+                        <h2 class="quotation__modal__subtitle">
+                            <!-- Nome da Transportadora -->
+                            Capital Logistica
+                        </h2>
+                        <h3 class="generic__form__label">
+                            Nota
+                        </h3>
+                    </div>
+
+                    <!-- Estrelas -->
+                    <div class="col-auto">
+                        <div class="comment__stars" id="stars">
+                            <i class="fas fa-star star" onclick="clickStar(0)"></i>
+                            <i class="fas fa-star star" onclick="clickStar(1)"></i>
+                            <i class="fas fa-star star" onclick="clickStar(2)"></i>
+                            <i class="fas fa-star star" onclick="clickStar(3)"></i>
+                            <i class="fas fa-star star" onclick="clickStar(4)"></i>
+                        </div>
+                        <div class="stars__text">
+                            <span class="stars__text__rating">
+                                Péssimo
+                            </span>
+                            <span class="stars__text__rating">
+                                Excelente
+                            </span>
+                        </div>
+                    </div>
+
+                    <form action="#">
+                        <fieldset>
+                            <div class="row">
+
+                                <!-- Nome -->
+                                <div class="col-md-6 col-12">
+                                    <label for="name" class="form-label generic__form__label required">Nome</label>
+                                    <input type="text" class="form-control generic__form__input" name="name" placeholder="Digite seu nome" required>
+                                </div>
+                                
+                                <!-- Email -->
+                                <div class="col-md-6 col-12">
+                                    <label for="email" class="form-label generic__form__label required">Email</label>
+                                    <input type="text" class="form-control generic__form__input" name="email" placeholder="Digite seu email" required>
+                                </div>
+
+                                <!-- Comentário -->
+                                <div class="col-12">
+                                    <label for="comment" class="form-label generic__form__label required">
+                                        Comentário
+                                    </label>
+                                    <textarea class="form-control" rows="2" name="comment" placeholder="Digite um comentário sobre a empresa"></textarea>
+                                </div>
+
+                                <!-- Verificar se é humano -->
+                                <div class="col-md-6 col-12">
+                                    <label for="origin" class="form-label generic__form__label required">Quanto é <span id="sumNumber1"></span> + <span id="sumNumber2"></span> </label>
+                                    <input type="text" class="form-control generic__form__input" name="origin" placeholder="Digite o resultado" required onchange="getValue(this)">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <!-- Botão submit -->
+                        <button class="btn generic__form__btn" type="submit" role="button" onclick="getSumResult()" style="margin-left: unset;">
+                            Enviar comentário
                         </button>
                     </form>
                 </div>
@@ -418,6 +521,7 @@
             </div>
         </section>
 
+        <!-- Transportadora Item Header -->
         <section class="trans__item">
             <div class="container">
                 <div class="trans__item__header">
@@ -432,16 +536,22 @@
                                     Potencial Cargas
                                 </h1>
 
-                                <div id="stars">
+                                <!-- Estrelas -->
+                                <div id="rating">
                                     <i class="fas fa-star star"></i>
                                     <i class="fas fa-star star"></i>
                                     <i class="fas fa-star star"></i>
                                     <i class="fas fa-star star"></i>
                                     <i class="fas fa-star star"></i>
 
-                                    <a href="#" class="stars__comments">
+                                    <span class="sr-only sr-only-focusable">
+                                        Nota de 1 a 5 da empresa
+                                    </span>
+
+                                    <!-- Levar para os comentários da empresa -->
+                                    <span class="stars__comments">
                                         13 comentário(s)
-                                    </a>
+                                    </span>
                                 </div>
 
                                 <ul class="trans__list" role="navigation">
@@ -479,7 +589,8 @@
                                     </li>
                                 </ul>
 
-                                <button class="btn btn__anim trans__header__btn" type="button" role="button">
+                                <!-- Abrir Modal de Cotação -->
+                                <button class="btn btn__anim trans__header__btn" type="button" role="button" onclick="toggleModal('quotation__modal')">
                                     Solicitar Cotação
                                 </button>
                             </div>
@@ -496,7 +607,8 @@
                         <h2 class="trans__infos__title">Descrição</h2>
 
                         <form>
-                            <textarea class="form-control trans__item__textfield" id="text__description" disabled>Você ainda não adicionou nenhuma descrição. Adicionar uma descrição pode melhorar a busca da sua empresa, adicione uma agora mesmo!</textarea>
+                            <!-- Descrição da Empresa -->
+                            <textarea class="form-control trans__item__textfield" id="text__description" disabled>Ainda não foi adicionada nenhuma descrição sobre essa empresa</textarea>
                         </form>
                     </div>
                 </div>
@@ -602,12 +714,14 @@
                         <h2 class="trans__infos__title">Comentários</h2>
 
                         <div class="trans__infos__container">
-                            <span class="trans__item__textfield">
+                            
+                            <!-- Comentários da Empresa -->
+                            <div class="trans__item__textfield">
                                 Ainda não há nenhum comentário. Seja o(a) primeiro(a) a comentar!
-                            </span>
+                            </div>
                         </div>
 
-                        <button class="btn trans__comments__btn btn__anim" type="button" role="button">
+                        <button class="btn trans__comments__btn btn__anim" type="button" role="button" onclick="toggleModal('comment__modal')">
                             Adicionar um comentário...
                         </button>
                     
@@ -702,7 +816,11 @@
     <!-- Importar Javascript Avaliação -->
     <script src="js/rating.js"></script>
 
-    <!-- Importar Javascript  -->
+    <!-- Importar Javascript Modal  -->
+    <script src="js/modal.js"></script>
+
+    <!-- Importar Javascript Verificador -->
+    <script src="js/validation.js"></script>
 </body>
 
 </html>

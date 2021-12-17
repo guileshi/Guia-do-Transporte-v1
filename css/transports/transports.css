@@ -30,7 +30,10 @@
     font-family: var(--opens-sans);
     font-weight: var(--regular);
 
-    transition: var(--transparent);
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
 }
 
 .transports__search::placeholder{
@@ -48,6 +51,9 @@
     border-radius: 4px;
 
     transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
 }
 
 .transports__card:hover{
@@ -57,6 +63,9 @@
 .transports__card.premium:hover{
     box-shadow: 0 0 12px #ebcc12;
     transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -o-transform: scale(1.01);
 }
 
 .transports__card.premium{

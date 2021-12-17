@@ -1,7 +1,7 @@
 var app = document.querySelector(".app")
 var hero = document.querySelector(".hero")
 
-var terms = document.querySelector('#term__title')
+var terms = document.querySelector('#termOfServices')
 var privacy = document.querySelector('#privacy__title')
 var publicy = document.querySelector('#publicy__title')
 var conditions = document.querySelector('#conditions__title')
@@ -27,7 +27,7 @@ var termOptions = {
 
     threshold: 0,
 
-    rootMargin: "-50px"
+    rootMargin: "-100px"
 }
 
 var observerApp = new IntersectionObserver(function (entries, observer) {
@@ -66,7 +66,6 @@ var observerApp = new IntersectionObserver(function (entries, observer) {
 var observerHero = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting && entry.target === hero) {
-            $('.slidetop').removeClass("unhide")
             $('.topbar__fluid').removeClass('fixed')
 
             $('.topbar__quotation').css("display", "none")
@@ -74,7 +73,6 @@ var observerHero = new IntersectionObserver(function (entries, observer) {
 
 
         } else if (!entry.isIntersecting) {
-            $('.slidetop').addClass("unhide")
             $('.topbar__fluid').addClass('fixed')
 
             $('.topbar__quotation').css("display", "block")

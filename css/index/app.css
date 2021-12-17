@@ -36,11 +36,15 @@
     object-fit: contain;
     transition: all 0.2s ease-out;
     -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
 }
 
 .app__image--google img:hover {
     transform: translateY(-10px);
-    -webkit-transform: translateY(-10px)
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
 }
 
 .app__title {
