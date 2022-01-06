@@ -19,7 +19,7 @@
     width: 100%;
     background: var(--accent-0);
 
-    padding: var(--px24);
+    padding: var(--px16);
     margin: var(--px24) 0;
 
     border-radius: 100px;
@@ -57,7 +57,7 @@
 }
 
 .transports__card:hover{
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 
 .transports__card.premium:hover{

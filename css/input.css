@@ -114,6 +114,8 @@
     right: var(--px8);
     top: 50%;
     transform: translateY(-50%);
+
+    color: var(--accent-6);
 }
 
 /* --- */

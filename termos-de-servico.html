@@ -36,7 +36,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body id="termOfService">
+<body id="noHero" class="terms">
     <!-- Loading -->
     <div class="loading__background">
         <div class="loading">
@@ -66,31 +66,10 @@
 
     <!-- Botão de voltar para o topo -->
     <div class="slidetop">
-        <a href="#hero" class="btn slidetop__btn scroll-page" type="button" role="button">
+        <a href="#breadcrumb" class="btn slidetop__btn scroll-page" type="button" role="button">
             <i class="fas fa-arrow-up fa-lg"></i>
         </a>
     </div>
-
-    <!-- Cookie -->
-    <!-- <section class="cookie">
-        <button class="cookie__close" type="button" role="button">
-            <div class="cookie__close__btn"><i class="fas fa-times fa-lg"></i></div>
-        </button>
-        <h2 class="cookie__title">
-            Aceita um Cookie?
-        </h2>
-        <p class="cookie__text">
-            O site Guia do Transporte utiliza a tecnologia de cookies para melhorar a experiência do usuario.
-        </p>
-        <div class="cookie__btn__group">
-            <a href="#" class="cookie__btn --transparent" role="button" type="button">
-                Saiba Mais
-            </a>
-            <button class="cookie__btn" role="button" type="button" id="cookie__btn--accept">
-                Aceitar
-            </button>
-        </div>
-    </section> -->
 
     <!-- Navbar -->
     <nav class="container-fluid topbar__fluid fixed" role="navigation">
@@ -104,6 +83,33 @@
     <!-- Conteúdo principal -->
     <main>
 
+        <!-- Breadcrumb -->
+        <section aria-label="breadcrumb" id="breadcrumb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb__item"> <a href="index.html" class="breadcrumb__link">
+                                    <div class="breadcrumb__link__group">
+                                        <div class="breadcrumb__link__icon">
+                                            <i class="fas fa-home"></i>
+                                        </div>
+                                        <div>
+                                            Inicio
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="breadcrumb__item active" aria-current="page"> <a href="termos-de-servico.html" class="breadcrumb__link">
+                                    Termos de Serviço
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="termOfServices">
 
             <div class="container">
@@ -112,7 +118,7 @@
                     <div class="col-lg-3 col-md-4 col-12">
                         <div class="row" id="termOfServices__links">
                             <div class="termOfServices__links">
-                                <a href="#termOfServices" class="termOfServices__links__item active scroll-page" id="terms">
+                                <a href="#breadcrumb" class="termOfServices__links__item active scroll-page" id="terms">
                                     Termos de Serviço
                                 </a>
                                 <a href="#privacyPolice" class="termOfServices__links__item scroll-page" id="privacy">
@@ -258,6 +264,9 @@
 
     <!-- Importar meu arquivo Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Importar meu Slide Up -->
+    <script src="js/slideUp.js"></script>
 </body>
 
 </html>

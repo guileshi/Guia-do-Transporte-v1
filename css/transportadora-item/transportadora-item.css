@@ -191,6 +191,76 @@
     right: var(--px16);
 }
 
+/* Comentários */
+
+.trans__item__comments{
+
+    width: 100%;
+    height: auto;
+
+    margin-bottom: var(--px16);
+
+    position: relative;
+
+}
+
+.trans__item__comments::after{
+    content: "";
+    
+    position: absolute;
+    bottom: -8px;
+
+    border-bottom: 1px solid var(--accent-3);
+
+    height: auto;
+    width: 100%;
+
+}
+
+.trans__item__comments:last-of-type::after{
+    content: "";
+    border-bottom: unset;
+}
+
+.trans__item__comments:last-of-type{
+    
+    margin-bottom: 0;
+
+}
+
+.trans__item__comment__name{
+
+    font-size: var(--px18);
+    font-weight: var(--medium);
+    font-family: var(--poppins);
+
+    color: var(--accent-7);
+
+}
+
+.trans__item__comment{
+    margin-left: var(--px8);
+    margin-top: var(--px8);
+
+    font-size: var(--px18);
+    font-weight: var(--light);
+    font-family: var(--opens-sans);
+
+    text-align: justify;
+
+    color: var(--accent-7);
+}
+
+.trans__item__comment__time{
+
+    font-size: var(--px16);
+    font-weight: var(--light);
+    font-family: var(--opens-sans);
+
+    color: var(--accent-7);
+
+}
+
 @media (max-width: 767.98px) {
 
     .trans__item__title{

@@ -1,5 +1,4 @@
 .termOfServices{
-    margin-top: calc(var(--topbarHeight) + var(--px32));
     margin-bottom: var(--px80);
 }
 

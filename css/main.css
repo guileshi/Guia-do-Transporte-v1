@@ -170,6 +170,10 @@ body#noHero .breadcrumb {
     margin-top: calc(var(--topMargin) + var(--px8));
 }
 
+body#noHero.terms .breadcrumb{
+    margin-top: calc(var(--topbarHeight) + var(--px8));
+}
+
 .breadcrumb__item {
     font-size: var(--px18);
     font-weight: var(--regular);
@@ -783,7 +787,7 @@ body#noHero .breadcrumb {
     top: 87px;
     z-index: 10;
     display: none;
-    box-shadow: 0px 4px 12px -4px rgb(0 0 0 / 20%);
+    box-shadow: 0px 8px 8px -4px rgb(0 0 0 / 20%);
 
 }
 
