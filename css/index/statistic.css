@@ -6,8 +6,9 @@
 
 .statistics__title {
     color: var(--base);
+    color: hsl(212, 80%, 47%);
     font-size: var(--px64);
-    font-weight: var(--medium);
+    font-weight: var(--semibold);
     font-family: var(--poppins);
     text-align: center;
     margin-bottom: 8px;

@@ -115,7 +115,14 @@ if(hero){
     observerHero.observe(hero)
 }
 
-if([terms, publicy, privacy, conditions]){
+// if([terms, publicy, privacy, conditions]){
+//     observerTerms.observe(terms)
+//     observerTerms.observe(publicy)
+//     observerTerms.observe(privacy)
+//     observerTerms.observe(conditions)
+// }
+
+if(terms != null || publicy != null || privacy != null || conditions != null){
     observerTerms.observe(terms)
     observerTerms.observe(publicy)
     observerTerms.observe(privacy)

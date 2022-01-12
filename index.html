@@ -105,7 +105,7 @@
 
     <!-- Botão de voltar para o topo -->
     <div class="slidetop">
-        <a href="#hero" class="btn slidetop__btn scroll-page" type="button" role="button">
+        <a href="#hero" class="btn slidetop__btn scroll-page" title="Voltar ao topo" type="button" role="button">
             <i class="fas fa-arrow-up fa-lg"></i>
         </a>
     </div>
@@ -126,14 +126,14 @@
                     </button>
                     <span class="sr-only">Botão para fechar o menu</span>
                     <!-- Adicione a classe active na li quando for a página selecionada -->
-                    <li class="sidebar__list__item active" role="menuitem" tabindex="0">
+                    <li class="sidebar__list__item active" role="link" tabindex="0">
                         <a href="index.html" class="d-flex" title="Inicio" role="link">
                             <span class="sidebar__list__item--icon"><i class="fas fa-home fa-lg mx-2"></i></span>
                             Inicio
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
+                    <li class="sidebar__list__item" role="link" tabindex="0">
                         <a href="transportadoras.html" class="d-flex" title="Transportadoras" role="link"
                             role="link">
                             <span class="sidebar__list__item--icon"><i class="fas fa-building fa-lg mx-2"></i></span>
@@ -141,7 +141,7 @@
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
+                    <li class="sidebar__list__item" role="link" tabindex="0">
                         <a href="#" class="d-flex" title="Cotação" role="link">
                             <span class="sidebar__list__item--icon"><i
                                     class="fas fa-clipboard-list fa-lg mx-2"></i></span>
@@ -149,7 +149,7 @@
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
+                    <li class="sidebar__list__item" role="link" tabindex="0">
                         <a href="origem-destino.html" class="d-flex" title="Origem e Destino" role="link">
                             <span class="sidebar__list__item--icon"><i
                                     class="fas fa-map-marker-alt fa-lg mx-2"></i></span>
@@ -157,28 +157,28 @@
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
+                    <li class="sidebar__list__item" role="link" tabindex="0">
                         <a href="#" class="d-flex" title="Blog"  role="link">
                             <span class="sidebar__list__item--icon"><i class="fab fa-blogger-b fa-lg mx-2"></i></span>
                             Blog
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
+                    <li class="sidebar__list__item" role="link" tabindex="0">
                         <a href="sobre-nos.html " class="d-flex" title="Sobre Nós"  role="link">
                             <span class="sidebar__list__item--icon"><i class="fas fa-users fa-lg mx-2"></i></span>
                             Sobre Nós
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" role="menuitem" tabindex="0">
+                    <li class="sidebar__list__item" role="link" tabindex="0">
                         <a href="termos-de-servico.html" class="d-flex" title="Políticas e Termos"  role="link">
                             <span class="sidebar__list__item--icon"><i class="fas fa-book fa-lg mx-2"></i></span>
                             Políticas e Termos
                         </a>
                     </li>
 
-                    <li class="sidebar__list__item" title="Cadastre-se" role="menuitem" tabindex="0">
+                    <li class="sidebar__list__item" title="Cadastre-se" role="link" tabindex="0">
                         <a href="cadastrar.html" class="d-flex justify-content-center" role="link">
                             <i class="fas fa-sign-in-alt fa-lg mx-2"></i> </span>
                             Cadastre-se
@@ -212,32 +212,32 @@
         <!-- Navbar -->
         <nav class="container-fluid topbar__fluid" role="navigation">
             <div class="container topbar">
-                <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte" tabindex="1"></a>
+                <a href="index.html" class="topbar__logo" id="topbar__logo__desktop" title="Guia do Transporte" tabindex="0"></a>
                 <ul class="topbar__list">   
-                    <li class="topbar__list__item" role="link">
+                    <li class="topbar__list__item">
                         <!-- Utilizar aria-current="page" quando for a página ativa -->
                         <a href="index.html" class="text-uppercase" aria-current="page" title="Ir para o Inicio"
-                            tabindex="1">
+                            tabindex="0">
                             Inicio
                         </a>
                     </li>
-                    <li class="topbar__list__item" role="link">
-                        <a href="origem-destino.html" class="text-uppercase" title="Ir para Origem e Destino" tabindex="1">
+                    <li class="topbar__list__item">
+                        <a href="origem-destino.html" class="text-uppercase" title="Ir para Origem e Destino" tabindex="0">
                             origem e destino
                         </a>
                     </li>
-                    <li class="topbar__list__item" role="link">
-                        <a href="transportadoras.html" class="text-uppercase" title="Ir para Transportadoras" tabindex="1">
+                    <li class="topbar__list__item">
+                        <a href="transportadoras.html" class="text-uppercase" title="Ir para Transportadoras" tabindex="0">
                             transportadoras
                         </a>
                     </li>
-                    <li class="topbar__list__item" role="link">
-                        <a href="#" class="text-uppercase" title="Ir para Cotação Rápida" tabindex="1">
+                    <li class="topbar__list__item">
+                        <a href="#" class="text-uppercase" title="Ir para Cotação Rápida" tabindex="0">
                             cotação rápida
                         </a>
                     </li>
-                    <li class="topbar__list__item" role="button">
-                        <button class="btn topbar_list--btn" title="Abrir o menu" tabindex="1">
+                    <li class="topbar__list__item">
+                        <button class="btn topbar_list--btn" title="Abrir o menu" tabindex="0">
                             <i class="fas fa-bars fa-lg"></i>
                             <span class="text-uppercase mx-2 topbar__list--menu d-none d-lg-inline">Menu</span>
                         </button>
@@ -442,613 +442,678 @@
             <h3 class="rotes__subtitle">
                 Veja abaixo as rotas mais buscadas
             </h3>
-            <ul class="rotes__list row" role="list">
+            <div class="rotes__list row">
                 <!-- 30 rotas no total -->
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item" tabindex="0">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>  
+                <div class="col-lg-4 col-md-6 col-12">
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
+                                </span>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
+                                </span>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
+                                </span>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
                 <br>
+
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
+                                </span>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
+                                </span>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
+                                </span>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
+                                </span>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
                 <br>
+
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
-                </div>
-                <br>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
-                                </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
+                    <ul>
+                        <li class="rotes__list__item" tabindex="0">
+                            <a href="#" class="rotes__list__item_link">
+                                <h4 class="rotes__list__item__title">
+                                    BH - RJ
+                                </h4>
+                                <span class="rotes__list__item__text__group">
+                                    <span class="rotes__list__item--origin mx-2">
+                                        Belo Horizonte
+                                    </span>
+                                    <span class="rotes__list__item--divider"> > </span>
+                                    <span class="rotes__list__item--destiny mx-2">
+                                        Rio de Janeiro
+                                    </span>
                                 </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
+                                <div class="rotes__list__item__anim">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
-                                </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
-                </div>
-                <br>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
-                                </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
-                                </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
-                                </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
-                                </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
-                                </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <li class="rotes__list__item">
-                        <a href="#" class="rotes__list__item_link">
-                            <h4 class="rotes__list__item__title">
-                                BH - RJ
-                            </h4>
-                            <span class="rotes__list__item__text__group">
-                                <span class="rotes__list__item--origin mx-2">
-                                    Belo Horizonte
-                                </span>
-                                <span class="rotes__list__item--divider"> > </span>
-                                <span class="rotes__list__item--destiny mx-2">
-                                    Rio de Janeiro
-                                </span>
-                            </span>
-                            <div class="rotes__list__item__anim">
-                            </div>
-                        </a>
-                    </li>
-                </div>
-            </ul>
+
+
+            </div>
         </section>
 
         <!-- Aplicativo Mobile -->
@@ -1267,8 +1332,10 @@
                     <div class="col-12">
                         <div class="footer--2__group">
                             <div class="footer--2__text">
-                                ©2021 <a href="index.html" class="footer--2__text--grey">Guia do Transporte</a> -
-                                29.497.833/0001-91.
+                                
+                                    ©2021 <a href="index.html" class="footer--2__text--grey">Guia do Transporte</a> -
+                                    29.497.833/0001-91.
+                                
                             </div>
                             <div class="footer--2__text">
                                 Todos os direitos reservados.
