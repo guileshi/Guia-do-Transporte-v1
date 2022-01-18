@@ -57,7 +57,7 @@ body{
  /* Dashboard Header */
 .dashboard__header__logo{
     height: var(--whitebar__height);
-    width: auto;
+    width: 17rem;
 
     object-fit: contain;
 }
@@ -251,6 +251,10 @@ body{
     color: var(--accent-3);
     font-family: var(--poppins);
     font-weight: var(--regular);
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .bottombar__link.active .bottombar__icon{
@@ -260,6 +264,7 @@ body{
 .bottombar__link.active .bottombar__text{
     color: var(--accent-8);
 }
+
 
 /* sm */
 @media (max-width: 767.98px) {
@@ -274,11 +279,25 @@ body{
     body{
         margin-bottom: var(--px80);
     }
+
+    .dashboard__header__logo{
+        height: var(--whitebar__height);
+        width: 13rem;
+    
+        object-fit: contain;
+    }
 }
 
 /* md */
 @media (min-width: 768px) and (max-width: 1023px) {
     .dashboard__mini__profile__name, .dashboard__sidebar__list__links, .dashboard__logout__button__text{
         font-size: var(--px16);
+    }
+
+    .dashboard__header__logo{
+        height: var(--whitebar__height);
+        width: 13rem;
+    
+        object-fit: contain;
     }
 }

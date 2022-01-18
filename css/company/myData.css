@@ -28,8 +28,6 @@
 }
 
 .myData__profile__picture{
-    margin-top: var(--px24);
-
     height: 10rem;
     width: 10rem;
     position: relative;
@@ -47,4 +45,83 @@
     font-family: var(--poppins);
     font-weight: var(--regular);
     font-size: var(--px18);
+}
+
+.myData__profile__name{
+    color: var(--accent-8);
+    font-family: var(--poppins);
+    font-weight: var(--regular);
+    font-size: var(--px24);
+
+    margin-top: var(--px8);
+
+    display: flex;
+    justify-content: center;
+}
+
+.myData__field__dashboard{
+    margin: var(--px24) 0;
+}
+
+.myData_field{
+    border-top: 2px solid var(--accent-2);
+
+    padding: 8px 0;
+}
+
+.myData__title{
+    color: var(--accent-6);
+    font-family: var(--poppins);
+    font-weight: var(--regular);
+    font-size: var(--px18);
+}
+
+.myData__content{
+    color: var(--accent-8);
+    font-family: var(--poppins);
+    font-weight: var(--regular);
+    font-size: var(--px18);
+}
+
+.myData__icon{
+    color: var(--accent-4);
+
+    font-size: var(--px18);
+
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
+
+    float: right;
+}
+
+.myData__icon:hover{
+    color: var(--accent-3);
+}
+
+/* sm */
+@media (max-width: 767.98px) {
+    .myData__content, .myData__title, .myData__icon, .myData__profile__name{
+        font-size: var(--px16);
+    }
+
+    .myData__subtitle{
+        font-size: var(--px16);
+    }
+
+    .basefield__title{
+        font-size: var(--px18);
+    }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .myData__content, .myData__title, .myData__icon, .myData__profile__name, .basefield__title{
+        font-size: var(--px18);
+    }
+
+    .myData__subtitle{
+        font-size: var(--px16);
+    }
 }

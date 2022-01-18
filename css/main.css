@@ -32,6 +32,9 @@
     --accent-gold: hsl(51, 89%, 40%);
     --accent-darkGold: hsl(51, 89%, 35%);
     --accent-lightGold: hsl(51, 89%, 43%);
+    --accent-red: hsl(0, 81%, 38%);
+    --accent-darkRed: hsl(0, 81%, 33%);
+    --accent-lightRed: hsl(0, 81%, 42%);
     /* typeface weight's */
     --extrabold: 800;
     --bold: 700;
@@ -100,6 +103,10 @@ label {
 
 .hide{
     display: none;
+}
+
+.unhide{
+    display: block;
 }
 
 .required::after{
@@ -899,22 +906,21 @@ body#noHero.terms .topbar{
 /* --- */
 
 .btn__anim:hover{
-
-    transform: translate(-5px, -5px) !important;
-    -webkit-transform: translate(-5px, -5px) !important;
-    -moz-transform: translate(-5px, -5px) !important;
-    -o-transform: translate(-5px, -5px) !important;
-
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+    box-shadow: 4px 4px 0 rgb(0, 0, 0) !important;
+    
+    transform: translate(-4px, -4px) !important;
+    -webkit-transform: translate(-4px, -4px) !important;
+    -moz-transform: translate(-4px, -4px) !important;
+    -o-transform: translate(-4px, -4px) !important;
 }
 
 .btn__anim:active{
-    transform: translate(0, 0) !important;
-    -webkit-transform: translate(0, 0) !important;
-    -moz-transform: translate(0, 0) !important;
-    -o-transform: translate(0, 0) !important;
+    box-shadow: 1px 1px 0 rgb(0, 0, 0) !important;
 
-    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+    transform: translate(0px, 0px) !important;
+    -webkit-transform: translate(0px, 0px) !important;
+    -moz-transform: translate(0px, 0px) !important;
+    -o-transform: translate(0px, 0px) !important;
 }
 
 .quotation__form__btn {

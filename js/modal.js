@@ -1,5 +1,24 @@
-function toggleModal(modal){
-    $(`#${modal}`).toggleClass('hide')
+function toggleModal(modal, type, input, inputVal, typeOfInput){
+    
+    if(document.getElementById(modal).id == 'switchPicture__modal'){
+        $(`#${modal}`).toggleClass('hide')
+
+    }else{
+        if($(`#${modal}`).hasClass('hide')){
+            document.getElementById('modalTitle').innerHTML = type
+            document.getElementById('modalType').innerHTML = type
+            document.getElementById('modalInput').innerHTML = type
+    
+            document.getElementById(input).inputVal = typeOfInput
+        
+            document.getElementById(input).value = document.getElementById(inputVal).innerText
+    
+            $(`#${modal}`).toggleClass('hide') 
+        } else{
+            $(`#${modal}`).toggleClass('hide')    
+        }
+    }
+
 }
 
 $('#form__trans__buttom').click(()=> {
