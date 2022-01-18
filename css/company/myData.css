@@ -1,0 +1,50 @@
+.myData__profile{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.myData__profile__picture__switchIcon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background: var(--accent-0);
+    padding: var(--px12);
+
+    border-radius: 100%;
+
+    color: var(--accent-8);
+
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
+}
+
+.myData__profile__picture__switchIcon:hover{
+    color: var(--accent-5);
+}
+
+.myData__profile__picture{
+    margin-top: var(--px24);
+
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+
+    object-fit: cover;
+
+    border-radius: 100%;
+    border: 1px solid var(--accent-1);
+}
+
+.myData__subtitle{
+    margin-top: var(--px8);
+
+    color: var(--accent-6);
+    font-family: var(--poppins);
+    font-weight: var(--regular);
+    font-size: var(--px18);
+}

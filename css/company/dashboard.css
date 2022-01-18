@@ -1,0 +1,119 @@
+/* basefield */
+.dashboard__text{
+    color: var(--accent-8);
+    font-family: var(--poppins);
+    font-weight: var(--regular);
+}
+
+.dashboard__text.money{
+    margin-top: var(--px12);
+
+    font-size: var(--px36);
+    color: var(--accent-money);
+    font-weight: var(--light);
+}
+
+.dashboard__text.rotes{
+    margin-top: var(--px12);
+
+    font-size: var(--px36);
+    color: var(--accent-6);
+    font-weight: var(--light);
+}
+
+.dashboard__text.quotation{
+    margin-top: var(--px32);
+
+    font-size: var(--px64);
+    color: var(--base);
+    font-weight: var(--regular);
+}
+
+.dashboard__subtitle{
+    margin-top: var(--px40);
+
+    font-size: var(--px18);
+    color: var(--accent-8);
+    font-weight: var(--regular);
+    font-family: var(--poppins);
+}
+
+.dashboard__subtitle__text{
+    margin-top: var(--px8);
+
+    font-size: var(--px24);
+    color: var(--accent-6);
+    font-weight: var(--regular);
+    font-family: var(--poppins);
+}
+
+.dashboard__text.bestRotes{
+    font-size: var(--px18);
+    color: var(--accent-8);
+    font-weight: var(--light);
+    margin-top: var(--px8);
+}
+
+.dashboard__rotes__badge{
+    background: var(--base);
+    color: var(--accent-0);
+
+    font-size: var(--px16);
+    font-weight: var(--regular);
+    font-family: var(--poppins);
+
+    padding: 2px 4px;
+
+    border-radius: 4px;
+    margin-left: var(--px8);
+}
+
+/* sm */
+@media (max-width: 767.98px) {
+    .dashboard__bestRotesList{
+        column-count: 2;
+        column-gap: 140px;
+        column-width: 150px;
+    }
+
+    .dashboard__title, .dashboard__subtitle__text{
+        font-size: var(--px18);
+    }
+
+    .dashboard__text.money, .dashboard__text.rotes{
+        font-size: var(--px32);
+    }
+
+    .dashboard__text.quotation{
+        font-size: var(--px40);
+    }
+    
+    .dashboard__subtitle{
+        font-size: var(--px16);
+    }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .dashboard__bestRotesList{
+        column-count: 2;
+        column-gap: 140px;
+        column-width: 150px;
+    }
+
+    .dashboard__title, .dashboard__subtitle__text{
+        font-size: var(--px18);
+    }
+
+    .dashboard__text.money, .dashboard__text.rotes{
+        font-size: var(--px32);
+    }
+
+    .dashboard__text.quotation{
+        font-size: var(--px48);
+    }
+    
+    .dashboard__subtitle{
+        font-size: var(--px16);
+    }
+}

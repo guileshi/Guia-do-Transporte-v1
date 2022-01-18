@@ -22,12 +22,16 @@
     --accent-2: #DBDBDB;
     --accent-1: #EBEBEB;
     --accent-0: #fff;
+    --accent-money: #299621;
     --accent-green: #05C928;
     --accent-greenDark: #04B023;
     --accent-blue: hsl(221, 44%, 60%);
     --accent-blueDark: hsl(221, 44%, 53%);
     --accent-purple: hsl(326, 57%, 60%);
     --accent-purpleDark: hsl(326, 57%, 53%);
+    --accent-gold: hsl(51, 89%, 40%);
+    --accent-darkGold: hsl(51, 89%, 35%);
+    --accent-lightGold: hsl(51, 89%, 43%);
     /* typeface weight's */
     --extrabold: 800;
     --bold: 700;

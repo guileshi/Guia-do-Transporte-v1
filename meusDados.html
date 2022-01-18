@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="O maior Guia do Transporte do Brasil. Busque e encontre transportadoras credenciadas para a sua carga!">
+    <meta name="theme-color" content="#1565C0">
+    <meta name="robots" content="index, follow">
+    <meta name="Language" content="Portuguese">
+    <meta name="city" content="São Paulo">
+    <meta name="country" content="Brazil">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guiadotransporte.com.br">
+    <meta property="og:image" content="https://guiadotransporte.com.br/images/guia-do-transporte-og.jpg">
+    <meta property="og:size_name" content="Guia do Transporte">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta http-equiv="content-language" content="pr-br">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="Revisit-After" content="1 day">
+    <title>O Melhor Guia de Transporte - Guia do Transporte</title>
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- CSS Main -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- CSS Para Empresas -->
+    <link rel="stylesheet" href="css/company/main.css">
+
+    <!-- CSS Para Empresas - Meus Dados -->
+    <link rel="stylesheet" href="css/company/myData.css">
+
+    <!-- CSS Font-Awesome -->
+    <link rel="stylesheet" href="vendor/fontawesome-free-5.15.4-web/css/all.min.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="dashboard">
+
+    <!-- Bottom Bar -->
+    <section class="d-md-none d-block">
+        <div class="container-fluid bottombar">
+            <div class="d-flex justify-content-between">
+                <a href="dashboard.html" class="bottombar__link">
+                    <div class="bottombar__icon">
+                        <i class="fas fa-th-large fa-2x"></i>
+                    </div>
+                    <div class="bottombar__text">
+                        Dashboard
+                    </div>
+                </a>
+                <a href="meusDados.html" class="bottombar__link active">
+                    <div class="bottombar__icon">
+                        <i class="fas fa-user fa-2x"></i>
+                    </div>
+                    <div class="bottombar__text">
+                        Meus Dados
+                    </div>
+                </a>
+                <a href="#" class="bottombar__link">
+                    <div class="bottombar__icon">
+                        <i class="fas fa-money-bill fa-2x"></i>
+                    </div>
+                    <div class="bottombar__text">
+                        Financeiro
+                    </div>
+                </a>
+                <a href="#" class="bottombar__link">
+                    <div class="bottombar__icon">
+                        <i class="fas fa-road fa-2x"></i>
+                    </div>
+                    <div class="bottombar__text">
+                        Rotas
+                    </div>
+                </a>
+                <a href="#" class="bottombar__link">
+                    <div class="bottombar__icon">
+                        <i class="fas fa-clipboard fa-2x"></i>
+                    </div>
+                    <div class="bottombar__text">
+                        Cotação
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading -->
+    <div class="loading__background">
+        <div class="loading">
+            <div class="loading__head">
+                <div class="loading__head__detail">
+                </div>
+            </div>
+            <div class="loading__body">
+                <img src="img/logo-dark.png" class="loading__body__image" alt="Logo Do Guia do Transporte">
+            </div>
+            <div class="loading__wheel --1">
+                <div class="loading__wheel__inside">
+                </div>
+            </div>
+            <div class="loading__wheel --2">
+                <div class="loading__wheel__inside">
+                </div>
+            </div>
+            <div class="loading__wheel --3">
+            </div>
+            <div class="loading__wheel --4">
+
+            </div>
+            <img src="img/wind.png" class="loading__wind">
+        </div>
+    </div>
+
+
+    <header class="header__height">
+        <div class="container-fluid header__bar">
+            <div class="container">
+                <div class="row">
+
+                    <!-- guia logo -->
+                    <div class="col-auto">
+                        <a href="index.html">
+                            <img src="img/logo-dark.png" alt="Logo do Guia do Transporte"
+                                class="dashboard__header__logo">
+                        </a>
+                    </div>
+
+                    <!-- mini profile -->
+                    <div class="col d-none d-md-block">
+                        <a href="#">
+                            <div class="dashboard__mini__profile">
+                                <span class="dashboard__mini__profile__name">
+                                    Pikachu Trans.
+                                </span>
+                                <img src="img/noticia1.jpeg" alt="Minha foto de Perfil"
+                                    class="dashboard__mini__profile__img">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- logout button -->
+                    <div class="col-auto d-none d-md-block">
+                        <a href="#">
+                            <div class="dashboard__logout__button">
+                                <i class="fas fa-sign-out-alt fa-2x"></i>
+                                <span class="dashboard__logout__button__text">Sair</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard__main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 d-none d-md-block position-fixed pe-0">
+                            <div class="dashboard__sidebar">
+                                <ul class="dashboard__sidebar__list">
+                                    <li class="dashboard__sidebar__list__item">
+                                        <a href="#" class="dashboard__sidebar__list__links">
+                                            <div class="dashboard__sidebar__list__links__text">
+                                                <div class="dashboard__sidebar__list__icon">
+                                                    <i class="fas fa-th-large"></i>
+                                                </div>
+                                                <div>
+                                                    Dashboard
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="dashboard__sidebar__list__item active">
+                                        <a href="#" class="dashboard__sidebar__list__links">
+                                            <div class="dashboard__sidebar__list__links__text">
+                                                <div class="dashboard__sidebar__list__icon">
+                                                    <i class="fas fa-user"></i>
+                                                </div>
+                                                <div>
+                                                    Meus Dados
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="dashboard__sidebar__list__item">
+                                        <a href="#" class="dashboard__sidebar__list__links">
+                                            <div class="dashboard__sidebar__list__links__text">
+                                                <div class="dashboard__sidebar__list__icon">
+                                                    <i class="fas fa-money-bill"></i>
+                                                </div>
+                                                <div>
+                                                    Financeiro
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="dashboard__sidebar__list__item">
+                                        <a href="#" class="dashboard__sidebar__list__links">
+                                            <div class="dashboard__sidebar__list__links__text">
+                                                <div class="dashboard__sidebar__list__icon">
+                                                    <i class="fas fa-road"></i>
+                                                </div>
+                                                <div>
+                                                    Rotas
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="dashboard__sidebar__list__item">
+                                        <a href="#" class="dashboard__sidebar__list__links">
+                                            <div class="dashboard__sidebar__list__links__text">
+                                                <div class="dashboard__sidebar__list__icon">
+                                                    <i class="fas fa-clipboard"></i>
+                                                </div>
+                                                <div>
+                                                    Cotação
+                                                    <span class="dashboard__quotation__badge">
+                                                        4
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-12 offset-lg-2 offset-md-3">
+                            <div class="basefield mt-lg-3">
+                                <div class="col-12 basefield__title">
+                                    Meus Dados
+                                </div>
+                                <div class="col-12 myData__subtitle">
+                                    Informações Básicas
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="myData__profile">   
+                                        <div class="position-relative">
+                                            <img src="img/noticia1.jpeg" alt="Minha Foto de Perfil" title="Minha Foto de Perfil" class="myData__profile__picture">
+                                            <div class="myData__profile__picture__switchIcon">
+                                                <i class="fas fa-camera fa-2x"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Importar Jquery -->
+    <script src="js/jquery-min.js"></script>
+
+    <!-- Importar Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Importar Jquery Counterup Plugin -->
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- Importar Main Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Importar Counter Up Javascript  -->
+    <script src="js/counterUp.js"></script>
+
+    <!-- Importar Slideup Javascript -->
+    <script src="js/slideUp.js"></script>
+</body>
+
+</html>
