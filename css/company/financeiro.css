@@ -1,0 +1,103 @@
+.moneyIncremental{
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+
+    background: var(--accent-0);
+    padding: var(--px12) var(--px16);
+
+    border-radius: 100%;
+
+    box-shadow: 0 0 var(--px12) rgba(0, 0, 0, 0.3);
+
+    transition: var(--t-generic);
+}
+
+.moneyIncremental:hover{
+    transform: scale(1.1);
+}
+
+.moneyIncremental:active{
+    transform: scale(0.95);
+}
+
+.financial__date{
+    font-size: var(--px18);
+    color: var(--accent-6);
+    font-family: var(--poppins);
+    font-weight: var(--regular);
+}
+
+.payment::before{
+    content: "R$ -";
+}
+
+.receipt::before{
+    content: "R$ +";
+}
+
+.financialField{
+    margin-bottom: var(--px8);
+}
+
+.financialField:last-of-type{
+    margin-bottom: unset;
+}
+
+.baseModal__button.financial{
+    background-color: var(--base);
+
+    border-radius: 4px;
+
+    padding: 6px var(--px32) !important;
+
+    margin-top: var(--px8);
+
+    font-size: var(--px32);
+
+    color: var(--accent-0);
+
+    transition: var(--t-generic);
+}
+
+.baseModal__button.financial:hover{
+    transform: scale(1.05);
+}
+
+.baseModal__button.financial:active{
+    transform: scale(0.95);
+}
+
+.financial{
+    font-size: var(--px18);
+}
+
+.financial.receipt{
+    color: var(--accent-money);
+}
+
+.financial.payment{
+    color: var(--accent-red);
+}
+
+/* sm */
+@media (max-width: 767.98px) {
+    .financialField{
+        margin-bottom: var(--px16);
+    }
+
+    .financial, .financial__date{
+        font-size: var(--px16);
+    }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .financialField{
+        margin-bottom: var(--px16);
+    }
+
+    .financial, .financial__date{
+        font-size: var(--px16);
+    }
+}

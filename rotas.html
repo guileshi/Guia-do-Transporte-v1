@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="O maior Guia do Transporte do Brasil. Busque e encontre transportadoras credenciadas para a sua carga!">
+    <meta name="theme-color" content="#1565C0">
+    <meta name="robots" content="index, follow">
+    <meta name="Language" content="Portuguese">
+    <meta name="city" content="São Paulo">
+    <meta name="country" content="Brazil">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guiadotransporte.com.br">
+    <meta property="og:image" content="https://guiadotransporte.com.br/images/guia-do-transporte-og.jpg">
+    <meta property="og:size_name" content="Guia do Transporte">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta http-equiv="content-language" content="pr-br">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="Revisit-After" content="1 day">
+    <title>O Melhor Guia de Transporte - Guia do Transporte</title>
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- CSS Main -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- CSS Para Empresas -->
+    <link rel="stylesheet" href="css/company/main.css">
+
+    <!-- CSS Para Empresas - Modal -->
+    <link rel="stylesheet" href="css/company/modal.css">
+
+    <!-- CSS Para Empresas - Dashboard -->
+    <link rel="stylesheet" href="css/company/dashboard.css">
+
+    <!-- CSS Font-Awesome -->
+    <link rel="stylesheet" href="vendor/fontawesome-free-5.15.4-web/css/all.min.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="dashRotes">
+
+    <!-- Modal de Adicionar Rotas(Município) -->
+    <section id="howWorks__modal" class="hide tutorial1">
+        
+        <div class="baseModal__filter" onclick="toggleModal('howWorks__modal')"></div>
+        
+        <div class="baseModal">
+
+            <a href="#" class="baseModal__close" onclick="toggleModal('howWorks__modal')">
+                <i class="fas fa-times"></i>
+                <span>Fechar</span>
+            </a>
+
+            <div class="container">
+                <div class="row">
+                    <div class="myData__field__dashboard">
+
+                        <div class="col-12">
+                            <div class="baseModal__title">
+                                Como Funciona
+                            </div>
+
+                            <div class="baseModal__text" id="howWorks__text">
+                                Ao selecionar um estado você verá todos os municípios disponíveis para escolher. Ao adicionar rotas em algum estado, ele ficará com o fundo azul e as rotas ficarão disponíveis.
+                            </div>           
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-12">
+                                <div class="baseModal__subtitle">
+                                    Exemplo:
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-5 col-sm-12" id="howWorks__addAllRotes_text">
+                                <div class="row">
+                                    <button class="baseModal__button rotes states" id="howWorks__addButton" disabled>
+                                        SP
+                                    </button>
+                                    <div class="baseModal__help text-center howWorks__field">
+                                        Possui rotas disponíveis
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-5 col-sm-12 offset-lg-4 offset-md-2 howWorks__field">
+                                <div class="row">
+                                    <button class="baseModal__button rotes states disabled" id="howWorks__addButton2" disabled>
+                                        MG
+                                    </button>
+                                    <div class="baseModal__help text-center">
+                                        Não possui rotas disponíveis
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span class="baseModal__help doubt hide" id="howWorks__doubt__text">Em caso de duvídas, você poderá rever este tutorial clicando em Como funciona.</span>
+
+                        </div>
+
+                        <div class="baseModal__buttons">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-md-auto col-12">
+                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('howWorks__modal')">
+                                        Cancelar
+                                    </a>
+                                </div>
+
+                                <div class="col-md-auto col-12">
+                                    <a href="#" role="button" class="baseModal__button confirm btn__anim" onclick="nextModal('howWorks__modal')" id="howWorks__button">
+                                        Proximo(1/3)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Modal de Adicionar Rotas(Município) -->
+    <section id="confirmAddRote__county__modal" class="hide">
+        
+        <div class="baseModal__filter" onclick="toggleModal('confirmAddRote__county__modal')"></div>
+        
+        <div class="baseModal">
+
+            <a href="#" class="baseModal__close" onclick="toggleModal('confirmAddRote__county__modal')">
+                <i class="fas fa-times"></i>
+                <span>Fechar</span>
+            </a>
+
+            <div class="container">
+                <div class="row">
+                    <div class="myData__field__dashboard">
+
+                        <div class="col-12">
+                            <div class="baseModal__title">
+                                Adicionar Rota
+                            </div>
+
+                            <div class="baseModal__text">
+                                <!-- São Paulo nesse caso seria só de exemplo -->
+                                Tem certeza que deseja adicionar todas as rotas de todos os municipios do estado de São Paulo?
+                            </div>
+
+                        </div>
+
+                        <div class="baseModal__buttons">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-lg-auto col-12">
+                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('confirmAddRote__county__modal')">
+                                        Cancelar
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-auto col-12">
+                                    <a href="#" role="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('confirmAddRote__county__modal')">
+                                        Adicionar Todas as Rotas
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Modal de Adicionar Rotas(Estado) -->
+    <section id="confirmAddRote__state__modal" class="hide">
+        
+        <div class="baseModal__filter" onclick="toggleModal('confirmAddRote__state__modal')"></div>
+        
+        <div class="baseModal">
+
+            <a href="#" class="baseModal__close" onclick="toggleModal('confirmAddRote__state__modal')">
+                <i class="fas fa-times"></i>
+                <span>Fechar</span>
+            </a>
+
+            <div class="container">
+                <div class="row">
+                    <div class="myData__field__dashboard">
+
+                        <div class="col-12">
+                            <div class="baseModal__title">
+                                Adicionar Rota
+                            </div>
+
+                            <div class="baseModal__text">
+                                Tem certeza que deseja adicionar todas as rotas de todos os estados?
+                            </div>
+
+                        </div>
+
+                        <div class="baseModal__buttons">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-lg-auto col-12">
+                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('confirmAddRote__state__modal')">
+                                        Cancelar
+                                    </a>
+                                </div>
+
+                                <div class="col-lg-auto col-12">
+                                    <a href="#" role="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('confirmAddRote__state__modal')">
+                                        Adicionar Todas as Rotas
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Modal de Adicionar Rotas(Estado) -->
+    <section id="addRote__state__modal" class="hide">
+        
+        <div class="baseModal__filter" onclick="toggleModal('addRote__state__modal')"></div>
+        
+        <div class="baseModal">
+
+            <a href="#" class="baseModal__close" onclick="toggleModal('addRote__state__modal')">
+                <i class="fas fa-times"></i>
+                <span>Fechar</span>
+            </a>
+
+            <div class="container">
+                <div class="row">
+                    <div class="myData__field__dashboard">
+
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="baseModal__title">
+                                    Adicionar Rota
+                                </div>
+    
+                                <div class="baseModal__text">
+                                    Escolha um estado para adicionar rotas.
+                                </div>
+    
+                                <div class="col-auto">
+                                    <a href="#" role="button" class="baseModal__button rotes" onclick="toggleModal('confirmAddRote__state__modal')">
+                                        ADICIONAR TODOS...
+                                    </a>
+                                </div>
+    
+                                <div class="baseModal__text">
+                                    Ou você também pode selecionar um estado específico:
+                                </div>
+
+                                <div class="baseModal__states">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                AL
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                AC
+                                            </a>
+                                        </div>
+                                        <!-- Se não tiver nenhuma rota disponivel, ficará disabled -->
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                AP
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                AM
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                BA
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                CE
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                ES
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                GO
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                MA
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                MT
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                MS
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                MG
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                PA
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                PB
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                PR
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                PE
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                PI
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                RJ
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                RN
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                RS
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                RO
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                RR
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                SC
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                SP
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                                SE
+                                            </a>
+                                        </div>
+        
+                                        <div class="col-lg-2 col-md-3 col-6">
+                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                                TO
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <a href="#" role="button" class="baseModal__help text-underline" onclick="toggleModal('howWorks__modal')">
+                            Como funciona?
+                        </a>
+
+                        <div class="baseModal__buttons">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-md-auto col-12">
+                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('addRote__state__modal')">
+                                        Cancelar
+                                    </a>
+                                </div>
+
+                                <div class="col-md-auto col-12">
+                                    <a href="#" role="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('addRote__state__modal')">
+                                        Salvar e Fechar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Modal de Adicionar Rotas(Município) -->
+    <section id="addRote__county__modal" class="hide">
+        
+        <div class="baseModal__filter" onclick="toggleModal('addRote__county__modal')"></div>
+        
+        <div class="baseModal">
+
+            <a href="#" class="baseModal__close" onclick="toggleModal('addRote__county__modal')">
+                <i class="fas fa-times"></i>
+                <span>Fechar</span>
+            </a>
+
+            <div class="container">
+                <div class="row">
+                    <div class="myData__field__dashboard">
+
+                        <div class="col-12">
+                           
+                                <div class="row">
+                                    <div class="baseModal__title">
+                                        Adicionar Rota
+                                    </div>
+        
+                                    <div class="baseModal__text">
+                                        Escolha o município que deseja adicionar rotas.
+                                    </div>
+        
+                                    <div class="col-auto">
+                                        <a href="#" role="button" class="baseModal__button rotes" onclick="toggleModal('confirmAddRote__county__modal')">
+                                            ADICIONAR TODOS...
+                                        </a>
+                                    </div>
+        
+                                    <div class="baseModal__text">
+                                        Ou você também pode selecionar um estado específico:
+                                    </div>
+
+                                    <div class="addRote__county__background">
+                                        <div class="row">
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SÃO PAULO
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    GUARULHOS
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes disabled" onclick="switchRotes(this)">
+                                                    SÃO BERNARDO DO CAMPO
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes disabled" onclick="switchRotes(this)">
+                                                    SÃO JOSÉ DOS CAMPOS
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                    SANTO ANDRÉ
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>     
+                                </div>                  
+                        </div>
+
+                        <a href="#" role="button" class="baseModal__help text-underline" onclick="toggleModal('howWorks__modal')">
+                            Como funciona?
+                        </a>
+
+                        <div class="baseModal__buttons">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-md-auto col-12">
+                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('addRote__county__modal')">
+                                        Remover Todos
+                                    </a>
+                                </div>
+
+                                <div class="col-md-auto col-12">
+                                    <a href="#" role="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('addRote__county__modal')">
+                                        Salvar e Fechar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Bottom Bar -->
+    <section class="d-md-none d-block">
+        <div class="container-fluid bottombar">
+            <div class="d-flex justify-content-between">
+                <a href="dashboard.html" class="bottombar__link">
+                    <div class="bottombar__icon">
+                        <i class="fas fa-th-large fa-2x"></i>
+                    </div>
+                    <div class="bottombar__text">
+                        Dashboard
+                    </div>
+                </a>
+                <a href="meusDados.html" class="bottombar__link">
+                    <div class="bottombar__icon">
+                        <i class="fas fa-user fa-2x"></i>
+                    </div>
+                    <div class="bottombar__text">
+                        Meus Dados
+                    </div>
+                </a>
+                <a href="financeiro.html" class="bottombar__link active">
+                    <div class="bottombar__icon">
+                        <i class="fas fa-money-bill fa-2x"></i>
+                    </div>
+                    <div class="bottombar__text">
+                        Financeiro
+                    </div>
+                </a>
+                <a href="#" class="bottombar__link">
+                    <div class="bottombar__icon">
+                        <i class="fas fa-road fa-2x"></i>
+                    </div>
+                    <div class="bottombar__text">
+                        Rotas
+                    </div>
+                </a>
+                <a href="#" class="bottombar__link">
+                    <div class="bottombar__icon">
+                        <i class="fas fa-clipboard fa-2x"></i>
+                    </div>
+                    <div class="bottombar__text">
+                        Cotação
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading -->
+    <div class="loading__background">
+        <div class="loading">
+            <div class="loading__head">
+                <div class="loading__head__detail">
+                </div>
+            </div>
+            <div class="loading__body">
+                <img src="img/logo-dark.png" class="loading__body__image" alt="Logo Do Guia do Transporte">
+            </div>
+            <div class="loading__wheel --1">
+                <div class="loading__wheel__inside">
+                </div>
+            </div>
+            <div class="loading__wheel --2">
+                <div class="loading__wheel__inside">
+                </div>
+            </div>
+            <div class="loading__wheel --3">
+            </div>
+            <div class="loading__wheel --4">
+
+            </div>
+            <img src="img/wind.png" class="loading__wind">
+        </div>
+    </div>
+
+
+    <header class="header__height">
+        <div class="container-fluid header__bar">
+            <div class="container">
+                <div class="row">
+
+                    <!-- guia logo -->
+                    <div class="col-md-auto col-sm-12 d-flex justify-content-center d-md-block justify-content-md-start">
+                        <a href="index.html">
+                            <img src="img/logo-dark.png" alt="Logo do Guia do Transporte"
+                                class="dashboard__header__logo">
+                        </a>
+                    </div>
+
+                    <!-- mini profile -->
+                    <div class="col d-none d-md-block">
+                        <a href="#">
+                            <div class="dashboard__mini__profile">
+                                <span class="dashboard__mini__profile__name">
+                                    Pikachu Trans.
+                                </span>
+                                <img src="img/noticia1.jpeg" alt="Minha foto de Perfil"
+                                    class="dashboard__mini__profile__img">
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- logout button -->
+                    <div class="col-auto d-none d-md-block">
+                        <a href="#">
+                            <div class="dashboard__logout__button">
+                                <i class="fas fa-sign-out-alt fa-2x"></i>
+                                <span class="dashboard__logout__button__text">Sair</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard__main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 d-none d-md-block position-fixed pe-0">
+                            <div class="dashboard__sidebar">
+                                <ul class="dashboard__sidebar__list">
+                                    <li class="dashboard__sidebar__list__item">
+                                        <a href="dashboard.html" class="dashboard__sidebar__list__links">
+                                            <div class="dashboard__sidebar__list__links__text">
+                                                <div class="dashboard__sidebar__list__icon">
+                                                    <i class="fas fa-th-large"></i>
+                                                </div>
+                                                <div>
+                                                    Dashboard
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="dashboard__sidebar__list__item">
+                                        <a href="meusDados.html" class="dashboard__sidebar__list__links">
+                                            <div class="dashboard__sidebar__list__links__text">
+                                                <div class="dashboard__sidebar__list__icon">
+                                                    <i class="fas fa-user"></i>
+                                                </div>
+                                                <div>
+                                                    Meus Dados
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="dashboard__sidebar__list__item active">
+                                        <a href="financeiro.html" class="dashboard__sidebar__list__links">
+                                            <div class="dashboard__sidebar__list__links__text">
+                                                <div class="dashboard__sidebar__list__icon">
+                                                    <i class="fas fa-money-bill"></i>
+                                                </div>
+                                                <div>
+                                                    Financeiro
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="dashboard__sidebar__list__item">
+                                        <a href="#" class="dashboard__sidebar__list__links">
+                                            <div class="dashboard__sidebar__list__links__text">
+                                                <div class="dashboard__sidebar__list__icon">
+                                                    <i class="fas fa-road"></i>
+                                                </div>
+                                                <div>
+                                                    Rotas
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                    <li class="dashboard__sidebar__list__item">
+                                        <a href="#" class="dashboard__sidebar__list__links">
+                                            <div class="dashboard__sidebar__list__links__text">
+                                                <div class="dashboard__sidebar__list__icon">
+                                                    <i class="fas fa-clipboard"></i>
+                                                </div>
+                                                <div>
+                                                    Cotação
+                                                    <span class="dashboard__quotation__badge">
+                                                        4
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-10 col-md-9 col-12 offset-lg-2 offset-md-3 mt-lg-3 mt-md-3 mt-2">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="basefield">
+                                
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="basefield__title rotesTitle">
+                                                    Rotas atuais
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-12">
+
+                                                <div class="basefield__text bestRotes">
+                                                    São Paulo 
+                                                    <span class="dashboard__rotes__badge">
+                                                        999+
+                                                    </span>
+                                                </div>
+
+                                                <div class="basefield__text bestRotes">
+                                                    Rio de Janeiro
+                                                    <span class="dashboard__rotes__badge">
+                                                        574
+                                                    </span>
+                                                </div>
+
+                                                <div class="basefield__text bestRotes">
+                                                    Minas Gerais
+                                                    <span class="dashboard__rotes__badge">
+                                                        5
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                                <a href="#" role="button" class="basefield__button btn__anim" onclick="toggleModal('addRote__state__modal')">Adicionar Rota...</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Importar Jquery -->
+    <script src="js/jquery-min.js"></script>
+
+    <!-- Importar Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Importar Jquery Counterup Plugin -->
+    <script src="js/jquery.counterup.min.js"></script>
+
+    <!-- Importar Main Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Importar Counter Up Javascript  -->
+    <script src="js/counterUp.js"></script>
+
+    <!-- Importar Modal Javascript -->
+    <script src="js/modal.js"></script>
+
+    <!-- Importar Script Para Pegar Os Dados -->
+    <script src="js/getData.js"></script>
+</body>
+
+</html>

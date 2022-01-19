@@ -101,6 +101,10 @@ label {
     font-size: var(--px16);
 }
 
+.text-underline{
+    text-decoration: underline !important;
+}
+
 .hide{
     display: none;
 }

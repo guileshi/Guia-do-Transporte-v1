@@ -54,13 +54,10 @@
     font-size: var(--px24);
 
     margin-top: var(--px8);
+    margin-bottom: var(--px24);
 
     display: flex;
     justify-content: center;
-}
-
-.myData__field__dashboard{
-    margin: var(--px24) 0;
 }
 
 .myData_field{

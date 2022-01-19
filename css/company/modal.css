@@ -1,10 +1,31 @@
-/* modal */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--accent-3); 
+    border-radius: 4px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: var(--accent-6); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
+/* modal */
 .baseModal__filter{
     background-color: rgba(0, 0, 0, 0.5);
 
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
 
     bottom: 0;
     top: 0;
@@ -15,9 +36,35 @@
     height: 100%;
 }
 
+#addRote__county__modal .baseModal__filter{
+    z-index: 999;
+}
+
+#confirmAddRote__state__modal .baseModal__filter{
+    z-index: 9999;
+}
+
+#confirmAddRote__county__modal .baseModal__filter{
+    z-index: 9999;
+}
+
+#howWorks__modal .baseModal__filter{
+    z-index: 9999;
+}
+
+.addRote__county__background{
+    background: var(--accent-1);
+    padding: 0 var(--px8) var(--px8) var(--px8);
+
+    max-height: 230px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 .baseModal{
     position: fixed;
-    z-index: 99999;
+    z-index: 999;
 
     left: 0;
     right: 0;
@@ -40,8 +87,27 @@
     animation: slidedown-notransform 0.2s ease;
 }
 
-/* close */
+#confirmAddRote__state__modal .baseModal{
+    z-index: 999999;
+}
 
+#confirmAddRote__county__modal .baseModal{
+    z-index: 999999;
+}
+
+#howWorks__modal .baseModal{
+    z-index: 999999;
+}
+
+#addRote__state__modal .baseModal{
+    width: calc(100vw - 20%);
+}
+
+#addRote__county__modal .baseModal{
+    width: calc(100vw - 25%);
+}
+
+/* close */
 .baseModal__close{
     position: absolute;
 
@@ -59,7 +125,6 @@
 }
 
 /* switch picture */
-
 .baseModal .myData__profile{
     margin-top: var(--px40);
 }
@@ -91,6 +156,15 @@
     text-align: justify;
 
     margin-top: var(--px8);
+}
+
+.baseModal__subtitle{
+    color: var(--accent-8);
+    font-size: var(--px18);
+    font-family: var(--poppins);
+    font-weight: var(--regular);
+
+    margin-top: var(--px16);
 }
 
 #switchPicture__modal .baseModal__text{
@@ -128,12 +202,24 @@
     margin-top: var(--px16);
 }
 
+.baseModal__inputGroup.financial{
+    margin-top: var(--px8);
+}
+
 /*  */
 
 /* buttons */
 
+.baseModal__button:disabled{
+    pointer-events: none !important;
+    cursor: none !important;
+}
+
 .baseModal__button{
     display: inline-flex;
+
+    width: 100%;
+    justify-content: center;
 
     margin-top: var(--px24);
 
@@ -166,14 +252,85 @@
     color: var(--accent-5);
 }
 
+.baseModal__button.rotes{
+    color: var(--accent-0);
+    background: var(--base);
+    border-radius: 4px;
+
+    transition: var(--t-generic);
+
+    margin-top: var(--px8);
+
+    border: 1px solid var(--base);
+}
+
+.baseModal__button.rotes.states{
+    width: 100%;
+    justify-content: center;
+}
+
+.baseModal__button.rotes:hover, .baseModal__button.rotes.active:hover{
+    background: var(--baseLight);
+    color: var(--accent-1);
+
+    border: 1px solid var(--baseLight);
+}
+
+.baseModal__button.rotes:active{
+    transform: scale(0.98);
+}
+
+.baseModal__button.rotes.disabled{
+    color: var(--accent-8);
+    background: var(--accent-0);
+    border: 1px solid var(--accent-8);
+}
+
+.baseModal__button.rotes.disabled:hover{
+    background: var(--accent-1);
+    color: var(--accent-7);
+}
+
 #switchPicture__modal .baseModal__button{
     margin-top: var(--px64);
 }
 
+/* help */
+
+.baseModal__help{
+    font-size: var(--px12);
+    font-family: var(--poppins);
+    font-weight: var(--regular);
+
+    color: var(--accent-6);
+}
+
+.baseModal__help:hover{
+    text-decoration: none !important;
+    color: var(--accent-5);
+}
+
+.baseModal__help.doubt{
+    color: var(--accent-6);
+    font-weight: var(--opens-sans);
+    font-weight: var(--light);
+
+    margin-top: var(--px16);
+}
+
+/*  */
+
 /* sm */
 @media (max-width: 767.98px) {
     .baseModal{
-        width: calc(100vw - 5%);
+        width: calc(100vw - 5%) !important;
+
+        padding: var(--px16) var(--px8);
+    }
+
+    .baseModal__states{
+        max-height: 200px;
+        overflow: auto;
     }
 
     .baseModal__button{
@@ -184,12 +341,29 @@
     .baseModal__button.confirm{
         margin-top: var(--px8) !important;
     }
+
+    .baseModal__title, .baseModal__text, .baseModal__subtitle, .baseModal__label{
+        font-size: var(--px16);
+    }
+
+    .baseModal__button.financial{
+        font-size: var(--px18);
+    }
+    
 }
 
 /* md */
 @media (min-width: 768px) and (max-width: 1023px) {
     .baseModal{
         width: calc(100vw - 40%);
+    }
+
+    .baseModal__title{
+        font-size: var(--px18);
+    }
+
+    .baseModal__label, .baseModal__text, .baseModal__subtitle{
+        font-size: var(--px16);
     }
 }
 

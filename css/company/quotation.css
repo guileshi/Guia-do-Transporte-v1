@@ -1,0 +1,70 @@
+body.dashQuotation .basefield__title{
+    margin-bottom: var(--px16);
+}
+
+.quotation__mail__title{
+    color: var(--accent-6);
+    font-family: var(--poppins);
+    font-weight: var(--regular);
+    font-size: var(--px18);
+}
+
+.quotation__info{
+    color: var(--accent-8);
+    font-family: var(--poppins);
+    font-weight: var(--regular);
+    font-size: var(--px18);
+}
+
+.quotation__mail.new{
+    background: var(--accent-1);
+}
+
+.quotation__mail.answered .dashboard__quotation__badge{
+    background: var(--base);
+}
+
+.quotation__mail.notAnswered .dashboard__quotation__badge{
+    background: var(--accent-red);
+}
+
+.quotation__email__link:hover .quotation__mail.new{
+    background: var(--accent-2);
+}
+
+.quotation__mail{
+    margin-top: 4px;
+    padding: var(--px8);
+
+    border-radius: 4px;
+
+    transition: var(--t-generic);
+}
+
+.quotation__icon{
+    color: var(--accent-4);
+
+    font-size: var(--px18);
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: right;
+    align-items: center;
+
+    transition: var(--t-generic);
+    -webkit-transition: var(--t-generic);
+    -moz-transition: var(--t-generic);
+    -o-transition: var(--t-generic);
+}
+
+.quotation__icon:hover{
+    color: var(--accent-3);
+}
+
+.quotation__email__group{
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    max-height: 20rem;
+}

@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="css/company/main.css">
 
     <!-- CSS Para Empresas - Meus Dados -->
-    <link rel="stylesheet" href="css/company/myData.css">
+    <link rel="stylesheet" href="css/company/financeiro.css">
 
     <!-- CSS Para Empresas - Modal -->
     <link rel="stylesheet" href="css/company/modal.css">
@@ -42,77 +42,16 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body class="meusDados">
+<body class="financeiro">
 
-    <!-- Modal de Trocar Foto -->
-    <section id="switchPicture__modal" class="hide">
+    <!-- Modal de Adicionar Dinheiro -->
+    <section id="balance__modal" class="hide">
         
-        <div class="baseModal__filter" onclick="toggleModal('switchPicture__modal')"></div>
-        
-        <div class="baseModal">
-
-            <a href="#" class="baseModal__close" onclick="toggleModal('switchPicture__modal')">
-                <i class="fas fa-times"></i>
-                <span>Fechar</span>
-            </a>
-
-            <div class="container">
-                <div class="row">
-                    <div class="myData__field__dashboard">
-
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="myData__profile">   
-                                    <div class="position-relative">
-                                        <img src="img/noticia1.jpeg" alt="Minha Foto de Perfil" title="Minha Foto de Perfil" class="myData__profile__picture">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="myData__profile__name">
-                                    Onibus Cargas Trans.
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="baseModal__text d-flex justify-content-center">
-                                    Sua foto aparecerá para todos os usuários
-                                </div>
-                            </div>
-
-                            <div class="baseModal__buttons">
-                                <div class="row d-flex justify-content-between">
-                                    <div class="col-md-auto col-12">
-                                        <a href="#" class="baseModal__button cancel" onclick="toggleModal('switchPicture__modal')">
-                                            Cancelar
-                                        </a>
-                                    </div>
-
-                                    <div class="col-md-auto col-12">
-                                        <a href="#" role="button" class="baseModal__button confirm btn__anim">
-                                            Alterar
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- Modal de Trocar Foto -->
-    <section id="switchMyData__modal" class="hide">
-        
-        <div class="baseModal__filter" onclick="toggleModal('switchMyData__modal')"></div>
+        <div class="baseModal__filter" onclick="toggleModal('balance__modal')"></div>
         
         <div class="baseModal">
 
-            <a href="#" class="baseModal__close" onclick="toggleModal('switchMyData__modal')">
+            <a href="#" class="baseModal__close" onclick="toggleModal('balance__modal')">
                 <i class="fas fa-times"></i>
                 <span>Fechar</span>
             </a>
@@ -123,24 +62,48 @@
 
                         <div class="col-12">
                             <div class="baseModal__title">
-                                <span id="modalTitle">
-
-                                </span>
+                                Adicionar Saldo
                             </div>
 
                             <div class="baseModal__text">
-                                Ao solicitar a troca do <span id="modalType"></span>, o pedido ficará em analise. Quando aprovado será realizada a troca.
+                                Escolha a quantidade a ser adicionada.
                             </div>
 
-                            <div class="baseModal__inputGroup">
+                            <div class="baseModal__subtitle">
+                                Valores Predefinidos
+                            </div>
+
+                            <div class="row">
+                                <div class="col-auto">
+                                    <a href="#" role="button" class="baseModal__button financial">
+                                        R$ 100
+                                    </a>
+                                </div>
+
+                                <div class="col-auto">
+                                    <a href="#" role="button" class="baseModal__button financial">
+                                        R$ 500
+                                    </a>
+                                </div>
+
+                                <div class="col-auto">
+                                    <a href="#" role="button" class="baseModal__button financial">
+                                        R$ 1000
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="baseModal__subtitle">
+                                Ou escolha um valor:
+                            </div>
+
+                            <div class="baseModal__inputGroup financial">
                                 <div class="row">
                                     <label for="modal__input" class="baseModal__label col-md-2 col-12">
-                                        <span id="modalInput">
-                                            
-                                        </span>
+                                        Valor
                                     </label>
                                     <div class="col-md-10 col-12">
-                                        <input type="" name="modal__input" id="modal__input" class="baseModal__input" value="2343123">
+                                        <input type="" name="modal__input" id="modal__input" class="baseModal__input" placeholder="Ex: R$ 176.40">
                                     </div>
                                 </div>
                             </div>
@@ -149,7 +112,7 @@
                         <div class="baseModal__buttons">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-md-auto col-12">
-                                    <a href="#" class="baseModal__button cancel" onclick="toggleModal('switchMyData__modal')">
+                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('balance__modal')">
                                         Cancelar
                                     </a>
                                 </div>
@@ -182,7 +145,7 @@
                         Dashboard
                     </div>
                 </a>
-                <a href="meusDados.html" class="bottombar__link active">
+                <a href="meusDados.html" class="bottombar__link">
                     <div class="bottombar__icon">
                         <i class="fas fa-user fa-2x"></i>
                     </div>
@@ -190,7 +153,7 @@
                         Meus Dados
                     </div>
                 </a>
-                <a href="financeiro.html" class="bottombar__link">
+                <a href="financeiro.html" class="bottombar__link active">
                     <div class="bottombar__icon">
                         <i class="fas fa-money-bill fa-2x"></i>
                     </div>
@@ -292,7 +255,6 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-lg-2 col-md-3 d-none d-md-block position-fixed pe-0">
-
                             <div class="dashboard__sidebar">
                                 <ul class="dashboard__sidebar__list">
                                     <li class="dashboard__sidebar__list__item">
@@ -308,7 +270,7 @@
                                         </a>
                                     </li>
 
-                                    <li class="dashboard__sidebar__list__item active">
+                                    <li class="dashboard__sidebar__list__item">
                                         <a href="meusDados.html" class="dashboard__sidebar__list__links">
                                             <div class="dashboard__sidebar__list__links__text">
                                                 <div class="dashboard__sidebar__list__icon">
@@ -321,7 +283,7 @@
                                         </a>
                                     </li>
 
-                                    <li class="dashboard__sidebar__list__item">
+                                    <li class="dashboard__sidebar__list__item active">
                                         <a href="financeiro.html" class="dashboard__sidebar__list__links">
                                             <div class="dashboard__sidebar__list__links__text">
                                                 <div class="dashboard__sidebar__list__icon">
@@ -370,120 +332,134 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="basefield">
-                                        <div class="col-12 basefield__title">
-                                            Meus Dados
-                                        </div>
-                                        <div class="col-12 myData__subtitle">
-                                            Informações Básicas
-                                        </div>
-        
-        
-                                        <div class="myData__field__dashboard">
-        
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="myData__profile">   
-                                                        <div class="position-relative">
-                                                            <img src="img/noticia1.jpeg" alt="Minha Foto de Perfil" title="Minha Foto de Perfil" class="myData__profile__picture">
-                                                            <a href="#" class="myData__profile__picture__switchIcon" onclick="toggleModal('switchPicture__modal')">
-                                                                <i class="fas fa-camera fa-2x"></i>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                
-                                                <div class="col-12">
-                                                    <div class="myData__profile__name">
-                                                        Onibus Cargas Trans.
-                                                    </div>
-                                                </div>
-                                            </div>
-        
-                                        </div>
-        
-                                        <div class="myData_field">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-4">
-                                                    <span class="myData__title">
-                                                        CPNJ
-                                                    </span>
-                                                </div>
-                                                <div class="col-lg-8 col-7">
-                                                    <span class="myData__content" id="cnpj">
-                                                        12345678910
-                                                    </span>
-                                                </div>
-                                                <div class="col-1">
-                                                    <a href="#" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'CNPJ', 'modal__input', 'cnpj', 'number')">
-                                                        <i class="fas fa-angle-right"></i>
-                                                    </a>
-                                                </div>
+                                
+                                        <div class="col-12">
+                                            <div class="basefield__title">
+                                                Saldo Disponível
                                             </div>
                                         </div>
         
-                                        <div class="myData_field">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-4">
-                                                    <span class="myData__title">
-                                                        CPF
-                                                    </span>
-                                                </div>
-                                                <div class="col-lg-8 col-7">
-                                                    <span class="myData__content" id="cpf">
-                                                        12345678910
-                                                    </span>
-                                                </div>
-                                                <div class="col-1">
-                                                    <a href="#" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'CPF', 'modal__input', 'cpf', 'number')">
-                                                        <i class="fas fa-angle-right"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-        
-                                        <div class="myData_field">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-4">
-                                                    <span class="myData__title">
-                                                        Nome
-                                                    </span>
-                                                </div>
-                                                <div class="col-lg-8 col-7">
-                                                    <span class="myData__content" id="nomeEmpresa">
-                                                        Nome Completo da Empresa
-                                                    </span>
-                                                </div>
-                                                <div class="col-1">
-                                                    <a href="#" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'Nome', 'modal__input', 'nomeEmpresa', 'text')">
-                                                        <i class="fas fa-angle-right"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-        
-                                        <div class="myData_field">
-                                            <div class="row">
-                                                <div class="col-lg-3 col-4">
-                                                    <span class="myData__title">
-                                                        Endereço
-                                                    </span>
-                                                </div>
-                                                <div class="col-lg-8 col-7">
-                                                    <span class="myData__content" id="enderecoEmpresa">
-                                                        Rua Soldado Cabo
-                                                    </span>
-                                                </div>
-                                                <div class="col-1">
-                                                    <a href="#" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'Endereço', 'modal__input','enderecoEmpresa', 'text')">
-                                                        <i class="fas fa-angle-right"></i>
-                                                    </a>
-                                                </div>
+                                        <div class="col-12">
+                                            <div class="basefield__text money">
+                                                R$ 4.478
                                             </div>
                                         </div>
                                     
+                                        <button type="button" role="button" class="moneyIncremental" onclick="toggleModal('balance__modal')">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+        
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-3">
+                                    <div class="basefield">
+                                
+                                        <div class="col-12">
+                                            <div class="basefield__title mb-3">
+                                                Saldo Disponível
+                                            </div>
+                                        </div>
+        
+                                        <div class="financialField">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-12">
+                                                        <div class="financial__date">
+                                                            12/01/2022
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8 col-sm-12">
+                                                        <div class="basefield__text financial">
+                                                            Pagamento Muito Caro e Grande só para testes
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-12">
+                                                        <!-- Pagamento -->
+                                                        <div class="basefield__text financial payment">
+                                                            7,490.90
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="financialField">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-12">
+                                                        <div class="financial__date">
+                                                            12/01/2022
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8 col-sm-12">
+                                                        <div class="basefield__text financial">
+                                                            Muito recebimento
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-12">
+                                                        <!-- Recebimento -->
+                                                        <div class="basefield__text financial receipt">
+                                                            49,4171.10
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="financialField">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-12">
+                                                        <div class="financial__date">
+                                                            12/01/2022
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8 col-sm-12">
+                                                        <div class="basefield__text financial">
+                                                            Recebimento
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-12">
+                                                        <!-- Recebimento -->
+                                                        <div class="basefield__text financial receipt">
+                                                            417.90
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="financialField">
+                                            <div class="col-12">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-12">
+                                                        <div class="financial__date">
+                                                            12/01/2022
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-8 col-sm-12">
+                                                        <div class="basefield__text financial">
+                                                            Pagamento
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-12">
+                                                        <!-- Recebimento -->
+                                                        <div class="basefield__text financial payment">
+                                                            21,481.21
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+        
                                     </div>
                                 </div>
                             </div>
+
+                            
                         </div>
                     </div>
                 </div>
