@@ -20,7 +20,7 @@
     <meta http-equiv="content-language" content="pr-br">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta name="Revisit-After" content="1 day">
-    <title>O Melhor Guia de Transporte - Guia do Transporte</title>
+    <title>Meus Dados - Guia do Transporte</title>
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -51,10 +51,10 @@
         
         <div class="baseModal">
 
-            <a href="#" class="baseModal__close" onclick="toggleModal('switchPicture__modal')">
+            <button type="button" class="baseModal__close" onclick="toggleModal('switchPicture__modal')">
                 <i class="fas fa-times"></i>
                 <span>Fechar</span>
-            </a>
+            </button>
 
             <div class="container">
                 <div class="row">
@@ -112,10 +112,10 @@
         
         <div class="baseModal">
 
-            <a href="#" class="baseModal__close" onclick="toggleModal('switchMyData__modal')">
+            <button type="button" class="baseModal__close" onclick="toggleModal('switchMyData__modal')">
                 <i class="fas fa-times"></i>
                 <span>Fechar</span>
-            </a>
+            </button>
 
             <div class="container">
                 <div class="row">
@@ -149,15 +149,15 @@
                         <div class="baseModal__buttons">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-md-auto col-12">
-                                    <a href="#" class="baseModal__button cancel" onclick="toggleModal('switchMyData__modal')">
+                                    <button type="button" class="baseModal__button cancel" onclick="toggleModal('switchMyData__modal')">
                                         Cancelar
-                                    </a>
+                                    </button>
                                 </div>
 
                                 <div class="col-md-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button confirm btn__anim">
+                                    <button type="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('switchMyData__modal')">
                                         Alterar
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +198,7 @@
                         Financeiro
                     </div>
                 </a>
-                <a href="#" class="bottombar__link">
+                <a href="rotas.html" class="bottombar__link">
                     <div class="bottombar__icon">
                         <i class="fas fa-road fa-2x"></i>
                     </div>
@@ -206,7 +206,7 @@
                         Rotas
                     </div>
                 </a>
-                <a href="#" class="bottombar__link">
+                <a href="cotacoes.html" class="bottombar__link">
                     <div class="bottombar__icon">
                         <i class="fas fa-clipboard fa-2x"></i>
                     </div>
@@ -245,14 +245,14 @@
         </div>
     </div>
 
-
+    <!-- Header -->
     <header class="header__height">
         <div class="container-fluid header__bar">
             <div class="container">
                 <div class="row">
 
                     <!-- guia logo -->
-                    <div class="col-md-auto col-sm-12 d-flex justify-content-center d-md-block justify-content-md-start">
+                    <div class="col-md-auto col-sm-12">
                         <a href="index.html">
                             <img src="img/logo-dark.png" alt="Logo do Guia do Transporte"
                                 class="dashboard__header__logo">
@@ -261,10 +261,10 @@
 
                     <!-- mini profile -->
                     <div class="col d-none d-md-block">
-                        <a href="#">
+                        <a href="meusDados.html">
                             <div class="dashboard__mini__profile">
                                 <span class="dashboard__mini__profile__name">
-                                    Pikachu Trans.
+                                    Onibus Cargas Trans.
                                 </span>
                                 <img src="img/noticia1.jpeg" alt="Minha foto de Perfil"
                                     class="dashboard__mini__profile__img">
@@ -293,6 +293,7 @@
                     <div class="row">
                         <div class="col-lg-2 col-md-3 d-none d-md-block position-fixed pe-0">
 
+                            <!-- Sidebar -->
                             <div class="dashboard__sidebar">
                                 <ul class="dashboard__sidebar__list">
                                     <li class="dashboard__sidebar__list__item">
@@ -308,6 +309,7 @@
                                         </a>
                                     </li>
 
+                                    <!-- Adiciona o active na li em que estiver a pagina -->
                                     <li class="dashboard__sidebar__list__item active">
                                         <a href="meusDados.html" class="dashboard__sidebar__list__links">
                                             <div class="dashboard__sidebar__list__links__text">
@@ -335,7 +337,7 @@
                                     </li>
 
                                     <li class="dashboard__sidebar__list__item">
-                                        <a href="#" class="dashboard__sidebar__list__links">
+                                        <a href="rotas.html" class="dashboard__sidebar__list__links">
                                             <div class="dashboard__sidebar__list__links__text">
                                                 <div class="dashboard__sidebar__list__icon">
                                                     <i class="fas fa-road"></i>
@@ -348,7 +350,7 @@
                                     </li>
 
                                     <li class="dashboard__sidebar__list__item">
-                                        <a href="#" class="dashboard__sidebar__list__links">
+                                        <a href="cotacoes.html" class="dashboard__sidebar__list__links">
                                             <div class="dashboard__sidebar__list__links__text">
                                                 <div class="dashboard__sidebar__list__icon">
                                                     <i class="fas fa-clipboard"></i>
@@ -385,9 +387,9 @@
                                                     <div class="myData__profile">   
                                                         <div class="position-relative">
                                                             <img src="img/noticia1.jpeg" alt="Minha Foto de Perfil" title="Minha Foto de Perfil" class="myData__profile__picture">
-                                                            <a href="#" class="myData__profile__picture__switchIcon" onclick="toggleModal('switchPicture__modal')">
+                                                            <button type="button" class="myData__profile__picture__switchIcon" onclick="toggleModal('switchPicture__modal')">
                                                                 <i class="fas fa-camera fa-2x"></i>
-                                                            </a>
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -414,9 +416,9 @@
                                                     </span>
                                                 </div>
                                                 <div class="col-1">
-                                                    <a href="#" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'CNPJ', 'modal__input', 'cnpj', 'number')">
+                                                    <button type="button" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'CNPJ', 'modal__input', 'cnpj', 'number')">
                                                         <i class="fas fa-angle-right"></i>
-                                                    </a>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -434,9 +436,9 @@
                                                     </span>
                                                 </div>
                                                 <div class="col-1">
-                                                    <a href="#" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'CPF', 'modal__input', 'cpf', 'number')">
+                                                    <button type="button" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'CPF', 'modal__input', 'cpf', 'number')">
                                                         <i class="fas fa-angle-right"></i>
-                                                    </a>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -454,9 +456,9 @@
                                                     </span>
                                                 </div>
                                                 <div class="col-1">
-                                                    <a href="#" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'Nome', 'modal__input', 'nomeEmpresa', 'text')">
+                                                    <button type="button" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'Nome', 'modal__input', 'nomeEmpresa', 'text')">
                                                         <i class="fas fa-angle-right"></i>
-                                                    </a>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -474,9 +476,9 @@
                                                     </span>
                                                 </div>
                                                 <div class="col-1">
-                                                    <a href="#" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'Endereço', 'modal__input','enderecoEmpresa', 'text')">
+                                                    <button type="button" class="myData__icon" onclick="toggleModal('switchMyData__modal', 'Endereço', 'modal__input','enderecoEmpresa', 'text')">
                                                         <i class="fas fa-angle-right"></i>
-                                                    </a>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -511,8 +513,6 @@
     <!-- Importar Modal Javascript -->
     <script src="js/modal.js"></script>
 
-    <!-- Importar Script Para Pegar Os Dados -->
-    <script src="js/getData.js"></script>
 </body>
 
 </html>

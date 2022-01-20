@@ -20,7 +20,7 @@
     <meta http-equiv="content-language" content="pr-br">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta name="Revisit-After" content="1 day">
-    <title>O Melhor Guia de Transporte - Guia do Transporte</title>
+    <title>Rotas - Guia do Transporte</title>
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -51,10 +51,10 @@
         
         <div class="baseModal">
 
-            <a href="#" class="baseModal__close" onclick="toggleModal('howWorks__modal')">
+            <button type="button" class="baseModal__close" onclick="toggleModal('howWorks__modal')">
                 <i class="fas fa-times"></i>
                 <span>Fechar</span>
-            </a>
+            </button>
 
             <div class="container">
                 <div class="row">
@@ -127,6 +127,57 @@
 
     </section>
 
+    <!-- Modal de Remover Rotas(Município) -->
+    <section id="confirmRemoveRote__county__modal" class="hide">
+        
+        <div class="baseModal__filter" onclick="toggleModal('confirmRemoveRote__county__modal')"></div>
+        
+        <div class="baseModal">
+
+            <button type="button" class="baseModal__close" onclick="toggleModal('confirmRemoveRote__county__modal')">
+                <i class="fas fa-times"></i>
+                <span>Fechar</span>
+            </button>
+
+            <div class="container">
+                <div class="row">
+                    <div class="myData__field__dashboard">
+
+                        <div class="col-12">
+                            <div class="baseModal__title">
+                                Adicionar Rota
+                            </div>
+
+                            <div class="baseModal__text">
+                                <!-- São Paulo nesse caso seria só de exemplo -->
+                                Tem certeza que deseja <strong>REMOVER</strong> todas as rotas de todos os municipios do estado de São Paulo?
+                            </div>
+
+                        </div>
+
+                        <div class="baseModal__buttons">
+                            <div class="row d-flex justify-content-between">
+                                <div class="col-lg-auto col-12">
+                                    <button type="button" class="baseModal__button cancel" onclick="toggleModal('confirmRemoveRote__county__modal')">
+                                        Cancelar
+                                    </button>
+                                </div>
+
+                                <div class="col-lg-auto col-12">
+                                    <button type="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('confirmRemoveRote__county__modal')">
+                                        Remover Todas as Rotas
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
     <!-- Modal de Adicionar Rotas(Município) -->
     <section id="confirmAddRote__county__modal" class="hide">
         
@@ -134,10 +185,10 @@
         
         <div class="baseModal">
 
-            <a href="#" class="baseModal__close" onclick="toggleModal('confirmAddRote__county__modal')">
+            <button type="button" class="baseModal__close" onclick="toggleModal('confirmAddRote__county__modal')">
                 <i class="fas fa-times"></i>
                 <span>Fechar</span>
-            </a>
+            </button>
 
             <div class="container">
                 <div class="row">
@@ -158,15 +209,15 @@
                         <div class="baseModal__buttons">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-lg-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('confirmAddRote__county__modal')">
+                                    <button type="button" class="baseModal__button cancel" onclick="toggleModal('confirmAddRote__county__modal')">
                                         Cancelar
-                                    </a>
+                                    </button>
                                 </div>
 
                                 <div class="col-lg-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('confirmAddRote__county__modal')">
+                                    <button type="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('confirmAddRote__county__modal')">
                                         Adicionar Todas as Rotas
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -185,10 +236,10 @@
         
         <div class="baseModal">
 
-            <a href="#" class="baseModal__close" onclick="toggleModal('confirmAddRote__state__modal')">
+            <button type="button" class="baseModal__close" onclick="toggleModal('confirmAddRote__state__modal')">
                 <i class="fas fa-times"></i>
                 <span>Fechar</span>
-            </a>
+            </button>
 
             <div class="container">
                 <div class="row">
@@ -208,15 +259,15 @@
                         <div class="baseModal__buttons">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-lg-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('confirmAddRote__state__modal')">
+                                    <button type="button" class="baseModal__button cancel" onclick="toggleModal('confirmAddRote__state__modal')">
                                         Cancelar
-                                    </a>
+                                    </button>
                                 </div>
 
                                 <div class="col-lg-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('confirmAddRote__state__modal')">
+                                    <button type="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('confirmAddRote__state__modal')">
                                         Adicionar Todas as Rotas
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -235,10 +286,10 @@
         
         <div class="baseModal">
 
-            <a href="#" class="baseModal__close" onclick="toggleModal('addRote__state__modal')">
+            <button type="button" class="baseModal__close" onclick="toggleModal('addRote__state__modal')">
                 <i class="fas fa-times"></i>
                 <span>Fechar</span>
-            </a>
+            </button>
 
             <div class="container">
                 <div class="row">
@@ -255,9 +306,9 @@
                                 </div>
     
                                 <div class="col-auto">
-                                    <a href="#" role="button" class="baseModal__button rotes" onclick="toggleModal('confirmAddRote__state__modal')">
+                                    <button type="button" class="baseModal__button rotes" onclick="toggleModal('confirmAddRote__state__modal')">
                                         ADICIONAR TODOS...
-                                    </a>
+                                    </button>
                                 </div>
     
                                 <div class="baseModal__text">
@@ -267,159 +318,159 @@
                                 <div class="baseModal__states">
                                     <div class="row">
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 AL
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 AC
-                                            </a>
+                                            </button>
                                         </div>
                                         <!-- Se não tiver nenhuma rota disponivel, ficará disabled -->
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 AP
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 AM
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 BA
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 CE
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 ES
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 GO
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 MA
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 MT
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 MS
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 MG
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 PA
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 PB
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 PR
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 PE
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 PI
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 RJ
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 RN
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 RS
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 RO
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 RR
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 SC
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 SP
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states disabled" onclick="toggleModal('addRote__county__modal')">
                                                 SE
-                                            </a>
+                                            </button>
                                         </div>
         
                                         <div class="col-lg-2 col-md-3 col-6">
-                                            <a href="#" role="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
+                                            <button type="button" class="baseModal__button rotes states" onclick="toggleModal('addRote__county__modal')">
                                                 TO
-                                            </a>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -427,22 +478,22 @@
                             </div>
                         </div>
 
-                        <a href="#" role="button" class="baseModal__help text-underline" onclick="toggleModal('howWorks__modal')">
+                        <button type="button" class="baseModal__help text-underline" onclick="toggleModal('howWorks__modal')">
                             Como funciona?
-                        </a>
+                        </button>
 
                         <div class="baseModal__buttons">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-md-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('addRote__state__modal')">
+                                    <button type="button" class="baseModal__button cancel" onclick="toggleModal('addRote__state__modal')">
                                         Cancelar
-                                    </a>
+                                    </button>
                                 </div>
 
                                 <div class="col-md-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('addRote__state__modal')">
+                                    <button type="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('addRote__state__modal')">
                                         Salvar e Fechar
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -461,10 +512,10 @@
         
         <div class="baseModal">
 
-            <a href="#" class="baseModal__close" onclick="toggleModal('addRote__county__modal')">
+            <button type="button" class="baseModal__close" onclick="toggleModal('addRote__county__modal')">
                 <i class="fas fa-times"></i>
                 <span>Fechar</span>
-            </a>
+            </button>
 
             <div class="container">
                 <div class="row">
@@ -482,9 +533,9 @@
                                     </div>
         
                                     <div class="col-auto">
-                                        <a href="#" role="button" class="baseModal__button rotes" onclick="toggleModal('confirmAddRote__county__modal')">
+                                        <button type="button"" class="baseModal__button rotes" onclick="toggleModal('confirmAddRote__county__modal')">
                                             ADICIONAR TODOS...
-                                        </a>
+                                        </button>
                                     </div>
         
                                     <div class="baseModal__text">
@@ -494,89 +545,89 @@
                                     <div class="addRote__county__background">
                                         <div class="row">
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SÃO PAULO
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     GUARULHOS
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes disabled" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes disabled" onclick="switchRotes(this)">
                                                     SÃO BERNARDO DO CAMPO
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes disabled" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes disabled" onclick="switchRotes(this)">
                                                     SÃO JOSÉ DOS CAMPOS
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
                                             <div class="col-auto">
-                                                <a href="#" role="button" class="baseModal__button rotes" onclick="switchRotes(this)">
+                                                <button type="button" class="baseModal__button rotes" onclick="switchRotes(this)">
                                                     SANTO ANDRÉ
-                                                </a>
+                                                </button>
                                             </div>
 
                                         </div>
@@ -584,22 +635,22 @@
                                 </div>                  
                         </div>
 
-                        <a href="#" role="button" class="baseModal__help text-underline" onclick="toggleModal('howWorks__modal')">
+                        <button type="button" class="baseModal__help text-underline" onclick="toggleModal('howWorks__modal')">
                             Como funciona?
-                        </a>
+                        </button>
 
                         <div class="baseModal__buttons">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-md-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('addRote__county__modal')">
+                                    <button type="button" class="baseModal__button cancel" onclick="toggleModal('confirmRemoveRote__county__modal')">
                                         Remover Todos
-                                    </a>
+                                    </button>
                                 </div>
 
                                 <div class="col-md-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('addRote__county__modal')">
+                                    <button type="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('addRote__county__modal')">
                                         Salvar e Fechar
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -631,7 +682,7 @@
                         Meus Dados
                     </div>
                 </a>
-                <a href="financeiro.html" class="bottombar__link active">
+                <a href="financeiro.html" class="bottombar__link">
                     <div class="bottombar__icon">
                         <i class="fas fa-money-bill fa-2x"></i>
                     </div>
@@ -639,7 +690,7 @@
                         Financeiro
                     </div>
                 </a>
-                <a href="#" class="bottombar__link">
+                <a href="rotas.html" class="bottombar__link active">
                     <div class="bottombar__icon">
                         <i class="fas fa-road fa-2x"></i>
                     </div>
@@ -647,7 +698,7 @@
                         Rotas
                     </div>
                 </a>
-                <a href="#" class="bottombar__link">
+                <a href="cotacoes.html" class="bottombar__link">
                     <div class="bottombar__icon">
                         <i class="fas fa-clipboard fa-2x"></i>
                     </div>
@@ -686,14 +737,14 @@
         </div>
     </div>
 
-
+    <!-- Header -->
     <header class="header__height">
         <div class="container-fluid header__bar">
             <div class="container">
                 <div class="row">
 
                     <!-- guia logo -->
-                    <div class="col-md-auto col-sm-12 d-flex justify-content-center d-md-block justify-content-md-start">
+                    <div class="col-md-auto col-sm-12">
                         <a href="index.html">
                             <img src="img/logo-dark.png" alt="Logo do Guia do Transporte"
                                 class="dashboard__header__logo">
@@ -702,10 +753,10 @@
 
                     <!-- mini profile -->
                     <div class="col d-none d-md-block">
-                        <a href="#">
+                        <a href="meusDados.html">
                             <div class="dashboard__mini__profile">
                                 <span class="dashboard__mini__profile__name">
-                                    Pikachu Trans.
+                                    Onibus Cargas Trans.
                                 </span>
                                 <img src="img/noticia1.jpeg" alt="Minha foto de Perfil"
                                     class="dashboard__mini__profile__img">
@@ -733,6 +784,8 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-lg-2 col-md-3 d-none d-md-block position-fixed pe-0">
+
+                            <!-- Sidebar -->
                             <div class="dashboard__sidebar">
                                 <ul class="dashboard__sidebar__list">
                                     <li class="dashboard__sidebar__list__item">
@@ -761,7 +814,7 @@
                                         </a>
                                     </li>
 
-                                    <li class="dashboard__sidebar__list__item active">
+                                    <li class="dashboard__sidebar__list__item">
                                         <a href="financeiro.html" class="dashboard__sidebar__list__links">
                                             <div class="dashboard__sidebar__list__links__text">
                                                 <div class="dashboard__sidebar__list__icon">
@@ -774,8 +827,9 @@
                                         </a>
                                     </li>
 
-                                    <li class="dashboard__sidebar__list__item">
-                                        <a href="#" class="dashboard__sidebar__list__links">
+                                    <!-- Adiciona o active na li em que estiver a pagina -->
+                                    <li class="dashboard__sidebar__list__item active">
+                                        <a href="rotas.html" class="dashboard__sidebar__list__links">
                                             <div class="dashboard__sidebar__list__links__text">
                                                 <div class="dashboard__sidebar__list__icon">
                                                     <i class="fas fa-road"></i>
@@ -788,7 +842,7 @@
                                     </li>
 
                                     <li class="dashboard__sidebar__list__item">
-                                        <a href="#" class="dashboard__sidebar__list__links">
+                                        <a href="cotacoes.html" class="dashboard__sidebar__list__links">
                                             <div class="dashboard__sidebar__list__links__text">
                                                 <div class="dashboard__sidebar__list__icon">
                                                     <i class="fas fa-clipboard"></i>
@@ -843,7 +897,7 @@
                                             </div>
                                             
                                             <div class="col-12">
-                                                <a href="#" role="button" class="basefield__button btn__anim" onclick="toggleModal('addRote__state__modal')">Adicionar Rota...</a>
+                                                <button type="button" class="basefield__button btn__anim" onclick="toggleModal('addRote__state__modal')">Adicionar Rota...</button>
                                             </div>
                                         </div>
 

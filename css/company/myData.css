@@ -60,6 +60,10 @@
     justify-content: center;
 }
 
+#switchPicture__modal .myData__profile__name{
+    margin-bottom: var(--px8);
+}
+
 .myData_field{
     border-top: 2px solid var(--accent-2);
 

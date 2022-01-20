@@ -25,10 +25,7 @@ function switchRotes(obj){
     $(obj).toggleClass('disabled')
 }
 
-function tutorial(){
-    new nextModal()
-}
-
+// Tutorial
 function nextModal(modal){
 
     var helpText = document.getElementById('howWorks__text')
@@ -86,6 +83,7 @@ function nextModal(modal){
 
 }
 
+// 
 $('#form__trans__buttom').click(()=> {
 
     $('#form__trans__buttom').removeClass('--white')

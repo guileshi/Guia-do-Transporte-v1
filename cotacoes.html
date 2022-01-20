@@ -20,7 +20,7 @@
     <meta http-equiv="content-language" content="pr-br">
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
     <meta name="Revisit-After" content="1 day">
-    <title>O Melhor Guia de Transporte - Guia do Transporte</title>
+    <title>Cotações - Guia do Transporte</title>
     <!-- CSS Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -44,17 +44,25 @@
 
 <body class="dashQuotation">
 
-    <!-- Modal de Adicionar Dinheiro -->
-    <section id="balance__modal" class="hide">
+    <div class="success__alert">
+        Enviado com Sucesso
+    </div>
+
+    <div class="error__alert hide">
+        Não foi possivel enviar
+    </div>
+
+    <!-- Modal de Responder Email -->
+    <section id="answerEmail__modal" class="hide">
         
-        <div class="baseModal__filter" onclick="toggleModal('balance__modal')"></div>
+        <div class="baseModal__filter" onclick="toggleModal('answerEmail__modal')"></div>
         
         <div class="baseModal">
 
-            <a href="#" class="baseModal__close" onclick="toggleModal('balance__modal')">
+            <button type="button" class="baseModal__close" onclick="toggleModal('answerEmail__modal')">
                 <i class="fas fa-times"></i>
                 <span>Fechar</span>
-            </a>
+            </button>
 
             <div class="container">
                 <div class="row">
@@ -62,65 +70,79 @@
 
                         <div class="col-12">
                             <div class="baseModal__title">
-                                Adicionar Saldo
+                                SP - RJ
                             </div>
 
                             <div class="baseModal__text">
-                                Escolha a quantidade a ser adicionada.
+                                Gostaria de uma entrega que fosse de SP para o RJ com tal especificação. A carga tem o peso de X, tamanho Y, comprimento Z.
+                                <br>
+                                Att, 
+                                <br>
+                                Onibus Cargas Trans.
                             </div>
 
-                            <div class="baseModal__subtitle">
-                                Valores Predefinidos
-                            </div>
-
-                            <div class="row">
-                                <div class="col-auto">
-                                    <a href="#" role="button" class="baseModal__button financial">
-                                        R$ 100
-                                    </a>
-                                </div>
-
-                                <div class="col-auto">
-                                    <a href="#" role="button" class="baseModal__button financial">
-                                        R$ 500
-                                    </a>
-                                </div>
-
-                                <div class="col-auto">
-                                    <a href="#" role="button" class="baseModal__button financial">
-                                        R$ 1000
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="baseModal__subtitle">
-                                Ou escolha um valor:
-                            </div>
-
-                            <div class="baseModal__inputGroup financial">
+                            <div class="baseModal__inputGroup">
                                 <div class="row">
-                                    <label for="modal__input" class="baseModal__label col-md-2 col-12">
-                                        Valor
-                                    </label>
-                                    <div class="col-md-10 col-12">
-                                        <input type="" name="modal__input" id="modal__input" class="baseModal__input" placeholder="Ex: R$ 176.40">
+                                    <div class="col-12">
+                                        <textarea name="respostaEmail" id="respostaEmail" rows="3" class="baseModal__input baseModal__textarea" placeholder="Digite aqui a sua resposta..."></textarea>
                                     </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="baseModal__buttons">
+                                <div class="col-md-auto col-12">
+                                    <button type="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('answerEmail__modal'), toggleModal('quotationEmail__modal')">
+                                        Enviar sua Resposta
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="baseModal__buttons">
-                            <div class="row d-flex justify-content-between">
-                                <div class="col-md-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button cancel" onclick="toggleModal('balance__modal')">
-                                        Cancelar
-                                    </a>
-                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+    </section>
+
+    <!-- Modal de Ver Email -->
+    <section id="quotationEmail__modal" class="hide">
+        
+        <div class="baseModal__filter" onclick="toggleModal('quotationEmail__modal')"></div>
+        
+        <div class="baseModal">
+
+            <button type="button" class="baseModal__close" onclick="toggleModal('quotationEmail__modal')">
+                <i class="fas fa-times"></i>
+                <span>Fechar</span>
+            </button>
+
+            <div class="container">
+                <div class="row">
+                    <div class="myData__field__dashboard">
+
+                        <div class="col-12">
+                            <div class="baseModal__title">
+                                SP - RJ
+                            </div>
+
+                            <div class="baseModal__text quotationEmail">
+                                Gostaria de uma entrega que fosse de SP para o RJ com tal especificação. A carga tem o peso de X, tamanho Y, comprimento Z.
+                                <br>
+                                Att, 
+                                <br>
+                                Onibus Cargas Trans.
+                            </div>
+
+                        </div>
+
+                        <div class="baseModal__buttons">
                                 <div class="col-md-auto col-12">
-                                    <a href="#" role="button" class="baseModal__button confirm btn__anim">
-                                        Alterar
-                                    </a>
+                                    <button role="button" class="baseModal__button confirm btn__anim" onclick="toggleModal('answerEmail__modal')">
+                                        Responder...
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -208,14 +230,14 @@
         </div>
     </div>
 
-
+    <!-- Header -->
     <header class="header__height">
         <div class="container-fluid header__bar">
             <div class="container">
                 <div class="row">
 
                     <!-- guia logo -->
-                    <div class="col-md-auto col-sm-12 d-flex justify-content-center d-md-block justify-content-md-start">
+                    <div class="col-md-auto col-sm-12">
                         <a href="index.html">
                             <img src="img/logo-dark.png" alt="Logo do Guia do Transporte"
                                 class="dashboard__header__logo">
@@ -224,10 +246,10 @@
 
                     <!-- mini profile -->
                     <div class="col d-none d-md-block">
-                        <a href="#">
+                        <a href="meusDados.html">
                             <div class="dashboard__mini__profile">
                                 <span class="dashboard__mini__profile__name">
-                                    Pikachu Trans.
+                                    Onibus Cargas Trans.
                                 </span>
                                 <img src="img/noticia1.jpeg" alt="Minha foto de Perfil"
                                     class="dashboard__mini__profile__img">
@@ -255,6 +277,7 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-lg-2 col-md-3 d-none d-md-block position-fixed pe-0">
+                            <!-- Sidebar -->
                             <div class="dashboard__sidebar">
                                 <ul class="dashboard__sidebar__list">
                                     <li class="dashboard__sidebar__list__item">
@@ -283,7 +306,7 @@
                                         </a>
                                     </li>
 
-                                    <li class="dashboard__sidebar__list__item ">
+                                    <li class="dashboard__sidebar__list__item">
                                         <a href="financeiro.html" class="dashboard__sidebar__list__links">
                                             <div class="dashboard__sidebar__list__links__text">
                                                 <div class="dashboard__sidebar__list__icon">
@@ -309,6 +332,7 @@
                                         </a>
                                     </li>
 
+                                    <!-- Adiciona o active na li em que estiver a pagina -->
                                     <li class="dashboard__sidebar__list__item active">
                                         <a href="cotacoes.html" class="dashboard__sidebar__list__links">
                                             <div class="dashboard__sidebar__list__links__text">
@@ -342,7 +366,7 @@
                                             </div>
 
                                             <div class="col-12">
-                                                <div class="basefield__text quotation">
+                                                <div class="basefield__text quotation contar">
                                                     84
                                                 </div>
                                             </div>
@@ -351,7 +375,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 col-12">
+                                <div class="col-md-6 col-12 mt-2 mt-md-0">
                                     <div class="basefield">
                                 
                                         <div class="row">
@@ -371,7 +395,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-12 mt-lg-3 mt-md-2">
+                                <div class="col-12 mt-lg-3 mt-md-2 mt-2 mb-3">
                                     <div class="basefield">
                                         <div class="row">
                                             <div class="col-12">
@@ -387,16 +411,16 @@
 
                                                 <div class="quotation__email__group">
                                                     <div class="row">
-                                                        <a href="#" role="button" class="quotation__email__link">
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
                                                             <div class="quotation__mail new">
                                                                 <div class="row">
-                                                                    <div class="col-3">
+                                                                    <div class="col-lg-3 col-12">
                                                                         <span class="quotation__mail__title">SP - RJ</span>
                                                                         <span class="dashboard__quotation__badge">
                                                                             NOVA
                                                                         </span>
                                                                     </div>
-                                                                    <div class="col-8">
+                                                                    <div class="col-lg-8 col-11">
                                                                         <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
                                                                     </div>
                                                                     <div class="col-1">
@@ -406,17 +430,17 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </a>
-                                                        <a href="#" role="button" class="quotation__email__link">
+                                                        </div>
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
                                                             <div class="quotation__mail new">
                                                                 <div class="row">
-                                                                    <div class="col-3">
+                                                                    <div class="col-lg-3 col-12">
                                                                         <span class="quotation__mail__title">SP - RJ</span>
                                                                         <span class="dashboard__quotation__badge">
                                                                             NOVA
                                                                         </span>
                                                                     </div>
-                                                                    <div class="col-8">
+                                                                    <div class="col-lg-8 col-11">
                                                                         <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
                                                                     </div>
                                                                     <div class="col-1">
@@ -426,17 +450,17 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </a>
-                                                        <a href="#" role="button" class="quotation__email__link">
+                                                        </div>
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
                                                             <div class="quotation__mail new">
                                                                 <div class="row">
-                                                                    <div class="col-3">
+                                                                    <div class="col-lg-3 col-12">
                                                                         <span class="quotation__mail__title">SP - RJ</span>
                                                                         <span class="dashboard__quotation__badge">
                                                                             NOVA
                                                                         </span>
                                                                     </div>
-                                                                    <div class="col-8">
+                                                                    <div class="col-lg-8 col-11">
                                                                         <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
                                                                     </div>
                                                                     <div class="col-1">
@@ -446,17 +470,17 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </a>
-                                                        <a href="#" role="button" class="quotation__email__link">
+                                                        </div>
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
                                                             <div class="quotation__mail new">
                                                                 <div class="row">
-                                                                    <div class="col-3">
+                                                                    <div class="col-lg-3 col-12">
                                                                         <span class="quotation__mail__title">SP - RJ</span>
                                                                         <span class="dashboard__quotation__badge">
                                                                             NOVA
                                                                         </span>
                                                                     </div>
-                                                                    <div class="col-8">
+                                                                    <div class="col-lg-8 col-11">
                                                                         <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
                                                                     </div>
                                                                     <div class="col-1">
@@ -466,17 +490,17 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </a>
-                                                        <a href="#" role="button" class="quotation__email__link">
+                                                        </div>
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
                                                             <div class="quotation__mail new">
                                                                 <div class="row">
-                                                                    <div class="col-3">
+                                                                    <div class="col-lg-3 col-12">
                                                                         <span class="quotation__mail__title">SP - RJ</span>
                                                                         <span class="dashboard__quotation__badge">
                                                                             NOVA
                                                                         </span>
                                                                     </div>
-                                                                    <div class="col-8">
+                                                                    <div class="col-lg-8 col-11">
                                                                         <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
                                                                     </div>
                                                                     <div class="col-1">
@@ -486,80 +510,17 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </a>
-                                                        <a href="#" role="button" class="quotation__email__link">
-                                                            <div class="quotation__mail new">
-                                                                <div class="row">
-                                                                    <div class="col-3">
-                                                                        <span class="quotation__mail__title">SP - RJ</span>
-                                                                        <span class="dashboard__quotation__badge">
-                                                                            NOVA
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
-                                                                    </div>
-                                                                    <div class="col-1">
-                                                                        <span class="quotation__icon">
-                                                                            <i class="fas fa-angle-right "></i>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        <a href="#" role="button" class="quotation__email__link">
-                                                            <div class="quotation__mail new">
-                                                                <div class="row">
-                                                                    <div class="col-3">
-                                                                        <span class="quotation__mail__title">SP - RJ</span>
-                                                                        <span class="dashboard__quotation__badge">
-                                                                            NOVA
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
-                                                                    </div>
-                                                                    <div class="col-1">
-                                                                        <span class="quotation__icon">
-                                                                            <i class="fas fa-angle-right "></i>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-                                                        
-        
-                                                        <a href="#" role="button" class="quotation__email__link">
-                                                            <div class="quotation__mail new">
-                                                                <div class="row">
-                                                                    <div class="col-3">
-                                                                        <span class="quotation__mail__title">SP - RJ</span>
-                                                                        <span class="dashboard__quotation__badge">
-                                                                            NOVA
-                                                                        </span>
-                                                                    </div>
-                                                                    <div class="col-8">
-                                                                        <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
-                                                                    </div>
-                                                                    <div class="col-1">
-                                                                        <span class="quotation__icon">
-                                                                            <i class="fas fa-angle-right "></i>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </a>
-        
-                                                        <a href="#" role="button" class="quotation__email__link">
+                                                        </div>
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
                                                             <div class="quotation__mail notAnswered">
                                                                 <div class="row">
-                                                                    <div class="col-3">
+                                                                    <div class="col-lg-3 col-12">
                                                                         <span class="quotation__mail__title">SP - RJ</span>
                                                                         <span class="dashboard__quotation__badge">
                                                                             NÃO RESPONDIDA
                                                                         </span>
                                                                     </div>
-                                                                    <div class="col-8">
+                                                                    <div class="col-lg-8 col-11">
                                                                         <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
                                                                     </div>
                                                                     <div class="col-1">
@@ -569,18 +530,17 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </a>
-        
-                                                        <a href="#" role="button" class="quotation__email__link">
+                                                        </div>
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
                                                             <div class="quotation__mail answered">
                                                                 <div class="row">
-                                                                    <div class="col-3">
+                                                                    <div class="col-lg-3 col-12">
                                                                         <span class="quotation__mail__title">SP - RJ</span>
                                                                         <span class="dashboard__quotation__badge">
                                                                             RESPONDIDA
                                                                         </span>
                                                                     </div>
-                                                                    <div class="col-8">
+                                                                    <div class="col-lg-8 col-11">
                                                                         <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
                                                                     </div>
                                                                     <div class="col-1">
@@ -590,18 +550,59 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </a>
+                                                        </div>                                                       
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
+                                                            <div class="quotation__mail notAnswered">
+                                                                <div class="row">
+                                                                    <div class="col-lg-3 col-12">
+                                                                        <span class="quotation__mail__title">SP - RJ</span>
+                                                                        <span class="dashboard__quotation__badge">
+                                                                            NÃO RESPONDIDA
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-11">
+                                                                        <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
+                                                                    </div>
+                                                                    <div class="col-1">
+                                                                        <span class="quotation__icon">
+                                                                            <i class="fas fa-angle-right "></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
         
-                                                        <a href="#" role="button" class="quotation__email__link">
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
+                                                            <div class="quotation__mail notAnswered">
+                                                                <div class="row">
+                                                                    <div class="col-lg-3 col-12">
+                                                                        <span class="quotation__mail__title">SP - RJ</span>
+                                                                        <span class="dashboard__quotation__badge">
+                                                                            NÃO RESPONDIDA
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-11">
+                                                                        <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
+                                                                    </div>
+                                                                    <div class="col-1">
+                                                                        <span class="quotation__icon">
+                                                                            <i class="fas fa-angle-right "></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+        
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
                                                             <div class="quotation__mail answered">
                                                                 <div class="row">
-                                                                    <div class="col-3">
+                                                                    <div class="col-lg-3 col-12">
                                                                         <span class="quotation__mail__title">SP - RJ</span>
                                                                         <span class="dashboard__quotation__badge">
                                                                             RESPONDIDA
                                                                         </span>
                                                                     </div>
-                                                                    <div class="col-8">
+                                                                    <div class="col-lg-8 col-11">
                                                                         <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
                                                                     </div>
                                                                     <div class="col-1">
@@ -611,7 +612,28 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </a>
+                                                        </div>
+        
+                                                        <div role="button" class="quotation__email__link" onclick="toggleModal('quotationEmail__modal')">
+                                                            <div class="quotation__mail answered">
+                                                                <div class="row">
+                                                                    <div class="col-lg-3 col-12">
+                                                                        <span class="quotation__mail__title">SP - RJ</span>
+                                                                        <span class="dashboard__quotation__badge">
+                                                                            RESPONDIDA
+                                                                        </span>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-11">
+                                                                        <span class="quotation__info">Gostaria de uma entrega que fosse de SP para o R...</span>
+                                                                    </div>
+                                                                    <div class="col-1">
+                                                                        <span class="quotation__icon">
+                                                                            <i class="fas fa-angle-right "></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
 

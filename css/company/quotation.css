@@ -28,7 +28,7 @@ body.dashQuotation .basefield__title{
     background: var(--accent-red);
 }
 
-.quotation__email__link:hover .quotation__mail.new{
+.quotation__email__link:hover .quotation__mail{
     background: var(--accent-2);
 }
 

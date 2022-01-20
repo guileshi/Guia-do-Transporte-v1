@@ -24,6 +24,7 @@
     --accent-0: #fff;
     --accent-money: #299621;
     --accent-green: #05C928;
+    --accent-greenLight: hsl(131, 95%, 50%);
     --accent-greenDark: #04B023;
     --accent-blue: hsl(221, 44%, 60%);
     --accent-blueDark: hsl(221, 44%, 53%);
@@ -95,6 +96,7 @@ a, a:hover {
 input, button {
     border: none;
     outline: none;
+    background-color: unset;
 }
 
 label {

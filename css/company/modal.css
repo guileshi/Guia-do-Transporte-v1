@@ -44,11 +44,15 @@
     z-index: 9999;
 }
 
-#confirmAddRote__county__modal .baseModal__filter{
+#confirmAddRote__county__modal .baseModal__filter, #confirmRemoveRote__county__modal .baseModal__filter{
     z-index: 9999;
 }
 
 #howWorks__modal .baseModal__filter{
+    z-index: 9999;
+}
+
+#answerEmail__modal .baseModal__filter{
     z-index: 9999;
 }
 
@@ -87,15 +91,7 @@
     animation: slidedown-notransform 0.2s ease;
 }
 
-#confirmAddRote__state__modal .baseModal{
-    z-index: 999999;
-}
-
-#confirmAddRote__county__modal .baseModal{
-    z-index: 999999;
-}
-
-#howWorks__modal .baseModal{
+#confirmAddRote__state__modal .baseModal, #confirmAddRote__county__modal .baseModal, #confirmRemoveRote__county__modal .baseModal, #howWorks__modal .baseModal{
     z-index: 999999;
 }
 
@@ -106,6 +102,17 @@
 #addRote__county__modal .baseModal{
     width: calc(100vw - 25%);
 }
+
+#quotationEmail__modal .baseModal{
+    width: calc(100vw - 35%);
+}
+
+#answerEmail__modal .baseModal{
+    width: calc(100vw - 35%);
+
+    z-index: 9999;
+}
+
 
 /* close */
 .baseModal__close{
@@ -148,14 +155,20 @@
 }
 
 .baseModal__text{
-    color: var(--accent-7);
+    color: var(--accent-6);
     font-size: var(--px18);
     font-family: var(--opens-sans);
-    font-weight: var(--light);
+    font-weight: var(--regular);
 
     text-align: justify;
 
     margin-top: var(--px8);
+}
+
+.baseModal__text.quotationEmail{
+    background: var(--accent-1);
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .baseModal__subtitle{
@@ -169,6 +182,7 @@
 
 #switchPicture__modal .baseModal__text{
     text-align: center;
+    margin-top: unset;
 }
 
 /* input / label */
@@ -196,6 +210,10 @@
     border-radius: 4px;
 
     padding: 4px var(--px16);
+}
+
+.baseModal__textarea{
+    background: var(--accent-1);
 }
 
 .baseModal__inputGroup{
@@ -242,6 +260,11 @@
     -webkit-transition: var(--t-btn);
     -moz-transition: var(--t-btn);
     -o-transition: var(--t-btn);
+}
+
+#quotationEmail__modal .baseModal__button, #answerEmail__modal .baseModal__button{
+    width: auto;
+    float: right;
 }
 
 .baseModal__button.cancel{
@@ -312,7 +335,7 @@
 
 .baseModal__help.doubt{
     color: var(--accent-6);
-    font-weight: var(--opens-sans);
+    font-family: var(--opens-sans);
     font-weight: var(--light);
 
     margin-top: var(--px16);
@@ -342,12 +365,26 @@
         margin-top: var(--px8) !important;
     }
 
+    body.dashQuotation .baseModal__button.confirm{
+        margin-top: var(--px24) !important;
+    }
+
     .baseModal__title, .baseModal__text, .baseModal__subtitle, .baseModal__label{
         font-size: var(--px16);
     }
 
     .baseModal__button.financial{
         font-size: var(--px18);
+    }
+
+    #quotationEmail__modal .baseModal{
+        width: calc(100vw - 20%);
+    }
+
+    #answerEmail__modal .baseModal{
+        width: calc(100vw - 20%);
+    
+        z-index: 9999;
     }
     
 }
@@ -358,6 +395,16 @@
         width: calc(100vw - 40%);
     }
 
+    #quotationEmail__modal .baseModal{
+        width: calc(100vw - 20%);
+    }
+
+    #answerEmail__modal .baseModal{
+        width: calc(100vw - 20%);
+    
+        z-index: 9999;
+    }
+
     .baseModal__title{
         font-size: var(--px18);
     }
@@ -365,6 +412,7 @@
     .baseModal__label, .baseModal__text, .baseModal__subtitle{
         font-size: var(--px16);
     }
+
 }
 
 /* Animation */
@@ -409,5 +457,74 @@
     100%{
         top: 50%;
         opacity: 1;
+    }
+}
+
+
+@keyframes up-down {
+    0%{
+        bottom: -32px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    10%, 90%{
+        bottom: 16px;
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        bottom: -32px;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes up-down {
+    0%{
+        bottom: -32px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    10%, 90%{
+        bottom: 16px;
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        bottom: -32px;
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes up-down {
+    0%{
+        bottom: -32px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    10%, 90%{
+        bottom: 16px;
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        bottom: -32px;
+        opacity: 0;
+    }
+}
+
+@-o-keyframes up-down {
+    0%{
+        bottom: -32px;
+        opacity: 0;
+        transform: scale(0);
+    }
+    10%, 90%{
+        bottom: 16px;
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        bottom: -32px;
+        opacity: 0;
     }
 }
